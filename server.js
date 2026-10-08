@@ -207,7 +207,9 @@ app.post('/api/checkout', async (req, res) => {
 async function onStripeWebhook(req, res) {
   const sig = req.headers['stripe-signature'];
   try {
-    const event = stripe().webhooks.constructEvent(req.body, sig, process.env.STRIPE_WEBHOOK_SECRET);
+    // Note: constructEvent is pure crypto verification — it needs only the
+    // webhook secret, NOT the Stripe API secret key.
+    const event = require('stripe').webhooks.constructEvent(req.body, sig, process.env.STRIPE_WEBHOOK_SECRET);
     if (event.type === 'checkout.session.completed') {
       const s = event.data.object;
       // Two flows: legacy cart checkout (metadata.items JSON) and per-product
