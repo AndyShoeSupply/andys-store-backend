@@ -20,6 +20,17 @@ app.use(cors({ origin: STORE_ORIGIN === '*' ? true : STORE_ORIGIN }));
 app.post('/api/webhooks/stripe', express.raw({ type: 'application/json' }), onStripeWebhook);
 app.use(express.json({ limit: '256kb' }));
 
+// ---------- Admin protection (private orders panel) ----------
+const ADMIN_TOKEN = process.env.ADMIN_TOKEN || '';
+function requireAdmin(req, res, next) {
+  if (!ADMIN_TOKEN) return res.status(503).json({ error: 'admin not configured' });
+  const t = req.get('x-admin-token') || req.query.token || '';
+  const a = Buffer.from(t), b = Buffer.from(ADMIN_TOKEN);
+  if (a.length !== b.length || !crypto.timingSafeEqual(a, b))
+    return res.status(401).json({ error: 'unauthorized' });
+  next();
+}
+
 // ---------- Catalog (price truth lives here, validated server-side) ----------
 const CATALOG_PATH = process.env.CATALOG_PATH || path.join(__dirname, 'products_full.json');
 let CATALOG = [];
@@ -276,7 +287,7 @@ async function uspsAccessToken() {
 }
 
 // POST { toZip, weightOz, lengthIn, widthIn, heightIn }
-app.post('/api/usps/rates', async (req, res) => {
+app.post('/api/usps/rates', requireAdmin, async (req, res) => {
   try {
     const token = await uspsAccessToken();
     const { toZip, weightOz = 16, lengthIn = 12, widthIn = 9, heightIn = 6 } = req.body;
@@ -302,7 +313,7 @@ app.post('/api/usps/rates', async (req, res) => {
 });
 
 // POST { orderId } — buy label for a paid order (uses stored ship-to from metadata)
-app.post('/api/usps/label', async (req, res) => {
+app.post('/api/usps/label', requireAdmin, async (req, res) => {
   try {
     const token = await uspsAccessToken();
     const order = db.prepare('SELECT * FROM orders WHERE id = ?').get(Number(req.body.orderId));
@@ -383,7 +394,7 @@ async function buyLabelForOrder(orderId) {
 }
 
 // Manual trigger (admin): POST { orderId }
-app.post('/api/labels/buy', async (req, res) => {
+app.post('/api/labels/buy', requireAdmin, async (req, res) => {
   try {
     res.json(await buyLabelForOrder(req.body.orderId));
   } catch (e) {
@@ -392,25 +403,25 @@ app.post('/api/labels/buy', async (req, res) => {
 });
 
 // ---------- Orders feed (for the notification job) ----------
-app.get('/api/orders/pending-labels', (req, res) => {
+app.get('/api/orders/pending-labels', requireAdmin, (req, res) => {
   const rows = db.prepare(`SELECT id, stripe_session, email, items, amount_total, ship_to,
     tracking_number, label_url, created_at FROM orders
     WHERE status = 'paid' AND label_url IS NOT NULL AND notified = 0 ORDER BY id`).all();
   res.json(rows.map(r => ({ ...r, items: JSON.parse(r.items || '[]'), ship_to: JSON.parse(r.ship_to || '{}') })));
 });
 
-app.post('/api/orders/:id/notified', (req, res) => {
+app.post('/api/orders/:id/notified', requireAdmin, (req, res) => {
   db.prepare('UPDATE orders SET notified = 1 WHERE id = ?').run(Number(req.params.id));
   res.json({ ok: true });
 });
 
-app.get('/api/orders/recent', (req, res) => {
+app.get('/api/orders/recent', requireAdmin, (req, res) => {
   const rows = db.prepare(`SELECT id, email, items, amount_total, ship_to, tracking_number,
     label_url, notified, status, created_at FROM orders ORDER BY id DESC LIMIT 50`).all();
   res.json(rows);
 });
 // ---------- Inventory (for the private admin panel to sync) ----------
-app.get('/api/inventory', (req, res) => {
+app.get('/api/inventory', requireAdmin, (req, res) => {
   res.json(db.prepare('SELECT product_id AS id, qty FROM inventory').all());
 });
 
