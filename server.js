@@ -438,6 +438,12 @@ app.get('/api/inventory', requireAdmin, (req, res) => {
   res.json(db.prepare('SELECT product_id AS id, qty FROM inventory').all());
 });
 
+app.get('/api/admin/users', requireAdmin, (req, res) => {
+  const rows = db.prepare(`SELECT id, email, name, created_at FROM users ORDER BY id DESC`).all();
+  const withOrders = db.prepare(`SELECT lower(email) AS e, COUNT(*) AS n FROM orders GROUP BY lower(email)`).all();
+  const orderCount = Object.fromEntries(withOrders.map(r => [r.e, r.n]));
+  res.json({ count: rows.length, users: rows.map(u => ({ ...u, orders: orderCount[u.email.toLowerCase()] || 0 })) });
+});
 app.get('/api/products/lite', (req, res) => {
   res.json(CATALOG.map(p => ({ id: String(p.id || p.itemId), title: p.title || p.name || '', price: priceOf(p) })));
 });
