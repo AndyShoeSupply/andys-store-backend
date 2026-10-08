@@ -425,6 +425,9 @@ app.get('/api/inventory', requireAdmin, (req, res) => {
   res.json(db.prepare('SELECT product_id AS id, qty FROM inventory').all());
 });
 
+app.get('/api/products/lite', (req, res) => {
+  res.json(CATALOG.map(p => ({ id: String(p.id || p.itemId), title: p.title || p.name || '', price: priceOf(p) })));
+});
 app.get('/api/health', (req, res) => res.json({
   ok: true,
   catalog: CATALOG.length,
