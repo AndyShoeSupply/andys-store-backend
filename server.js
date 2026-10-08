@@ -1,5 +1,5 @@
 // Andy's Shoe Supply — store backend
-// Endpoints: health, likes, reviews, Stripe checkout + webhook, USPS rates + labels, inventory,
+// Endpoints: health, likes, reviews (purchase-gated, Maria's rule), Stripe checkout + webhook, USPS rates + labels, inventory,
 // customer emails via Resend (welcome, purchase confirmation + review invite, admin promos).
 // Secrets come ONLY from environment variables (see .env.example). Never hardcode keys.
 
@@ -92,6 +92,29 @@ try {
     console.log('migration: users.unsubscribed column added');
   }
 } catch (e) { console.warn('migration users.unsubscribed skipped:', e.message); }
+// Reviews only after a purchase (Maria's rule, 2026-10-08): one unguessable
+// review_tokens row per paid order. used_store gates the one-time store-wide
+// review; per-product reuse is bounded by one review row per (token, product).
+db.exec(`
+  CREATE TABLE IF NOT EXISTS review_tokens (
+    token TEXT PRIMARY KEY,
+    order_id INTEGER,
+    email TEXT,
+    created_at TEXT NOT NULL DEFAULT (datetime('now')),
+    used_store INTEGER NOT NULL DEFAULT 0
+  );
+`);
+try {
+  const reviewCols = db.prepare('PRAGMA table_info(reviews)').all().map(c => c.name);
+  if (!reviewCols.includes('verified')) {
+    db.exec('ALTER TABLE reviews ADD COLUMN verified INTEGER NOT NULL DEFAULT 0');
+    console.log('migration: reviews.verified column added');
+  }
+  if (!reviewCols.includes('review_token')) {
+    db.exec('ALTER TABLE reviews ADD COLUMN review_token TEXT');
+    console.log('migration: reviews.review_token column added');
+  }
+} catch (e) { console.warn('migration reviews columns skipped:', e.message); }
 // Seed inventory from catalog quantities (only for ids not already tracked)
 {
   const ins = db.prepare('INSERT OR IGNORE INTO inventory (product_id, qty) VALUES (?, ?)');
@@ -236,7 +259,32 @@ function orderItemTitle(it) {
   return m ? `${title} — Size ${m[2]}` : String(title);
 }
 
-async function sendPurchaseConfirmation(session, items) {
+// ---------- Review-after-purchase tokens ----------
+// One unguessable token per new paid order, created in the webhook and carried
+// in the confirmation email (?rt=<token>). The review endpoints refuse to post
+// without one — Maria's rule: reviews only after buying.
+function createReviewToken(orderId, email) {
+  const token = crypto.randomBytes(32).toString('hex');
+  db.prepare('INSERT INTO review_tokens (token, order_id, email) VALUES (?, ?, ?)')
+    .run(token, orderId ?? null, String(email || ''));
+  return token;
+}
+function getReviewToken(token) {
+  const t = String(token || '').trim();
+  if (!/^[0-9a-f]{64}$/.test(t)) return null;
+  return db.prepare('SELECT * FROM review_tokens WHERE token = ?').get(t) || null;
+}
+// Did this order include the product? Order items may carry Payment Link
+// variant ids ("398339652878__size_6") — match on the base product id.
+function orderIncludesProduct(orderId, productId) {
+  const row = db.prepare('SELECT items FROM orders WHERE id = ?').get(orderId);
+  if (!row) return false;
+  let items; try { items = JSON.parse(row.items || '[]'); } catch { return false; }
+  const base = (raw) => String(raw).split('__size_')[0];
+  return items.some(it => base(it.id) === String(productId));
+}
+
+async function sendPurchaseConfirmation(session, items, reviewToken) {
   const to = session.customer_email || session.customer_details?.email || '';
   if (!to) {
     console.log('[email] purchase confirmation skipped: no customer email on session', session.id);
@@ -248,6 +296,21 @@ async function sendPurchaseConfirmation(session, items) {
   });
   const totalCents = Number(session.amount_total) || 0;
   const totalLine = totalCents > 0 ? `Total charged: $${(totalCents / 100).toFixed(2)}` : '';
+  // Review links carry this order's token — only buyers can review (Maria's
+  // rule), and the token proves this purchase at the API.
+  const storeUrl = reviewToken
+    ? `https://andysshoesupply.com/?rt=${reviewToken}#reviews`
+    : 'https://andysshoesupply.com/#reviews';
+  const itemLinks = [];
+  if (reviewToken) {
+    const seen = new Set();
+    for (const it of items) {
+      const baseId = String(it.id || '').split('__size_')[0];
+      if (!baseId || seen.has(baseId)) continue;
+      seen.add(baseId);
+      itemLinks.push({ label: orderItemTitle(it), url: `https://andysshoesupply.com/?rt=${reviewToken}` });
+    }
+  }
   const text = `Thanks for your order!
 
 Your payment went through and we're getting everything ready. Here's your order:
@@ -257,8 +320,8 @@ ${totalLine ? '\n' + totalLine + '\n' : ''}
 We'll send your tracking number as soon as your shipping label is ready. You can also see your orders anytime under My Account on our site.
 
 How was your experience? Review our store:
-https://andysshoesupply.com/#reviews
-
+${storeUrl}
+${itemLinks.length ? `\nReview your items too — your review gets a Verified Purchase badge:\n${itemLinks.map(l => `• ${l.label}: ${l.url}`).join('\n')}\n` : ''}
 — Andy's Shoe Supply`;
   const html = emailShell(
     '<p>Thanks for your order!</p>'
@@ -266,7 +329,11 @@ https://andysshoesupply.com/#reviews
     + '<ul>' + lines.map(l => `<li>${escHtml(l.label)}${l.qty > 1 ? ` × ${l.qty}` : ''}</li>`).join('') + '</ul>'
     + (totalLine ? `<p><strong>${escHtml(totalLine)}</strong></p>` : '')
     + '<p>We\'ll send your tracking number as soon as your shipping label is ready. You can also see your orders anytime under My Account on our site.</p>'
-    + '<p><strong>How was your experience?</strong> <a href="https://andysshoesupply.com/#reviews">Review our store</a></p>'
+    + `<p><strong>How was your experience?</strong> <a href="${storeUrl}">Review our store</a></p>`
+    + (itemLinks.length
+      ? '<p>Review your items too — your review gets a <strong>Verified Purchase</strong> badge:</p><ul>'
+        + itemLinks.map(l => `<li><a href="${l.url}">${escHtml(l.label)}</a></li>`).join('') + '</ul>'
+      : '')
   );
   return sendEmail({ to, subject: "Your Andy's Shoe Supply order is confirmed", html, text });
 }
@@ -372,7 +439,8 @@ app.post('/api/likes/:productId/toggle', (req, res) => {
 // ---------- Reviews (public) ----------
 app.get('/api/reviews/:productId', (req, res) => {
   const id = String(req.params.productId);
-  const rows = db.prepare(`SELECT name, rating, text, created_at FROM reviews WHERE product_id=? AND approved=1 ORDER BY id DESC LIMIT 100`).all(id);
+  const rows = db.prepare(`SELECT name, rating, text, created_at, verified FROM reviews WHERE product_id=? AND approved=1 ORDER BY id DESC LIMIT 100`).all(id)
+    .map(r => ({ name: r.name, rating: r.rating, text: r.text, created_at: r.created_at, verified: !!r.verified, productId: id }));
   const avg = db.prepare(`SELECT AVG(rating) AS a, COUNT(*) AS n FROM reviews WHERE product_id=? AND approved=1`).get(id);
   res.json({ productId: id, average: avg.a ? Math.round(avg.a * 10) / 10 : null, count: avg.n, reviews: rows });
 });
@@ -384,17 +452,21 @@ app.post('/api/reviews/:productId', (req, res) => {
   const rating = Number(req.body.rating);
   if (!byId.has(id)) return res.status(404).json({ error: 'Unknown product' });
   if (!name || !text || !(rating >= 1 && rating <= 5)) return res.status(400).json({ error: 'Name, rating 1-5 and review text are required' });
-  // light spam guard: one review per voter per product
-  const voter = voterOf(req, 'rev' + id);
-  if (db.prepare(`SELECT 1 FROM reviews WHERE product_id=? AND name=?`).get(id, name))
-    return res.status(409).json({ error: 'You already reviewed this product' });
-  db.prepare(`INSERT INTO reviews (product_id, name, rating, text) VALUES (?, ?, ?, ?)`).run(id, name, rating, text);
-  res.json({ ok: true });
+  // Purchase gate (Maria's rule): only a buyer can review, proven by the
+  // review_token emailed with their order; one review per product per purchase.
+  const tokenRow = getReviewToken(req.body.review_token);
+  if (!tokenRow || !tokenRow.order_id || !orderIncludesProduct(tokenRow.order_id, id)
+      || db.prepare('SELECT 1 FROM reviews WHERE product_id=? AND review_token=?').get(id, tokenRow.token))
+    return res.status(403).json({ error: 'Reviews are only available after a purchase' });
+  db.prepare(`INSERT INTO reviews (product_id, name, rating, text, verified, review_token) VALUES (?, ?, ?, ?, 1, ?)`)
+    .run(id, name, rating, text, tokenRow.token);
+  res.json({ ok: true, verified: true });
 });
 
 // ---------- Store reviews (public, about the shop in general) ----------
 app.get('/api/store-reviews', (req, res) => {
-  const rows = db.prepare(`SELECT name, rating, text, created_at FROM reviews WHERE product_id='STORE' AND approved=1 ORDER BY id DESC LIMIT 100`).all();
+  const rows = db.prepare(`SELECT name, rating, text, created_at, verified, product_id FROM reviews WHERE product_id='STORE' AND approved=1 ORDER BY id DESC LIMIT 100`).all()
+    .map(r => ({ name: r.name, rating: r.rating, text: r.text, created_at: r.created_at, verified: !!r.verified, productId: r.product_id }));
   const avg = db.prepare(`SELECT AVG(rating) AS a, COUNT(*) AS n FROM reviews WHERE product_id='STORE' AND approved=1`).get();
   res.json({ average: avg.a ? Math.round(avg.a * 10) / 10 : null, count: avg.n, reviews: rows });
 });
@@ -404,11 +476,15 @@ app.post('/api/store-reviews', (req, res) => {
   const text = String(req.body.text || '').trim().slice(0, 500);
   const rating = Number(req.body.rating);
   if (!name || !text || !(rating >= 1 && rating <= 5)) return res.status(400).json({ error: 'Name, rating 1-5 and review text are required' });
-  // light spam guard: one store review per name
-  if (db.prepare(`SELECT 1 FROM reviews WHERE product_id='STORE' AND name=?`).get(name))
-    return res.status(409).json({ error: 'You already reviewed our store' });
-  db.prepare(`INSERT INTO reviews (product_id, name, rating, text) VALUES ('STORE', ?, ?, ?)`).run(name, rating, text);
-  res.json({ ok: true });
+  // Purchase gate (Maria's rule): one store review per purchase, proven by
+  // the review_token emailed with the order; consumed on first use.
+  const tokenRow = getReviewToken(req.body.review_token);
+  if (!tokenRow || !tokenRow.order_id || tokenRow.used_store)
+    return res.status(403).json({ error: 'Reviews are only available after a purchase' });
+  db.prepare(`INSERT INTO reviews (product_id, name, rating, text, verified, review_token) VALUES ('STORE', ?, ?, ?, 1, ?)`)
+    .run(name, rating, text, tokenRow.token);
+  db.prepare('UPDATE review_tokens SET used_store = 1 WHERE token = ?').run(tokenRow.token);
+  res.json({ ok: true, verified: true });
 });
 
 // ---------- Stripe checkout ----------
@@ -544,9 +620,13 @@ async function onStripeWebhook(req, res) {
       if (info.changes > 0) {
         const orderId = db.prepare('SELECT id FROM orders WHERE stripe_session = ?').get(s.id)?.id;
         if (orderId) buyLabelForOrder(orderId).catch(e => console.error('auto-label failed:', e.message));
-        // Purchase confirmation + store-review invite, once per order: the
+        // Purchase confirmation + review invite, once per order: the
         // INSERT OR IGNORE above dedups webhook retries (changes = 0 on replays).
-        sendPurchaseConfirmation(s, items).catch(e => console.error('purchase email failed:', e.message));
+        // One review token per new order; the email carries it (?rt=<token>).
+        const reviewToken = orderId
+          ? createReviewToken(orderId, s.customer_email || s.customer_details?.email || '')
+          : null;
+        sendPurchaseConfirmation(s, items, reviewToken).catch(e => console.error('purchase email failed:', e.message));
       }
     }
     res.json({ received: true });
