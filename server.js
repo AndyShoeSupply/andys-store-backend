@@ -199,6 +199,25 @@ app.post('/api/reviews/:productId', (req, res) => {
   res.json({ ok: true });
 });
 
+// ---------- Store reviews (public, about the shop in general) ----------
+app.get('/api/store-reviews', (req, res) => {
+  const rows = db.prepare(`SELECT name, rating, text, created_at FROM reviews WHERE product_id='STORE' AND approved=1 ORDER BY id DESC LIMIT 100`).all();
+  const avg = db.prepare(`SELECT AVG(rating) AS a, COUNT(*) AS n FROM reviews WHERE product_id='STORE' AND approved=1`).get();
+  res.json({ average: avg.a ? Math.round(avg.a * 10) / 10 : null, count: avg.n, reviews: rows });
+});
+
+app.post('/api/store-reviews', (req, res) => {
+  const name = String(req.body.name || '').trim().slice(0, 40);
+  const text = String(req.body.text || '').trim().slice(0, 500);
+  const rating = Number(req.body.rating);
+  if (!name || !text || !(rating >= 1 && rating <= 5)) return res.status(400).json({ error: 'Name, rating 1-5 and review text are required' });
+  // light spam guard: one store review per name
+  if (db.prepare(`SELECT 1 FROM reviews WHERE product_id='STORE' AND name=?`).get(name))
+    return res.status(409).json({ error: 'You already reviewed our store' });
+  db.prepare(`INSERT INTO reviews (product_id, name, rating, text) VALUES ('STORE', ?, ?, ?)`).run(name, rating, text);
+  res.json({ ok: true });
+});
+
 // ---------- Stripe checkout ----------
 function stripe() {
   if (!process.env.STRIPE_SECRET_KEY) throw new Error('STRIPE_SECRET_KEY not configured');
@@ -422,12 +441,20 @@ async function buyLabelForOrder(orderId) {
   const shipTo = JSON.parse(order.ship_to || '{}');
   if (!shipTo.zip || !shipTo.line1) throw new Error('Order is missing the shipping address');
 
-  // Parcel: shoebox 13x8x5 in; weight from the heaviest item (fallback 2.5 lb)
-  let weightLb = 2.5;
+  // Parcel: per-product box size + weight (by department); fallback 13x8x5 in, 2.5 lb
+  let weightLb = 2.5, boxL = 13, boxW = 8, boxH = 5;
   for (const it of items) {
     const p = byId.get(String(it.id));
     const w = Number(p?.weight_lbs);
-    if (Number.isFinite(w) && w > 0) weightLb = Math.max(weightLb, w);
+    if (Number.isFinite(w) && w > 0 && w >= weightLb) {
+      weightLb = w;
+      const pc = p?.parcel_in || {};
+      if (Number(pc.l) > 0) boxL = Number(pc.l);
+      if (Number(pc.w) > 0) boxW = Number(pc.w);
+      if (Number(pc.h) > 0) boxH = Number(pc.h);
+    } else if (Number.isFinite(w) && w > 0 && w > weightLb) {
+      weightLb = w;
+    }
   }
   const shipmentRes = await fetch(`${SHIPPO_API}/shipments/`, {
     method: 'POST', headers: shippoHeaders(),
@@ -439,7 +466,7 @@ async function buyLabelForOrder(orderId) {
         phone: shipTo.phone || '', email: order.email || '',
       },
       parcels: [{
-        length: '13', width: '8', height: '5',
+        length: String(boxL), width: String(boxW), height: String(boxH),
         distance_unit: 'in', weight: String(weightLb), mass_unit: 'lb',
       }],
       async: false,
