@@ -1,5 +1,6 @@
 // Andy's Shoe Supply — store backend
-// Endpoints: health, likes, reviews, Stripe checkout + webhook, USPS rates + labels, inventory.
+// Endpoints: health, likes, reviews, Stripe checkout + webhook, USPS rates + labels, inventory,
+// customer emails via Resend (welcome, purchase confirmation + review invite, admin promos).
 // Secrets come ONLY from environment variables (see .env.example). Never hardcode keys.
 
 require('dotenv').config();
@@ -83,6 +84,14 @@ db.exec(`
     expires_at TEXT NOT NULL
   );
 `);
+// Migration: users.unsubscribed (promo opt-out flag). Safe to run on every boot.
+try {
+  const userCols = db.prepare('PRAGMA table_info(users)').all().map(c => c.name);
+  if (!userCols.includes('unsubscribed')) {
+    db.exec('ALTER TABLE users ADD COLUMN unsubscribed INTEGER NOT NULL DEFAULT 0');
+    console.log('migration: users.unsubscribed column added');
+  }
+} catch (e) { console.warn('migration users.unsubscribed skipped:', e.message); }
 // Seed inventory from catalog quantities (only for ids not already tracked)
 {
   const ins = db.prepare('INSERT OR IGNORE INTO inventory (product_id, qty) VALUES (?, ?)');
@@ -150,6 +159,190 @@ const voterOf = (req, productId) => {
   if (/^[A-Za-z0-9-]{8,64}$/.test(v)) return 'v:' + v;
   return 'ip:' + crypto.createHash('sha256').update((req.ip || '') + '|' + productId + '|' + (process.env.VOTE_SALT || 'andys')).digest('hex');
 };
+
+// ---------- Email (Resend) ----------
+// Customer emails via the Resend HTTP API (native fetch, no new dependencies).
+// If RESEND_API_KEY is not set, sendEmail is a safe no-op: it only logs
+// "[email] skipped (no RESEND_API_KEY)" and the request flow continues.
+const RESEND_API_KEY = process.env.RESEND_API_KEY || '';
+const EMAIL_FROM = process.env.EMAIL_FROM || "Andy's Shoe Supply <hola@andysshoesupply.com>";
+// Signs the one-click unsubscribe links (HMAC-SHA256). Falls back to ADMIN_TOKEN.
+const EMAIL_SIGNING_SECRET = process.env.EMAIL_SECRET || ADMIN_TOKEN || '';
+const escHtml = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const textToHtml = (s) => escHtml(s).replace(/\n/g, '<br>');
+
+function emailShell(innerHtml) {
+  return '<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.55;color:#1a1a1a">'
+    + innerHtml
+    + '<hr style="border:none;border-top:1px solid #ddd;margin:24px 0">'
+    + '<p style="font-size:13px;color:#666">Thanks for shopping small!<br>'
+    + 'Andy\'s Shoe Supply · Hereford, TX · <a href="https://andysshoesupply.com">andysshoesupply.com</a></p>'
+    + '</div>';
+}
+
+// Never throws: callers fire-and-forget. Returns { ok, id } / { skipped: true } / { ok: false, error }.
+async function sendEmail({ to, subject, html, text, headers }) {
+  const recipient = String(to || '').trim();
+  if (!RESEND_API_KEY) {
+    console.log(`[email] skipped (no RESEND_API_KEY): "${subject}" -> ${recipient || '(no recipient)'}`);
+    return { skipped: true };
+  }
+  if (!recipient || !subject) return { ok: false, error: 'missing to/subject' };
+  try {
+    const r = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: { 'Authorization': `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ from: EMAIL_FROM, to: recipient, subject, html, text, headers }),
+    });
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok) {
+      console.error(`[email] Resend ${r.status} for "${subject}" -> ${recipient}:`, JSON.stringify(j).slice(0, 200));
+      return { ok: false, error: `resend http ${r.status}` };
+    }
+    console.log(`[email] sent "${subject}" -> ${recipient} (id ${j.id || '?'})`);
+    return { ok: true, id: j.id };
+  } catch (e) {
+    console.error(`[email] send failed "${subject}" -> ${recipient}:`, e.message);
+    return { ok: false, error: e.message };
+  }
+}
+
+async function sendWelcomeEmail(email, name) {
+  const first = String(name || '').trim().split(/\s+/)[0];
+  const text = `Hi${first ? ' ' + first : ''}!
+
+Welcome to Andy's Shoe Supply — thanks for creating your account.
+
+Every pair in our direct store is 15% OFF the eBay price, every day, and new pairs land all the time. Come take a look:
+https://andysshoesupply.com
+
+— Andy's Shoe Supply`;
+  const html = emailShell(
+    `<p>Hi${first ? ' ' + escHtml(first) : ''}!</p>`
+    + '<p>Welcome to Andy\'s Shoe Supply — thanks for creating your account.</p>'
+    + '<p>Every pair in our direct store is <strong>15% OFF</strong> the eBay price, every day, and new pairs land all the time. Come take a look:</p>'
+    + '<p><a href="https://andysshoesupply.com">Shop Andy\'s Shoe Supply</a></p>'
+  );
+  return sendEmail({ to: email, subject: "Welcome to Andy's Shoe Supply", html, text });
+}
+
+// Human title for an order line item. Payment Link variants carry the id
+// "398339652878__size_6" (see make_variant_links.py) — show "Title — Size 6".
+function orderItemTitle(it) {
+  const raw = String(it.id || '');
+  const m = raw.match(/^(.+?)__size_(.+)$/);
+  const p = byId.get(m ? m[1] : raw);
+  const title = (p && (p.title || p.name)) || raw;
+  return m ? `${title} — Size ${m[2]}` : String(title);
+}
+
+async function sendPurchaseConfirmation(session, items) {
+  const to = session.customer_email || session.customer_details?.email || '';
+  if (!to) {
+    console.log('[email] purchase confirmation skipped: no customer email on session', session.id);
+    return { skipped: true };
+  }
+  const lines = items.map(it => {
+    const qty = Math.max(1, Number(it.qty) | 0);
+    return { label: orderItemTitle(it), qty };
+  });
+  const totalCents = Number(session.amount_total) || 0;
+  const totalLine = totalCents > 0 ? `Total charged: $${(totalCents / 100).toFixed(2)}` : '';
+  const text = `Thanks for your order!
+
+Your payment went through and we're getting everything ready. Here's your order:
+
+${lines.map(l => `• ${l.label}${l.qty > 1 ? ` × ${l.qty}` : ''}`).join('\n')}
+${totalLine ? '\n' + totalLine + '\n' : ''}
+We'll send your tracking number as soon as your shipping label is ready. You can also see your orders anytime under My Account on our site.
+
+How was your experience? Review our store:
+https://andysshoesupply.com/#reviews
+
+— Andy's Shoe Supply`;
+  const html = emailShell(
+    '<p>Thanks for your order!</p>'
+    + '<p>Your payment went through and we\'re getting everything ready. Here\'s your order:</p>'
+    + '<ul>' + lines.map(l => `<li>${escHtml(l.label)}${l.qty > 1 ? ` × ${l.qty}` : ''}</li>`).join('') + '</ul>'
+    + (totalLine ? `<p><strong>${escHtml(totalLine)}</strong></p>` : '')
+    + '<p>We\'ll send your tracking number as soon as your shipping label is ready. You can also see your orders anytime under My Account on our site.</p>'
+    + '<p><strong>How was your experience?</strong> <a href="https://andysshoesupply.com/#reviews">Review our store</a></p>'
+  );
+  return sendEmail({ to, subject: "Your Andy's Shoe Supply order is confirmed", html, text });
+}
+
+// One-click unsubscribe links: base64url(JSON {u: userId, e: email}) + "." + HMAC-SHA256(payload).
+function unsubToken(userId, email) {
+  const payload = Buffer.from(JSON.stringify({ u: userId, e: String(email || '').toLowerCase() }), 'utf8').toString('base64url');
+  const sig = crypto.createHmac('sha256', EMAIL_SIGNING_SECRET).update(payload).digest('base64url');
+  return `${payload}.${sig}`;
+}
+function parseUnsubToken(t) {
+  const parts = String(t || '').split('.');
+  if (parts.length !== 2 || !parts[0] || !parts[1]) return null;
+  const expected = crypto.createHmac('sha256', EMAIL_SIGNING_SECRET).update(parts[0]).digest();
+  let got;
+  try { got = Buffer.from(parts[1], 'base64url'); } catch { return null; }
+  if (got.length !== expected.length || !crypto.timingSafeEqual(got, expected)) return null;
+  try {
+    const o = JSON.parse(Buffer.from(parts[0], 'base64url').toString('utf8'));
+    return (o && o.u && o.e) ? o : null;
+  } catch { return null; }
+}
+function unsubscribeUrl(req, userId, email) {
+  const base = String(process.env.API_PUBLIC_URL || process.env.RENDER_EXTERNAL_URL
+    || (req ? `${req.protocol}://${req.get('host')}` : '')).replace(/\/+$/, '');
+  return `${base}/api/unsubscribe?t=${unsubToken(userId, email)}`;
+}
+
+app.get('/api/unsubscribe', (req, res) => {
+  const page = (msg) => '<!doctype html><html><head><meta charset="utf-8">'
+    + '<title>Unsubscribe — Andy\'s Shoe Supply</title></head>'
+    + '<body style="font-family:Arial,Helvetica,sans-serif;padding:32px;color:#1a1a1a">'
+    + '<h1 style="font-size:20px">Andy\'s Shoe Supply</h1><p>' + msg + '</p>'
+    + '<p><a href="https://andysshoesupply.com">Back to the store</a></p></body></html>';
+  const data = parseUnsubToken(req.query.t);
+  if (!data) return res.status(400).type('html').send(page('That unsubscribe link is invalid or expired.'));
+  const user = db.prepare('SELECT id, email FROM users WHERE id = ?').get(data.u);
+  if (!user || user.email.toLowerCase() !== data.e)
+    return res.status(400).type('html').send(page('That unsubscribe link is invalid or expired.'));
+  db.prepare('UPDATE users SET unsubscribed = 1 WHERE id = ?').run(user.id);
+  res.type('html').send(page('You have been unsubscribed. You will no longer receive promotional emails from us. (Order emails still arrive when you buy something.)'));
+});
+
+// Admin promo blast: POST { subject, text } → one email per registered,
+// non-unsubscribed user, each with its own signed unsubscribe link.
+app.post('/api/admin/send-promo', requireAdmin, async (req, res) => {
+  try {
+    const subject = String(req.body.subject || '').trim().slice(0, 150);
+    const text = String(req.body.text || '').trim().slice(0, 8000);
+    if (!subject || !text) return res.status(400).json({ error: 'subject and text are required' });
+    if (!RESEND_API_KEY) return res.status(503).json({ error: 'email not configured (set RESEND_API_KEY)' });
+    const users = db.prepare('SELECT id, email, name FROM users WHERE unsubscribed = 0 ORDER BY id').all();
+    let sent = 0, failed = 0;
+    for (const u of users) {
+      const unsub = unsubscribeUrl(req, u.id, u.email);
+      const r = await sendEmail({
+        to: u.email,
+        subject,
+        html: emailShell(
+          `<div>${textToHtml(text)}</div>`
+          + `<p style="font-size:12px;color:#888;margin-top:20px">You're receiving this because you have an account at Andy's Shoe Supply. <a href="${unsub}">Unsubscribe</a></p>`
+        ),
+        text: `${text}\n\n—\nDon't want these emails? Unsubscribe here: ${unsub}`,
+        headers: { 'List-Unsubscribe': `<${unsub}>` },
+      });
+      if (r.ok) sent++; else failed++;
+      // Gentle pacing to stay under Resend's per-second rate limits.
+      if (users.length > 1) await new Promise(done => setTimeout(done, 350));
+    }
+    console.log(`[email] promo "${subject}": ${sent} sent, ${failed} failed, ${users.length} recipients`);
+    res.json({ ok: true, recipients: users.length, sent, failed });
+  } catch (e) {
+    console.error('send-promo error:', e.message);
+    res.status(500).json({ error: 'promo send failed', detail: e.message });
+  }
+});
 
 // ---------- Likes (public, shared across all visitors) ----------
 app.get('/api/likes/:productId', (req, res) => {
@@ -351,6 +544,9 @@ async function onStripeWebhook(req, res) {
       if (info.changes > 0) {
         const orderId = db.prepare('SELECT id FROM orders WHERE stripe_session = ?').get(s.id)?.id;
         if (orderId) buyLabelForOrder(orderId).catch(e => console.error('auto-label failed:', e.message));
+        // Purchase confirmation + store-review invite, once per order: the
+        // INSERT OR IGNORE above dedups webhook retries (changes = 0 on replays).
+        sendPurchaseConfirmation(s, items).catch(e => console.error('purchase email failed:', e.message));
       }
     }
     res.json({ received: true });
@@ -676,6 +872,8 @@ app.post('/api/account/register', async (req, res) => {
     const token = newSessionToken();
     const exp = new Date(Date.now() + 30*24*3600*1000).toISOString();
     db.prepare('INSERT INTO sessions (token, user_id, expires_at) VALUES (?, ?, ?)').run(token, r.lastInsertRowid, exp);
+    // Welcome email (fire-and-forget; safe no-op until RESEND_API_KEY is set).
+    sendWelcomeEmail(email, name).catch(e => console.error('welcome email failed:', e.message));
     res.json({ token, user: { email, name } });
   } catch (e) { res.status(500).json({ error: 'registration failed' }); }
 });
@@ -710,6 +908,7 @@ app.get('/api/health', (req, res) => res.json({
   stripe: !!process.env.STRIPE_WEBHOOK_SECRET, // checkout uses Payment Links + webhook; no secret key needed
   usps: !!(process.env.USPS_CLIENT_ID && process.env.USPS_CLIENT_SECRET),
   shipping: process.env.EASYPOST_API_KEY ? 'easypost' : (process.env.SHIPPO_TOKEN ? 'shippo' : 'none'),
+  email: !!RESEND_API_KEY, // Resend wired for welcome / order / promo emails
   r2: r2Enabled(),
 }));
 
