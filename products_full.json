@@ -869,10 +869,11 @@
   "weight_estimated": true,
   "description": "You can't go wrong with the Nike Cosmic Runner Unisex Kids, a kids' sneaker made to be worn on repeat. Sized at 12C. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 10,
+   "l": 12,
    "w": 6,
    "h": 4
-  }
+  },
+  "size": "US 12C"
  },
  {
   "id": "920007852708",
@@ -5290,7 +5291,7 @@
   "weight_estimated": false,
   "description": "The ASICS GEL-EXCITE 10 GS is a go-to kids' sneaker that goes with just about anything. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 10,
+   "l": 12,
    "w": 6,
    "h": 4
   },
@@ -5326,7 +5327,8 @@
    "w": 8,
    "h": 5
   },
-  "store_only": true
+  "store_only": true,
+  "size": "US 9"
  },
  {
   "id": "398432931238",
@@ -5686,7 +5688,7 @@
   "weight_estimated": false,
   "description": "The NBA 2K x Puma Scoot Zeros 2 Mismatched brings classic Puma style to your everyday lineup. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
-   "l": 10,
+   "l": 12,
    "w": 6,
    "h": 4
   },
@@ -5749,7 +5751,7 @@
   "weight_estimated": false,
   "description": "The PUMA Scoot Zeros II 2K Men’s Basketball Shoes Multicolor is a go-to kids' shoe that goes with just about anything. Sized at 11. Ships brand new in its box.",
   "parcel_in": {
-   "l": 10,
+   "l": 12,
    "w": 6,
    "h": 4
   },
@@ -5774,7 +5776,8 @@
    "l": 13,
    "w": 8,
    "h": 5
-  }
+  },
+  "size": "US 8.5"
  },
  {
   "id": "398399249971",
@@ -5949,7 +5952,8 @@
    "w": 8,
    "h": 5
   },
-  "store_only": true
+  "store_only": true,
+  "size": "US 10.5"
  },
  {
   "id": "398419242487",
@@ -6745,7 +6749,8 @@
    "w": 7,
    "h": 4.5
   },
-  "store_only": true
+  "store_only": true,
+  "size": "US 9"
  },
  {
   "id": "398449011367",
@@ -6922,7 +6927,8 @@
    "w": 8,
    "h": 5
   },
-  "store_only": true
+  "store_only": true,
+  "size": "US 5.5"
  },
  {
   "id": "398405600531",
@@ -7906,7 +7912,7 @@
   "weight_estimated": false,
   "description": "Add some fresh style to your rotation with the Air Jordan Flight Court White Sail Black, a kids' sneaker in a head-turning colorway. Sized at 4.5Y. Comes brand new with its box included.",
   "parcel_in": {
-   "l": 10,
+   "l": 12,
    "w": 6,
    "h": 4
   },
@@ -8477,7 +8483,7 @@
   "weight_estimated": false,
   "description": "The Air Diamond Turf II GS “Royals” is a go-to kids' sneaker that goes with just about anything. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
-   "l": 10,
+   "l": 12,
    "w": 6,
    "h": 4
   },
