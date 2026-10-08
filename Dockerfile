@@ -2,7 +2,7 @@ FROM node:24-slim
 WORKDIR /app
 COPY package.json ./
 RUN npm install --omit=dev
-COPY server.js ./
+COPY server.js r2restore.js ./
 COPY products_full.json ./
 ENV PORT=8080
 EXPOSE 8080
