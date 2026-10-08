@@ -6,6 +6,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const crypto = require('crypto');
+const bcrypt = require('bcryptjs');
 const fs = require('fs');
 const path = require('path');
 const { DatabaseSync } = require('node:sqlite'); // built-in, no native build needed
@@ -62,6 +63,18 @@ db.exec(`
     ship_to TEXT, tracking_number TEXT, label_url TEXT,
     notified INTEGER NOT NULL DEFAULT 0,
     status TEXT NOT NULL DEFAULT 'pending', created_at TEXT NOT NULL DEFAULT (datetime('now'))
+  );
+`);
+db.exec(`
+  CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT UNIQUE NOT NULL,
+    password_hash TEXT NOT NULL, name TEXT NOT NULL DEFAULT '',
+    created_at TEXT NOT NULL DEFAULT (datetime('now'))
+  );
+  CREATE TABLE IF NOT EXISTS sessions (
+    token TEXT PRIMARY KEY, user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    created_at TEXT NOT NULL DEFAULT (datetime('now')),
+    expires_at TEXT NOT NULL
   );
 `);
 // Seed inventory from catalog quantities (only for ids not already tracked)
@@ -428,6 +441,65 @@ app.get('/api/inventory', requireAdmin, (req, res) => {
 app.get('/api/products/lite', (req, res) => {
   res.json(CATALOG.map(p => ({ id: String(p.id || p.itemId), title: p.title || p.name || '', price: priceOf(p) })));
 });
+// ---------- Customer accounts ----------
+const newSessionToken = () => crypto.randomBytes(32).toString('hex');
+function accountUser(req) {
+  const h = req.get('authorization') || '';
+  const m = h.match(/^Bearer\s+(.+)$/i);
+  if (!m) return null;
+  const row = db.prepare("SELECT s.user_id, s.expires_at, u.id, u.email, u.name, u.created_at FROM sessions s JOIN users u ON u.id = s.user_id WHERE s.token = ?").get(m[1]);
+  if (!row) return null;
+  if (new Date(row.expires_at) < new Date()) { db.prepare('DELETE FROM sessions WHERE token = ?').run(m[1]); return null; }
+  return { id: row.id, email: row.email, name: row.name, created_at: row.created_at };
+}
+function requireAccount(req, res, next) {
+  const u = accountUser(req);
+  if (!u) return res.status(401).json({ error: 'login required' });
+  req.account = u; next();
+}
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+app.post('/api/account/register', async (req, res) => {
+  try {
+    const email = String(req.body.email || '').trim().toLowerCase();
+    const password = String(req.body.password || '');
+    const name = String(req.body.name || '').trim().slice(0, 80);
+    if (!EMAIL_RE.test(email)) return res.status(400).json({ error: 'invalid email' });
+    if (password.length < 8) return res.status(400).json({ error: 'password too short (min 8)' });
+    if (db.prepare('SELECT id FROM users WHERE email = ?').get(email))
+      return res.status(409).json({ error: 'email already registered' });
+    const hash = await bcrypt.hash(password, 10);
+    const r = db.prepare('INSERT INTO users (email, password_hash, name) VALUES (?, ?, ?)').run(email, hash, name);
+    const token = newSessionToken();
+    const exp = new Date(Date.now() + 30*24*3600*1000).toISOString();
+    db.prepare('INSERT INTO sessions (token, user_id, expires_at) VALUES (?, ?, ?)').run(token, r.lastInsertRowid, exp);
+    res.json({ token, user: { email, name } });
+  } catch (e) { res.status(500).json({ error: 'registration failed' }); }
+});
+app.post('/api/account/login', async (req, res) => {
+  try {
+    const email = String(req.body.email || '').trim().toLowerCase();
+    const password = String(req.body.password || '');
+    const u = db.prepare('SELECT * FROM users WHERE email = ?').get(email);
+    if (!u || !(await bcrypt.compare(password, u.password_hash)))
+      return res.status(401).json({ error: 'invalid credentials' });
+    const token = newSessionToken();
+    const exp = new Date(Date.now() + 30*24*3600*1000).toISOString();
+    db.prepare('INSERT INTO sessions (token, user_id, expires_at) VALUES (?, ?, ?)').run(token, u.id, exp);
+    res.json({ token, user: { email: u.email, name: u.name } });
+  } catch (e) { res.status(500).json({ error: 'login failed' }); }
+});
+app.post('/api/account/logout', (req, res) => {
+  const h = req.get('authorization') || '';
+  const m = h.match(/^Bearer\s+(.+)$/i);
+  if (m) db.prepare('DELETE FROM sessions WHERE token = ?').run(m[1]);
+  res.json({ ok: true });
+});
+app.get('/api/account/me', requireAccount, (req, res) => {
+  const orders = db.prepare(`SELECT id, items, amount_total, tracking_number, label_url, status, created_at
+    FROM orders WHERE lower(email) = lower(?) ORDER BY id DESC LIMIT 20`).all(req.account.email);
+  res.json({ user: req.account, orders: orders.map(o => ({ ...o, items: JSON.parse(o.items || '[]') })) });
+});
+
 app.get('/api/health', (req, res) => res.json({
   ok: true,
   catalog: CATALOG.length,
