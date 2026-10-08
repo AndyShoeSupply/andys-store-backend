@@ -47,7 +47,13 @@ const priceOf = (p) => Number(p.price ?? p.currentPrice ?? 0);
 const DISCOUNT = 0.15; // 15% off eBay price on direct store
 
 // ---------- Database ----------
-const db = new DatabaseSync(process.env.DB_PATH || './store.db');
+const DB_PATH = process.env.DB_PATH || './store.db';
+// Render's free plan wipes the local disk on every restart/redeploy.
+// Restore the latest snapshot from Cloudflare R2 first (no-op if R2 isn't configured).
+try {
+  require('child_process').execFileSync(process.execPath, [path.join(__dirname, 'r2restore.js')], { stdio: 'inherit', timeout: 45000 });
+} catch (e) { console.warn('DB restore step failed, continuing with local DB'); }
+const db = new DatabaseSync(DB_PATH);
 db.exec(`
   CREATE TABLE IF NOT EXISTS likes (product_id TEXT PRIMARY KEY, count INTEGER NOT NULL DEFAULT 0);
   CREATE TABLE IF NOT EXISTS like_votes (product_id TEXT, voter TEXT, PRIMARY KEY (product_id, voter));
@@ -88,9 +94,62 @@ db.exec(`
 }
 const invQty = (id) => db.prepare('SELECT qty FROM inventory WHERE product_id = ?').get(String(id))?.qty ?? 0;
 
+// ---------- Durable SQLite snapshots (Cloudflare R2) ----------
+// Likes, reviews, orders, users and sessions live in the local SQLite file, which
+// Render's free plan erases on restart. When R2_* env vars are set, a consistent
+// snapshot (VACUUM INTO) is uploaded every 60s and on shutdown, and restored on boot.
+const R2 = {
+  endpoint: process.env.R2_ENDPOINT || '',
+  bucket: process.env.R2_BUCKET || '',
+  key: process.env.R2_KEY || 'store.db',
+  accessKeyId: process.env.R2_ACCESS_KEY_ID || '',
+  secretAccessKey: process.env.R2_SECRET_ACCESS_KEY || '',
+};
+const r2Enabled = () => !!(R2.endpoint && R2.bucket && R2.accessKeyId && R2.secretAccessKey);
+let _s3 = null;
+function r2client() {
+  if (!r2Enabled()) return null;
+  if (!_s3) {
+    const { S3Client } = require('@aws-sdk/client-s3');
+    _s3 = new S3Client({ region: 'auto', endpoint: R2.endpoint,
+      credentials: { accessKeyId: R2.accessKeyId, secretAccessKey: R2.secretAccessKey } });
+  }
+  return _s3;
+}
+let r2BackupRunning = false;
+async function r2Backup() {
+  if (!r2Enabled() || r2BackupRunning) return;
+  r2BackupRunning = true;
+  try {
+    const tmp = DB_PATH + '.snap.' + process.pid;
+    db.exec(`VACUUM INTO '${tmp.replace(/'/g, "''")}'`);
+    const { PutObjectCommand } = require('@aws-sdk/client-s3');
+    await r2client().send(new PutObjectCommand({ Bucket: R2.bucket, Key: R2.key, Body: fs.createReadStream(tmp) }));
+    fs.unlinkSync(tmp);
+    console.log('r2: snapshot backup ok');
+  } catch (e) {
+    console.warn('r2: backup failed -', e.message || e);
+  } finally {
+    r2BackupRunning = false;
+  }
+}
+if (r2Enabled()) {
+  console.log('r2: durable snapshots enabled');
+  setInterval(() => { r2Backup().catch(() => {}); }, 60000).unref();
+  const r2Shutdown = async () => { try { await r2Backup(); } finally { process.exit(0); } };
+  process.on('SIGTERM', r2Shutdown);
+  process.on('SIGINT', r2Shutdown);
+}
+
 // ---------- Helpers ----------
-const voterOf = (req, productId) =>
-  crypto.createHash('sha256').update((req.ip || '') + '|' + productId + '|' + (process.env.VOTE_SALT || 'andys')).digest('hex');
+// Voter identity: prefer the stable per-device id the store frontend sends
+// (X-Voter header / voter param, stored in the visitor's localStorage), because
+// phone IPs change constantly and IP-only voters made hearts "unlike" themselves.
+const voterOf = (req, productId) => {
+  const v = String((req.body && req.body.voter) || req.query.voter || req.get('x-voter') || '').trim();
+  if (/^[A-Za-z0-9-]{8,64}$/.test(v)) return 'v:' + v;
+  return 'ip:' + crypto.createHash('sha256').update((req.ip || '') + '|' + productId + '|' + (process.env.VOTE_SALT || 'andys')).digest('hex');
+};
 
 // ---------- Likes (public, shared across all visitors) ----------
 app.get('/api/likes/:productId', (req, res) => {
@@ -509,8 +568,9 @@ app.get('/api/account/me', requireAccount, (req, res) => {
 app.get('/api/health', (req, res) => res.json({
   ok: true,
   catalog: CATALOG.length,
-  stripe: !!process.env.STRIPE_SECRET_KEY,
+  stripe: !!process.env.STRIPE_WEBHOOK_SECRET, // checkout uses Payment Links + webhook; no secret key needed
   usps: !!(process.env.USPS_CLIENT_ID && process.env.USPS_CLIENT_SECRET),
+  r2: r2Enabled(),
 }));
 
 app.listen(PORT, () => console.log(`Andy's store backend on :${PORT}`));
