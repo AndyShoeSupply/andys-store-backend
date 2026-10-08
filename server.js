@@ -48,6 +48,8 @@ db.exec(`
   CREATE TABLE IF NOT EXISTS orders (
     id INTEGER PRIMARY KEY AUTOINCREMENT, stripe_session TEXT UNIQUE,
     email TEXT, items TEXT NOT NULL, amount_total INTEGER NOT NULL,
+    ship_to TEXT, tracking_number TEXT, label_url TEXT,
+    notified INTEGER NOT NULL DEFAULT 0,
     status TEXT NOT NULL DEFAULT 'pending', created_at TEXT NOT NULL DEFAULT (datetime('now'))
   );
 `);
@@ -208,14 +210,44 @@ async function onStripeWebhook(req, res) {
     const event = stripe().webhooks.constructEvent(req.body, sig, process.env.STRIPE_WEBHOOK_SECRET);
     if (event.type === 'checkout.session.completed') {
       const s = event.data.object;
-      const items = JSON.parse(s.metadata.items || '[]');
+      // Two flows: legacy cart checkout (metadata.items JSON) and per-product
+      // Payment Links (payment link metadata.product_id copied onto the session).
+      let items = [];
+      try { items = JSON.parse(s.metadata.items || '[]'); } catch { items = []; }
+      if (!items.length && s.metadata.product_id) {
+        items = [{ id: String(s.metadata.product_id), qty: 1 }];
+      }
+      if (!items.length) {
+        console.warn('webhook: session with no recognizable items', s.id);
+        res.json({ received: true, ignored: true });
+        return;
+      }
       for (const it of items) {
         db.prepare('UPDATE inventory SET qty = MAX(0, qty - ?) WHERE product_id = ?').run(Number(it.qty) | 0, String(it.id));
       }
-      db.prepare(`INSERT OR IGNORE INTO orders (stripe_session, email, items, amount_total, status)
-                  VALUES (?, ?, ?, ?, 'paid')`)
-        .run(s.id, s.customer_email || '', JSON.stringify(items), s.amount_total || 0);
+      // Shipping address: Payment Links collect it via shipping_address_collection.
+      const sh = s.shipping_details || {};
+      const shipTo = {
+        name: sh.name || s.metadata.ship_name || '',
+        phone: s.customer_details?.phone || '',
+        line1: sh.address?.line1 || '',
+        line2: sh.address?.line2 || '',
+        city: sh.address?.city || '',
+        state: sh.address?.state || '',
+        zip: sh.address?.postal_code || '',
+        country: sh.address?.country || 'US',
+      };
+      const info = db.prepare(`INSERT OR IGNORE INTO orders
+        (stripe_session, email, items, amount_total, ship_to, status)
+        VALUES (?, ?, ?, ?, ?, 'paid')`)
+        .run(s.id, s.customer_email || s.customer_details?.email || '',
+             JSON.stringify(items), s.amount_total || 0, JSON.stringify(shipTo));
       console.log('Order paid:', s.id, items.length, 'items');
+      // Buy the shipping label right away (async, never blocks the webhook reply).
+      if (info.changes > 0) {
+        const orderId = db.prepare('SELECT id FROM orders WHERE stripe_session = ?').get(s.id)?.id;
+        if (orderId) buyLabelForOrder(orderId).catch(e => console.error('auto-label failed:', e.message));
+      }
     }
     res.json({ received: true });
   } catch (e) {
@@ -280,6 +312,101 @@ app.post('/api/usps/label', async (req, res) => {
   }
 });
 
+// ---------- Shippo: automatic label purchase (commercial USPS rates via API) ----------
+const SHIPPO_API = 'https://api.shippo.com';
+function shippoHeaders() {
+  if (!process.env.SHIPPO_TOKEN) throw new Error('SHIPPO_TOKEN not configured');
+  return { 'Authorization': `ShippoToken ${process.env.SHIPPO_TOKEN}`, 'Content-Type': 'application/json' };
+}
+const SHIP_FROM = {
+  name: process.env.SHIP_FROM_NAME || 'Andys Shoe Supply',
+  street1: process.env.SHIP_FROM_STREET || '223 N Greenwood St',
+  city: process.env.SHIP_FROM_CITY || 'Hereford',
+  state: process.env.SHIP_FROM_STATE || 'TX',
+  zip: process.env.SHIP_FROM_ZIP || '79045',
+  country: 'US',
+  phone: process.env.SHIP_FROM_PHONE || '7025806374',
+  email: process.env.SHIP_FROM_EMAIL || 'roinelpadin@gmail.com',
+};
+
+async function buyLabelForOrder(orderId) {
+  const order = db.prepare('SELECT * FROM orders WHERE id = ?').get(Number(orderId));
+  if (!order || order.status !== 'paid') throw new Error('Paid order not found');
+  if (order.label_url) return { label_url: order.label_url, tracking_number: order.tracking_number }; // already done
+  const items = JSON.parse(order.items || '[]');
+  const shipTo = JSON.parse(order.ship_to || '{}');
+  if (!shipTo.zip || !shipTo.line1) throw new Error('Order is missing the shipping address');
+
+  // Parcel: shoebox 13x8x5 in; weight from the heaviest item (fallback 2.5 lb)
+  let weightLb = 2.5;
+  for (const it of items) {
+    const p = byId.get(String(it.id));
+    const w = Number(p?.weight_lbs);
+    if (Number.isFinite(w) && w > 0) weightLb = Math.max(weightLb, w);
+  }
+  const shipmentRes = await fetch(`${SHIPPO_API}/shipments/`, {
+    method: 'POST', headers: shippoHeaders(),
+    body: JSON.stringify({
+      address_from: SHIP_FROM,
+      address_to: {
+        name: shipTo.name || 'Customer', street1: shipTo.line1, street2: shipTo.line2 || '',
+        city: shipTo.city, state: shipTo.state, zip: shipTo.zip, country: shipTo.country || 'US',
+        phone: shipTo.phone || '', email: order.email || '',
+      },
+      parcels: [{
+        length: '13', width: '8', height: '5',
+        distance_unit: 'in', weight: String(weightLb), mass_unit: 'lb',
+      }],
+      async: false,
+    }),
+  });
+  const shipment = await shipmentRes.json();
+  if (!shipmentRes.ok) throw new Error('Shippo shipment failed: ' + JSON.stringify(shipment).slice(0, 300));
+  const rates = shipment.rates || [];
+  // Prefer USPS Ground Advantage, else cheapest USPS, else cheapest overall
+  const pick = rates.find(r => /ground advantage/i.test(r.servicelevel?.name || '') && /usps/i.test(r.provider || ''))
+    || rates.filter(r => /usps/i.test(r.provider || '')).sort((a, b) => Number(a.amount) - Number(b.amount))[0]
+    || rates.sort((a, b) => Number(a.amount) - Number(b.amount))[0];
+  if (!pick) throw new Error('Shippo returned no rates');
+  const txRes = await fetch(`${SHIPPO_API}/transactions/`, {
+    method: 'POST', headers: shippoHeaders(),
+    body: JSON.stringify({ rate: pick.object_id, label_file_type: 'PDF', async: false }),
+  });
+  const tx = await txRes.json();
+  if (!txRes.ok || tx.status !== 'SUCCESS') throw new Error('Shippo label failed: ' + JSON.stringify(tx).slice(0, 300));
+  db.prepare('UPDATE orders SET tracking_number = ?, label_url = ? WHERE id = ?')
+    .run(tx.tracking_number || '', tx.label_url || '', orderId);
+  console.log(`Label bought for order ${orderId}: ${tx.tracking_number} $${tx.rate}`);
+  return { label_url: tx.label_url, tracking_number: tx.tracking_number };
+}
+
+// Manual trigger (admin): POST { orderId }
+app.post('/api/labels/buy', async (req, res) => {
+  try {
+    res.json(await buyLabelForOrder(req.body.orderId));
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
+// ---------- Orders feed (for the notification job) ----------
+app.get('/api/orders/pending-labels', (req, res) => {
+  const rows = db.prepare(`SELECT id, stripe_session, email, items, amount_total, ship_to,
+    tracking_number, label_url, created_at FROM orders
+    WHERE status = 'paid' AND label_url IS NOT NULL AND notified = 0 ORDER BY id`).all();
+  res.json(rows.map(r => ({ ...r, items: JSON.parse(r.items || '[]'), ship_to: JSON.parse(r.ship_to || '{}') })));
+});
+
+app.post('/api/orders/:id/notified', (req, res) => {
+  db.prepare('UPDATE orders SET notified = 1 WHERE id = ?').run(Number(req.params.id));
+  res.json({ ok: true });
+});
+
+app.get('/api/orders/recent', (req, res) => {
+  const rows = db.prepare(`SELECT id, email, items, amount_total, ship_to, tracking_number,
+    label_url, notified, status, created_at FROM orders ORDER BY id DESC LIMIT 50`).all();
+  res.json(rows);
+});
 // ---------- Inventory (for the private admin panel to sync) ----------
 app.get('/api/inventory', (req, res) => {
   res.json(db.prepare('SELECT product_id AS id, qty FROM inventory').all());

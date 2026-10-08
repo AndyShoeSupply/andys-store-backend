@@ -18,3 +18,7 @@ services:
         value: "*"
       - key: SHIP_FROM_ZIP
         value: "79045"
+      - key: SHIPPO_TOKEN
+        sync: false
+      - key: VOTE_SALT
+        generateValue: true
