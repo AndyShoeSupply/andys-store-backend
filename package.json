@@ -1,0 +1,1 @@
+{"dependencies":{"cors":"^2.8.5","dotenv":"^16.4.7","express":"^4.21.2","stripe":"^17.7.0"},"description":"Backend for Andy's Shoe Supply store: Stripe checkout, USPS rates/labels, public reviews and likes.","main":"server.js","name":"andys-store-backend","scripts":{"start":"node server.js"},"version":"1.0.0"}
