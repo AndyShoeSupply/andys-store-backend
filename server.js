@@ -433,17 +433,10 @@ const SHIP_FROM = {
   email: process.env.SHIP_FROM_EMAIL || 'roinelpadin@gmail.com',
 };
 
-async function buyLabelForOrder(orderId) {
-  const order = db.prepare('SELECT * FROM orders WHERE id = ?').get(Number(orderId));
-  if (!order || order.status !== 'paid') throw new Error('Paid order not found');
-  if (order.label_url) return { label_url: order.label_url, tracking_number: order.tracking_number }; // already done
-  const items = JSON.parse(order.items || '[]');
-  const shipTo = JSON.parse(order.ship_to || '{}');
-  if (!shipTo.zip || !shipTo.line1) throw new Error('Order is missing the shipping address');
-
-  // Parcel: per-product box size + weight (by department); fallback 13x8x5 in, 2.5 lb
+// Parcel for an order's items: box + weight of the heaviest product; fallback 13x8x5 in, 2.5 lb
+function parcelForItems(items) {
   let weightLb = 2.5, boxL = 13, boxW = 8, boxH = 5;
-  for (const it of items) {
+  for (const it of items || []) {
     const p = byId.get(String(it.id));
     const w = Number(p?.weight_lbs);
     if (Number.isFinite(w) && w > 0 && w >= weightLb) {
@@ -452,10 +445,19 @@ async function buyLabelForOrder(orderId) {
       if (Number(pc.l) > 0) boxL = Number(pc.l);
       if (Number(pc.w) > 0) boxW = Number(pc.w);
       if (Number(pc.h) > 0) boxH = Number(pc.h);
-    } else if (Number.isFinite(w) && w > 0 && w > weightLb) {
-      weightLb = w;
     }
   }
+  return { weightLb, boxL, boxW, boxH };
+}
+
+async function buyLabelShippo(orderId) {
+  const order = db.prepare('SELECT * FROM orders WHERE id = ?').get(Number(orderId));
+  if (!order || order.status !== 'paid') throw new Error('Paid order not found');
+  if (order.label_url) return { label_url: order.label_url, tracking_number: order.tracking_number }; // already done
+  const items = JSON.parse(order.items || '[]');
+  const shipTo = JSON.parse(order.ship_to || '{}');
+  if (!shipTo.zip || !shipTo.line1) throw new Error('Order is missing the shipping address');
+  const { weightLb, boxL, boxW, boxH } = parcelForItems(items);
   const shipmentRes = await fetch(`${SHIPPO_API}/shipments/`, {
     method: 'POST', headers: shippoHeaders(),
     body: JSON.stringify({
@@ -491,6 +493,116 @@ async function buyLabelForOrder(orderId) {
   console.log(`Label bought for order ${orderId}: ${tx.tracking_number} $${tx.rate}`);
   return { label_url: tx.label_url, tracking_number: tx.tracking_number };
 }
+
+// ---------- EasyPost: rates + label purchase (no manual approval gate; key active at signup) ----------
+const EASYPOST_API = 'https://api.easypost.com/v2';
+function epHeaders() {
+  if (!process.env.EASYPOST_API_KEY) throw new Error('EASYPOST_API_KEY not configured');
+  return {
+    'Authorization': 'Basic ' + Buffer.from(process.env.EASYPOST_API_KEY + ':').toString('base64'),
+    'Content-Type': 'application/json',
+  };
+}
+function epPickRate(rates) {
+  const usps = rates.filter(r => /usps/i.test(r.carrier || ''));
+  return rates.find(r => /usps/i.test(r.carrier || '') && /ground advantage/i.test(r.service || ''))
+    || usps.sort((a, b) => Number(a.rate) - Number(b.rate))[0]
+    || rates.slice().sort((a, b) => Number(a.rate) - Number(b.rate))[0]
+    || null;
+}
+async function epCreateShipment(toAddr, parcel) {
+  const r = await fetch(`${EASYPOST_API}/shipments`, {
+    method: 'POST', headers: epHeaders(),
+    body: JSON.stringify({
+      shipment: {
+        from_address: {
+          name: SHIP_FROM.name, street1: SHIP_FROM.street1, city: SHIP_FROM.city,
+          state: SHIP_FROM.state, zip: SHIP_FROM.zip, country: SHIP_FROM.country,
+          phone: SHIP_FROM.phone, email: SHIP_FROM.email,
+        },
+        to_address: toAddr,
+        parcel: {
+          length: parcel.boxL, width: parcel.boxW, height: parcel.boxH,
+          weight: Math.max(1, Math.round(parcel.weightLb * 16)), // EasyPost weighs in ounces
+        },
+        options: { label_format: 'PDF', label_size: '4x6', currency: 'USD' },
+      },
+    }),
+  });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error('EasyPost shipment failed: ' + JSON.stringify(j.error || j).slice(0, 300));
+  if (!Array.isArray(j.rates) || !j.rates.length) {
+    const msgs = (j.messages || []).filter(m => m.type === 'rate_error')
+      .map(m => `${m.carrier}: ${m.message}`).join('; ');
+    throw new Error('EasyPost returned no rates' + (msgs ? ': ' + msgs.slice(0, 250) : ''));
+  }
+  return j;
+}
+
+async function buyLabelEasyPost(orderId) {
+  const order = db.prepare('SELECT * FROM orders WHERE id = ?').get(Number(orderId));
+  if (!order || order.status !== 'paid') throw new Error('Paid order not found');
+  if (order.label_url) return { label_url: order.label_url, tracking_number: order.tracking_number }; // already done
+  const items = JSON.parse(order.items || '[]');
+  const shipTo = JSON.parse(order.ship_to || '{}');
+  if (!shipTo.zip || !shipTo.line1) throw new Error('Order is missing the shipping address');
+  const parcel = parcelForItems(items);
+  const shipment = await epCreateShipment({
+    name: shipTo.name || 'Customer', street1: shipTo.line1, street2: shipTo.line2 || '',
+    city: shipTo.city, state: shipTo.state, zip: shipTo.zip, country: shipTo.country || 'US',
+    phone: shipTo.phone || '', email: order.email || '',
+  }, parcel);
+  const pick = epPickRate(shipment.rates);
+  if (!pick) throw new Error('EasyPost returned no rates');
+  const buyRes = await fetch(`${EASYPOST_API}/shipments/${shipment.id}/buy`, {
+    method: 'POST', headers: epHeaders(),
+    body: JSON.stringify({ rate: { id: pick.id } }),
+  });
+  const bought = await buyRes.json().catch(() => ({}));
+  if (!buyRes.ok || !bought.postage_label?.label_url) {
+    throw new Error('EasyPost label failed: ' + JSON.stringify(bought.error || bought).slice(0, 300));
+  }
+  db.prepare('UPDATE orders SET tracking_number = ?, label_url = ? WHERE id = ?')
+    .run(bought.tracking_code || '', bought.postage_label.label_url, orderId);
+  const sr = bought.selected_rate || pick;
+  console.log(`Label bought (EasyPost) for order ${orderId}: ${bought.tracking_code} ${sr.carrier} ${sr.service} $${sr.rate}`);
+  return { label_url: bought.postage_label.label_url, tracking_number: bought.tracking_code || '', carrier: sr.carrier, service: sr.service, rate: Number(sr.rate) };
+}
+
+// Label dispatcher: EasyPost when its key is set, Shippo as fallback
+async function buyLabelForOrder(orderId) {
+  if (process.env.EASYPOST_API_KEY) return buyLabelEasyPost(orderId);
+  if (process.env.SHIPPO_TOKEN) return buyLabelShippo(orderId);
+  throw new Error('No shipping provider configured (set EASYPOST_API_KEY or SHIPPO_TOKEN)');
+}
+
+// Public shipping quote for the checkout: POST { to: {name?, street1, city, state, zip}, items: [{id, qty}] }
+app.post('/api/shipping/quote', async (req, res) => {
+  try {
+    if (!process.env.EASYPOST_API_KEY && !process.env.SHIPPO_TOKEN) {
+      return res.status(503).json({ error: 'Shipping provider not configured yet' });
+    }
+    const to = req.body.to || {};
+    const items = Array.isArray(req.body.items) ? req.body.items : [];
+    for (const f of ['street1', 'city', 'state', 'zip']) {
+      if (!String(to[f] || '').trim()) return res.status(400).json({ error: `Missing address field: ${f}` });
+    }
+    if (!items.length) return res.status(400).json({ error: 'Empty items' });
+    for (const it of items) if (!byId.get(String(it.id))) return res.status(400).json({ error: `Unknown product ${it.id}` });
+    if (!process.env.EASYPOST_API_KEY) return res.status(503).json({ error: 'Quote provider not configured yet' });
+    const parcel = parcelForItems(items);
+    const shipment = await epCreateShipment({
+      name: to.name || 'Customer', street1: to.street1, street2: to.street2 || '',
+      city: to.city, state: to.state, zip: String(to.zip), country: to.country || 'US', phone: to.phone || '',
+    }, parcel);
+    const rates = shipment.rates
+      .map(r => ({ carrier: r.carrier, service: r.service, rate: Number(r.rate), currency: r.currency || 'USD', rate_id: r.id }))
+      .sort((a, b) => a.rate - b.rate);
+    res.json({ rates, parcel: { weight_oz: Math.max(1, Math.round(parcel.weightLb * 16)), length_in: parcel.boxL, width_in: parcel.boxW, height_in: parcel.boxH } });
+  } catch (e) {
+    res.status(500).json({ error: 'Shipping quote error', detail: e.message });
+  }
+});
 
 // Manual trigger (admin): POST { orderId }
 app.post('/api/labels/buy', requireAdmin, async (req, res) => {
@@ -597,6 +709,7 @@ app.get('/api/health', (req, res) => res.json({
   catalog: CATALOG.length,
   stripe: !!process.env.STRIPE_WEBHOOK_SECRET, // checkout uses Payment Links + webhook; no secret key needed
   usps: !!(process.env.USPS_CLIENT_ID && process.env.USPS_CLIENT_SECRET),
+  shipping: process.env.EASYPOST_API_KEY ? 'easypost' : (process.env.SHIPPO_TOKEN ? 'shippo' : 'none'),
   r2: r2Enabled(),
 }));
 
