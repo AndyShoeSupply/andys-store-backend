@@ -57,7 +57,7 @@
   "url": "https://www.ebay.com/itm/398409123317",
   "brand": "Crocs",
   "department": "Kids",
-  "qty": 1,
+  "qty": 2,
   "payment_url": "https://buy.stripe.com/8x24gz9O27U12TH6qddZ647",
   "weight_lbs": 0.5,
   "weight_estimated": false,
@@ -67,11 +67,23 @@
    "w": 8,
    "h": 4
   },
-  "size": "US 5"
+  "size": "US 5, US 6",
+  "variants": [
+   {
+    "size": "5",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/dRm14n2lAgqxfGteWJdZ73b"
+   },
+   {
+    "size": "6",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/6oU28raS62zHbqdcOBdZ73c"
+   }
+  ]
  },
  {
   "id": "398408803116",
-  "title": "Chuck Taylor All Star 2V Easy-On — Valentine’s Day 2025",
+  "title": "Chuck Taylor All Star 2V Easy-On \u2014 Valentine\u2019s Day 2025",
   "price": "$25.00",
   "price_direct": 21.25,
   "image": "https://i.ebayimg.com/images/g/EhQAAeSwJs5qrcEB/s-l300.webp",
@@ -82,7 +94,7 @@
   "payment_url": "https://buy.stripe.com/9B6bJ1bWa1vD9i5bKxdZ70f",
   "weight_lbs": 0.75,
   "weight_estimated": false,
-  "description": "You can't go wrong with the Chuck Taylor All Star 2V Easy-On — Valentine’s Day 2025, a unisex sneaker made to be worn on repeat. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "You can't go wrong with the Chuck Taylor All Star 2V Easy-On \u2014 Valentine\u2019s Day 2025, a unisex sneaker made to be worn on repeat. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -92,24 +104,46 @@
  },
  {
   "id": "398408950883",
-  "title": "Minnie Mouse “Minie High Top” – Toddler",
+  "title": "Minnie Mouse \u201cMinie High Top\u201d \u2013 Toddler",
   "price": "$26.00",
   "price_direct": 22.1,
   "image": "https://i.ebayimg.com/images/g/xjsAAeSwR2JqrdlE/s-l300.webp",
   "url": "https://www.ebay.com/itm/398408950883",
   "brand": "Other",
   "department": "Kids",
-  "qty": 1,
+  "qty": 5,
   "payment_url": "https://buy.stripe.com/3cIbJ15xM7U1fGtcOBdZ709",
   "weight_lbs": 0.75,
   "weight_estimated": false,
-  "description": "The Minnie Mouse “Minie High Top” – Toddler is a go-to kids' sneaker that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "The Minnie Mouse \u201cMinie High Top\u201d \u2013 Toddler is a go-to kids' sneaker that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 8,
    "h": 4
   },
-  "size": "US 9"
+  "size": "US 6, US 8, US 9, US 10",
+  "variants": [
+   {
+    "size": "6",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/cNiaEXe4ifmt79XcOBdZ73d"
+   },
+   {
+    "size": "8",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/bJe7sLe4i4HPcuh3e1dZ73e"
+   },
+   {
+    "size": "9",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/dRmfZh0dsgqx1PD29XdZ73f"
+   },
+   {
+    "size": "10",
+    "qty": 2,
+    "payment_url": "https://buy.stripe.com/14AfZh6BQfmt65T29XdZ73g"
+   }
+  ]
  },
  {
   "id": "920008954662",
@@ -133,7 +167,7 @@
   "payment_url": "https://buy.stripe.com/14A14ne4i3DLeCp29XdZ607",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Reebok Rush Runner 5 SYN Kids Black White Running Sneakers US — a kids' sneaker with a clean, standout look. Listed here in size 1. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Reebok Rush Runner 5 SYN Kids Black White Running Sneakers US \u2014 a kids' sneaker with a clean, standout look. Listed here in size 1. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -213,50 +247,67 @@
   "url": "https://www.ebay.com/itm/398408970955",
   "brand": "Other",
   "department": "Unisex",
-  "qty": 2,
+  "qty": 3,
   "payment_url": "https://buy.stripe.com/9B600j3pE3DL0Lzg0NdZ708",
   "variants": [
-   {
-    "size": "10",
-    "qty": 1,
-    "payment_url": "https://buy.stripe.com/3cI7sL6BQb6d2THbKxdZ72o"
-   },
    {
     "size": "9",
     "qty": 1,
     "payment_url": "https://buy.stripe.com/7sYcN5gcqcahfGt3e1dZ72p"
+   },
+   {
+    "size": "10",
+    "qty": 2,
+    "payment_url": "https://buy.stripe.com/3cI7sL6BQb6d2THbKxdZ72o"
    }
   ],
   "weight_lbs": 0.625,
   "weight_estimated": false,
-  "description": "The PAW PATROL HIGH TOP is a go-to unisex sneaker that goes with just about anything. Select your size from the options — each size has its own Buy Now button. Brand new and comes with its box.",
+  "description": "The PAW PATROL HIGH TOP is a go-to unisex sneaker that goes with just about anything. Select your size from the options \u2014 each size has its own Buy Now button. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
    "h": 6
   },
-  "size": "US 10"
+  "size": "US 9, US 10"
  },
  {
   "id": "398408862793",
-  "title": "Converse Chuck Taylor All Star 2V Low – Toddler",
+  "title": "Converse Chuck Taylor All Star 2V Low \u2013 Toddler",
   "price": "$28.00",
   "price_direct": 23.8,
   "image": "https://i.ebayimg.com/images/g/FJEAAeSw34pqrxLn/s-l300.webp",
   "url": "https://www.ebay.com/itm/398408862793",
   "brand": "Converse",
   "department": "Kids",
-  "qty": 1,
+  "qty": 3,
   "payment_url": "https://buy.stripe.com/bJe3cv8JYeip3XLbKxdZ70c",
   "weight_lbs": 0.75,
   "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the Converse Chuck Taylor All Star 2V Low – Toddler, a kids' sneaker in a head-turning colorway. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "Add some fresh style to your rotation with the Converse Chuck Taylor All Star 2V Low \u2013 Toddler, a kids' sneaker in a head-turning colorway. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 8,
    "h": 4
   },
-  "size": "US 4"
+  "size": "US 4, US 6, US 8",
+  "variants": [
+   {
+    "size": "4",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/eVqcN55xM0rz3XLg0NdZ733"
+   },
+   {
+    "size": "6",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/aFa3cv3pE4HP79X01PdZ734"
+   },
+   {
+    "size": "8",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/5kQeVd5xMcah8e1bKxdZ735"
+   }
+  ]
  },
  {
   "id": "398408837402",
@@ -467,7 +518,7 @@
   "payment_url": "https://buy.stripe.com/eVqaEXf8meip1PDg0NdZ633",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "Meet the Vans Old Skool V Glitter — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "Meet the Vans Old Skool V Glitter \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 4,
@@ -484,7 +535,7 @@
   "url": "https://www.ebay.com/itm/398409169987",
   "brand": "Crocs",
   "department": "Kids",
-  "qty": 1,
+  "qty": 4,
   "payment_url": "https://buy.stripe.com/eVq14n2lAdel51PcOBdZ642",
   "weight_lbs": 0.5,
   "weight_estimated": false,
@@ -494,7 +545,24 @@
    "w": 8,
    "h": 4
   },
-  "size": "US 6"
+  "size": "US 1, US 6, US 8",
+  "variants": [
+   {
+    "size": "1",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/3cI14naS64HPfGtbKxdZ736"
+   },
+   {
+    "size": "6",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/00w6oH0dsb6d3XL3e1dZ737"
+   },
+   {
+    "size": "8",
+    "qty": 2,
+    "payment_url": "https://buy.stripe.com/eVqdR98JY0rz9i55m9dZ738"
+   }
+  ]
  },
  {
   "id": "398409147466",
@@ -551,7 +619,7 @@
   "payment_url": "https://buy.stripe.com/aFa8wP9O27U179XbKxdZ645",
   "weight_lbs": 0.5,
   "weight_estimated": false,
-  "description": "Meet the Crocs Unisex Kids Casual Clog — a kids' clog with a clean, standout look. Available in 10. Comes brand new with its box included.",
+  "description": "Meet the Crocs Unisex Kids Casual Clog \u2014 a kids' clog with a clean, standout look. Available in 10. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 6,
@@ -582,7 +650,7 @@
  },
  {
   "id": "398409104372",
-  "title": "Crocs Classic Valentine’s Day Clog Toddler",
+  "title": "Crocs Classic Valentine\u2019s Day Clog Toddler",
   "price": "$29.00",
   "price_direct": 24.65,
   "image": "https://i.ebayimg.com/images/g/hXYAAeSwXFlqrenf/s-l300.webp",
@@ -593,7 +661,7 @@
   "payment_url": "https://buy.stripe.com/14A9ATgcq5LTam9eWJdZ700",
   "weight_lbs": 0.5,
   "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the Crocs Classic Valentine’s Day Clog Toddler, a kids' clog in a head-turning colorway. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Add some fresh style to your rotation with the Crocs Classic Valentine\u2019s Day Clog Toddler, a kids' clog in a head-turning colorway. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -614,7 +682,7 @@
   "payment_url": "https://buy.stripe.com/8x2eVd7FU6PX51P4i5dZ702",
   "weight_lbs": 0.5,
   "weight_estimated": false,
-  "description": "Meet the Crocs Unisex Kids Casual Clog — a kids' clog with a clean, standout look. Sized at 10. Brand new and comes with its box.",
+  "description": "Meet the Crocs Unisex Kids Casual Clog \u2014 a kids' clog with a clean, standout look. Sized at 10. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 12,
@@ -652,12 +720,12 @@
   "url": "https://www.ebay.com/itm/398408881315",
   "brand": "Converse",
   "department": "Unisex",
-  "qty": 4,
+  "qty": 9,
   "payment_url": "https://buy.stripe.com/7sY4gzd0e5LTfGt8yldZ70b",
   "variants": [
    {
     "size": "6",
-    "qty": 1,
+    "qty": 3,
     "payment_url": "https://buy.stripe.com/aFafZh0ds0rzam915TdZ72t"
    },
    {
@@ -672,19 +740,19 @@
    },
    {
     "size": "10",
-    "qty": 1,
+    "qty": 4,
     "payment_url": "https://buy.stripe.com/14A14n6BQcah0Lz01PdZ72w"
    }
   ],
   "weight_lbs": 0.75,
   "weight_estimated": false,
-  "description": "You can't go wrong with the Converse Chuck Taylor All Star Strawberries Easy-On, a unisex sneaker made to be worn on repeat. Select your size from the options — each size has its own Buy Now button. Ships brand new in its box.",
+  "description": "You can't go wrong with the Converse Chuck Taylor All Star Strawberries Easy-On, a unisex sneaker made to be worn on repeat. Select your size from the options \u2014 each size has its own Buy Now button. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
    "h": 6
   },
-  "size": "US 6"
+  "size": "US 6, US 8, US 9, US 10"
  },
  {
   "id": "398382884584",
@@ -716,12 +784,12 @@
   "url": "https://www.ebay.com/itm/398366266809",
   "brand": "Crocs",
   "department": "Unisex",
-  "qty": 3,
+  "qty": 4,
   "payment_url": "https://buy.stripe.com/8x23cv1hweipgKx7uhdZ71O",
   "variants": [
    {
     "size": "6",
-    "qty": 1,
+    "qty": 2,
     "payment_url": "https://buy.stripe.com/dRm4gz3pE6PXgKx15TdZ72B"
    },
    {
@@ -737,7 +805,7 @@
   ],
   "weight_lbs": 0.5,
   "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the Crocs Classic Butterfly Graphic Clog Butterfly Print, a unisex clog in a head-turning colorway. Select your size from the options — each size has its own Buy Now button. Comes brand new with its box included.",
+  "description": "Add some fresh style to your rotation with the Crocs Classic Butterfly Graphic Clog Butterfly Print, a unisex clog in a head-turning colorway. Select your size from the options \u2014 each size has its own Buy Now button. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -754,17 +822,29 @@
   "url": "https://www.ebay.com/itm/398363801611",
   "brand": "Eddie Bauer",
   "department": "Women",
-  "qty": 1,
+  "qty": 2,
   "payment_url": "https://buy.stripe.com/8x2bJ14tI7U1dyl4i5dZ71Y",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "Meet the Eddie Bauer Surrey Women's Blue Lace-Up Loafer Shoes Casual — a women's shoe with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "Meet the Eddie Bauer Surrey Women's Blue Lace-Up Loafer Shoes Casual \u2014 a women's shoe with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 14,
    "w": 12,
    "h": 9
   },
-  "size": "US 7"
+  "size": "US 7, US 10",
+  "variants": [
+   {
+    "size": "7",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/eVq4gz2lA0rz0Lz7uhdZ73j"
+   },
+   {
+    "size": "10",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/14A9AT1hwgqx9i57uhdZ73k"
+   }
+  ]
  },
  {
   "id": "398408917829",
@@ -775,12 +855,12 @@
   "url": "https://www.ebay.com/itm/398408917829",
   "brand": "Skechers",
   "department": "Unisex",
-  "qty": 3,
+  "qty": 5,
   "payment_url": "https://buy.stripe.com/8x2dR98JY1vD8e17uhdZ70a",
   "variants": [
    {
     "size": "12",
-    "qty": 1,
+    "qty": 3,
     "payment_url": "https://buy.stripe.com/00w00j2lA1vD9i56qddZ72q"
    },
    {
@@ -796,13 +876,13 @@
   ],
   "weight_lbs": 0.75,
   "weight_estimated": false,
-  "description": "Meet the Skechers S-Lights Unicorn Chaser — a unisex sneaker with a clean, standout look. Select your size from the options — each size has its own Buy Now button. Ships brand new in its box.",
+  "description": "Meet the Skechers S-Lights Unicorn Chaser \u2014 a unisex sneaker with a clean, standout look. Select your size from the options \u2014 each size has its own Buy Now button. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 6,
    "h": 4
   },
-  "size": "US 12"
+  "size": "US 12, US 1, US 2"
  },
  {
   "id": "920005570958",
@@ -937,7 +1017,7 @@
   "payment_url": "https://buy.stripe.com/4gMaEX4tI1vD1PDeWJdZ61Q",
   "weight_lbs": 0.75,
   "weight_estimated": false,
-  "description": "Meet the New Balance 1000 — a kids' sneaker with a clean, standout look. This pair is a 4C. Comes brand new with its box included.",
+  "description": "Meet the New Balance 1000 \u2014 a kids' sneaker with a clean, standout look. This pair is a 4C. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -954,29 +1034,29 @@
   "url": "https://www.ebay.com/itm/398438879920",
   "brand": "New Balance",
   "department": "Kids",
-  "qty": 2,
+  "qty": 3,
   "payment_url": "https://buy.stripe.com/28EdR9e4i6PX8e13e1dZ61R",
   "variants": [
-   {
-    "size": "9",
-    "qty": 1,
-    "payment_url": "https://buy.stripe.com/28E9AT1hwa29fGt9CpdZ72j"
-   },
    {
     "size": "4",
     "qty": 1,
     "payment_url": "https://buy.stripe.com/dRmdR92lAfmt79X8yldZ72k"
+   },
+   {
+    "size": "9",
+    "qty": 2,
+    "payment_url": "https://buy.stripe.com/28E9AT1hwa29fGt9CpdZ72j"
    }
   ],
   "weight_lbs": 0.75,
   "weight_estimated": false,
-  "description": "Meet the New Balance 1000 Bungee Lace — a kids' sneaker with a clean, standout look. Select your size from the options — each size has its own Buy Now button. Brand new and comes with its box.",
+  "description": "Meet the New Balance 1000 Bungee Lace \u2014 a kids' sneaker with a clean, standout look. Select your size from the options \u2014 each size has its own Buy Now button. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 6,
    "h": 4
   },
-  "size": "US 9"
+  "size": "US 4, US 9"
  },
  {
   "id": "398435952337",
@@ -1001,7 +1081,7 @@
  },
  {
   "id": "398435842786",
-  "title": "Vans Knu Skool – Leopard Pop Black/Multi 12C",
+  "title": "Vans Knu Skool \u2013 Leopard Pop Black/Multi 12C",
   "price": "$33.00",
   "price_direct": 28.05,
   "image": "https://i.ebayimg.com/images/g/zN0AAeSwy5ZquJMo/s-l300.webp",
@@ -1012,7 +1092,7 @@
   "payment_url": "https://buy.stripe.com/5kQ9AT7FU3DL8e1bKxdZ623",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the Vans Knu Skool – Leopard Pop Black/Multi, a kids' sneaker in a head-turning colorway. This pair is a 12C. New with box, ready to wear straight out of the package.",
+  "description": "Add some fresh style to your rotation with the Vans Knu Skool \u2013 Leopard Pop Black/Multi, a kids' sneaker in a head-turning colorway. This pair is a 12C. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -1075,7 +1155,7 @@
   "payment_url": "https://buy.stripe.com/6oUaEX3pEfmtdyl15TdZ62j",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "Meet the adidas Superstar Low Triple White — a kids' sneaker with a clean, standout look. Available in 7K. New with box, ready to wear straight out of the package.",
+  "description": "Meet the adidas Superstar Low Triple White \u2014 a kids' sneaker with a clean, standout look. Available in 7K. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -1096,7 +1176,7 @@
   "payment_url": "https://buy.stripe.com/9B64gzf8m2zH8e1cOBdZ62n",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "Meet the adidas Superstar Low Triple White — a kids' sneaker with a clean, standout look. Available in 5K. New with box, ready to wear straight out of the package.",
+  "description": "Meet the adidas Superstar Low Triple White \u2014 a kids' sneaker with a clean, standout look. Available in 5K. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -1148,45 +1228,45 @@
  },
  {
   "id": "398409040451",
-  "title": "Minecraft Creeper Canvas Slip-On – Kids,",
+  "title": "Minecraft Creeper Canvas Slip-On \u2013 Kids,",
   "price": "$33.00",
   "price_direct": 28.05,
   "image": "https://i.ebayimg.com/images/g/VP4AAeSwSyBqreOZ/s-l300.webp",
   "url": "https://www.ebay.com/itm/398409040451",
   "brand": "Other",
   "department": "Kids",
-  "qty": 3,
+  "qty": 4,
   "payment_url": "https://buy.stripe.com/3cIbJ1f8m0rz2TH01PdZ704",
   "variants": [
    {
-    "size": "12",
+    "size": "1",
     "qty": 1,
+    "payment_url": "https://buy.stripe.com/00w7sLgcq5LTam901PdZ72n"
+   },
+   {
+    "size": "12",
+    "qty": 2,
     "payment_url": "https://buy.stripe.com/6oU5kD7FUa291PD01PdZ72l"
    },
    {
     "size": "13",
     "qty": 1,
     "payment_url": "https://buy.stripe.com/14A00j5xM6PXcuh9CpdZ72m"
-   },
-   {
-    "size": "1",
-    "qty": 1,
-    "payment_url": "https://buy.stripe.com/00w7sLgcq5LTam901PdZ72n"
    }
   ],
   "weight_lbs": 0.75,
   "weight_estimated": false,
-  "description": "The Minecraft Creeper Canvas Slip-On – Kids brings classic style to your everyday lineup. Select your size from the options — each size has its own Buy Now button. Comes brand new with its box included.",
+  "description": "The Minecraft Creeper Canvas Slip-On \u2013 Kids brings classic style to your everyday lineup. Select your size from the options \u2014 each size has its own Buy Now button. Comes brand new with its box included.",
   "parcel_in": {
    "l": 14,
    "w": 12,
    "h": 9
   },
-  "size": "US 12"
+  "size": "US 1, US 12, US 13"
  },
  {
   "id": "398409013132",
-  "title": "Minecraft Creeper Canvas Slip-On – Kids,",
+  "title": "Minecraft Creeper Canvas Slip-On \u2013 Kids,",
   "price": "$33.00",
   "price_direct": 28.05,
   "image": "https://i.ebayimg.com/images/g/vuUAAeSwLcNqrd~T/s-l300.webp",
@@ -1197,7 +1277,7 @@
   "payment_url": "https://buy.stripe.com/3cI8wP8JYa292THbKxdZ705",
   "weight_lbs": 0.75,
   "weight_estimated": false,
-  "description": "The Minecraft Creeper Canvas Slip-On – Kids is a go-to kids' sneaker that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "The Minecraft Creeper Canvas Slip-On \u2013 Kids is a go-to kids' sneaker that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -1317,7 +1397,7 @@
   "payment_url": "https://buy.stripe.com/00w00jbWagqx3XLeWJdZ605",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Reebok Energen Lux Black Pure Grey W — a women's sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Reebok Energen Lux Black Pure Grey W \u2014 a women's sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -1422,7 +1502,7 @@
   "payment_url": "https://buy.stripe.com/9B6dR9gcq3DLcuhaGtdZ62w",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "Meet the adidas Superstar Low Triple White — a kids' sneaker with a clean, standout look. Available in 12k. Ships brand new in its box.",
+  "description": "Meet the adidas Superstar Low Triple White \u2014 a kids' sneaker with a clean, standout look. Available in 12k. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -1443,7 +1523,7 @@
   "payment_url": "https://buy.stripe.com/dRmcN59O2deleCp5m9dZ62x",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "Meet the adidas Superstar Low Triple White — a kids' sneaker with a clean, standout look. Sized at 10k. Comes brand new with its box included.",
+  "description": "Meet the adidas Superstar Low Triple White \u2014 a kids' sneaker with a clean, standout look. Sized at 10k. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -1485,7 +1565,7 @@
   "payment_url": "https://buy.stripe.com/cNi7sL8JY2zHcuh7uhdZ62R",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the New Balance B480 Lace — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the New Balance B480 Lace \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -1527,7 +1607,7 @@
   "payment_url": "https://buy.stripe.com/6oU3cv7FU0rz8e129XdZ63a",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Nizza RF Triple White — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "Meet the Adidas Nizza RF Triple White \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -1597,7 +1677,7 @@
   "payment_url": "https://buy.stripe.com/3cI00j6BQb6dcuhg0NdZ608",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Reebok Smash Edge Kids Sneakers in beautiful light pink and whit — a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "Meet the Reebok Smash Edge Kids Sneakers in beautiful light pink and whit \u2014 a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -1705,7 +1785,7 @@
  },
  {
   "id": "398435731172",
-  "title": "Vans Sport Low – Black/White",
+  "title": "Vans Sport Low \u2013 Black/White",
   "price": "$39.00",
   "price_direct": 33.15,
   "image": "https://i.ebayimg.com/images/g/LJMAAeSw-htquIgN/s-l300.webp",
@@ -1716,7 +1796,7 @@
   "payment_url": "https://buy.stripe.com/9B68wPf8mgqxbqdcOBdZ629",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Vans Sport Low – Black/White — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Vans Sport Low \u2013 Black/White \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -1737,7 +1817,7 @@
   "payment_url": "https://buy.stripe.com/9B67sLbWab6dbqd7uhdZ62b",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "Meet the Air Jordan Flight Court Black Anthracite — a kids' sneaker with a clean, standout look. This pair is a 8C. Comes brand new with its box included.",
+  "description": "Meet the Air Jordan Flight Court Black Anthracite \u2014 a kids' sneaker with a clean, standout look. This pair is a 8C. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -1779,7 +1859,7 @@
   "payment_url": "https://buy.stripe.com/4gM4gz6BQgqx9i5g0NdZ62m",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the adidas Superstar II — a kids' sneaker with a clean, standout look. Sized at 7k. Ships brand new in its box.",
+  "description": "Meet the adidas Superstar II \u2014 a kids' sneaker with a clean, standout look. Sized at 7k. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -1831,7 +1911,7 @@
  },
  {
   "id": "398432784285",
-  "title": "adidas Samba OG EL I – Black / White / Gum 6K",
+  "title": "adidas Samba OG EL I \u2013 Black / White / Gum 6K",
   "price": "$39.00",
   "price_direct": 33.15,
   "image": "https://i.ebayimg.com/images/g/CDsAAeSw7xdqtzf5/s-l300.webp",
@@ -1842,7 +1922,7 @@
   "payment_url": "https://buy.stripe.com/8x200jbWa7U151P4i5dZ62A",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the adidas Samba OG EL I – Black / White / Gum — a kids' sneaker with a clean, standout look. Listed here in size 6K. Comes brand new with its box included.",
+  "description": "Meet the adidas Samba OG EL I \u2013 Black / White / Gum \u2014 a kids' sneaker with a clean, standout look. Listed here in size 6K. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -2010,7 +2090,7 @@
   "payment_url": "https://buy.stripe.com/3cI28r9O28Y5bqd7uhdZ62J",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Samba OG Kids Preschool Bright Red Cream White — a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Adidas Samba OG Kids Preschool Bright Red Cream White \u2014 a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12.0,
    "w": 10.0,
@@ -2115,7 +2195,7 @@
   "payment_url": "https://buy.stripe.com/3cI28r7FU5LTam97uhdZ710",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the New Columbia Crestwood Men's Hiking Shoes Gray/Black US Mens 14 BM4595 - 011 — a men's shoe with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "Meet the New Columbia Crestwood Men's Hiking Shoes Gray/Black US Mens 14 BM4595 - 011 \u2014 a men's shoe with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 15,
    "w": 11,
@@ -2125,7 +2205,7 @@
  },
  {
   "id": "398389568293",
-  "title": "adidas Women’s VL Court 3.0",
+  "title": "adidas Women\u2019s VL Court 3.0",
   "price": "$39.00",
   "price_direct": 33.15,
   "image": "https://i.ebayimg.com/images/g/ig8AAeSwKcBqpiZT/s-l300.webp",
@@ -2136,7 +2216,7 @@
   "payment_url": "https://buy.stripe.com/3cI28r5xMgqx79X8yldZ71f",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "You can't go wrong with the adidas Women’s VL Court 3.0, a women's sneaker made to be worn on repeat. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "You can't go wrong with the adidas Women\u2019s VL Court 3.0, a women's sneaker made to be worn on repeat. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 7,
@@ -2178,7 +2258,7 @@
   "payment_url": "https://buy.stripe.com/00waEXaS6cah0Lz7uhdZ723",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Nike Jr Mercurial Vapor 16 Little Kids Soccer Cleats — a kids' cleat with a clean, standout look. Sized at 12c. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Nike Jr Mercurial Vapor 16 Little Kids Soccer Cleats \u2014 a kids' cleat with a clean, standout look. Sized at 12c. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -2343,7 +2423,7 @@
  },
  {
   "id": "398414730510",
-  "title": "Brahma Men’s Combustion 6\" Steel Toe Work Boots",
+  "title": "Brahma Men\u2019s Combustion 6\" Steel Toe Work Boots",
   "price": "$40.00",
   "price_direct": 34.0,
   "image": "https://i.ebayimg.com/images/g/FzYAAeSwdIRqsEyC/s-l300.webp",
@@ -2362,7 +2442,7 @@
   "payment_url": "https://buy.stripe.com/3cI3cvbWaa2979X4i5dZ63p",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "The Brahma Men’s Combustion 6\" Steel Toe Work Boots is a go-to men's boot that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "The Brahma Men\u2019s Combustion 6\" Steel Toe Work Boots is a go-to men's boot that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -2383,7 +2463,7 @@
   "payment_url": "https://buy.stripe.com/6oU3cve4i7U11PDdSFdZ60u",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the adidas Gazelle Bold — a women's sneaker with a clean, standout look. Listed here in size US 7 / EU 40 - women's US 8. New with box, ready to wear straight out of the package.",
+  "description": "Meet the adidas Gazelle Bold \u2014 a women's sneaker with a clean, standout look. Listed here in size US 7 / EU 40 - women's US 8. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -2435,7 +2515,7 @@
  },
  {
   "id": "398435615991",
-  "title": "Air Jordan 12 Retro TD “Pearl Pink” 10C",
+  "title": "Air Jordan 12 Retro TD \u201cPearl Pink\u201d 10C",
   "price": "$41.00",
   "price_direct": 34.85,
   "image": "https://i.ebayimg.com/images/g/o~sAAeSwnNlquHoh/s-l300.webp",
@@ -2446,7 +2526,7 @@
   "payment_url": "https://buy.stripe.com/eVqbJ15xM2zH51P6qddZ62a",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "You can't go wrong with the Air Jordan 12 Retro TD “Pearl Pink”, a kids' sneaker made to be worn on repeat. Listed here in size 10C. Comes brand new with its box included.",
+  "description": "You can't go wrong with the Air Jordan 12 Retro TD \u201cPearl Pink\u201d, a kids' sneaker made to be worn on repeat. Listed here in size 10C. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8.0,
@@ -2488,7 +2568,7 @@
   "payment_url": "https://buy.stripe.com/eVq6oH5xMb6d65Tg0NdZ61M",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "Meet the New Balance 990v6 — a kids' sneaker with a clean, standout look. Listed here in size 4C. Brand new and comes with its box.",
+  "description": "Meet the New Balance 990v6 \u2014 a kids' sneaker with a clean, standout look. Listed here in size 4C. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -2586,7 +2666,7 @@
   "payment_url": "https://buy.stripe.com/9B69ATbWa7U165T4i5dZ60l",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Campus 00s Comfort Closure — a kids' sneaker with a clean, standout look. This pair is a 11C. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Adidas Campus 00s Comfort Closure \u2014 a kids' sneaker with a clean, standout look. This pair is a 11C. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -2596,7 +2676,7 @@
  },
  {
   "id": "398435606423",
-  "title": "Jordan Spizike Low PS “Let’s PlayAir Jordan Spizike Low PS Size 5C",
+  "title": "Jordan Spizike Low PS \u201cLet\u2019s PlayAir Jordan Spizike Low PS Size 5C",
   "price": "$43.00",
   "price_direct": 36.55,
   "image": "https://i.ebayimg.com/images/g/JVIAAeSwWP1qrhFX/s-l300.webp",
@@ -2607,7 +2687,7 @@
   "payment_url": "https://buy.stripe.com/aFa28rd0e2zH0LzdSFdZ62c",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "You can't go wrong with the Jordan Spizike Low PS “Let’s PlayAir Jordan Spizike Low PS, a kids' sneaker made to be worn on repeat. Available in 5C. Brand new and comes with its box.",
+  "description": "You can't go wrong with the Jordan Spizike Low PS \u201cLet\u2019s PlayAir Jordan Spizike Low PS, a kids' sneaker made to be worn on repeat. Available in 5C. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -2617,7 +2697,7 @@
  },
  {
   "id": "398422722635",
-  "title": "Nike Jr. Mercurial Superfly 10 Academy Kylian Mbappé TF",
+  "title": "Nike Jr. Mercurial Superfly 10 Academy Kylian Mbapp\u00e9 TF",
   "price": "$44.00",
   "price_direct": 37.4,
   "image": "https://i.ebayimg.com/images/g/1dwAAeSwshlqs0UD/s-l300.webp",
@@ -2628,7 +2708,7 @@
   "payment_url": "https://buy.stripe.com/14A5kD7FUcah3XLeWJdZ63f",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The Nike Jr. Mercurial Superfly 10 Academy Kylian Mbappé TF is a go-to kids' sneaker that goes with just about anything. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "The Nike Jr. Mercurial Superfly 10 Academy Kylian Mbapp\u00e9 TF is a go-to kids' sneaker that goes with just about anything. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -2740,7 +2820,7 @@
   "payment_url": "https://buy.stripe.com/8x27sL2lAgqx0Lz4i5dZ612",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Nike Court Borough 2 Mid Black Game Royal — a kids' sneaker with a clean, standout look. Sized at 7 (GS). Ships brand new in its box.",
+  "description": "Meet the Nike Court Borough 2 Mid Black Game Royal \u2014 a kids' sneaker with a clean, standout look. Sized at 7 (GS). Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -2824,7 +2904,7 @@
   "payment_url": "https://buy.stripe.com/8x214n3pEcah1PDg0NdZ639",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas SL 72 RS GS / Big Kid — a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Adidas SL 72 RS GS / Big Kid \u2014 a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -2855,7 +2935,7 @@
  },
  {
   "id": "398386333792",
-  "title": "Nike Ebernon Low Women’s",
+  "title": "Nike Ebernon Low Women\u2019s",
   "price": "$45.00",
   "price_direct": 38.25,
   "image": "https://i.ebayimg.com/images/g/6acAAeSw-0FqpNL3/s-l300.webp",
@@ -2866,7 +2946,7 @@
   "payment_url": "https://buy.stripe.com/3cI3cv0dsdel1PDg0NdZ71s",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the Nike Ebernon Low Women’s, a women's sneaker in a head-turning colorway. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "Add some fresh style to your rotation with the Nike Ebernon Low Women\u2019s, a women's sneaker in a head-turning colorway. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 7,
@@ -2876,7 +2956,7 @@
  },
  {
   "id": "398366082499",
-  "title": "YZY YS-01 / Yeezy Slide “Fudge”",
+  "title": "YZY YS-01 / Yeezy Slide \u201cFudge\u201d",
   "price": "$45.00",
   "price_direct": 38.25,
   "image": "https://i.ebayimg.com/images/g/Q0UAAeSwE~FqnYau/s-l300.webp",
@@ -2887,7 +2967,7 @@
   "payment_url": "https://buy.stripe.com/6oU00j9O26PXfGt01PdZ71P",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "The YZY YS-01 / Yeezy Slide “Fudge” brings classic Yeezy style to your everyday lineup. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "The YZY YS-01 / Yeezy Slide \u201cFudge\u201d brings classic Yeezy style to your everyday lineup. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 13,
    "w": 8,
@@ -2960,7 +3040,7 @@
  },
  {
   "id": "398422852270",
-  "title": "Nike Jr. Mercurial Superfly 10 Academy Mbappé FG/MG",
+  "title": "Nike Jr. Mercurial Superfly 10 Academy Mbapp\u00e9 FG/MG",
   "price": "$47.50",
   "price_direct": 40.38,
   "image": "https://i.ebayimg.com/images/g/0XMAAeSw185qs1ak/s-l300.webp",
@@ -2971,7 +3051,7 @@
   "payment_url": "https://buy.stripe.com/aFacN53pE6PX1PD4i5dZ63e",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The Nike Jr. Mercurial Superfly 10 Academy Mbappé FG/MG brings classic Nike style to your everyday lineup. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "The Nike Jr. Mercurial Superfly 10 Academy Mbapp\u00e9 FG/MG brings classic Nike style to your everyday lineup. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -3034,7 +3114,7 @@
   "payment_url": "https://buy.stripe.com/3cIfZh5xM2zHbqd4i5dZ70n",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Converse Weapon Luxe Mid Days — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Converse Weapon Luxe Mid Days \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -3076,7 +3156,7 @@
   "payment_url": "https://buy.stripe.com/5kQbJ10dsdel79XaGtdZ611",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the ASICS Gel Zaraca 5 Blue Black — a unisex sneaker with a clean, standout look. Available in 8. Brand new and comes with its box.",
+  "description": "Meet the ASICS Gel Zaraca 5 Blue Black \u2014 a unisex sneaker with a clean, standout look. Available in 8. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -3149,7 +3229,7 @@
  },
  {
   "id": "398442290334",
-  "title": "Adidas Anthony Edwards 2 “Easter”",
+  "title": "Adidas Anthony Edwards 2 \u201cEaster\u201d",
   "price": "$49.00",
   "price_direct": 41.65,
   "image": "https://i.ebayimg.com/images/g/7EUAAeSwpPxqt0Ml/s-l300.webp",
@@ -3160,7 +3240,7 @@
   "payment_url": "https://buy.stripe.com/28E8wPaS61vD0Lz5m9dZ61t",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The Adidas Anthony Edwards 2 “Easter” brings classic Adidas style to your everyday lineup. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "The Adidas Anthony Edwards 2 \u201cEaster\u201d brings classic Adidas style to your everyday lineup. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -3202,7 +3282,7 @@
   "payment_url": "https://buy.stripe.com/8x228r3pEa29fGt01PdZ61J",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the New Balance 550 White Black — a women's sneaker with a clean, standout look. Available in men's 7 / women's 8.5. Ships brand new in its box.",
+  "description": "Meet the New Balance 550 White Black \u2014 a women's sneaker with a clean, standout look. Available in men's 7 / women's 8.5. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 12,
@@ -3254,7 +3334,7 @@
  },
  {
   "id": "398409083762",
-  "title": "Crocs x Dragon Ball Z Echo Clog – Vegeta Kids",
+  "title": "Crocs x Dragon Ball Z Echo Clog \u2013 Vegeta Kids",
   "price": "$49.00",
   "price_direct": 41.65,
   "image": "https://i.ebayimg.com/images/g/0GkAAeSw6Lpqreil/s-l300.webp",
@@ -3265,7 +3345,7 @@
   "payment_url": "https://buy.stripe.com/8x2fZh3pEeipgKx01PdZ701",
   "weight_lbs": 0.75,
   "weight_estimated": false,
-  "description": "The Crocs x Dragon Ball Z Echo Clog – Vegeta Kids is a go-to kids' clog that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "The Crocs x Dragon Ball Z Echo Clog \u2013 Vegeta Kids is a go-to kids' clog that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 21.0,
    "w": 12.0,
@@ -3275,7 +3355,7 @@
  },
  {
   "id": "398398960907",
-  "title": "Nike Ava Rover GS “Black Sequoia”",
+  "title": "Nike Ava Rover GS \u201cBlack Sequoia\u201d",
   "price": "$49.00",
   "price_direct": 41.65,
   "image": "https://i.ebayimg.com/images/g/0-MAAeSwtMVqqfRB/s-l300.webp",
@@ -3286,7 +3366,7 @@
   "payment_url": "https://buy.stripe.com/00w00j4tIb6dbqd6qddZ70P",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Nike Ava Rover GS “Black Sequoia” — a kids' sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Nike Ava Rover GS \u201cBlack Sequoia\u201d \u2014 a kids' sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -3303,13 +3383,13 @@
   "url": "https://www.ebay.com/itm/398366041190",
   "brand": "Yeezy",
   "department": "Unisex",
-  "qty": 3,
+  "qty": 5,
   "payment_url": "https://buy.stripe.com/8x2cN5d0e0rz1PDaGtdZ71Q",
   "variants": [
    {
-    "size": "9",
-    "qty": 1,
-    "payment_url": "https://buy.stripe.com/eVq4gz1hwa291PDeWJdZ72E"
+    "size": "5",
+    "qty": 2,
+    "payment_url": "https://buy.stripe.com/eVq4gz9O25LTgKx3e1dZ72G"
    },
    {
     "size": "6",
@@ -3317,20 +3397,20 @@
     "payment_url": "https://buy.stripe.com/eVq7sL8JY4HPcuhaGtdZ72F"
    },
    {
-    "size": "5",
-    "qty": 1,
-    "payment_url": "https://buy.stripe.com/eVq4gz9O25LTgKx3e1dZ72G"
+    "size": "9",
+    "qty": 2,
+    "payment_url": "https://buy.stripe.com/eVq4gz1hwa291PDeWJdZ72E"
    }
   ],
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the Yeezy Slides Black YS-01 Original Bag As Pictures With Dust Bag-New, a unisex slide in a head-turning colorway. Select your size from the options — each size has its own Buy Now button. Ships brand new in its box.",
+  "description": "Add some fresh style to your rotation with the Yeezy Slides Black YS-01 Original Bag As Pictures With Dust Bag-New, a unisex slide in a head-turning colorway. Select your size from the options \u2014 each size has its own Buy Now button. Ships brand new in its box.",
   "parcel_in": {
    "l": 14,
    "w": 12,
    "h": 9
   },
-  "size": "US 9, US 6, US 5"
+  "size": "US 5, US 6, US 9"
  },
  {
   "id": "398435734501",
@@ -3518,7 +3598,7 @@
  },
  {
   "id": "920006186995",
-  "title": "Adidas Campus 00s Women’s 6 Red/Pink",
+  "title": "Adidas Campus 00s Women\u2019s 6 Red/Pink",
   "price": "$52.00",
   "price_direct": 44.2,
   "image": "https://i.ebayimg.com/images/g/WhYAAeSwzN1qweXV/s-l300.webp",
@@ -3538,7 +3618,7 @@
   "payment_url": "https://buy.stripe.com/8x2cN5e4icahfGtdSFdZ60n",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Campus 00s Women’s 6 Red/Pink — a women's sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Adidas Campus 00s Women\u2019s 6 Red/Pink \u2014 a women's sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -3651,7 +3731,7 @@
   "payment_url": "https://buy.stripe.com/eVq7sL1hw7U13XL01PdZ70B",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Chuck Taylor All Star Classic High Top — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Chuck Taylor All Star Classic High Top \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -3672,7 +3752,7 @@
   "payment_url": "https://buy.stripe.com/6oU28r5xM3DL51P5m9dZ631",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Vans Knu Skool GS — a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Vans Knu Skool GS \u2014 a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -3756,7 +3836,7 @@
   "payment_url": "https://buy.stripe.com/3cI4gz7FUa29cuhbKxdZ70D",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Converse Chuck Taylor All Star Canvas High Top White — a unisex sneaker with a clean, standout look. Sized at 7.5. Comes brand new with its box included.",
+  "description": "Meet the Converse Chuck Taylor All Star Canvas High Top White \u2014 a unisex sneaker with a clean, standout look. Sized at 7.5. Comes brand new with its box included.",
   "parcel_in": {
    "l": 14,
    "w": 10,
@@ -3798,7 +3878,7 @@
   "payment_url": "https://buy.stripe.com/aFa9ATf8mgqx3XL8yldZ61r",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the New Balance 1000 — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the New Balance 1000 \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -3808,7 +3888,7 @@
  },
  {
   "id": "398432466822",
-  "title": "Adidas UBounce DNA Women’s size  5.5 men or 6.5 women",
+  "title": "Adidas UBounce DNA Women\u2019s size  5.5 men or 6.5 women",
   "price": "$54.21",
   "price_direct": 46.08,
   "image": "https://i.ebayimg.com/images/g/XzcAAeSwrgpqr1fR/s-l300.webp",
@@ -3819,7 +3899,7 @@
   "payment_url": "https://buy.stripe.com/3cI00j4tI2zH65T8yldZ62O",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The Adidas UBounce DNA Women’s brings classic Adidas style to your everyday lineup. Sized at men's 5.5 / women's 6.5. Ships brand new in its box.",
+  "description": "The Adidas UBounce DNA Women\u2019s brings classic Adidas style to your everyday lineup. Sized at men's 5.5 / women's 6.5. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -3829,7 +3909,7 @@
  },
  {
   "id": "398412382933",
-  "title": "Adidas Samba XLG J – Junior/Grade School",
+  "title": "Adidas Samba XLG J \u2013 Junior/Grade School",
   "price": "$54.33",
   "price_direct": 46.18,
   "image": "https://i.ebayimg.com/images/g/biwAAeSwSyBqr0DT/s-l300.webp",
@@ -3840,7 +3920,7 @@
   "payment_url": "https://buy.stripe.com/eVqdR9bWacah51P9CpdZ63H",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Samba XLG J – Junior/Grade School — a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "Meet the Adidas Samba XLG J \u2013 Junior/Grade School \u2014 a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -4015,7 +4095,7 @@
   "payment_url": "https://buy.stripe.com/28E6oHf8m5LT9i501PdZ624",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Vans Knu Skool — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "Meet the Vans Knu Skool \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -4046,7 +4126,7 @@
  },
  {
   "id": "398432492308",
-  "title": "UGG Goldenstar Sandal – Big Kids",
+  "title": "UGG Goldenstar Sandal \u2013 Big Kids",
   "price": "$55.00",
   "price_direct": 46.75,
   "image": "https://i.ebayimg.com/images/g/Y0wAAeSwbu5qtxdF/s-l300.webp",
@@ -4057,7 +4137,7 @@
   "payment_url": "https://buy.stripe.com/bJe5kD9O20rzdyl8yldZ62N",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The UGG Goldenstar Sandal – Big Kids is a go-to kids' sandal that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "The UGG Goldenstar Sandal \u2013 Big Kids is a go-to kids' sandal that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -4099,7 +4179,7 @@
   "payment_url": "https://buy.stripe.com/4gMdR92lAgqx3XLdSFdZ637",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Taekwondo Lace Black White Gum W — a women's sneaker with a clean, standout look. This pair is a 8.5. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Adidas Taekwondo Lace Black White Gum W \u2014 a women's sneaker with a clean, standout look. This pair is a 8.5. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -4116,12 +4196,12 @@
   "url": "https://www.ebay.com/itm/398392068097",
   "brand": "Converse",
   "department": "Unisex",
-  "qty": 2,
+  "qty": 4,
   "payment_url": "https://buy.stripe.com/cNidR91hwgqxdyleWJdZ70S",
   "variants": [
    {
     "size": "7",
-    "qty": 1,
+    "qty": 3,
     "payment_url": "https://buy.stripe.com/9B69ATf8mdelam94i5dZ72x"
    },
    {
@@ -4132,7 +4212,7 @@
   ],
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Converse Chuck Taylor All Star Canvas High Top White — a unisex sneaker with a clean, standout look. Select your size from the options — each size has its own Buy Now button. Brand new and comes with its box.",
+  "description": "Meet the Converse Chuck Taylor All Star Canvas High Top White \u2014 a unisex sneaker with a clean, standout look. Select your size from the options \u2014 each size has its own Buy Now button. Brand new and comes with its box.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -4202,7 +4282,7 @@
   "payment_url": "https://buy.stripe.com/eVq3cv0ds4HP79X9CpdZ604",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Reebok Classic Nylon HS Low Black — a women's sneaker with a clean, standout look. Available in 8 or 9.5 Women. Comes brand new with its box included.",
+  "description": "Meet the Reebok Classic Nylon HS Low Black \u2014 a women's sneaker with a clean, standout look. Available in 8 or 9.5 Women. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -4212,7 +4292,7 @@
  },
  {
   "id": "398412632475",
-  "title": "Adidas Sambae Women’s",
+  "title": "Adidas Sambae Women\u2019s",
   "price": "$56.21",
   "price_direct": 47.78,
   "image": "https://i.ebayimg.com/images/g/2ZAAAeSw4FBqr1ly/s-l300.webp",
@@ -4223,7 +4303,7 @@
   "payment_url": "https://buy.stripe.com/fZu5kD8JYeip79XdSFdZ63F",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "You can't go wrong with the Adidas Sambae Women’s, a women's sneaker made to be worn on repeat. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "You can't go wrong with the Adidas Sambae Women\u2019s, a women's sneaker made to be worn on repeat. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 8.0,
@@ -4391,7 +4471,7 @@
   "payment_url": "https://buy.stripe.com/cNiaEXd0e1vD3XL4i5dZ61x",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Campus 00s Core Black Gum — a kids' sneaker with a clean, standout look. This pair is a 4.5Y. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Adidas Campus 00s Core Black Gum \u2014 a kids' sneaker with a clean, standout look. This pair is a 4.5Y. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -4475,7 +4555,7 @@
   "payment_url": "https://buy.stripe.com/dRm7sL9O20rz0Lz01PdZ61P",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the New Balance 1000 Kids Sneaker Purple/White — a kids' sneaker with a clean, standout look. Listed here in size men's US 7 / women's US 8.5. Ships brand new in its box.",
+  "description": "Meet the New Balance 1000 Kids Sneaker Purple/White \u2014 a kids' sneaker with a clean, standout look. Listed here in size men's US 7 / women's US 8.5. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -4496,7 +4576,7 @@
   "payment_url": "https://buy.stripe.com/aFa8wPe4i6PXdyl5m9dZ620",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Vans Old Skool Navy — a unisex sneaker with a clean, standout look. Available in 9.5. Ships brand new in its box.",
+  "description": "Meet the Vans Old Skool Navy \u2014 a unisex sneaker with a clean, standout look. Available in 9.5. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -4534,7 +4614,7 @@
   "url": "https://www.ebay.com/itm/398412659120",
   "brand": "Ariat",
   "department": "Women",
-  "qty": 1,
+  "qty": 2,
   "payment_url": "https://buy.stripe.com/dRm4gz7FUb6d3XLg0NdZ63C",
   "weight_lbs": 2.0,
   "weight_estimated": false,
@@ -4544,7 +4624,19 @@
    "w": 8,
    "h": 6
   },
-  "size": "US 6.5, US 8"
+  "size": "US 6.5, US 8",
+  "variants": [
+   {
+    "size": "6.5",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/00w7sL0ds8Y579X5m9dZ731"
+   },
+   {
+    "size": "8",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/14A28r7FUdel3XLeWJdZ732"
+   }
+  ]
  },
  {
   "id": "398412638519",
@@ -4580,7 +4672,7 @@
   "payment_url": "https://buy.stripe.com/6oU3cv5xM4HPbqdg0NdZ719",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Superstar 2 Black Scarlet — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "Meet the Adidas Superstar 2 Black Scarlet \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 14.0,
    "w": 12.0,
@@ -4590,7 +4682,7 @@
  },
  {
   "id": "398389408824",
-  "title": "asics GEL-Venture 10 Women’s",
+  "title": "asics GEL-Venture 10 Women\u2019s",
   "price": "$59.00",
   "price_direct": 50.15,
   "image": "https://i.ebayimg.com/images/g/9i8AAeSwXFlqphK6/s-l300.webp",
@@ -4601,7 +4693,7 @@
   "payment_url": "https://buy.stripe.com/3cI3cv4tI8Y58e101PdZ71k",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "The asics GEL-Venture 10 Women’s brings classic Asics style to your everyday lineup. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "The asics GEL-Venture 10 Women\u2019s brings classic Asics style to your everyday lineup. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 7,
@@ -4639,7 +4731,7 @@
   "url": "https://www.ebay.com/itm/398382984607",
   "brand": "Nike",
   "department": "Unisex",
-  "qty": 1,
+  "qty": 2,
   "payment_url": "https://buy.stripe.com/28EcN5d0e8Y5dylg0NdZ71w",
   "weight_lbs": 3.0,
   "weight_estimated": false,
@@ -4649,7 +4741,19 @@
    "w": 8,
    "h": 5
   },
-  "size": "US 10, US 11.5"
+  "size": "US 10, US 11.5",
+  "variants": [
+   {
+    "size": "10",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/28EfZh8JY0rz9i529XdZ72Z"
+   },
+   {
+    "size": "11.5",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/4gM00j9O20rz0LzdSFdZ730"
+   }
+  ]
  },
  {
   "id": "398379147565",
@@ -4685,7 +4789,7 @@
   "payment_url": "https://buy.stripe.com/cNieVd3pEdel8e1g0NdZ71A",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Nike P-6000 GS Big Kids University Red Silver — a kids' sneaker with a clean, standout look. Available in 7Y. Comes brand new with its box included.",
+  "description": "Meet the Nike P-6000 GS Big Kids University Red Silver \u2014 a kids' sneaker with a clean, standout look. Available in 7Y. Comes brand new with its box included.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -4702,7 +4806,7 @@
   "url": "https://www.ebay.com/itm/398365974035",
   "brand": "Nike",
   "department": "Kids",
-  "qty": 1,
+  "qty": 2,
   "payment_url": "https://buy.stripe.com/dRm9ATbWa1vDdyl15TdZ71R",
   "weight_lbs": 2.0,
   "weight_estimated": false,
@@ -4712,7 +4816,19 @@
    "w": 12,
    "h": 9
   },
-  "size": "US 6, US 7"
+  "size": "US 6, US 7",
+  "variants": [
+   {
+    "size": "6",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/aFa4gzd0ecahgKxdSFdZ73h"
+   },
+   {
+    "size": "7",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/5kQbJ11hw4HP51PcOBdZ73i"
+   }
+  ]
  },
  {
   "id": "398399086442",
@@ -4765,7 +4881,7 @@
  },
  {
   "id": "398412338004",
-  "title": "Adidas Samba XLG J – Junior/Grade School",
+  "title": "Adidas Samba XLG J \u2013 Junior/Grade School",
   "price": "$59.43",
   "price_direct": 50.52,
   "image": "https://i.ebayimg.com/images/g/BHEAAeSwE6lqrz4p/s-l300.webp",
@@ -4776,7 +4892,7 @@
   "payment_url": "https://buy.stripe.com/00w00j9O26PXdylcOBdZ63I",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The Adidas Samba XLG J – Junior/Grade School brings classic Adidas style to your everyday lineup. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "The Adidas Samba XLG J \u2013 Junior/Grade School brings classic Adidas style to your everyday lineup. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -4786,7 +4902,7 @@
  },
  {
   "id": "398402429038",
-  "title": "Converse Chuck Taylor All Star Malden Street Low – Pale Surplus",
+  "title": "Converse Chuck Taylor All Star Malden Street Low \u2013 Pale Surplus",
   "price": "$59.66",
   "price_direct": 50.71,
   "image": "https://i.ebayimg.com/images/g/tDIAAeSw7ydqq0YI/s-l300.webp",
@@ -4797,7 +4913,7 @@
   "payment_url": "https://buy.stripe.com/dRm5kD9O21vDgKxeWJdZ70z",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "You can't go wrong with the Converse Chuck Taylor All Star Malden Street Low – Pale Surplus, a unisex sneaker made to be worn on repeat. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "You can't go wrong with the Converse Chuck Taylor All Star Malden Street Low \u2013 Pale Surplus, a unisex sneaker made to be worn on repeat. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -4807,7 +4923,7 @@
  },
  {
   "id": "398442170195",
-  "title": "Adidas Campus 00s J – “Cream Semi Pink Spark” 4Y",
+  "title": "Adidas Campus 00s J \u2013 \u201cCream Semi Pink Spark\u201d 4Y",
   "price": "$59.95",
   "price_direct": 50.96,
   "image": "https://i.ebayimg.com/images/g/M9UAAeSw-UZquyKZ/s-l300.webp",
@@ -4818,7 +4934,7 @@
   "payment_url": "https://buy.stripe.com/6oU5kD6BQ4HP8e1aGtdZ61w",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The Adidas Campus 00s J – “Cream Semi Pink Spark” brings classic Adidas style to your everyday lineup. Sized at 4Y. Comes brand new with its box included.",
+  "description": "The Adidas Campus 00s J \u2013 \u201cCream Semi Pink Spark\u201d brings classic Adidas style to your everyday lineup. Sized at 4Y. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -4828,7 +4944,7 @@
  },
  {
   "id": "398442070545",
-  "title": "Adidas Campus 00s J – “Cream Semi Pink Spark” 5Y or 6 Women",
+  "title": "Adidas Campus 00s J \u2013 \u201cCream Semi Pink Spark\u201d 5Y or 6 Women",
   "price": "$59.95",
   "price_direct": 50.96,
   "image": "https://i.ebayimg.com/images/g/M9UAAeSw-UZquyKZ/s-l300.webp",
@@ -4839,7 +4955,7 @@
   "payment_url": "https://buy.stripe.com/eVq28r3pE3DLcuh5m9dZ61A",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the Adidas Campus 00s J – “Cream Semi Pink Spark” 5Y or 6, a kids' sneaker in a head-turning colorway. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "Add some fresh style to your rotation with the Adidas Campus 00s J \u2013 \u201cCream Semi Pink Spark\u201d 5Y or 6, a kids' sneaker in a head-turning colorway. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -5194,7 +5310,7 @@
  },
  {
   "id": "398402746985",
-  "title": "ASICS GEL-Venture 10 Women’s",
+  "title": "ASICS GEL-Venture 10 Women\u2019s",
   "price": "$62.00",
   "price_direct": 52.7,
   "image": "https://i.ebayimg.com/images/g/FQ8AAeSwSmdqq2bn/s-l300.webp",
@@ -5205,7 +5321,7 @@
   "payment_url": "https://buy.stripe.com/fZu00jgcq6PX8e1dSFdZ70p",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The ASICS GEL-Venture 10 Women’s is a go-to women's sneaker that goes with just about anything. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "The ASICS GEL-Venture 10 Women\u2019s is a go-to women's sneaker that goes with just about anything. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -5285,7 +5401,7 @@
   "url": "https://www.ebay.com/itm/398389221692",
   "brand": "Asics",
   "department": "Kids",
-  "qty": 1,
+  "qty": 2,
   "payment_url": "https://buy.stripe.com/bJe5kD0ds0rzgKxbKxdZ71o",
   "weight_lbs": 3.0,
   "weight_estimated": false,
@@ -5295,7 +5411,19 @@
    "w": 6,
    "h": 4
   },
-  "size": "US 6"
+  "size": "US 5.5, US 6",
+  "variants": [
+   {
+    "size": "5.5",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/5kQ9AT3pE2zHbqdeWJdZ739"
+   },
+   {
+    "size": "6",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/bJe9AT7FU3DL2TH3e1dZ73a"
+   }
+  ]
  },
  {
   "id": "398389766370",
@@ -5321,7 +5449,7 @@
   "payment_url": "https://buy.stripe.com/9B6dR94tIfmtdyl5m9dZ72H",
   "weight_lbs": 3.0,
   "weight_estimated": true,
-  "description": "Meet the adidas Superstar II Patent Black Red — a men's sneaker with a bold patent-leather look in black and red. Size: Men US 9. Condition: New with box. Includes original box, ready to wear straight out of the package.",
+  "description": "Meet the adidas Superstar II Patent Black Red \u2014 a men's sneaker with a bold patent-leather look in black and red. Size: Men US 9. Condition: New with box. Includes original box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 13,
    "w": 8,
@@ -5353,7 +5481,7 @@
  },
  {
   "id": "398435811615",
-  "title": "Vans Knu Skool Flame – Black/Red/Yellow 6TD",
+  "title": "Vans Knu Skool Flame \u2013 Black/Red/Yellow 6TD",
   "price": "$63.74",
   "price_direct": 54.18,
   "image": "https://i.ebayimg.com/images/g/uDcAAeSwCJlquI96/s-l300.webp",
@@ -5364,7 +5492,7 @@
   "payment_url": "https://buy.stripe.com/eVq9AT6BQb6dam9eWJdZ625",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The Vans Knu Skool Flame – Black/Red/Yellow 6TD brings classic Vans style to your everyday lineup. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "The Vans Knu Skool Flame \u2013 Black/Red/Yellow 6TD brings classic Vans style to your everyday lineup. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -5374,7 +5502,7 @@
  },
  {
   "id": "398435810576",
-  "title": "Vans Knu Skool Flame – Black/Red/Yellow",
+  "title": "Vans Knu Skool Flame \u2013 Black/Red/Yellow",
   "price": "$63.74",
   "price_direct": 54.18,
   "image": "https://i.ebayimg.com/images/g/uDcAAeSwCJlquI96/s-l300.webp",
@@ -5385,7 +5513,7 @@
   "payment_url": "https://buy.stripe.com/aFa5kD7FU7U1bqdbKxdZ626",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The Vans Knu Skool Flame – Black/Red/Yellow is a go-to unisex sneaker that goes with just about anything. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "The Vans Knu Skool Flame \u2013 Black/Red/Yellow is a go-to unisex sneaker that goes with just about anything. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -5395,7 +5523,7 @@
  },
  {
   "id": "398435810216",
-  "title": "Vans Knu Skool Flame – Black/Red/Yellow",
+  "title": "Vans Knu Skool Flame \u2013 Black/Red/Yellow",
   "price": "$63.74",
   "price_direct": 54.18,
   "image": "https://i.ebayimg.com/images/g/uDcAAeSwCJlquI96/s-l300.webp",
@@ -5406,7 +5534,7 @@
   "payment_url": "https://buy.stripe.com/8x2bJ18JY0rz8e13e1dZ627",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The Vans Knu Skool Flame – Black/Red/Yellow brings classic Vans style to your everyday lineup. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "The Vans Knu Skool Flame \u2013 Black/Red/Yellow brings classic Vans style to your everyday lineup. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -5500,7 +5628,7 @@
  },
  {
   "id": "398432893204",
-  "title": "Adidas Anthony Edwards 2 “Easter”",
+  "title": "Adidas Anthony Edwards 2 \u201cEaster\u201d",
   "price": "$64.99",
   "price_direct": 55.24,
   "image": "https://i.ebayimg.com/images/g/7EUAAeSwpPxqt0Ml/s-l300.webp",
@@ -5511,7 +5639,7 @@
   "payment_url": "https://buy.stripe.com/bJecN57FU7U1bqd4i5dZ62p",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "The Adidas Anthony Edwards 2 “Easter” brings classic Adidas style to your everyday lineup. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "The Adidas Anthony Edwards 2 \u201cEaster\u201d brings classic Adidas style to your everyday lineup. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -5542,7 +5670,7 @@
  },
  {
   "id": "398442353452",
-  "title": "Nike Run Swift 3 SE Women’s Grey Pink Running Shoes",
+  "title": "Nike Run Swift 3 SE Women\u2019s Grey Pink Running Shoes",
   "price": "$65.00",
   "price_direct": 55.25,
   "image": "https://i.ebayimg.com/images/g/U9kAAeSwqcpqu0Qs/s-l300.webp",
@@ -5553,7 +5681,7 @@
   "payment_url": "https://buy.stripe.com/dRm28r2lA4HPeCpeWJdZ61q",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "The Nike Run Swift 3 SE Women’s Grey Pink Running Shoes brings classic Nike style to your everyday lineup. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "The Nike Run Swift 3 SE Women\u2019s Grey Pink Running Shoes brings classic Nike style to your everyday lineup. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -5696,7 +5824,7 @@
  },
  {
   "id": "398375667745",
-  "title": "UGG GoldenGlow Kids Sandal – Sea Salt",
+  "title": "UGG GoldenGlow Kids Sandal \u2013 Sea Salt",
   "price": "$65.00",
   "price_direct": 55.25,
   "image": "https://i.ebayimg.com/images/g/5j8AAeSwXVhqoMiV/s-l300.webp",
@@ -5707,7 +5835,7 @@
   "payment_url": "https://buy.stripe.com/00w7sL5xMa2951PcOBdZ71B",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the UGG GoldenGlow Kids Sandal – Sea Salt, a kids' sandal in a head-turning colorway. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "Add some fresh style to your rotation with the UGG GoldenGlow Kids Sandal \u2013 Sea Salt, a kids' sandal in a head-turning colorway. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -5717,7 +5845,7 @@
  },
  {
   "id": "398375628510",
-  "title": "UGG GoldenGlow Kids Sandal – Sea Salt",
+  "title": "UGG GoldenGlow Kids Sandal \u2013 Sea Salt",
   "price": "$65.00",
   "price_direct": 55.25,
   "image": "https://i.ebayimg.com/images/g/5j8AAeSwXVhqoMiV/s-l300.webp",
@@ -5728,7 +5856,7 @@
   "payment_url": "https://buy.stripe.com/dRm14naS62zHcuheWJdZ71C",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The UGG GoldenGlow Kids Sandal – Sea Salt brings classic Ugg style to your everyday lineup. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "The UGG GoldenGlow Kids Sandal \u2013 Sea Salt brings classic Ugg style to your everyday lineup. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -5738,7 +5866,7 @@
  },
  {
   "id": "398375354755",
-  "title": "PUMA Scoot Zeros II 2K Men’s Size 11 Basketball Shoes Multicolor",
+  "title": "PUMA Scoot Zeros II 2K Men\u2019s Size 11 Basketball Shoes Multicolor",
   "price": "$65.00",
   "price_direct": 55.25,
   "image": "https://i.ebayimg.com/images/g/ricAAeSwN-9qoLRM/s-l300.webp",
@@ -5749,7 +5877,7 @@
   "payment_url": "https://buy.stripe.com/bJedR91hweip3XLaGtdZ71G",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "The PUMA Scoot Zeros II 2K Men’s Basketball Shoes Multicolor is a go-to kids' shoe that goes with just about anything. Sized at 11. Ships brand new in its box.",
+  "description": "The PUMA Scoot Zeros II 2K Men\u2019s Basketball Shoes Multicolor is a go-to kids' shoe that goes with just about anything. Sized at 11. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 6,
@@ -5813,7 +5941,7 @@
   "payment_url": "https://buy.stripe.com/8x25kDaS62zH51P6qddZ71q",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Nike Giannis Freak 7 Spotlight — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Nike Giannis Freak 7 Spotlight \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 13,
    "w": 8,
@@ -5834,7 +5962,7 @@
   "payment_url": "https://buy.stripe.com/4gMeVdgcq3DLeCp01PdZ71W",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Nike Zoom Air Fire White University Red W — a women's sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Nike Zoom Air Fire White University Red W \u2014 a women's sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -5876,7 +6004,7 @@
   "payment_url": "https://buy.stripe.com/5kQ6oHaS6gqx3XL4i5dZ61b",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Nike V5 RNR GS Aura Platinum Tint 6Y or 7.5Women — a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "Meet the Nike V5 RNR GS Aura Platinum Tint 6Y or 7.5Women \u2014 a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12.0,
    "w": 10.0,
@@ -5946,7 +6074,7 @@
   "payment_url": "https://buy.stripe.com/8x214nf8m6PX79XcOBdZ72K",
   "weight_lbs": 3.0,
   "weight_estimated": true,
-  "description": "Meet the adidas AE 2 Georgia Bulldogs — a men's basketball sneaker in Georgia Bulldogs colors. Size: Men US 10.5. Condition: New with box. Includes original box, ready to wear straight out of the package.",
+  "description": "Meet the adidas AE 2 Georgia Bulldogs \u2014 a men's basketball sneaker in Georgia Bulldogs colors. Size: Men US 10.5. Condition: New with box. Includes original box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 13,
    "w": 8,
@@ -6053,7 +6181,7 @@
   "payment_url": "https://buy.stripe.com/5kQ3cv8JY7U13XL9CpdZ60o",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Campus 00s — a women's sneaker with a clean, standout look. Sized at US 6- women's US 7. Brand new and comes with its box.",
+  "description": "Meet the Adidas Campus 00s \u2014 a women's sneaker with a clean, standout look. Sized at US 6- women's US 7. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -6137,7 +6265,7 @@
   "payment_url": "https://buy.stripe.com/eVq7sL3pE1vDeCpaGtdZ60z",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Campus 00s — a women's sneaker with a clean, standout look. Available in US 7 / EU 40 - women's US 8.5. Brand new and comes with its box.",
+  "description": "Meet the Adidas Campus 00s \u2014 a women's sneaker with a clean, standout look. Available in US 7 / EU 40 - women's US 8.5. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -6179,7 +6307,7 @@
   "payment_url": "https://buy.stripe.com/14A00jaS66PXdyl8yldZ60B",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Campus 00s Core Black Gum — a women's sneaker with a clean, standout look. Available in US 7- women's US 8.5. Comes brand new with its box included.",
+  "description": "Meet the Adidas Campus 00s Core Black Gum \u2014 a women's sneaker with a clean, standout look. Available in US 7- women's US 8.5. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -6273,7 +6401,7 @@
  },
  {
   "id": "398422860736",
-  "title": "Nike Jr. Mercurial Superfly 10 Academy Mbappé FG/MG",
+  "title": "Nike Jr. Mercurial Superfly 10 Academy Mbapp\u00e9 FG/MG",
   "price": "$69.00",
   "price_direct": 58.65,
   "image": "https://i.ebayimg.com/images/g/B4wAAeSwwD1qs1f9/s-l300.webp",
@@ -6284,7 +6412,7 @@
   "payment_url": "https://buy.stripe.com/cNi3cvf8m2zHcuhbKxdZ63c",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The Nike Jr. Mercurial Superfly 10 Academy Mbappé FG/MG is a go-to kids' sneaker that goes with just about anything. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "The Nike Jr. Mercurial Superfly 10 Academy Mbapp\u00e9 FG/MG is a go-to kids' sneaker that goes with just about anything. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -6337,7 +6465,7 @@
   "payment_url": "https://buy.stripe.com/6oUeVd0ds1vDam96qddZ63E",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Sambae Linen Green — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Adidas Sambae Linen Green \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -6347,7 +6475,7 @@
  },
  {
   "id": "398412609065",
-  "title": "UGG Bea Mary Jane Kids – Chestnut",
+  "title": "UGG Bea Mary Jane Kids \u2013 Chestnut",
   "price": "$69.00",
   "price_direct": 58.65,
   "image": "https://i.ebayimg.com/images/g/kHEAAeSwOZRqr1bf/s-l300.webp",
@@ -6358,7 +6486,7 @@
   "payment_url": "https://buy.stripe.com/dRm9AT6BQ4HP79Xg0NdZ63G",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "You can't go wrong with the UGG Bea Mary Jane Kids – Chestnut, a kids' sneaker made to be worn on repeat. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "You can't go wrong with the UGG Bea Mary Jane Kids \u2013 Chestnut, a kids' sneaker made to be worn on repeat. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 8.0,
@@ -6368,7 +6496,7 @@
  },
  {
   "id": "398409466734",
-  "title": "Jordan Spizike Low PS “Let’s PlayAir Jordan Spizike Low PS Size 13c",
+  "title": "Jordan Spizike Low PS \u201cLet\u2019s PlayAir Jordan Spizike Low PS Size 13c",
   "price": "$69.00",
   "price_direct": 58.65,
   "image": "https://i.ebayimg.com/images/g/JVIAAeSwWP1qrhFX/s-l300.webp",
@@ -6379,7 +6507,7 @@
   "payment_url": "https://buy.stripe.com/9B6dR95xMfmtam9dSFdZ63N",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "The Jordan Spizike Low PS “Let’s PlayAir Jordan Spizike Low PS is a go-to kids' sneaker that goes with just about anything. Available in 13c. Brand new and comes with its box.",
+  "description": "The Jordan Spizike Low PS \u201cLet\u2019s PlayAir Jordan Spizike Low PS is a go-to kids' sneaker that goes with just about anything. Available in 13c. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -6400,7 +6528,7 @@
   "payment_url": "https://buy.stripe.com/7sY00j4tI4HP2TH5m9dZ63V",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Nike Air Force 1 GS W — a kids' sneaker with a clean, standout look. Available in 6. Brand new and comes with its box.",
+  "description": "Meet the Nike Air Force 1 GS W \u2014 a kids' sneaker with a clean, standout look. Available in 6. Brand new and comes with its box.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -6410,7 +6538,7 @@
  },
  {
   "id": "398402255120",
-  "title": "ASICS GEL-Contend 9 Women’s",
+  "title": "ASICS GEL-Contend 9 Women\u2019s",
   "price": "$69.00",
   "price_direct": 58.65,
   "image": "https://i.ebayimg.com/images/g/fcIAAeSwE6lqqzOY/s-l300.webp",
@@ -6421,7 +6549,7 @@
   "payment_url": "https://buy.stripe.com/9B67sL8JY8Y52TH01PdZ70F",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the ASICS GEL-Contend 9 Women’s — a women's sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "Meet the ASICS GEL-Contend 9 Women\u2019s \u2014 a women's sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -6505,7 +6633,7 @@
   "payment_url": "https://buy.stripe.com/28EaEXe4i8Y53XL9CpdZ715",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Asics Gel Venture 9 Feather Grey Birch — a unisex sneaker with a clean, standout look. This pair is a 8.5. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Asics Gel Venture 9 Feather Grey Birch \u2014 a unisex sneaker with a clean, standout look. This pair is a 8.5. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 13,
    "w": 8,
@@ -6526,7 +6654,7 @@
   "payment_url": "https://buy.stripe.com/4gM8wP7FU0rz2TH3e1dZ717",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the adidas Japan Off White Collegiate Green W — a women's sneaker with a clean, standout look. Listed here in size 10. Brand new and comes with its box.",
+  "description": "Meet the adidas Japan Off White Collegiate Green W \u2014 a women's sneaker with a clean, standout look. Listed here in size 10. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 7,
@@ -6743,7 +6871,7 @@
   "payment_url": "https://buy.stripe.com/eVq7sLbWa0rz9i529XdZ72L",
   "weight_lbs": 2.5,
   "weight_estimated": true,
-  "description": "Meet the ASICS Gel Pulse 16 Mineral — a women's road-running sneaker with GEL cushioning in a mineral colorway. Size: Women US 9. Condition: New with box. Includes original box, ready to wear straight out of the package.",
+  "description": "Meet the ASICS Gel Pulse 16 Mineral \u2014 a women's road-running sneaker with GEL cushioning in a mineral colorway. Size: Women US 9. Condition: New with box. Includes original box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 7,
@@ -6754,7 +6882,7 @@
  },
  {
   "id": "398449011367",
-  "title": "Nike Air Max Solo – White/Hemp/Noble Red/White Size 7 men or 8.5 Women",
+  "title": "Nike Air Max Solo \u2013 White/Hemp/Noble Red/White Size 7 men or 8.5 Women",
   "price": "$71.23",
   "price_direct": 60.55,
   "image": "https://i.ebayimg.com/images/g/IcMAAeSwgQBqvbuq/s-l300.webp",
@@ -6765,7 +6893,7 @@
   "payment_url": "https://buy.stripe.com/5kQaEX8JYa290Lz5m9dZ613",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Nike Air Max Solo – White/Hemp/Noble Red/White — a women's sneaker with a clean, standout look. Available in men's 7 / women's 8.5. Comes brand new with its box included.",
+  "description": "Meet the Nike Air Max Solo \u2013 White/Hemp/Noble Red/White \u2014 a women's sneaker with a clean, standout look. Available in men's 7 / women's 8.5. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -6921,7 +7049,7 @@
   "payment_url": "https://buy.stripe.com/eVq28rd0eb6d0LzdSFdZ72I",
   "weight_lbs": 3.0,
   "weight_estimated": true,
-  "description": "Meet the Air Jordan 2 Retro Python — a men's retro basketball sneaker with a snakeskin-style python finish. Size: Men US 5.5. Condition: New with box. Includes original box, ready to wear straight out of the package.",
+  "description": "Meet the Air Jordan 2 Retro Python \u2014 a men's retro basketball sneaker with a snakeskin-style python finish. Size: Men US 5.5. Condition: New with box. Includes original box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 13,
    "w": 8,
@@ -7204,7 +7332,7 @@
   "payment_url": "https://buy.stripe.com/fZu14n3pE6PXam9aGtdZ61g",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Nike Vomero 5 GS Ghost Summit White Platinum 7Y or 8.5 — a kids' sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Nike Vomero 5 GS Ghost Summit White Platinum 7Y or 8.5 \u2014 a kids' sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -7225,7 +7353,7 @@
   "payment_url": "https://buy.stripe.com/4gM00j3pE4HP8e115TdZ61L",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "Meet the New Balance 9060 Lace — a kids' sneaker with a clean, standout look. Listed here in size 2Y. Comes brand new with its box included.",
+  "description": "Meet the New Balance 9060 Lace \u2014 a kids' sneaker with a clean, standout look. Listed here in size 2Y. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -7400,7 +7528,7 @@
   "payment_url": "https://buy.stripe.com/28EaEXe4i8Y579X7uhdZ63P",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Air Jordan 1 Slip Low Infra-Bred W — a women's sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Air Jordan 1 Slip Low Infra-Bred W \u2014 a women's sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -7410,7 +7538,7 @@
  },
  {
   "id": "398409430618",
-  "title": "Air Jordan 1 Mid SE GS “Christmas”",
+  "title": "Air Jordan 1 Mid SE GS \u201cChristmas\u201d",
   "price": "$74.00",
   "price_direct": 62.9,
   "image": "https://i.ebayimg.com/images/g/GTYAAeSwfBJqrgzr/s-l300.webp",
@@ -7421,7 +7549,7 @@
   "payment_url": "https://buy.stripe.com/5kQfZhbWaeip51PaGtdZ63R",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "You can't go wrong with the Air Jordan 1 Mid SE GS “Christmas”, a kids' sneaker made to be worn on repeat. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "You can't go wrong with the Air Jordan 1 Mid SE GS \u201cChristmas\u201d, a kids' sneaker made to be worn on repeat. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -7484,7 +7612,7 @@
   "payment_url": "https://buy.stripe.com/5kQbJ13pEgqxeCp8yldZ70w",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Converse CL98 Suede Deep Bordeaux — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Converse CL98 Suede Deep Bordeaux \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 14,
    "w": 10,
@@ -7547,7 +7675,7 @@
   "payment_url": "https://buy.stripe.com/fZu3cv5xMeip79X4i5dZ71a",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Campus 00s Triple Black — a men's sneaker with a clean, standout look. This pair is a 8 Men. Ships brand new in its box.",
+  "description": "Meet the Adidas Campus 00s Triple Black \u2014 a men's sneaker with a clean, standout look. This pair is a 8 Men. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -7557,7 +7685,7 @@
  },
  {
   "id": "398389713519",
-  "title": "Adidas Anthony Edwards 1 Low / AE 1 Low Metamorphosis “Arctic Night”",
+  "title": "Adidas Anthony Edwards 1 Low / AE 1 Low Metamorphosis \u201cArctic Night\u201d",
   "price": "$74.00",
   "price_direct": 62.9,
   "image": "https://i.ebayimg.com/images/g/jSgAAeSw03ZqpjiT/s-l300.webp",
@@ -7568,7 +7696,7 @@
   "payment_url": "https://buy.stripe.com/28E7sL9O2eip79XbKxdZ71b",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the Adidas Anthony Edwards 1 Low / AE 1 Low Metamorphosis “Arctic Night”, a unisex sneaker in a head-turning colorway. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "Add some fresh style to your rotation with the Adidas Anthony Edwards 1 Low / AE 1 Low Metamorphosis \u201cArctic Night\u201d, a unisex sneaker in a head-turning colorway. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -7610,7 +7738,7 @@
   "payment_url": "https://buy.stripe.com/00w14n9O2cah9i56qddZ71g",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Adizero RC 4 Halo Silver Black — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "Meet the Adidas Adizero RC 4 Halo Silver Black \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 13,
    "w": 8,
@@ -7631,7 +7759,7 @@
   "payment_url": "https://buy.stripe.com/fZuaEXd0e4HPam96qddZ71i",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Supernova Stride M — a men's sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Adidas Supernova Stride M \u2014 a men's sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -7648,7 +7776,7 @@
   "url": "https://www.ebay.com/itm/398375489374",
   "brand": "Nike",
   "department": "Women",
-  "qty": 1,
+  "qty": 2,
   "payment_url": "https://buy.stripe.com/00w5kDbWa7U18e15m9dZ71D",
   "weight_lbs": 2.0,
   "weight_estimated": false,
@@ -7658,7 +7786,19 @@
    "w": 8,
    "h": 6
   },
-  "size": "US 6, US 8.5"
+  "size": "US 6, US 8.5",
+  "variants": [
+   {
+    "size": "6",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/9B64gz6BQdel3XLbKxdZ72X"
+   },
+   {
+    "size": "8.5",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/9B64gzbWadel1PD15TdZ72Y"
+   }
+  ]
  },
  {
   "id": "398375410953",
@@ -7673,7 +7813,7 @@
   "payment_url": "https://buy.stripe.com/bJe6oHbWa5LTeCp6qddZ71E",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Inter Miami x adidas Samba Third — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "Meet the Inter Miami x adidas Samba Third \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -7711,19 +7851,9 @@
   "url": "https://www.ebay.com/itm/398339652878",
   "brand": "Jordan",
   "department": "Kids",
-  "qty": 5,
+  "qty": 6,
   "payment_url": "https://buy.stripe.com/eVq3cv2lA3DLbqdbKxdZ720",
   "variants": [
-   {
-    "size": "6",
-    "qty": 1,
-    "payment_url": "https://buy.stripe.com/9B6dR98JYeip8e129XdZ72e"
-   },
-   {
-    "size": "6.5",
-    "qty": 1,
-    "payment_url": "https://buy.stripe.com/cNi8wP1hw1vD65TaGtdZ72f"
-   },
    {
     "size": "2.5",
     "qty": 1,
@@ -7738,17 +7868,27 @@
     "size": "5.5",
     "qty": 1,
     "payment_url": "https://buy.stripe.com/28E4gzgcqcah51P4i5dZ72i"
+   },
+   {
+    "size": "6",
+    "qty": 1,
+    "payment_url": "https://buy.stripe.com/9B6dR98JYeip8e129XdZ72e"
+   },
+   {
+    "size": "6.5",
+    "qty": 2,
+    "payment_url": "https://buy.stripe.com/cNi8wP1hw1vD65TaGtdZ72f"
    }
   ],
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the NIKE JORDAN SPIZIKE LOW (GS) GYM RED/BLACK — a kids' sneaker with a clean, standout look. Select your size from the options — each size has its own Buy Now button. New with box, ready to wear straight out of the package.",
+  "description": "Meet the NIKE JORDAN SPIZIKE LOW (GS) GYM RED/BLACK \u2014 a kids' sneaker with a clean, standout look. Select your size from the options \u2014 each size has its own Buy Now button. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 8,
    "h": 6
   },
-  "size": "US 6"
+  "size": "US 2.5, US 4.5, US 5.5, US 6, US 6.5"
  },
  {
   "id": "398339539891",
@@ -7815,7 +7955,7 @@
  },
  {
   "id": "398409383966",
-  "title": "Jordan MVP GS “Twine / Geode Teal”",
+  "title": "Jordan MVP GS \u201cTwine / Geode Teal\u201d",
   "price": "$82.00",
   "price_direct": 69.7,
   "image": "https://i.ebayimg.com/images/g/XiUAAeSwyXtqrgZt/s-l300.webp",
@@ -7826,7 +7966,7 @@
   "payment_url": "https://buy.stripe.com/cNidR9d0egqxbqd4i5dZ63U",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "You can't go wrong with the Jordan MVP GS “Twine / Geode Teal”, a kids' sneaker made to be worn on repeat. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "You can't go wrong with the Jordan MVP GS \u201cTwine / Geode Teal\u201d, a kids' sneaker made to be worn on repeat. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -8004,7 +8144,7 @@
  },
  {
   "id": "398389875573",
-  "title": "ASICS GT‑2160",
+  "title": "ASICS GT\u20112160",
   "price": "$88.00",
   "price_direct": 74.8,
   "image": "https://i.ebayimg.com/images/g/ULIAAeSwDG9qpk8L/s-l300.webp",
@@ -8015,7 +8155,7 @@
   "payment_url": "https://buy.stripe.com/28E00je4i1vD8e18yldZ714",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "The ASICS GT‑2160 is a go-to unisex sneaker that goes with just about anything. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "The ASICS GT\u20112160 is a go-to unisex sneaker that goes with just about anything. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 13,
    "w": 8,
@@ -8025,7 +8165,7 @@
  },
  {
   "id": "398435904763",
-  "title": "New Balance 9060 GS “Sea Salt / Dolce” 5 MEN OR 6.5 WOMEN",
+  "title": "New Balance 9060 GS \u201cSea Salt / Dolce\u201d 5 MEN OR 6.5 WOMEN",
   "price": "$89.00",
   "price_direct": 75.65,
   "image": "https://i.ebayimg.com/images/g/EVQAAeSwjhxquJtG/s-l300.webp",
@@ -8036,7 +8176,7 @@
   "payment_url": "https://buy.stripe.com/14A4gz1hw7U12TH8yldZ61X",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "The New Balance 9060 GS “Sea Salt / Dolce” brings classic New Balance style to your everyday lineup. Available in men's 5 / women's 6.5. Brand new and comes with its box.",
+  "description": "The New Balance 9060 GS \u201cSea Salt / Dolce\u201d brings classic New Balance style to your everyday lineup. Available in men's 5 / women's 6.5. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12.0,
    "w": 10.0,
@@ -8096,7 +8236,7 @@
  },
  {
   "id": "398399156883",
-  "title": "HOKA Hopara 2 Women’s",
+  "title": "HOKA Hopara 2 Women\u2019s",
   "price": "$89.00",
   "price_direct": 75.65,
   "image": "https://i.ebayimg.com/images/g/P~cAAeSwFx9qqgWP/s-l300.webp",
@@ -8107,7 +8247,7 @@
   "payment_url": "https://buy.stripe.com/8x200j6BQ4HP1PD01PdZ70M",
   "weight_lbs": 2.5,
   "weight_estimated": true,
-  "description": "Add some fresh style to your rotation with the HOKA Hopara 2 Women’s, a women's sneaker in a head-turning colorway. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "Add some fresh style to your rotation with the HOKA Hopara 2 Women\u2019s, a women's sneaker in a head-turning colorway. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 7,
@@ -8128,7 +8268,7 @@
   "payment_url": "https://buy.stripe.com/9B600j7FU0rzdylg0NdZ70X",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the New Balance 9060 Great Plains True Red — a unisex sneaker with a clean, standout look. Listed here in size 10.5. Ships brand new in its box.",
+  "description": "Meet the New Balance 9060 Great Plains True Red \u2014 a unisex sneaker with a clean, standout look. Listed here in size 10.5. Ships brand new in its box.",
   "parcel_in": {
    "l": 13,
    "w": 8,
@@ -8207,29 +8347,29 @@
   "url": "https://www.ebay.com/itm/398371561923",
   "brand": "Nike",
   "department": "Unisex",
-  "qty": 2,
+  "qty": 3,
   "payment_url": "https://buy.stripe.com/dRm28r1hw2zH65T15TdZ71K",
   "variants": [
-   {
-    "size": "11.5",
-    "qty": 1,
-    "payment_url": "https://buy.stripe.com/4gMaEX8JY1vD65TbKxdZ72z"
-   },
    {
     "size": "11",
     "qty": 1,
     "payment_url": "https://buy.stripe.com/6oU14naS6fmt8e1aGtdZ72A"
+   },
+   {
+    "size": "11.5",
+    "qty": 2,
+    "payment_url": "https://buy.stripe.com/4gMaEX8JY1vD65TbKxdZ72z"
    }
   ],
   "weight_lbs": 4.0,
   "weight_estimated": false,
-  "description": "You can't go wrong with the Nike Air Force 1 '07 White Midnight Navy, a unisex sneaker made to be worn on repeat. Select your size from the options — each size has its own Buy Now button. Ships brand new in its box.",
+  "description": "You can't go wrong with the Nike Air Force 1 '07 White Midnight Navy, a unisex sneaker made to be worn on repeat. Select your size from the options \u2014 each size has its own Buy Now button. Ships brand new in its box.",
   "parcel_in": {
    "l": 14,
    "w": 12,
    "h": 9
   },
-  "size": "US 11.5"
+  "size": "US 11, US 11.5"
  },
  {
   "id": "920012351793",
@@ -8272,7 +8412,7 @@
   "payment_url": "https://buy.stripe.com/eVq14nd0e0rzbqd5m9dZ61S",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Size 6 New Balance 2002R Steel Orca — a women's sneaker with a clean, standout look. This pair is a 6 or 7.5 Women. Brand new and comes with its box.",
+  "description": "Meet the Size 6 New Balance 2002R Steel Orca \u2014 a women's sneaker with a clean, standout look. This pair is a 6 or 7.5 Women. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -8303,7 +8443,7 @@
  },
  {
   "id": "398375213137",
-  "title": "Nike Air Force 1 Retro / Low “Valentine’s Day” 2026",
+  "title": "Nike Air Force 1 Retro / Low \u201cValentine\u2019s Day\u201d 2026",
   "price": "$91.00",
   "price_direct": 77.35,
   "image": "https://i.ebayimg.com/images/g/CBoAAeSwlr9qoJf9/s-l300.webp",
@@ -8314,7 +8454,7 @@
   "payment_url": "https://buy.stripe.com/28E28r7FU6PX9i501PdZ71I",
   "weight_lbs": 2.8,
   "weight_estimated": true,
-  "description": "Add some fresh style to your rotation with the Nike Air Force 1 Retro / Low “Valentine’s Day” 2026, a unisex sneaker in a head-turning colorway. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "Add some fresh style to your rotation with the Nike Air Force 1 Retro / Low \u201cValentine\u2019s Day\u201d 2026, a unisex sneaker in a head-turning colorway. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 13,
    "w": 8,
@@ -8397,7 +8537,7 @@
   "payment_url": "https://buy.stripe.com/28E7sL0ds6PXgKxaGtdZ70O",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Nike Air Zoom Structure 25 Wide White Metallic Silver — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Nike Air Zoom Structure 25 Wide White Metallic Silver \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -8418,7 +8558,7 @@
   "payment_url": "https://buy.stripe.com/3cI3cvbWaeip51Pg0NdZ71n",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Asics Gel Kumo Lyte 2 Sheet Rock — a unisex sneaker with a clean, standout look. Listed here in size 12. Ships brand new in its box.",
+  "description": "Meet the Asics Gel Kumo Lyte 2 Sheet Rock \u2014 a unisex sneaker with a clean, standout look. Listed here in size 12. Ships brand new in its box.",
   "parcel_in": {
    "l": 13,
    "w": 8,
@@ -8439,7 +8579,7 @@
   "payment_url": "https://buy.stripe.com/5kQ4gz9O2b6d0LzeWJdZ63O",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Air Jordan 1 Zoom Comfort 2 High Valentine's Day W — a women's sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "Meet the Air Jordan 1 Zoom Comfort 2 High Valentine's Day W \u2014 a women's sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 7,
@@ -8470,7 +8610,7 @@
  },
  {
   "id": "398386300465",
-  "title": "Air Diamond Turf II GS “Royals”",
+  "title": "Air Diamond Turf II GS \u201cRoyals\u201d",
   "price": "$98.00",
   "price_direct": 83.3,
   "image": "https://i.ebayimg.com/images/g/FJwAAeSwxfNqpM9m/s-l300.webp",
@@ -8481,7 +8621,7 @@
   "payment_url": "https://buy.stripe.com/28E5kD8JYgqxbqd3e1dZ71t",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "The Air Diamond Turf II GS “Royals” is a go-to kids' sneaker that goes with just about anything. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "The Air Diamond Turf II GS \u201cRoyals\u201d is a go-to kids' sneaker that goes with just about anything. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 6,
@@ -8502,7 +8642,7 @@
   "payment_url": "https://buy.stripe.com/3cI8wPe4igqx2THaGtdZ614",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the HOKA Clifton One9/ Men 5 or 6 — a women's sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "Meet the HOKA Clifton One9/ Men 5 or 6 \u2014 a women's sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 7,
@@ -8594,7 +8734,7 @@
   "payment_url": "https://buy.stripe.com/5kQ14nbWadel0Lz15TdZ63n",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the HOKA Clifton One9 Carbon Black — a women's sneaker with a clean, standout look. Sized at men's 7.5 / women's 8.5. Comes brand new with its box included.",
+  "description": "Meet the HOKA Clifton One9 Carbon Black \u2014 a women's sneaker with a clean, standout look. Sized at men's 7.5 / women's 8.5. Comes brand new with its box included.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -8636,7 +8776,7 @@
   "payment_url": "https://buy.stripe.com/4gM9ATbWadel51PeWJdZ63Z",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the HOKA Clifton One9/ Men 6 or 7 — a women's sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "Meet the HOKA Clifton One9/ Men 6 or 7 \u2014 a women's sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 7,
@@ -8728,7 +8868,7 @@
   "payment_url": "https://buy.stripe.com/3cIdR99O2gqxcuhcOBdZ603",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Hoka Clifton 9 Cloud Blue Ice Flow — a men's sneaker with a clean, standout look. Listed here in size US 8.5 / EU 42. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Hoka Clifton 9 Cloud Blue Ice Flow \u2014 a men's sneaker with a clean, standout look. Listed here in size US 8.5 / EU 42. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -8890,5 +9030,129 @@
    "h": 8
   },
   "size": "US 9"
+ },
+ {
+  "id": "store-lebron-22-mogul-7y",
+  "title": "Nike LeBron 22 White Black Metallic Gold Size 7Y",
+  "price": "$65.00",
+  "price_direct": 55.25,
+  "image": "assets/catalog/store-lebron-22-mogul-7y.webp",
+  "url": "",
+  "brand": "Nike",
+  "department": "Kids",
+  "qty": 1,
+  "photos": [
+   "assets/catalog/store-lebron-22-mogul-7y-1.jpg",
+   "assets/catalog/store-lebron-22-mogul-7y-2.jpg",
+   "assets/catalog/store-lebron-22-mogul-7y-3.jpg",
+   "assets/catalog/store-lebron-22-mogul-7y-4.jpg",
+   "assets/catalog/store-lebron-22-mogul-7y-5.jpg",
+   "assets/catalog/store-lebron-22-mogul-7y-6.jpg",
+   "assets/catalog/store-lebron-22-mogul-7y-7.jpg",
+   "assets/catalog/store-lebron-22-mogul-7y-8.jpg"
+  ],
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The Nike LeBron 22 \"Mogul\" (Split) in White/Black-Metallic Gold is a grade school basketball shoe with a bold two-tone look. Listed here in size US 7Y (also fits women's US 8.5). Style HV8616-100, UPC 197860243606. Brand new with its original box.",
+  "parcel_in": {
+   "l": 13,
+   "w": 8,
+   "h": 5
+  },
+  "size": "US 7Y",
+  "payment_url": "https://buy.stripe.com/00w5kD7FU8Y5dyl15TdZ73l"
+ },
+ {
+  "id": "store-adidas-runfalcon-5-105",
+  "title": "Adidas Runfalcon 5 Dusky Petrol Core Black Size 10.5",
+  "price": "$39.99",
+  "price_direct": 33.99,
+  "image": "assets/catalog/store-adidas-runfalcon-5-105.webp",
+  "url": "",
+  "brand": "Adidas",
+  "department": "Men",
+  "qty": 1,
+  "photos": [
+   "assets/catalog/store-adidas-runfalcon-5-105-1.jpg",
+   "assets/catalog/store-adidas-runfalcon-5-105-2.jpg",
+   "assets/catalog/store-adidas-runfalcon-5-105-3.jpg",
+   "assets/catalog/store-adidas-runfalcon-5-105-4.jpg",
+   "assets/catalog/store-adidas-runfalcon-5-105-5.jpg",
+   "assets/catalog/store-adidas-runfalcon-5-105-6.jpg",
+   "assets/catalog/store-adidas-runfalcon-5-105-7.jpg",
+   "assets/catalog/store-adidas-runfalcon-5-105-8.jpg"
+  ],
+  "weight_lbs": 3.0,
+  "weight_estimated": true,
+  "description": "The adidas Runfalcon 5 in Dusky Petrol/Core Black/Cloud White is a lightweight everyday trainer with a breathable mesh upper. Listed here in men's size US 10.5 (also fits women's US 12). Style JQ6974, UPC 198321461102. Brand new with its original box.",
+  "parcel_in": {
+   "l": 13,
+   "w": 8,
+   "h": 5
+  },
+  "size": "US 10.5",
+  "payment_url": "https://buy.stripe.com/eVqbJ15xM4HPcuh29XdZ73m"
+ },
+ {
+  "id": "store-adidas-ae2-allstar-6y",
+  "title": "Adidas Anthony Edwards 2 Lucid Orange Silver Metallic Size 6Y",
+  "price": "$64.99",
+  "price_direct": 55.24,
+  "image": "assets/catalog/store-adidas-ae2-allstar-6y.webp",
+  "url": "",
+  "brand": "Adidas",
+  "department": "Kids",
+  "qty": 1,
+  "photos": [
+   "assets/catalog/store-adidas-ae2-allstar-6y-1.jpg",
+   "assets/catalog/store-adidas-ae2-allstar-6y-2.jpg",
+   "assets/catalog/store-adidas-ae2-allstar-6y-3.jpg",
+   "assets/catalog/store-adidas-ae2-allstar-6y-4.jpg",
+   "assets/catalog/store-adidas-ae2-allstar-6y-5.jpg",
+   "assets/catalog/store-adidas-ae2-allstar-6y-6.jpg",
+   "assets/catalog/store-adidas-ae2-allstar-6y-7.jpg",
+   "assets/catalog/store-adidas-ae2-allstar-6y-8.jpg"
+  ],
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The adidas Anthony Edwards 2 \"All-Star\" in Lucid Orange/Silver Metallic/Grey One brings Anthony Edwards' signature style to the court. Listed here in grade school size US 6Y (also fits women's US 7.5). Style KI1655, UPC 198322292217. Brand new with its original box.",
+  "parcel_in": {
+   "l": 13,
+   "w": 8,
+   "h": 5
+  },
+  "size": "US 6Y",
+  "payment_url": "https://buy.stripe.com/bJe14n2lA5LTdyl7uhdZ73n"
+ },
+ {
+  "id": "store-hoka-clifton-one9-10",
+  "title": "Hoka Clifton One9 Black Cerise Men 10 Women 11",
+  "price": "$89.99",
+  "price_direct": 76.49,
+  "image": "assets/catalog/store-hoka-clifton-one9-10.webp",
+  "url": "",
+  "brand": "Hoka",
+  "department": "Unisex",
+  "qty": 1,
+  "photos": [
+   "assets/catalog/store-hoka-clifton-one9-10-1.jpg",
+   "assets/catalog/store-hoka-clifton-one9-10-2.jpg",
+   "assets/catalog/store-hoka-clifton-one9-10-3.jpg",
+   "assets/catalog/store-hoka-clifton-one9-10-4.jpg",
+   "assets/catalog/store-hoka-clifton-one9-10-5.jpg",
+   "assets/catalog/store-hoka-clifton-one9-10-6.jpg",
+   "assets/catalog/store-hoka-clifton-one9-10-7.jpg",
+   "assets/catalog/store-hoka-clifton-one9-10-8.jpg"
+  ],
+  "weight_lbs": 2.8,
+  "weight_estimated": true,
+  "description": "The Hoka Clifton One9 in Black/Cerise pairs Hoka's plush cushioning with an everyday trainer feel. Unisex sizing: men's US 10 / women's US 11 (UK 9.5 / EU 44). Style 1155370-BCRS. Brand new with its original box.",
+  "parcel_in": {
+   "l": 13,
+   "w": 8,
+   "h": 5
+  },
+  "size": "US 10",
+  "payment_url": "https://buy.stripe.com/dRm8wP7FUeipcuhdSFdZ73o"
  }
 ]
