@@ -46,6 +46,16 @@ try {
 const byId = new Map(CATALOG.map(p => [String(p.id || p.itemId), p]));
 const priceOf = (p) => Number(p.price ?? p.currentPrice ?? 0);
 const DISCOUNT = 0.15; // 15% off eBay price on direct store
+// Catalog price truth: p.price is the eBay price as a TEXT string ("$21.19");
+// p.price_direct is the numeric 15%-off direct-store price this shop charges
+// (the Payment Link builder uses it too). The legacy priceOf() turns "$21.19"
+// into NaN, so anything money-facing must go through storePriceOf().
+const storePriceOf = (p) => {
+  const d = Number(p?.price_direct);
+  if (Number.isFinite(d) && d > 0) return d;
+  const e = Number(String(p?.price ?? '').replace(/[^0-9.]/g, ''));
+  return Number.isFinite(e) && e > 0 ? e * (1 - DISCOUNT) : 0;
+};
 
 // ---------- Database ----------
 const DB_PATH = process.env.DB_PATH || './store.db';
@@ -104,6 +114,19 @@ db.exec(`
     used_store INTEGER NOT NULL DEFAULT 0
   );
 `);
+// Migration: orders.fulfillment + orders.ship_charged_cents (dynamic checkout
+// with calculated shipping, 2026-10-08). Safe to run on every boot.
+try {
+  const orderCols = db.prepare('PRAGMA table_info(orders)').all().map(c => c.name);
+  if (!orderCols.includes('fulfillment')) {
+    db.exec("ALTER TABLE orders ADD COLUMN fulfillment TEXT NOT NULL DEFAULT 'shipping'");
+    console.log('migration: orders.fulfillment column added');
+  }
+  if (!orderCols.includes('ship_charged_cents')) {
+    db.exec('ALTER TABLE orders ADD COLUMN ship_charged_cents INTEGER NOT NULL DEFAULT 0');
+    console.log('migration: orders.ship_charged_cents column added');
+  }
+} catch (e) { console.warn('migration orders columns skipped:', e.message); }
 try {
   const reviewCols = db.prepare('PRAGMA table_info(reviews)').all().map(c => c.name);
   if (!reviewCols.includes('verified')) {
@@ -256,7 +279,10 @@ function orderItemTitle(it) {
   const m = raw.match(/^(.+?)__size_(.+)$/);
   const p = byId.get(m ? m[1] : raw);
   const title = (p && (p.title || p.name)) || raw;
-  return m ? `${title} — Size ${m[2]}` : String(title);
+  // Size comes either embedded in the id ("...__size_6", Payment Link flow) or
+  // as its own field on the order item (dynamic checkout flow).
+  const size = m ? m[2] : (it.size != null && String(it.size) !== '' ? String(it.size) : null);
+  return size ? `${title} — Size ${size}` : String(title);
 }
 
 // ---------- Review-after-purchase tokens ----------
@@ -487,91 +513,249 @@ app.post('/api/store-reviews', (req, res) => {
   res.json({ ok: true, verified: true });
 });
 
+// ---------- Calculated shipping (Maria's rule 2026-10-08) ----------
+// Real calculated shipping by weight + destination, CAPPED at $12.95: the
+// customer never pays more than the cap; the shop absorbs any excess on the
+// rare far/heavy shipment. Provider chain: EasyPost real rate -> Shippo real
+// rate -> weight/zone estimate from Hereford, TX 79045.
+const SHIPPING_CAP_CENTS = 1295;
+const DEPT_WEIGHT_LB = { Men: 3.0, Unisex: 2.8, Women: 2.5, Kids: 1.8, Baby: 1.0, Toys: 1.5, Electronics: 2.0 };
+const DEPT_PARCEL_IN = {
+  Men: { l: 13, w: 8, h: 5 }, Unisex: { l: 13, w: 8, h: 5 }, Women: { l: 12, w: 7, h: 4.5 },
+  Kids: { l: 10, w: 6, h: 4 }, Baby: { l: 7, w: 5, h: 3 }, Toys: { l: 10, w: 8, h: 6 }, Electronics: { l: 9, w: 7, h: 4 },
+};
+const ZONE_NEAR = new Set(['TX', 'OK', 'NM', 'KS', 'CO']); // +$0.00
+const ZONE_CENTRAL = new Set(['AR', 'LA', 'MO', 'NE', 'SD', 'ND', 'MN', 'IA', 'WI', 'MI', 'IL', 'IN', 'OH', 'KY', 'TN', 'MS', 'AL']); // +$1.50
+const ZONE_EAST = new Set(['FL', 'GA', 'SC', 'NC', 'VA', 'WV', 'PA', 'NY', 'NJ', 'CT', 'MA', 'VT', 'NH', 'ME', 'MD', 'DE', 'DC']); // +$3.00
+const ZONE_WEST = new Set(['CA', 'OR', 'WA', 'NV', 'AZ', 'UT', 'ID', 'MT', 'WY']); // +$3.00 (AK/HI: +$6.00)
+const US_STATE_CODES = {
+  ALABAMA: 'AL', ALASKA: 'AK', ARIZONA: 'AZ', ARKANSAS: 'AR', CALIFORNIA: 'CA', COLORADO: 'CO', CONNECTICUT: 'CT',
+  DELAWARE: 'DE', 'DISTRICT OF COLUMBIA': 'DC', FLORIDA: 'FL', GEORGIA: 'GA', HAWAII: 'HI', IDAHO: 'ID',
+  ILLINOIS: 'IL', INDIANA: 'IN', IOWA: 'IA', KANSAS: 'KS', KENTUCKY: 'KY', LOUISIANA: 'LA', MAINE: 'ME',
+  MARYLAND: 'MD', MASSACHUSETTS: 'MA', MICHIGAN: 'MI', MINNESOTA: 'MN', MISSISSIPPI: 'MS', MISSOURI: 'MO',
+  MONTANA: 'MT', NEBRASKA: 'NE', NEVADA: 'NV', 'NEW HAMPSHIRE': 'NH', 'NEW JERSEY': 'NJ', 'NEW MEXICO': 'NM',
+  'NEW YORK': 'NY', 'NORTH CAROLINA': 'NC', 'NORTH DAKOTA': 'ND', OHIO: 'OH', OKLAHOMA: 'OK', OREGON: 'OR',
+  PENNSYLVANIA: 'PA', 'RHODE ISLAND': 'RI', 'SOUTH CAROLINA': 'SC', 'SOUTH DAKOTA': 'SD', TENNESSEE: 'TN',
+  TEXAS: 'TX', UTAH: 'UT', VERMONT: 'VT', VIRGINIA: 'VA', WASHINGTON: 'WA', 'WEST VIRGINIA': 'WV',
+  WISCONSIN: 'WI', WYOMING: 'WY',
+};
+function normalizeState(s) {
+  const t = String(s || '').trim().toUpperCase();
+  if (/^[A-Z]{2}$/.test(t)) return t;
+  return US_STATE_CODES[t] || '';
+}
+const deptOf = (p) => {
+  const d = String(p?.department || '').trim();
+  return Object.prototype.hasOwnProperty.call(DEPT_WEIGHT_LB, d) ? d : '';
+};
+const itemWeightLb = (p) => {
+  const w = Number(p?.weight_lbs);
+  if (Number.isFinite(w) && w > 0) return w;
+  return DEPT_WEIGHT_LB[deptOf(p)] ?? 2.5;
+};
+const itemParcelIn = (p) => {
+  const pc = p?.parcel_in || {};
+  if (Number(pc.l) > 0 && Number(pc.w) > 0 && Number(pc.h) > 0) return { l: Number(pc.l), w: Number(pc.w), h: Number(pc.h) };
+  return DEPT_PARCEL_IN[deptOf(p)] || { l: 13, w: 8, h: 5 };
+};
+// Validate + group raw cart entries [{id, size?, qty?}] against the catalog.
+// Accepts the legacy "id__size_6" id form as well (size split out of the id).
+function resolveCartLines(rawItems) {
+  const map = new Map();
+  for (const raw of rawItems || []) {
+    let id = String(raw?.id || '');
+    let size = raw?.size != null && String(raw.size) !== '' ? String(raw.size) : null;
+    const m = id.match(/^(.+?)__size_(.+)$/);
+    if (m) { id = m[1]; size = size ?? m[2]; }
+    const p = byId.get(id);
+    if (!p) { const e = new Error(`Unknown product ${id}`); e.status = 400; throw e; }
+    const qty = Math.max(1, Math.min(99, Number(raw?.qty) || 1));
+    const key = id + '|' + (size || '');
+    if (map.has(key)) map.get(key).qty += qty;
+    else map.set(key, { id, size, qty, p });
+  }
+  return [...map.values()];
+}
+// One parcel for the whole cart: combined weight, box of the heaviest item
+// (same single-parcel assumption the label buyers already use).
+function cartWeightParcel(lines) {
+  let totalLb = 0, heaviest = null, heaviestW = -1;
+  for (const l of lines) {
+    const w = itemWeightLb(l.p);
+    totalLb += w * l.qty;
+    if (w > heaviestW) { heaviestW = w; heaviest = l.p; }
+  }
+  const pc = heaviest ? itemParcelIn(heaviest) : { l: 13, w: 8, h: 5 };
+  return { totalLb, parcel: { weightLb: totalLb, boxL: pc.l, boxW: pc.w, boxH: pc.h } };
+}
+function estimateShippingDollars(totalLb, state) {
+  const w = Math.max(0.1, Number(totalLb) || 0);
+  let base;
+  if (w <= 1) base = 6.95; else if (w <= 2) base = 7.95; else if (w <= 3) base = 9.25;
+  else if (w <= 4) base = 10.75; else base = 10.75 + (Math.ceil(w) - 4) * 1.25;
+  let adder = 3.00; // unknown state: mid-zone default
+  if (ZONE_NEAR.has(state)) adder = 0;
+  else if (ZONE_CENTRAL.has(state)) adder = 1.50;
+  else if (ZONE_EAST.has(state) || ZONE_WEST.has(state)) adder = 3.00;
+  else if (state === 'AK' || state === 'HI') adder = 6.00;
+  return base + adder;
+}
+// Real carrier rate when a provider is configured. Throws on any provider
+// failure; computeShipping catches and falls back to the estimate.
+async function providerQuote(lines, dest) {
+  const { parcel } = cartWeightParcel(lines);
+  const zip = String(dest.zip || '');
+  if (process.env.EASYPOST_API_KEY) {
+    const shipment = await epCreateShipment({
+      name: 'Customer', street1: 'Address at checkout', city: '', state: dest.state,
+      zip, country: 'US',
+    }, parcel);
+    const pick = epPickRate(shipment.rates);
+    if (pick && Number(pick.rate) > 0) return { dollars: Number(pick.rate), source: 'easypost' };
+    throw new Error('EasyPost returned no usable rate');
+  }
+  if (process.env.SHIPPO_TOKEN) {
+    const r = await fetch(`${SHIPPO_API}/shipments/`, {
+      method: 'POST', headers: shippoHeaders(),
+      body: JSON.stringify({
+        address_from: SHIP_FROM,
+        address_to: { name: 'Customer', street1: 'Address at checkout', city: '', state: dest.state, zip, country: 'US' },
+        parcels: [{
+          length: String(parcel.boxL), width: String(parcel.boxW), height: String(parcel.boxH),
+          distance_unit: 'in', weight: String(parcel.weightLb), mass_unit: 'lb',
+        }],
+        async: false,
+      }),
+    });
+    const sh = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error('Shippo quote failed: ' + JSON.stringify(sh).slice(0, 200));
+    const rates = sh.rates || [];
+    const pick = rates.find(x => /ground advantage/i.test(x.servicelevel?.name || '') && /usps/i.test(x.provider || ''))
+      || rates.filter(x => /usps/i.test(x.provider || '')).sort((a, b) => Number(a.amount) - Number(b.amount))[0]
+      || rates.slice().sort((a, b) => Number(a.amount) - Number(b.amount))[0];
+    if (pick && Number(pick.amount) > 0) return { dollars: Number(pick.amount), source: 'shippo' };
+    throw new Error('Shippo returned no rates');
+  }
+  return null;
+}
+async function computeShipping(lines, dest) {
+  const state = normalizeState(dest?.state);
+  const { totalLb } = cartWeightParcel(lines);
+  let dollars = null, source = 'estimate';
+  try {
+    const pq = await providerQuote(lines, { state, zip: dest?.zip });
+    if (pq && Number.isFinite(pq.dollars) && pq.dollars > 0) { dollars = pq.dollars; source = pq.source; }
+  } catch (e) {
+    console.warn('shipping quote: provider failed, using estimate:', e.message);
+  }
+  if (dollars == null) dollars = estimateShippingDollars(totalLb, state);
+  const rounded = Math.ceil(dollars * 20 - 1e-6) / 20; // round UP to the next $0.05
+  const capped = rounded > SHIPPING_CAP_CENTS / 100;
+  return { amount_cents: Math.min(Math.round(rounded * 100), SHIPPING_CAP_CENTS), source, capped };
+}
+
 // ---------- Stripe checkout ----------
 function stripe() {
   if (!process.env.STRIPE_SECRET_KEY) throw new Error('STRIPE_SECRET_KEY not configured');
   return require('stripe')(process.env.STRIPE_SECRET_KEY);
 }
 
-// POST { items: [{id, qty}], shipping: {name, phone, address, city, state, zip, method}, coupon?: string }
+// POST { items: [{id, size?}], buyer: {name, email}, fulfillment: 'shipping'|'pickup',
+//        shipTo: {line1, city, state, zip} }  (shipTo required only for shipping)
+// Dynamic Stripe Checkout with CALCULATED shipping capped at $12.95 (the
+// amount is always recomputed server-side from the catalog weights + the
+// destination, never trusted from the client). Without STRIPE_SECRET_KEY —
+// or if Stripe rejects the session — single-item carts fall back to the
+// per-product Payment Link, so selling never breaks.
 app.post('/api/checkout', async (req, res) => {
   try {
-    const items = Array.isArray(req.body.items) ? req.body.items : [];
-    const ship = req.body.ship || {};
-    if (!items.length) return res.status(400).json({ error: 'Empty cart' });
-    for (const f of ['name', 'address', 'city', 'state', 'zip']) {
-      if (!String(ship[f] || '').trim()) return res.status(400).json({ error: `Missing shipping field: ${f}` });
+    const rawItems = Array.isArray(req.body.items) ? req.body.items : [];
+    const buyer = req.body.buyer || {};
+    const fulfillment = req.body.fulfillment === 'pickup' ? 'pickup' : 'shipping';
+    const shipTo = req.body.shipTo || {};
+    if (!rawItems.length) return res.status(400).json({ ok: false, error: 'Empty cart' });
+    let lines;
+    try { lines = resolveCartLines(rawItems); }
+    catch (e) { return res.status(e.status || 400).json({ ok: false, error: e.message }); }
+    // Inventory: per-size variant quantities from the catalog first, then the
+    // tracked total stock for the product.
+    const wantedById = new Map();
+    for (const l of lines) {
+      if (Array.isArray(l.p.variants) && l.p.variants.length) {
+        const v = l.size != null ? l.p.variants.find(vv => String(vv.size) === l.size) : null;
+        if (!v || Number(v.qty || 0) < l.qty) return res.status(400).json({ ok: false, error: 'Sold out' });
+        l.variant = v;
+      }
+      wantedById.set(l.id, (wantedById.get(l.id) || 0) + l.qty);
     }
-    // Validate items + stock against server catalog (never trust client prices)
-    const lineItems = [];
-    let subtotal = 0;
-    for (const it of items) {
-      const id = String(it.id);
-      const qty = Math.max(1, Math.min(99, Number(it.qty) | 0));
-      const p = byId.get(id);
-      if (!p) return res.status(400).json({ error: `Unknown product ${id}` });
-      const stock = invQty(id);
-      if (qty > stock) return res.status(400).json({ error: `Only ${stock} available for "${p.title || id}"` });
-      const unit = Math.round(priceOf(p) * (1 - DISCOUNT) * 100); // 15% off, in cents
-      subtotal += unit * qty;
-      lineItems.push({
-        price_data: { currency: 'usd', unit_amount: unit, product_data: { name: String(p.title || id).slice(0, 120) } },
-        quantity: qty,
-      });
+    for (const [id, q] of wantedById) {
+      if (invQty(id) < q) return res.status(400).json({ ok: false, error: 'Sold out' });
     }
-    // Service fee 2.9% + $0.30 passed to the customer (configurable)
-    const feeRate = Number(process.env.STRIPE_FEE_RATE || '0.029');
-    const feeFixed = Number(process.env.STRIPE_FEE_FIXED_CENTS || '30');
-    const fee = Math.round(subtotal * feeRate) + feeFixed;
-    lineItems.push({
-      price_data: { currency: 'usd', unit_amount: fee, product_data: { name: 'Service fee (card processing)' } },
-      quantity: 1,
-    });
-    // Shipping: flat provisional options until USPS live rates are wired ("Calculated" in store UI)
-    const method = /priority/i.test(ship.method || '') ? 'priority' : 'ground';
-    const shipCents = method === 'priority'
-      ? Number(process.env.SHIP_PRIORITY_CENTS || '0')
-      : Number(process.env.SHIP_GROUND_CENTS || '0');
-    if (shipCents > 0) {
-      lineItems.push({
-        price_data: { currency: 'usd', unit_amount: shipCents, product_data: { name: method === 'priority' ? 'USPS Priority Mail' : 'USPS Ground Advantage' } },
-        quantity: 1,
-      });
-    }
-    // Sales tax: Texas rate when shipping to TX (permit in mail; rate configurable)
-    const taxEnabled = /^(1|true|yes)$/i.test(process.env.TAX_ENABLED || 'true');
-    const taxRate = Number(process.env.TAX_TX_RATE || '0.0825');
-    const shipState = String(ship.state || '').trim().toLowerCase();
-    const taxable = taxEnabled && (shipState === 'tx' || shipState === 'texas');
-    if (taxable) {
-      const taxBase = subtotal + shipCents;
-      const taxCents = Math.round(taxBase * taxRate);
-      if (taxCents > 0) {
-        lineItems.push({
-          price_data: { currency: 'usd', unit_amount: taxCents, product_data: { name: `Sales tax (TX ${(taxRate * 100).toFixed(2)}%)` } },
-          quantity: 1,
-        });
+    if (fulfillment === 'shipping') {
+      for (const f of ['line1', 'city', 'state', 'zip']) {
+        if (!String(shipTo[f] || '').trim()) return res.status(400).json({ ok: false, error: `Missing shipping field: ${f}` });
       }
     }
-    const session = await stripe().checkout.sessions.create({
+    // Fallback to the per-product Payment Link (single-item carts only).
+    const fallback = () => {
+      if (lines.length !== 1 || lines[0].qty !== 1)
+        return res.status(503).json({ ok: false, error: 'Checkout unavailable' });
+      const l = lines[0];
+      const url = (l.variant && l.variant.payment_url) || l.p.payment_url || null;
+      if (!url) return res.status(503).json({ ok: false, error: 'Checkout unavailable' });
+      return res.json({ ok: false, fallback: true, url });
+    };
+    if (!process.env.STRIPE_SECRET_KEY) return fallback();
+    const lineItems = lines.map(l => ({
+      price_data: {
+        currency: 'usd',
+        unit_amount: Math.round(storePriceOf(l.p) * 100),
+        product_data: { name: (String(l.p.title || l.id).slice(0, 120) + (l.size ? ` — Size ${l.size}` : '')) },
+      },
+      quantity: l.qty,
+    }));
+    if (lineItems.some(li => !(li.price_data.unit_amount > 0)))
+      return res.status(400).json({ ok: false, error: 'Price unavailable' });
+    const params = {
       mode: 'payment',
       line_items: lineItems,
-      success_url: `${process.env.STORE_URL}/?order=success&session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.STORE_URL}/?order=cancelled`,
-      customer_email: ship.email || undefined,
+      success_url: 'https://andysshoesupply.com/?paid=1',
+      cancel_url: 'https://andysshoesupply.com/',
+      customer_email: String(buyer.email || '').trim() || undefined,
       metadata: {
-        items: JSON.stringify(items.map(i => ({ id: String(i.id), qty: Number(i.qty) | 0 }))),
-        ship_name: String(ship.name || '').slice(0, 80),
-        ship_phone: String(ship.phone || '').slice(0, 20),
-        ship_address: [ship.address, ship.city, ship.state, ship.zip].join(', '),
-        ship_method: method,
-        coupon: String(req.body.coupon || ''),
+        source: 'direct-store',
+        items: JSON.stringify(lines.map(l => ({
+          id: l.id,
+          ...(l.size ? { size: l.size } : {}),
+          ...(l.qty > 1 ? { qty: l.qty } : {}),
+        }))),
+        fulfillment,
+        buyer_email: String(buyer.email || '').slice(0, 120),
+        buyer_name: String(buyer.name || '').slice(0, 80),
       },
-    });
-    res.json({ url: session.url });
+    };
+    if (fulfillment === 'shipping') {
+      const q = await computeShipping(lines, { state: shipTo.state, zip: shipTo.zip });
+      params.shipping_address_collection = { allowed_countries: ['US'] };
+      params.shipping_options = [{
+        shipping_rate_data: {
+          type: 'fixed_amount',
+          fixed_amount: { amount: q.amount_cents, currency: 'usd' },
+          display_name: 'USPS Ground Advantage',
+        },
+      }];
+    }
+    let session;
+    try {
+      session = await stripe().checkout.sessions.create(params, { idempotencyKey: crypto.randomUUID() });
+    } catch (e) {
+      console.error('stripe session create failed, falling back to payment link:', e.message);
+      return fallback();
+    }
+    res.json({ ok: true, url: session.url });
   } catch (e) {
     console.error('checkout error:', e.message);
-    res.status(500).json({ error: 'Checkout failed', detail: e.message });
+    res.status(500).json({ ok: false, error: 'Checkout failed', detail: e.message });
   }
 });
 
@@ -595,8 +779,13 @@ async function onStripeWebhook(req, res) {
         res.json({ received: true, ignored: true });
         return;
       }
+      // Inventory decrement. Item ids may embed the size ("...__size_6" from
+      // Payment Links) — decrement the base product either way.
+      const fulfillment = s.metadata.fulfillment === 'pickup' ? 'pickup' : 'shipping';
       for (const it of items) {
-        db.prepare('UPDATE inventory SET qty = MAX(0, qty - ?) WHERE product_id = ?').run(Number(it.qty) | 0, String(it.id));
+        const baseId = String(it.id).split('__size_')[0];
+        const q = Number(it.qty) > 0 ? Number(it.qty) : 1;
+        db.prepare('UPDATE inventory SET qty = MAX(0, qty - ?) WHERE product_id = ?').run(q, baseId);
       }
       // Shipping address: Payment Links collect it via shipping_address_collection.
       const sh = s.shipping_details || {};
@@ -610,16 +799,19 @@ async function onStripeWebhook(req, res) {
         zip: sh.address?.postal_code || '',
         country: sh.address?.country || 'US',
       };
+      const shipCharged = Number(s.total_details?.amount_shipping) || 0;
       const info = db.prepare(`INSERT OR IGNORE INTO orders
-        (stripe_session, email, items, amount_total, ship_to, status)
-        VALUES (?, ?, ?, ?, ?, 'paid')`)
+        (stripe_session, email, items, amount_total, ship_to, status, fulfillment, ship_charged_cents)
+        VALUES (?, ?, ?, ?, ?, 'paid', ?, ?)`)
         .run(s.id, s.customer_email || s.customer_details?.email || '',
-             JSON.stringify(items), s.amount_total || 0, JSON.stringify(shipTo));
+             JSON.stringify(items), s.amount_total || 0, JSON.stringify(shipTo),
+             fulfillment, shipCharged);
       console.log('Order paid:', s.id, items.length, 'items');
       // Buy the shipping label right away (async, never blocks the webhook reply).
       if (info.changes > 0) {
         const orderId = db.prepare('SELECT id FROM orders WHERE stripe_session = ?').get(s.id)?.id;
-        if (orderId) buyLabelForOrder(orderId).catch(e => console.error('auto-label failed:', e.message));
+        // Pickup orders never need a label; shipping orders keep the auto-buy.
+        if (orderId && fulfillment !== 'pickup') buyLabelForOrder(orderId).catch(e => console.error('auto-label failed:', e.message));
         // Purchase confirmation + review invite, once per order: the
         // INSERT OR IGNORE above dedups webhook retries (changes = 0 on replays).
         // One review token per new order; the email carries it (?rt=<token>).
@@ -852,8 +1044,31 @@ async function buyLabelForOrder(orderId) {
   throw new Error('No shipping provider configured (set EASYPOST_API_KEY or SHIPPO_TOKEN)');
 }
 
-// Public shipping quote for the checkout: POST { to: {name?, street1, city, state, zip}, items: [{id, qty}] }
+// Public shipping quote: POST { items: [{id, size?}], state, zip } ->
+// { ok, amount_cents, amount, source, capped } where amount is the calculated
+// shipping CHARGED to the customer (real provider rate when configured, else
+// the weight/zone estimate), never above the $12.95 cap. The legacy body
+// { to: {...}, items } is still answered by legacyShippingQuote below.
 app.post('/api/shipping/quote', async (req, res) => {
+  if (req.body && req.body.to) return legacyShippingQuote(req, res);
+  try {
+    const rawItems = Array.isArray(req.body.items) ? req.body.items : [];
+    const state = normalizeState(req.body.state);
+    const zip = String(req.body.zip || '').trim();
+    if (!rawItems.length) return res.status(400).json({ ok: false, error: 'Empty items' });
+    if (!state || !/^\d{5}/.test(zip)) return res.status(400).json({ ok: false, error: 'Destination state and ZIP are required' });
+    let lines;
+    try { lines = resolveCartLines(rawItems); }
+    catch (e) { return res.status(e.status || 400).json({ ok: false, error: e.message }); }
+    const q = await computeShipping(lines, { state, zip });
+    res.json({ ok: true, amount_cents: q.amount_cents, amount: (q.amount_cents / 100).toFixed(2), source: q.source, capped: q.capped });
+  } catch (e) {
+    res.status(500).json({ ok: false, error: 'Shipping quote error', detail: e.message });
+  }
+});
+
+// Legacy quote shape: POST { to: {name?, street1, city, state, zip}, items: [{id, qty}] }
+async function legacyShippingQuote(req, res) {
   try {
     if (!process.env.EASYPOST_API_KEY && !process.env.SHIPPO_TOKEN) {
       return res.status(503).json({ error: 'Shipping provider not configured yet' });
@@ -878,7 +1093,7 @@ app.post('/api/shipping/quote', async (req, res) => {
   } catch (e) {
     res.status(500).json({ error: 'Shipping quote error', detail: e.message });
   }
-});
+}
 
 // Manual trigger (admin): POST { orderId }
 app.post('/api/labels/buy', requireAdmin, async (req, res) => {
@@ -919,7 +1134,7 @@ app.get('/api/admin/users', requireAdmin, (req, res) => {
   res.json({ count: rows.length, users: rows.map(u => ({ ...u, orders: orderCount[u.email.toLowerCase()] || 0 })) });
 });
 app.get('/api/products/lite', (req, res) => {
-  res.json(CATALOG.map(p => ({ id: String(p.id || p.itemId), title: p.title || p.name || '', price: priceOf(p) })));
+  res.json(CATALOG.map(p => ({ id: String(p.id || p.itemId), title: p.title || p.name || '', price: storePriceOf(p) })));
 });
 // ---------- Customer accounts ----------
 const newSessionToken = () => crypto.randomBytes(32).toString('hex');
@@ -986,6 +1201,7 @@ app.get('/api/health', (req, res) => res.json({
   ok: true,
   catalog: CATALOG.length,
   stripe: !!process.env.STRIPE_WEBHOOK_SECRET, // checkout uses Payment Links + webhook; no secret key needed
+  checkout: !!process.env.STRIPE_SECRET_KEY, // dynamic checkout (calculated shipping) needs the secret key
   usps: !!(process.env.USPS_CLIENT_ID && process.env.USPS_CLIENT_SECRET),
   shipping: process.env.EASYPOST_API_KEY ? 'easypost' : (process.env.SHIPPO_TOKEN ? 'shippo' : 'none'),
   email: !!RESEND_API_KEY, // Resend wired for welcome / order / promo emails
