@@ -513,11 +513,13 @@ app.post('/api/store-reviews', (req, res) => {
   res.json({ ok: true, verified: true });
 });
 
-// ---------- Calculated shipping (Maria's rule 2026-10-08) ----------
-// Real calculated shipping by weight + destination, CAPPED at $12.95: the
-// customer never pays more than the cap; the shop absorbs any excess on the
-// rare far/heavy shipment. Provider chain: EasyPost real rate -> Shippo real
-// rate -> weight/zone estimate from Hereford, TX 79045.
+// ---------- Shipping price charged to the customer ----------
+// Maria's FINAL rule 2026-10-08 (evening, reverses the calculated-with-cap
+// rule from earlier that day): FLAT $11.95 for every shipped order; local
+// Hereford pickup stays free. Customers pay inside Stripe's hosted checkout.
+// computeShipping() below short-circuits to this flat amount; the weight/zone
+// estimate and provider quote chain stay in the file for label-cost checks.
+const SHIPPING_FLAT_CENTS = 1195;
 const SHIPPING_CAP_CENTS = 1295;
 const DEPT_WEIGHT_LB = { Men: 3.0, Unisex: 2.8, Women: 2.5, Kids: 1.8, Baby: 1.0, Toys: 1.5, Electronics: 2.0 };
 const DEPT_PARCEL_IN = {
@@ -639,6 +641,9 @@ async function providerQuote(lines, dest) {
   return null;
 }
 async function computeShipping(lines, dest) {
+  // Flat $11.95 shipping (Maria's final call, 2026-10-08). The calculated
+  // estimate below is kept for internal cost checks, not for charging.
+  return { amount_cents: SHIPPING_FLAT_CENTS, source: 'flat', capped: false };
   const state = normalizeState(dest?.state);
   const { totalLb } = cartWeightParcel(lines);
   let dollars = null, source = 'estimate';
@@ -741,7 +746,7 @@ app.post('/api/checkout', async (req, res) => {
         shipping_rate_data: {
           type: 'fixed_amount',
           fixed_amount: { amount: q.amount_cents, currency: 'usd' },
-          display_name: 'USPS Ground Advantage',
+          display_name: 'USPS Ground Advantage — flat rate',
         },
       }];
     }
