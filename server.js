@@ -161,6 +161,42 @@ try {
     ins.run(id, Number.isFinite(q) ? q : 1);
   }
 }
+// ---------- Store settings (Maria edits her store from /admin) ----------
+// JSON blobs persisted in SQLite so they survive restarts (the DB file is
+// snapshotted to R2 like everything else). Keys: 'featured' (her Top
+// sellers / New arrivals / Top picks choices) and 'overrides' (per-product
+// price_direct / hidden set from the admin panel).
+db.exec('CREATE TABLE IF NOT EXISTS settings (key TEXT PRIMARY KEY, value TEXT)');
+function getSetting(key, fallback) {
+  try {
+    const row = db.prepare('SELECT value FROM settings WHERE key = ?').get(key);
+    if (!row || row.value == null) return fallback;
+    return JSON.parse(row.value);
+  } catch (e) { return fallback; }
+}
+function setSetting(key, obj) {
+  db.prepare('INSERT INTO settings (key, value) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value')
+    .run(key, JSON.stringify(obj ?? null));
+}
+const FEATURED_DEFAULTS = { top_sellers: [], new_arrivals: [], top_picks: [] };
+const cleanIdList = (v) => Array.isArray(v)
+  ? [...new Set(v.filter(x => typeof x === 'string' || typeof x === 'number').map(x => String(x)).filter(Boolean))]
+  : [];
+function getFeatured() {
+  const f = getSetting('featured', null);
+  const out = { top_sellers: [], new_arrivals: [], top_picks: [] };
+  if (f && typeof f === 'object') {
+    out.top_sellers = cleanIdList(f.top_sellers);
+    out.new_arrivals = cleanIdList(f.new_arrivals);
+    out.top_picks = cleanIdList(f.top_picks);
+  }
+  return out;
+}
+function getOverrides() {
+  const o = getSetting('overrides', null);
+  return o && typeof o === 'object' && !Array.isArray(o) ? o : {};
+}
+
 const invQty = (id) => db.prepare('SELECT qty FROM inventory WHERE product_id = ?').get(String(id))?.qty ?? 0;
 
 // ---------- Durable SQLite snapshots (Cloudflare R2) ----------
@@ -723,6 +759,17 @@ app.post('/api/checkout', async (req, res) => {
     let lines;
     try { lines = resolveCartLines(rawItems); }
     catch (e) { return res.status(e.status || 400).json({ ok: false, error: e.message }); }
+    // Maria's admin overrides win over the catalog: hidden products cannot
+    // be bought at all, and a price_direct override replaces the computed
+    // store price as the unit amount (in cents) for the Stripe session.
+    const overrides = getOverrides();
+    for (const l of lines) {
+      const ov = overrides[l.id];
+      if (ov && ov.hidden === true) return res.status(400).json({ ok: false, error: 'Sold out' });
+      l.unitCents = ov && Number(ov.price_direct) > 0
+        ? Math.round(Number(ov.price_direct) * 100)
+        : Math.round(storePriceOf(l.p) * 100);
+    }
     // Inventory: per-size variant quantities from the catalog first, then the
     // tracked total stock for the product.
     const wantedById = new Map();
@@ -755,7 +802,7 @@ app.post('/api/checkout', async (req, res) => {
     const lineItems = lines.map(l => ({
       price_data: {
         currency: 'usd',
-        unit_amount: Math.round(storePriceOf(l.p) * 100),
+        unit_amount: l.unitCents,
         product_data: { name: (String(l.p.title || l.id).slice(0, 120) + (l.size ? ` — Size ${l.size}` : '')) },
       },
       quantity: l.qty,
@@ -1181,6 +1228,59 @@ app.get('/api/admin/users', requireAdmin, (req, res) => {
 });
 app.get('/api/products/lite', (req, res) => {
   res.json(CATALOG.map(p => ({ id: String(p.id || p.itemId), title: p.title || p.name || '', price: storePriceOf(p) })));
+});
+// ---------- Store config Maria edits from /admin (featured picks + overrides) ----------
+// Public read so the storefront can render her Top sellers / New arrivals /
+// Top picks and apply her per-product price/hide overrides without a rebuild.
+app.get('/api/store-config', (req, res) => {
+  res.json({ featured: getFeatured(), overrides: getOverrides() });
+});
+app.get('/api/admin/featured', requireAdmin, (req, res) => {
+  res.json(getFeatured());
+});
+app.put('/api/admin/featured', requireAdmin, (req, res) => {
+  try {
+    const body = req.body || {};
+    setSetting('featured', {
+      top_sellers: cleanIdList(body.top_sellers),
+      new_arrivals: cleanIdList(body.new_arrivals),
+      top_picks: cleanIdList(body.top_picks),
+    });
+    res.json({ ok: true });
+  } catch (e) {
+    console.error('featured save error:', e.message);
+    res.status(500).json({ ok: false, error: 'Could not save featured picks' });
+  }
+});
+app.get('/api/admin/overrides', requireAdmin, (req, res) => {
+  res.json(getOverrides());
+});
+app.put('/api/admin/overrides', requireAdmin, (req, res) => {
+  try {
+    const body = req.body || {};
+    const id = String(body.id || '');
+    if (!byId.has(id)) return res.status(400).json({ ok: false, error: 'Unknown product' });
+    const overrides = getOverrides();
+    const entry = overrides[id] && typeof overrides[id] === 'object' ? { ...overrides[id] } : {};
+    // price_direct: a number > 0 sets the store price; null / "" / 0 clears it.
+    if (Object.prototype.hasOwnProperty.call(body, 'price_direct')) {
+      const n = Number(body.price_direct);
+      if (Number.isFinite(n) && n > 0) entry.price_direct = n;
+      else delete entry.price_direct;
+    }
+    // hidden: only booleans count — true hides the product, false un-hides it.
+    if (typeof body.hidden === 'boolean') {
+      if (body.hidden) entry.hidden = true;
+      else delete entry.hidden;
+    }
+    if (Object.keys(entry).length) overrides[id] = entry;
+    else delete overrides[id];
+    setSetting('overrides', overrides);
+    res.json({ ok: true, overrides });
+  } catch (e) {
+    console.error('overrides save error:', e.message);
+    res.status(500).json({ ok: false, error: 'Could not save override' });
+  }
 });
 // ---------- Customer accounts ----------
 const newSessionToken = () => crypto.randomBytes(32).toString('hex');
