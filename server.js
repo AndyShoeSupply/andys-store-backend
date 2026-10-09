@@ -102,6 +102,20 @@ try {
     console.log('migration: users.unsubscribed column added');
   }
 } catch (e) { console.warn('migration users.unsubscribed skipped:', e.message); }
+// Migration: users.terms_accepted_at + users.terms_version (2026-10-08) —
+// when the customer accepted the Terms & Conditions at signup, and which
+// version. Safe to run on every boot.
+try {
+  const uCols2 = db.prepare('PRAGMA table_info(users)').all().map(c => c.name);
+  if (!uCols2.includes('terms_accepted_at')) {
+    db.exec('ALTER TABLE users ADD COLUMN terms_accepted_at TEXT');
+    console.log('migration: users.terms_accepted_at column added');
+  }
+  if (!uCols2.includes('terms_version')) {
+    db.exec('ALTER TABLE users ADD COLUMN terms_version TEXT');
+    console.log('migration: users.terms_version column added');
+  }
+} catch (e) { console.warn('migration users terms columns skipped:', e.message); }
 // Reviews only after a purchase (Maria's rule, 2026-10-08): one unguessable
 // review_tokens row per paid order. used_store gates the one-time store-wide
 // review; per-product reuse is bounded by one review row per (token, product).
@@ -212,6 +226,8 @@ const voterOf = (req, productId) => {
 // "[email] skipped (no RESEND_API_KEY)" and the request flow continues.
 const RESEND_API_KEY = process.env.RESEND_API_KEY || '';
 const EMAIL_FROM = process.env.EMAIL_FROM || "Andy's Shoe Supply <hola@andysshoesupply.com>";
+// Version of the Terms & Conditions customers accept at signup (2026-10-08).
+const TERMS_VERSION = '2026-10-08';
 // Signs the one-click unsubscribe links (HMAC-SHA256). Falls back to ADMIN_TOKEN.
 const EMAIL_SIGNING_SECRET = process.env.EMAIL_SECRET || ADMIN_TOKEN || '';
 const escHtml = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -257,18 +273,43 @@ async function sendWelcomeEmail(email, name) {
   const first = String(name || '').trim().split(/\s+/)[0];
   const text = `Hi${first ? ' ' + first : ''}!
 
-Welcome to Andy's Shoe Supply — thanks for creating your account.
+Welcome to Andy's Shoe Supply — thanks for creating your account!
 
-Every pair in our direct store is 15% OFF the eBay price, every day, and new pairs land all the time. Come take a look:
-https://andysshoesupply.com
+Every pair in our direct store is 15% OFF the eBay price, every day — Nike, Jordan, Hoka, adidas and more, with new pairs landing all the time.
 
-— Andy's Shoe Supply`;
-  const html = emailShell(
-    `<p>Hi${first ? ' ' + escHtml(first) : ''}!</p>`
-    + '<p>Welcome to Andy\'s Shoe Supply — thanks for creating your account.</p>'
-    + '<p>Every pair in our direct store is <strong>15% OFF</strong> the eBay price, every day, and new pairs land all the time. Come take a look:</p>'
-    + '<p><a href="https://andysshoesupply.com">Shop Andy\'s Shoe Supply</a></p>'
-  );
+Start shopping: https://andysshoesupply.com
+
+Thanks for shopping small!
+Andy's Shoe Supply · Hereford, TX
+
+By creating an account you agree to our Terms & Conditions: https://andysshoesupply.com/terms`;
+  const html = ''
+    + '<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>'
+    + '<body style="margin:0;padding:0;background:#f4f1ea;font-family:Arial,Helvetica,sans-serif">'
+    + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f1ea"><tr><td align="center" style="padding:24px 12px">'
+    + '<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:14px;overflow:hidden">'
+    + '<tr><td style="background:#111111;padding:34px 28px;text-align:center">'
+    + '<div style="font-size:30px;font-weight:800;letter-spacing:1px;color:#ffffff">ANDY\'S SHOE SUPPLY</div>'
+    + '<div style="font-size:15px;color:#ffd23f;margin-top:8px">Hereford, Texas</div>'
+    + '</td></tr>'
+    + '<tr><td style="padding:34px 30px 6px;color:#1a1a1a">'
+    + `<p style="font-size:22px;font-weight:700;margin:0 0 12px">Hi${first ? ' ' + escHtml(first) : ''}, welcome aboard!</p>`
+    + '<p style="font-size:16px;line-height:1.6;margin:0 0 18px">Thanks for creating your account at <strong>Andy\'s Shoe Supply</strong>. You now get our direct-store prices on every pair we carry — Nike, Jordan, Hoka, adidas and more, with new pairs landing all the time.</p>'
+    + '</td></tr>'
+    + '<tr><td style="padding:4px 30px"><div style="background:#fff7e0;border:2px dashed #f5c518;border-radius:12px;padding:20px;text-align:center">'
+    + '<div style="font-size:34px;font-weight:800;color:#111111">15% OFF</div>'
+    + '<div style="font-size:15px;color:#444444;margin-top:6px">Every pair in our direct store, every day — no code needed.</div>'
+    + '</div></td></tr>'
+    + '<tr><td style="padding:26px 30px 8px;text-align:center">'
+    + '<a href="https://andysshoesupply.com" style="display:inline-block;background:#111111;color:#ffffff;font-size:18px;font-weight:700;text-decoration:none;padding:16px 44px;border-radius:999px">Start shopping</a>'
+    + '</td></tr>'
+    + '<tr><td style="padding:18px 30px 30px;color:#666666;font-size:13px;line-height:1.6;text-align:center">'
+    + '<p style="margin:0 0 10px">Thanks for shopping small!<br>Andy\'s Shoe Supply · Hereford, TX · <a href="https://andysshoesupply.com" style="color:#666666">andysshoesupply.com</a></p>'
+    + '<p style="margin:0;font-size:12px;color:#888888">By creating an account you agree to our <a href="https://andysshoesupply.com/terms" style="color:#888888;text-decoration:underline">Terms &amp; Conditions</a>: andysshoesupply.com/terms</p>'
+    + '</td></tr>'
+    + '</table>'
+    + '</td></tr></table>'
+    + '</body></html>';
   return sendEmail({ to: email, subject: "Welcome to Andy's Shoe Supply", html, text });
 }
 
@@ -1163,12 +1204,15 @@ app.post('/api/account/register', async (req, res) => {
     const email = String(req.body.email || '').trim().toLowerCase();
     const password = String(req.body.password || '');
     const name = String(req.body.name || '').trim().slice(0, 80);
+    if (req.body.agree !== true && req.body.acceptedTerms !== true)
+      return res.status(400).json({ ok: false, error: 'You must agree to the Terms & Conditions' });
     if (!EMAIL_RE.test(email)) return res.status(400).json({ error: 'invalid email' });
     if (password.length < 8) return res.status(400).json({ error: 'password too short (min 8)' });
     if (db.prepare('SELECT id FROM users WHERE email = ?').get(email))
       return res.status(409).json({ error: 'email already registered' });
     const hash = await bcrypt.hash(password, 10);
-    const r = db.prepare('INSERT INTO users (email, password_hash, name) VALUES (?, ?, ?)').run(email, hash, name);
+    const r = db.prepare('INSERT INTO users (email, password_hash, name, terms_accepted_at, terms_version) VALUES (?, ?, ?, ?, ?)')
+      .run(email, hash, name, new Date().toISOString(), TERMS_VERSION);
     const token = newSessionToken();
     const exp = new Date(Date.now() + 30*24*3600*1000).toISOString();
     db.prepare('INSERT INTO sessions (token, user_id, expires_at) VALUES (?, ?, ?)').run(token, r.lastInsertRowid, exp);
