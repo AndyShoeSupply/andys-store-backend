@@ -463,6 +463,41 @@ function sendOrderNotification(session, items, orderId) {
     sendEmail({ to, subject: `Nueva venta en tu tienda — $${total}`, html, text })));
 }
 
+// SMS sale alerts (Maria approved 2026-10-09 20:08 CDT: texts to her numbers
+// on every sale). Uses Twilio when its env vars are set; safe no-op until
+// then. Fire-and-forget: never blocks or fails the Stripe webhook.
+const TWILIO_SID = process.env.TWILIO_ACCOUNT_SID || '';
+const TWILIO_TOKEN = process.env.TWILIO_AUTH_TOKEN || '';
+const TWILIO_FROM = process.env.TWILIO_FROM_NUMBER || '';
+const ORDER_SMS_TO = (process.env.ORDER_SMS_TO || '+17025806374,+18063448673')
+  .split(',').map(s => s.trim()).filter(Boolean);
+async function sendOrderSms(session, items, orderId) {
+  if (!TWILIO_SID || !TWILIO_TOKEN || !TWILIO_FROM) {
+    console.log('[sms] skipped (Twilio not configured)');
+    return { skipped: true };
+  }
+  const total = ((Number(session.amount_total) || 0) / 100).toFixed(2);
+  const first = items && items[0] ? orderItemTitle(items[0]) : 'tu tienda';
+  const more = items && items.length > 1 ? ` y ${items.length - 1} más` : '';
+  const body = `¡Nueva venta en Andy's Shoe Supply! ${first}${more}. Total: $${total}. Orden #${orderId || ''} — mírala en andysshoesupply.com/admin`;
+  const auth = Buffer.from(`${TWILIO_SID}:${TWILIO_TOKEN}`).toString('base64');
+  for (const to of ORDER_SMS_TO) {
+    try {
+      const r = await fetch(`https://api.twilio.com/2010-04-01/Accounts/${TWILIO_SID}/Messages.json`, {
+        method: 'POST',
+        headers: { 'Authorization': `Basic ${auth}`, 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({ To: to, From: TWILIO_FROM, Body: body }).toString(),
+      });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) console.error(`[sms] Twilio ${r.status} -> ${to}:`, (j.message || JSON.stringify(j)).slice(0, 180));
+      else console.log(`[sms] sent -> ${to} (${j.sid || ''})`);
+    } catch (e) {
+      console.error(`[sms] failed -> ${to}:`, e.message);
+    }
+  }
+  return { ok: true };
+}
+
 // One-click unsubscribe links: base64url(JSON {u: userId, e: email}) + "." + HMAC-SHA256(payload).
 function unsubToken(userId, email) {
   const payload = Buffer.from(JSON.stringify({ u: userId, e: String(email || '').toLowerCase() }), 'utf8').toString('base64url');
@@ -935,6 +970,7 @@ async function onStripeWebhook(req, res) {
           : null;
         sendPurchaseConfirmation(s, items, reviewToken).catch(e => console.error('purchase email failed:', e.message));
         sendOrderNotification(s, items, orderId).catch(e => console.error('order notify email failed:', e.message));
+        sendOrderSms(s, items, orderId).catch(e => console.error('order sms failed:', e.message));
       }
     }
     res.json({ received: true });
