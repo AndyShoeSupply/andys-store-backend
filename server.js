@@ -1734,7 +1734,9 @@ app.get('/api/account/verify', (req, res) => {
       return res.redirect('https://andysshoesupply.com/#verify-expired');
     db.prepare('UPDATE users SET email_verified = 1, verify_token = NULL, verify_expires = NULL WHERE id = ?').run(u.id);
     sendWelcomeEmail(u.email, u.name).catch(e => console.error('welcome email failed:', e.message));
-    return res.redirect('https://andysshoesupply.com/#verified');
+    // The email travels in the URL fragment (#...) so the store can show it;
+    // fragments are never sent to any server.
+    return res.redirect('https://andysshoesupply.com/#verified=' + encodeURIComponent(u.email));
   } catch (e) { return res.redirect('https://andysshoesupply.com/#verify-failed'); }
 });
 // Resend the confirmation email (always answers ok to avoid email enumeration).
