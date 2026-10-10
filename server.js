@@ -632,21 +632,28 @@ function pick3NewArrivals(user, candidates) {
   return picks.slice(0, 3);
 }
 
+function newArrivalImg(p) {
+  // Store-only products use relative asset paths (assets/catalog/...) which
+  // do NOT load inside an email — turn them into full domain URLs.
+  const raw = String(p.image || '').trim();
+  return /^https?:\/\//i.test(raw) ? raw : ('https://andysshoesupply.com/' + raw.replace(/^\/+/, ''));
+}
+
 function newArrivalCard(p) {
   const link = 'https://andysshoesupply.com/#item-' + encodeURIComponent(p.id);
-  const img = escHtml(p.image || '');
+  const img = escHtml(newArrivalImg(p));
   const title = escHtml(p.title || p.name || 'New arrival');
   const price = '$' + Number(p.price_direct || p.price || 0).toFixed(2);
-  const sizeLine = p.size ? `<div style="font-size:14px;color:#666;margin-top:4px">Size ${escHtml(p.size)}</div>` : '';
-  return '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 16px;background:#fafafa;border-radius:12px;overflow:hidden">'
-    + '<tr><td align="center" style="padding:0">'
-    + `<a href="${link}" style="text-decoration:none"><img src="${img}" alt="${title}" style="width:100%;max-width:560px;height:auto;display:block"></a>`
+  const sizeLine = p.size ? `<div style="font-size:14px;color:#555555;margin-top:4px">Size ${escHtml(p.size)}</div>` : '';
+  return '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 18px;background:#ffffff;border:1px solid #eeeeee;border-radius:14px;overflow:hidden">'
+    + '<tr><td align="center" style="padding:0;background:#ffffff">'
+    + `<a href="${link}" style="text-decoration:none;color:#111111"><img src="${img}" alt="${title}" width="560" style="width:100%;max-width:560px;height:auto;display:block;border:0"></a>`
     + '</td></tr>'
-    + '<tr><td style="padding:14px 18px 18px">'
-    + `<div style="font-size:16px;font-weight:700;color:#1a1a1a">${title}</div>`
-    + `<div style="font-size:20px;font-weight:800;color:#111;margin-top:6px">${price} <span style="font-size:12px;font-weight:700;color:#fff;background:#d22;padding:2px 8px;border-radius:6px;vertical-align:middle">15% OFF</span></div>`
+    + '<tr><td style="padding:16px 20px 20px;background:#ffffff">'
+    + `<a href="${link}" style="text-decoration:none;color:#111111"><div style="font-size:17px;font-weight:700;color:#111111">${title}</div></a>`
+    + `<div style="font-size:22px;font-weight:800;color:#111111;margin-top:8px">${price} <span style="font-size:12px;font-weight:700;color:#ffffff;background:#d22;padding:3px 9px;border-radius:6px;vertical-align:middle">15% OFF</span></div>`
     + sizeLine
-    + `<div style="margin-top:10px"><a href="${link}" style="display:inline-block;background:#111;color:#fff;font-size:15px;font-weight:700;text-decoration:none;padding:11px 26px;border-radius:999px">See it</a></div>`
+    + `<div style="margin-top:12px"><a href="${link}" style="display:inline-block;background:#111111;color:#ffffff;font-size:15px;font-weight:700;text-decoration:none;padding:12px 30px;border-radius:999px">See this pair</a></div>`
     + '</td></tr></table>';
 }
 
@@ -671,11 +678,15 @@ app.post('/api/cron/new-arrivals', async (req, res) => {
       await sendEmail({
         to: testTo,
         subject: `[Preview] ${pending} new pairs at Andy's Shoe Supply`,
-        html: emailShell(`<p style="font-size:18px;font-weight:700;margin:0 0 6px">👀 Preview — not mailed to anyone</p>`
-          + `<p style="font-size:15px;color:#444;margin:0 0 18px">This is how the new-arrivals email would look. ${pending} pairs are waiting in the queue.</p>`
+        html: emailShell(`<p style="font-size:14px;font-weight:700;letter-spacing:2px;color:#d22;margin:0 0 4px">👀 PREVIEW — NOT MAILED TO ANYONE</p>`
+          + `<p style="font-size:30px;font-weight:800;margin:0 0 10px;color:#111111">NEW ARRIVALS JUST LANDED 👟</p>`
+          + `<p style="font-size:16px;line-height:1.65;color:#333333;margin:0 0 12px">${pending} brand-new pairs just hit our direct store — and remember, everything at Andy's Shoe Supply is always <strong>15% OFF the eBay price</strong>. No codes, no games, every day.</p>`
+          + `<p style="font-size:15px;line-height:1.6;color:#555555;margin:0 0 20px">This is exactly how the email your subscribers would get looks. Here are 3 of the ${pending} fresh pairs:</p>`
           + cards
-          + `<p style="text-align:center;margin:6px 0 18px"><a href="https://andysshoesupply.com/#new-arrivals-rail" style="display:inline-block;background:#d22;color:#fff;font-size:16px;font-weight:700;text-decoration:none;padding:13px 34px;border-radius:999px">See all new arrivals</a></p>`),
-        text: `Preview of the new-arrivals email (${pending} pairs waiting). See: https://andysshoesupply.com/#new-arrivals-rail`,
+          + `<p style="font-size:15px;line-height:1.6;color:#333333;margin:4px 0 18px">And that's just a taste — there are <strong>${pending} fresh pairs</strong> waiting. They go fast, so don't sleep on your size.</p>`
+          + `<p style="text-align:center;margin:6px 0 18px"><a href="https://andysshoesupply.com/#new-arrivals-rail" style="display:inline-block;background:#d22;color:#fff;font-size:17px;font-weight:700;text-decoration:none;padding:15px 40px;border-radius:999px">Shop all new arrivals</a></p>`
+          + `<p style="font-size:13px;color:#888888;text-align:center;margin:0">100% authentic · Fast US shipping · Free pickup in Hereford, TX</p>`),
+        text: `PREVIEW (not mailed). NEW ARRIVALS JUST LANDED: ${pending} brand-new pairs at Andy's Shoe Supply, always 15% OFF the eBay price. See: https://andysshoesupply.com/#new-arrivals-rail`,
       });
       return res.json({ ok: true, sent: 0, reason: 'preview', pending, previewTo: testTo });
     }
@@ -710,11 +721,16 @@ app.post('/api/cron/new-arrivals', async (req, res) => {
         to: u.email,
         subject,
         html: emailShell(
-          `<p style="font-size:22px;font-weight:700;margin:0 0 8px">Hi${first ? ' ' + escHtml(first) : ''}! 👋</p>`
-          + `<p style="font-size:16px;line-height:1.6;margin:0 0 18px">${pending} new pairs just landed in our direct store — always 15% OFF the eBay price. ${personal}</p>`
+          `<p style="font-size:14px;font-weight:700;letter-spacing:2px;color:#d22;margin:0 0 4px">FRESH IN STORE</p>`
+          + `<p style="font-size:30px;font-weight:800;margin:0 0 10px;color:#111111">NEW ARRIVALS JUST LANDED 👟</p>`
+          + `<p style="font-size:17px;font-weight:700;color:#333333;margin:0 0 10px">Hi${first ? ' ' + escHtml(first) : ''}! 👋</p>`
+          + `<p style="font-size:16px;line-height:1.65;color:#333333;margin:0 0 12px"><strong>${pending} brand-new pairs</strong> just hit our direct store — and remember, everything at Andy's Shoe Supply is always <strong>15% OFF the eBay price</strong>. No codes, no games, every day.</p>`
+          + `<p style="font-size:15px;line-height:1.6;color:#555555;margin:0 0 20px">${personal} Here are 3 of the freshest pairs:</p>`
           + picks.map(newArrivalCard).join('')
-          + `<p style="text-align:center;margin:6px 0 18px"><a href="https://andysshoesupply.com/#new-arrivals-rail" style="display:inline-block;background:#d22;color:#fff;font-size:16px;font-weight:700;text-decoration:none;padding:13px 34px;border-radius:999px">See all ${pending} new arrivals</a></p>`
-          + `<p style="font-size:12px;color:#888;margin-top:20px">You're receiving this because you have an account at Andy's Shoe Supply. <a href="${unsub}">Unsubscribe</a></p>`
+          + `<p style="font-size:15px;line-height:1.6;color:#333333;margin:4px 0 18px">And that's just a taste — there are <strong>${pending} fresh pairs</strong> waiting for you. They go fast, so don't sleep on your size.</p>`
+          + `<p style="text-align:center;margin:6px 0 18px"><a href="https://andysshoesupply.com/#new-arrivals-rail" style="display:inline-block;background:#d22;color:#fff;font-size:17px;font-weight:700;text-decoration:none;padding:15px 40px;border-radius:999px">Shop all ${pending} new arrivals</a></p>`
+          + `<p style="font-size:13px;color:#888888;text-align:center;margin:0 0 10px">100% authentic · Fast US shipping · Free pickup in Hereford, TX</p>`
+          + `<p style="font-size:12px;color:#888;margin-top:10px">You're receiving this because you have an account at Andy's Shoe Supply. <a href="${unsub}">Unsubscribe</a></p>`
         ),
         text: `Hi${first ? ' ' + first : ''}! ${pending} new pairs just landed at Andy's Shoe Supply (always 15% OFF the eBay price). See them: https://andysshoesupply.com/#new-arrivals-rail\n\n—\nDon't want these emails? Unsubscribe here: ${unsub}`,
         headers: { 'List-Unsubscribe': `<${unsub}>` },
