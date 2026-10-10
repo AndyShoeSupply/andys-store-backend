@@ -102,6 +102,20 @@ try {
     console.log('migration: users.unsubscribed column added');
   }
 } catch (e) { console.warn('migration users.unsubscribed skipped:', e.message); }
+// Migration: users.favorite_brand + users.favorite_size (2026-10-10) —
+// optional preferences from the Create Account form, used to personalize
+// the "new arrivals" digest emails. Safe to run on every boot.
+try {
+  const userCols = db.prepare('PRAGMA table_info(users)').all().map(c => c.name);
+  if (!userCols.includes('favorite_brand')) {
+    db.exec('ALTER TABLE users ADD COLUMN favorite_brand TEXT NOT NULL DEFAULT \'\'');
+    console.log('migration: users.favorite_brand column added');
+  }
+  if (!userCols.includes('favorite_size')) {
+    db.exec('ALTER TABLE users ADD COLUMN favorite_size TEXT NOT NULL DEFAULT \'\'');
+    console.log('migration: users.favorite_size column added');
+  }
+} catch (e) { console.warn('migration users.preferences skipped:', e.message); }
 // Migration: users.terms_accepted_at + users.terms_version (2026-10-08) —
 // when the customer accepted the Terms & Conditions at signup, and which
 // version. Safe to run on every boot.
@@ -569,6 +583,153 @@ app.post('/api/admin/send-promo', requireAdmin, async (req, res) => {
   } catch (e) {
     console.error('send-promo error:', e.message);
     res.status(500).json({ error: 'promo send failed', detail: e.message });
+  }
+});
+
+// ---------- New-arrivals digest emails (Maria, 2026-10-10) ----------
+// A cron job calls POST /api/cron/new-arrivals (header x-cron-secret).
+// The email goes out ONLY when 20+ un-mailed new arrivals pile up, and
+// never more than once per 7 days (Maria: no daily emails — people
+// unsubscribe when you fill their inbox). Each user gets a personalized
+// 3-pick: their favorite brand/size first, everyone else the 3 freshest.
+const NEWARRIVALS_THRESHOLD = 20;
+const NEWARRIVALS_MIN_DAYS = 7;
+
+function getMailedNewArrivals() {
+  try { const v = getSetting('newarrivals_mailed', null); return Array.isArray(v) ? v : []; }
+  catch (e) { return []; }
+}
+
+function newArrivalCandidates() {
+  const mailed = new Set(getMailedNewArrivals().map(String));
+  return CATALOG
+    .filter(p => p && p.added && !mailed.has(String(p.id)))
+    .sort((a, b) => String(b.added).localeCompare(String(a.added)));
+}
+
+function pick3NewArrivals(user, candidates) {
+  const fb = String(user.favorite_brand || '').trim().toLowerCase();
+  const fs = String(user.favorite_size || '').trim().replace(/\s+/g, '').toLowerCase();
+  const picks = [], seen = new Set();
+  const take = (p) => { const id = String(p.id); if (!seen.has(id)) { picks.push(p); seen.add(id); } };
+  const brandHit = (p) => {
+    const b = String(p.brand || '').trim().toLowerCase();
+    return fb && b && (b.includes(fb) || fb.includes(b));
+  };
+  const sizeHit = (p) => {
+    const s = String(p.size || '').trim().replace(/\s+/g, '').toLowerCase();
+    return fs && s && (s.includes(fs) || fs.includes(s));
+  };
+  if (fb || fs) {
+    for (const p of candidates) { // exact brand+size matches first
+      if (brandHit(p) && (fs ? sizeHit(p) : true)) { take(p); if (picks.length >= 3) break; }
+    }
+    if (fb) { // then any of their brand
+      for (const p of candidates) { if (brandHit(p)) { take(p); if (picks.length >= 3) break; } }
+    }
+  }
+  for (const p of candidates) { take(p); if (picks.length >= 3) break; } // fill with freshest
+  return picks.slice(0, 3);
+}
+
+function newArrivalCard(p) {
+  const link = 'https://andysshoesupply.com/#item-' + encodeURIComponent(p.id);
+  const img = escHtml(p.image || '');
+  const title = escHtml(p.title || p.name || 'New arrival');
+  const price = '$' + Number(p.price_direct || p.price || 0).toFixed(2);
+  const sizeLine = p.size ? `<div style="font-size:14px;color:#666;margin-top:4px">Size ${escHtml(p.size)}</div>` : '';
+  return '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 16px;background:#fafafa;border-radius:12px;overflow:hidden">'
+    + '<tr><td align="center" style="padding:0">'
+    + `<a href="${link}" style="text-decoration:none"><img src="${img}" alt="${title}" style="width:100%;max-width:560px;height:auto;display:block"></a>`
+    + '</td></tr>'
+    + '<tr><td style="padding:14px 18px 18px">'
+    + `<div style="font-size:16px;font-weight:700;color:#1a1a1a">${title}</div>`
+    + `<div style="font-size:20px;font-weight:800;color:#111;margin-top:6px">${price} <span style="font-size:12px;font-weight:700;color:#fff;background:#d22;padding:2px 8px;border-radius:6px;vertical-align:middle">15% OFF</span></div>`
+    + sizeLine
+    + `<div style="margin-top:10px"><a href="${link}" style="display:inline-block;background:#111;color:#fff;font-size:15px;font-weight:700;text-decoration:none;padding:11px 26px;border-radius:999px">See it</a></div>`
+    + '</td></tr></table>';
+}
+
+app.post('/api/cron/new-arrivals', async (req, res) => {
+  try {
+    const secret = process.env.CRON_SECRET;
+    if (!secret) return res.status(503).json({ ok: false, error: 'CRON_SECRET not configured' });
+    const a = Buffer.from(req.get('x-cron-secret') || ''), b = Buffer.from(secret);
+    if (a.length !== b.length || !crypto.timingSafeEqual(a, b))
+      return res.status(401).json({ ok: false, error: 'unauthorized' });
+
+    const dry = req.query.dry === '1';
+    const testTo = String(req.query.to || '').trim().toLowerCase();
+    const candidates = newArrivalCandidates();
+    const pending = candidates.length;
+
+    if (pending < NEWARRIVALS_THRESHOLD)
+      return res.json({ ok: true, sent: 0, reason: 'not_ready', pending, threshold: NEWARRIVALS_THRESHOLD });
+
+    // Preview to a single address (Maria's), without marking anything as mailed.
+    if (dry && testTo) {
+      const featured = candidates.slice(0, 3);
+      const cards = featured.map(newArrivalCard).join('');
+      await sendEmail({
+        to: testTo,
+        subject: `[Preview] ${pending} new pairs at Andy's Shoe Supply`,
+        html: emailShell(`<p style="font-size:18px;font-weight:700;margin:0 0 6px">👀 Preview — not mailed to anyone</p>`
+          + `<p style="font-size:15px;color:#444;margin:0 0 18px">This is how the new-arrivals email would look. ${pending} pairs are waiting in the queue.</p>`
+          + cards
+          + `<p style="text-align:center;margin:6px 0 18px"><a href="https://andysshoesupply.com/#new-arrivals-rail" style="display:inline-block;background:#d22;color:#fff;font-size:16px;font-weight:700;text-decoration:none;padding:13px 34px;border-radius:999px">See all new arrivals</a></p>`),
+        text: `Preview of the new-arrivals email (${pending} pairs waiting). See: https://andysshoesupply.com/#new-arrivals-rail`,
+      });
+      return res.json({ ok: true, sent: 0, reason: 'preview', pending, previewTo: testTo });
+    }
+
+    const lastSent = getSetting('newarrivals_last_sent', null);
+    if (lastSent && (Date.now() - new Date(lastSent).getTime()) < NEWARRIVALS_MIN_DAYS * 24 * 3600 * 1000)
+      return res.json({ ok: true, sent: 0, reason: 'cooldown', pending });
+
+    if (dry)
+      return res.json({ ok: true, sent: 0, reason: 'dry_run_ready', pending, threshold: NEWARRIVALS_THRESHOLD,
+        featured: candidates.slice(0, 3).map(p => ({ id: p.id, title: p.title, price_direct: p.price_direct, brand: p.brand, size: p.size })),
+        recipientCount: db.prepare('SELECT COUNT(*) AS c FROM users WHERE unsubscribed = 0').get().c });
+
+    if (!RESEND_API_KEY) return res.status(503).json({ ok: false, error: 'email not configured (set RESEND_API_KEY)' });
+
+    const users = db.prepare('SELECT id, email, name, favorite_brand, favorite_size FROM users WHERE unsubscribed = 0 AND email <> ? AND email NOT LIKE ? ORDER BY id')
+      .all('roinelpadin@gmail.com', 'roinelpadin+%');
+    const subject = `Fresh arrivals: ${pending} new pairs at Andy's Shoe Supply`;
+    const featured = candidates.slice(0, 3);
+    let sent = 0, failed = 0;
+    for (const u of users) {
+      const picks = pick3NewArrivals(u, candidates);
+      const first = String(u.name || '').trim().split(/\s+/)[0];
+      const unsub = unsubscribeUrl(req, u.id, u.email);
+      const personal = (u.favorite_brand || u.favorite_size)
+        ? `Picked for you — ${escHtml([u.favorite_brand, u.favorite_size && ('size ' + u.favorite_size)].filter(Boolean).join(' · '))}.`
+        : `Here are 3 of the ${pending} freshest pairs.`;
+      const r = await sendEmail({
+        to: u.email,
+        subject,
+        html: emailShell(
+          `<p style="font-size:22px;font-weight:700;margin:0 0 8px">Hi${first ? ' ' + escHtml(first) : ''}! 👋</p>`
+          + `<p style="font-size:16px;line-height:1.6;margin:0 0 18px">${pending} new pairs just landed in our direct store — always 15% OFF the eBay price. ${personal}</p>`
+          + picks.map(newArrivalCard).join('')
+          + `<p style="text-align:center;margin:6px 0 18px"><a href="https://andysshoesupply.com/#new-arrivals-rail" style="display:inline-block;background:#d22;color:#fff;font-size:16px;font-weight:700;text-decoration:none;padding:13px 34px;border-radius:999px">See all ${pending} new arrivals</a></p>`
+          + `<p style="font-size:12px;color:#888;margin-top:20px">You're receiving this because you have an account at Andy's Shoe Supply. <a href="${unsub}">Unsubscribe</a></p>`
+        ),
+        text: `Hi${first ? ' ' + first : ''}! ${pending} new pairs just landed at Andy's Shoe Supply (always 15% OFF the eBay price). See them: https://andysshoesupply.com/#new-arrivals-rail\n\n—\nDon't want these emails? Unsubscribe here: ${unsub}`,
+        headers: { 'List-Unsubscribe': `<${unsub}>` },
+      });
+      if (r.ok) sent++; else failed++;
+      if (users.length > 1) await new Promise(done => setTimeout(done, 350));
+    }
+    console.log(`[email] new-arrivals digest: ${sent} sent, ${failed} failed, ${users.length} recipients, ${pending} pairs`);
+    if (sent > 0) {
+      setSetting('newarrivals_mailed', getMailedNewArrivals().concat(candidates.map(p => String(p.id))));
+      setSetting('newarrivals_last_sent', new Date().toISOString());
+    }
+    res.json({ ok: true, sent, failed, recipients: users.length, pending, mailed: sent > 0 });
+  } catch (e) {
+    console.error('new-arrivals digest error:', e.message);
+    res.status(500).json({ ok: false, error: 'digest failed', detail: e.message });
   }
 });
 
@@ -1392,6 +1553,8 @@ app.post('/api/account/register', async (req, res) => {
     const email = String(req.body.email || '').trim().toLowerCase();
     const password = String(req.body.password || '');
     const name = String(req.body.name || '').trim().slice(0, 80);
+    const favoriteBrand = String(req.body.favoriteBrand || '').trim().slice(0, 60);
+    const favoriteSize = String(req.body.favoriteSize || '').trim().slice(0, 20);
     if (req.body.agree !== true && req.body.acceptedTerms !== true)
       return res.status(400).json({ ok: false, error: 'You must agree to the Terms & Conditions' });
     if (!EMAIL_RE.test(email)) return res.status(400).json({ error: 'invalid email' });
@@ -1399,14 +1562,14 @@ app.post('/api/account/register', async (req, res) => {
     if (db.prepare('SELECT id FROM users WHERE email = ?').get(email))
       return res.status(409).json({ error: 'email already registered' });
     const hash = await bcrypt.hash(password, 10);
-    const r = db.prepare('INSERT INTO users (email, password_hash, name, terms_accepted_at, terms_version) VALUES (?, ?, ?, ?, ?)')
-      .run(email, hash, name, new Date().toISOString(), TERMS_VERSION);
+    const r = db.prepare('INSERT INTO users (email, password_hash, name, terms_accepted_at, terms_version, favorite_brand, favorite_size) VALUES (?, ?, ?, ?, ?, ?, ?)')
+      .run(email, hash, name, new Date().toISOString(), TERMS_VERSION, favoriteBrand, favoriteSize);
     const token = newSessionToken();
     const exp = new Date(Date.now() + 30*24*3600*1000).toISOString();
     db.prepare('INSERT INTO sessions (token, user_id, expires_at) VALUES (?, ?, ?)').run(token, r.lastInsertRowid, exp);
     // Welcome email (fire-and-forget; safe no-op until RESEND_API_KEY is set).
     sendWelcomeEmail(email, name).catch(e => console.error('welcome email failed:', e.message));
-    res.json({ token, user: { email, name } });
+    res.json({ token, user: { email, name, favoriteBrand, favoriteSize } });
   } catch (e) { res.status(500).json({ error: 'registration failed' }); }
 });
 app.post('/api/account/login', async (req, res) => {
@@ -1419,7 +1582,7 @@ app.post('/api/account/login', async (req, res) => {
     const token = newSessionToken();
     const exp = new Date(Date.now() + 30*24*3600*1000).toISOString();
     db.prepare('INSERT INTO sessions (token, user_id, expires_at) VALUES (?, ?, ?)').run(token, u.id, exp);
-    res.json({ token, user: { email: u.email, name: u.name } });
+    res.json({ token, user: { email: u.email, name: u.name, favoriteBrand: u.favorite_brand || '', favoriteSize: u.favorite_size || '' } });
   } catch (e) { res.status(500).json({ error: 'login failed' }); }
 });
 app.post('/api/account/logout', (req, res) => {
@@ -1432,6 +1595,18 @@ app.get('/api/account/me', requireAccount, (req, res) => {
   const orders = db.prepare(`SELECT id, items, amount_total, tracking_number, label_url, status, created_at
     FROM orders WHERE lower(email) = lower(?) ORDER BY id DESC LIMIT 20`).all(req.account.email);
   res.json({ user: req.account, orders: orders.map(o => ({ ...o, items: JSON.parse(o.items || '[]') })) });
+});
+
+// Update optional shopping preferences (favorite brand/size) — used for
+// personalized "new arrivals" digest emails. Both optional, never required.
+app.put('/api/account/preferences', requireAccount, (req, res) => {
+  try {
+    const favoriteBrand = String(req.body.favoriteBrand || '').trim().slice(0, 60);
+    const favoriteSize = String(req.body.favoriteSize || '').trim().slice(0, 20);
+    db.prepare('UPDATE users SET favorite_brand = ?, favorite_size = ? WHERE id = ?')
+      .run(favoriteBrand, favoriteSize, req.account.id);
+    res.json({ ok: true, favoriteBrand, favoriteSize });
+  } catch (e) { res.status(500).json({ error: 'preferences update failed' }); }
 });
 
 app.get('/api/health', (req, res) => res.json({
