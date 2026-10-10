@@ -116,7 +116,28 @@ try {
     console.log('migration: users.favorite_size column added');
   }
 } catch (e) { console.warn('migration users.preferences skipped:', e.message); }
+// Migration: email verification (2026-10-10, Maria) — new accounts must
+// confirm their email before the account becomes active. Existing users
+// are grandfathered as verified. Safe to run on every boot.
+try {
+  const uCols3 = db.prepare('PRAGMA table_info(users)').all().map(c => c.name);
+  if (!uCols3.includes('email_verified')) {
+    db.exec('ALTER TABLE users ADD COLUMN email_verified INTEGER NOT NULL DEFAULT 0');
+    db.exec('UPDATE users SET email_verified = 1');
+    console.log('migration: users.email_verified column added (existing users grandfathered)');
+  }
+  if (!uCols3.includes('verify_token')) {
+    db.exec('ALTER TABLE users ADD COLUMN verify_token TEXT');
+    console.log('migration: users.verify_token column added');
+  }
+  if (!uCols3.includes('verify_expires')) {
+    db.exec('ALTER TABLE users ADD COLUMN verify_expires TEXT');
+    console.log('migration: users.verify_expires column added');
+  }
+} catch (e) { console.warn('migration users.email_verified skipped:', e.message); }
 // Migration: users.terms_accepted_at + users.terms_version (2026-10-08) —
+// when the customer accepted the Terms & Conditions at signup, and which
+// version. Safe to run on every boot.
 // when the customer accepted the Terms & Conditions at signup, and which
 // version. Safe to run on every boot.
 try {
@@ -362,6 +383,44 @@ By creating an account you agree to our Terms & Conditions: https://andysshoesup
     + '</td></tr></table>'
     + '</body></html>';
   return sendEmail({ to: email, subject: "Welcome to Andy's Shoe Supply", html, text });
+}
+
+// Verification email for new accounts (Maria, 2026-10-10): the user must
+// click the link to confirm their email before the account becomes active.
+async function sendVerificationEmail(email, name, token) {
+  const link = `https://andys-store-backend.onrender.com/api/account/verify?token=${encodeURIComponent(token)}`;
+  const first = String(name || '').trim().split(/\s+/)[0];
+  const text = `Hi${first ? ' ' + first : ''}!
+
+One last step: confirm your email to finish creating your Andy's Shoe Supply account.
+
+Confirm my email: ${link}
+
+This link expires in 48 hours. If you didn't create this account, just ignore this email.
+
+Andy's Shoe Supply · Hereford, TX`;
+  const html = ''
+    + '<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>'
+    + '<body style="margin:0;padding:0;background:#f4f1ea;font-family:Arial,Helvetica,sans-serif">'
+    + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f1ea"><tr><td align="center" style="padding:24px 12px">'
+    + '<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:14px;overflow:hidden">'
+    + '<tr><td style="background:#111111;padding:34px 28px;text-align:center">'
+    + '<div style="font-size:30px;font-weight:800;letter-spacing:1px;color:#ffffff">ANDY\'S SHOE SUPPLY</div>'
+    + '<div style="font-size:15px;color:#ffd23f;margin-top:8px">Hereford, Texas</div>'
+    + '</td></tr>'
+    + '<tr><td style="padding:34px 30px 8px;color:#1a1a1a;text-align:center">'
+    + `<p style="font-size:24px;font-weight:800;margin:0 0 12px">One last step, ${first ? escHtml(first) : 'friend'}! ✉️</p>`
+    + '<p style="font-size:16px;line-height:1.65;margin:0 0 22px">Tap the button below to <strong>confirm your email</strong> and finish creating your account. Then you can shop every pair at <strong>15% OFF the eBay price</strong>.</p>'
+    + `<a href="${link}" style="display:inline-block;background:#d22;color:#ffffff;font-size:18px;font-weight:700;text-decoration:none;padding:16px 44px;border-radius:999px">Confirm my email</a>`
+    + '<p style="font-size:13px;color:#888888;margin:18px 0 0">This link expires in 48 hours.<br>If you didn\'t create this account, just ignore this email.</p>'
+    + '</td></tr>'
+    + '<tr><td style="padding:18px 30px 30px;color:#666666;font-size:13px;line-height:1.6;text-align:center">'
+    + '<p style="margin:0">Andy\'s Shoe Supply · Hereford, TX · <a href="https://andysshoesupply.com" style="color:#666666">andysshoesupply.com</a></p>'
+    + '</td></tr>'
+    + '</table>'
+    + '</td></tr></table>'
+    + '</body></html>';
+  return sendEmail({ to: email, subject: "Confirm your email — Andy's Shoe Supply", html, text });
 }
 
 // Human title for an order line item. Payment Link variants carry the id
@@ -705,7 +764,7 @@ app.post('/api/cron/new-arrivals', async (req, res) => {
 
     if (!RESEND_API_KEY) return res.status(503).json({ ok: false, error: 'email not configured (set RESEND_API_KEY)' });
 
-    const users = db.prepare('SELECT id, email, name, favorite_brand, favorite_size FROM users WHERE unsubscribed = 0 AND email <> ? AND email NOT LIKE ? ORDER BY id')
+    const users = db.prepare('SELECT id, email, name, favorite_brand, favorite_size FROM users WHERE unsubscribed = 0 AND email_verified = 1 AND email <> ? AND email NOT LIKE ? ORDER BY id')
       .all('roinelpadin@gmail.com', 'roinelpadin+%');
     const subject = `Fresh arrivals: ${pending} new pairs at Andy's Shoe Supply`;
     const featured = candidates.slice(0, 3);
@@ -786,7 +845,7 @@ app.post('/api/cron/preferences-nudge', async (req, res) => {
       return res.json({ ok: true, sent: 0, reason: 'preview', previewTo });
     }
 
-    const users = db.prepare("SELECT id, email, name FROM users WHERE unsubscribed = 0 AND (favorite_brand IS NULL OR favorite_brand = '' OR favorite_size IS NULL OR favorite_size = '') AND email <> ? AND email NOT LIKE ? ORDER BY id")
+    const users = db.prepare("SELECT id, email, name FROM users WHERE unsubscribed = 0 AND email_verified = 1 AND (favorite_brand IS NULL OR favorite_brand = '' OR favorite_size IS NULL OR favorite_size = '') AND email <> ? AND email NOT LIKE ? ORDER BY id")
       .all('roinelpadin@gmail.com', 'roinelpadin+%');
     let sent = 0, failed = 0;
     for (const u of users) {
@@ -1639,14 +1698,14 @@ app.post('/api/account/register', async (req, res) => {
     if (db.prepare('SELECT id FROM users WHERE email = ?').get(email))
       return res.status(409).json({ error: 'email already registered' });
     const hash = await bcrypt.hash(password, 10);
-    const r = db.prepare('INSERT INTO users (email, password_hash, name, terms_accepted_at, terms_version, favorite_brand, favorite_size) VALUES (?, ?, ?, ?, ?, ?, ?)')
-      .run(email, hash, name, new Date().toISOString(), TERMS_VERSION, favoriteBrand, favoriteSize);
-    const token = newSessionToken();
-    const exp = new Date(Date.now() + 30*24*3600*1000).toISOString();
-    db.prepare('INSERT INTO sessions (token, user_id, expires_at) VALUES (?, ?, ?)').run(token, r.lastInsertRowid, exp);
-    // Welcome email (fire-and-forget; safe no-op until RESEND_API_KEY is set).
-    sendWelcomeEmail(email, name).catch(e => console.error('welcome email failed:', e.message));
-    res.json({ token, user: { email, name, favoriteBrand, favoriteSize } });
+    const vtoken = crypto.randomBytes(32).toString('hex');
+    const vexp = new Date(Date.now() + 48*3600*1000).toISOString();
+    const r = db.prepare('INSERT INTO users (email, password_hash, name, terms_accepted_at, terms_version, favorite_brand, favorite_size, email_verified, verify_token, verify_expires) VALUES (?, ?, ?, ?, ?, ?, ?, 0, ?, ?)')
+      .run(email, hash, name, new Date().toISOString(), TERMS_VERSION, favoriteBrand, favoriteSize, vtoken, vexp);
+    // No session yet — the account activates when the user confirms their
+    // email (Maria, 2026-10-10). The welcome email goes out after verification.
+    sendVerificationEmail(email, name, vtoken).catch(e => console.error('verification email failed:', e.message));
+    res.json({ ok: true, verifySent: true, email });
   } catch (e) { res.status(500).json({ error: 'registration failed' }); }
 });
 app.post('/api/account/login', async (req, res) => {
@@ -1656,14 +1715,43 @@ app.post('/api/account/login', async (req, res) => {
     const u = db.prepare('SELECT * FROM users WHERE email = ?').get(email);
     if (!u || !(await bcrypt.compare(password, u.password_hash)))
       return res.status(401).json({ error: 'invalid credentials' });
+    if (!u.email_verified)
+      return res.status(403).json({ error: 'email_not_verified', message: 'Please confirm your email first — we sent you a confirmation link.' });
     const token = newSessionToken();
     const exp = new Date(Date.now() + 30*24*3600*1000).toISOString();
     db.prepare('INSERT INTO sessions (token, user_id, expires_at) VALUES (?, ?, ?)').run(token, u.id, exp);
     res.json({ token, user: { email: u.email, name: u.name, favoriteBrand: u.favorite_brand || '', favoriteSize: u.favorite_size || '' } });
   } catch (e) { res.status(500).json({ error: 'login failed' }); }
 });
-app.post('/api/account/logout', (req, res) => {
-  const h = req.get('authorization') || '';
+// Email confirmation link: verifies the account, sends the welcome email,
+// then lands the customer on the store with a success banner.
+app.get('/api/account/verify', (req, res) => {
+  try {
+    const token = String(req.query.token || '').trim();
+    const u = token ? db.prepare('SELECT id, email, name, verify_expires FROM users WHERE verify_token = ?').get(token) : null;
+    if (!u) return res.redirect('https://andysshoesupply.com/#verify-failed');
+    if (u.verify_expires && new Date(u.verify_expires) < new Date())
+      return res.redirect('https://andysshoesupply.com/#verify-expired');
+    db.prepare('UPDATE users SET email_verified = 1, verify_token = NULL, verify_expires = NULL WHERE id = ?').run(u.id);
+    sendWelcomeEmail(u.email, u.name).catch(e => console.error('welcome email failed:', e.message));
+    return res.redirect('https://andysshoesupply.com/#verified');
+  } catch (e) { return res.redirect('https://andysshoesupply.com/#verify-failed'); }
+});
+// Resend the confirmation email (always answers ok to avoid email enumeration).
+app.post('/api/account/resend-verification', async (req, res) => {
+  try {
+    const email = String(req.body.email || '').trim().toLowerCase();
+    const u = email ? db.prepare('SELECT id, email, name, email_verified FROM users WHERE email = ?').get(email) : null;
+    if (u && !u.email_verified) {
+      const vtoken = crypto.randomBytes(32).toString('hex');
+      const vexp = new Date(Date.now() + 48*3600*1000).toISOString();
+      db.prepare('UPDATE users SET verify_token = ?, verify_expires = ? WHERE id = ?').run(vtoken, vexp, u.id);
+      await sendVerificationEmail(u.email, u.name, vtoken).catch(e => console.error('verify resend failed:', e.message));
+    }
+    res.json({ ok: true });
+  } catch (e) { res.json({ ok: true }); }
+});
+app.post('/api/account/logout', (req, res) => {  const h = req.get('authorization') || '';
   const m = h.match(/^Bearer\s+(.+)$/i);
   if (m) db.prepare('DELETE FROM sessions WHERE token = ?').run(m[1]);
   res.json({ ok: true });
