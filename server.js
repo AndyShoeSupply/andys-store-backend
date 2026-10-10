@@ -663,13 +663,11 @@ app.post('/api/cron/new-arrivals', async (req, res) => {
     const candidates = newArrivalCandidates();
     const pending = candidates.length;
 
-    if (pending < NEWARRIVALS_THRESHOLD)
-      return res.json({ ok: true, sent: 0, reason: 'not_ready', pending, threshold: NEWARRIVALS_THRESHOLD });
-
-    // Preview to a single address (Maria's), without marking anything as mailed.
+    // Preview to a single address (Maria's), without marking anything as
+    // mailed. Works even before the threshold is reached.
     if (dry && testTo) {
-      const featured = candidates.slice(0, 3);
-      const cards = featured.map(newArrivalCard).join('');
+      if (!RESEND_API_KEY) return res.status(503).json({ ok: false, error: 'email not configured (set RESEND_API_KEY)' });
+      const cards = candidates.slice(0, 3).map(newArrivalCard).join('');
       await sendEmail({
         to: testTo,
         subject: `[Preview] ${pending} new pairs at Andy's Shoe Supply`,
@@ -681,6 +679,9 @@ app.post('/api/cron/new-arrivals', async (req, res) => {
       });
       return res.json({ ok: true, sent: 0, reason: 'preview', pending, previewTo: testTo });
     }
+
+    if (pending < NEWARRIVALS_THRESHOLD)
+      return res.json({ ok: true, sent: 0, reason: 'not_ready', pending, threshold: NEWARRIVALS_THRESHOLD });
 
     const lastSent = getSetting('newarrivals_last_sent', null);
     if (lastSent && (Date.now() - new Date(lastSent).getTime()) < NEWARRIVALS_MIN_DAYS * 24 * 3600 * 1000)
