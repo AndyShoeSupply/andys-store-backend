@@ -441,9 +441,11 @@ ${itemLinks.length ? `\nReview your items too — your review gets a Verified Pu
   return sendEmail({ to, subject: "Your Andy's Shoe Supply order is confirmed", html, text });
 }
 
-// Order alert for the store owner (Maria asked for an email on every sale,
-// 2026-10-09). Fire-and-forget: never blocks or fails the Stripe webhook.
-const ORDER_NOTIFY_EMAIL = process.env.ORDER_NOTIFY_EMAIL || 'maria6234montez@gmail.com';
+// Order alert for the store owners (Maria asked for an email on every sale,
+// 2026-10-09; later same day: also to the business account email). Fire-and-
+// forget: never blocks or fails the Stripe webhook.
+const ORDER_NOTIFY_EMAILS = (process.env.ORDER_NOTIFY_EMAILS || 'maria6234montez@gmail.com,roinelpadin@gmail.com')
+  .split(',').map(s => s.trim()).filter(Boolean);
 function sendOrderNotification(session, items, orderId) {
   const total = ((Number(session.amount_total) || 0) / 100).toFixed(2);
   const buyer = session.customer_email || session.customer_details?.email || '';
@@ -457,7 +459,8 @@ function sendOrderNotification(session, items, orderId) {
     + `<p><strong>Total cobrado: $${total}</strong></p>`
     + '<p><a href="https://andysshoesupply.com/admin">Verla en tu panel</a></p>'
   );
-  return sendEmail({ to: ORDER_NOTIFY_EMAIL, subject: `Nueva venta en tu tienda — $${total}`, html, text });
+  return Promise.all(ORDER_NOTIFY_EMAILS.map(to =>
+    sendEmail({ to, subject: `Nueva venta en tu tienda — $${total}`, html, text })));
 }
 
 // One-click unsubscribe links: base64url(JSON {u: userId, e: email}) + "." + HMAC-SHA256(payload).
