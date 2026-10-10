@@ -765,7 +765,7 @@ app.post('/api/cron/preferences-nudge', async (req, res) => {
     if (!RESEND_API_KEY) return res.status(503).json({ ok: false, error: 'email not configured (set RESEND_API_KEY)' });
 
     const previewTo = String(req.query.to || '').trim().toLowerCase();
-    const accountLink = 'https://andysshoesupply.com/#account';
+    const accountLink = 'https://andysshoesupply.com/#preferences';
     const bodyHtml = (first, unsub) =>
       `<p style="font-size:14px;font-weight:700;letter-spacing:2px;color:#d22;margin:0 0 4px">MAKE IT YOURS</p>`
       + `<p style="font-size:28px;font-weight:800;margin:0 0 10px;color:#111111">Get picks made for YOU 👟</p>`
