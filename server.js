@@ -441,6 +441,25 @@ ${itemLinks.length ? `\nReview your items too — your review gets a Verified Pu
   return sendEmail({ to, subject: "Your Andy's Shoe Supply order is confirmed", html, text });
 }
 
+// Order alert for the store owner (Maria asked for an email on every sale,
+// 2026-10-09). Fire-and-forget: never blocks or fails the Stripe webhook.
+const ORDER_NOTIFY_EMAIL = process.env.ORDER_NOTIFY_EMAIL || 'maria6234montez@gmail.com';
+function sendOrderNotification(session, items, orderId) {
+  const total = ((Number(session.amount_total) || 0) / 100).toFixed(2);
+  const buyer = session.customer_email || session.customer_details?.email || '';
+  const shipName = session.customer_details?.name || '';
+  const lines = (items || []).map(it => `• ${orderItemTitle(it)}${Number(it.qty) > 1 ? ` × ${it.qty}` : ''}`);
+  const text = `¡Nueva venta en tu tienda!\n\nOrden #${orderId || ''}\nCliente: ${shipName} <${buyer}>\n\n${lines.join('\n')}\n\nTotal cobrado: $${total}\n\nVela en tu panel: https://andysshoesupply.com/admin\n— Andy's Shoe Supply`;
+  const html = emailShell(
+    '<p><strong>¡Nueva venta en tu tienda!</strong></p>'
+    + `<p>Orden #${orderId || ''} — Cliente: ${escHtml(shipName)} &lt;${escHtml(buyer)}&gt;</p>`
+    + '<ul>' + lines.map(l => `<li>${escHtml(l.replace(/^• /, ''))}</li>`).join('') + '</ul>'
+    + `<p><strong>Total cobrado: $${total}</strong></p>`
+    + '<p><a href="https://andysshoesupply.com/admin">Verla en tu panel</a></p>'
+  );
+  return sendEmail({ to: ORDER_NOTIFY_EMAIL, subject: `Nueva venta en tu tienda — $${total}`, html, text });
+}
+
 // One-click unsubscribe links: base64url(JSON {u: userId, e: email}) + "." + HMAC-SHA256(payload).
 function unsubToken(userId, email) {
   const payload = Buffer.from(JSON.stringify({ u: userId, e: String(email || '').toLowerCase() }), 'utf8').toString('base64url');
@@ -912,6 +931,7 @@ async function onStripeWebhook(req, res) {
           ? createReviewToken(orderId, s.customer_email || s.customer_details?.email || '')
           : null;
         sendPurchaseConfirmation(s, items, reviewToken).catch(e => console.error('purchase email failed:', e.message));
+        sendOrderNotification(s, items, orderId).catch(e => console.error('order notify email failed:', e.message));
       }
     }
     res.json({ received: true });
