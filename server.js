@@ -589,11 +589,11 @@ app.post('/api/admin/send-promo', requireAdmin, async (req, res) => {
 // ---------- New-arrivals digest emails (Maria, 2026-10-10) ----------
 // A cron job calls POST /api/cron/new-arrivals (header x-cron-secret).
 // The email goes out ONLY when 20+ un-mailed new arrivals pile up, and
-// never more than once per 7 days (Maria: no daily emails — people
+// never more than once per 3 days (Maria: no daily emails — people
 // unsubscribe when you fill their inbox). Each user gets a personalized
 // 3-pick: their favorite brand/size first, everyone else the 3 freshest.
 const NEWARRIVALS_THRESHOLD = 20;
-const NEWARRIVALS_MIN_DAYS = 7;
+const NEWARRIVALS_MIN_DAYS = 3;
 
 function getMailedNewArrivals() {
   try { const v = getSetting('newarrivals_mailed', null); return Array.isArray(v) ? v : []; }
@@ -747,6 +747,66 @@ app.post('/api/cron/new-arrivals', async (req, res) => {
   } catch (e) {
     console.error('new-arrivals digest error:', e.message);
     res.status(500).json({ ok: false, error: 'digest failed', detail: e.message });
+  }
+});
+
+// ---------- Preferences nudge (Maria, 2026-10-10) ----------
+// One-off: invite subscribers who haven't set favorite brand/size to add
+// them in My Account, so the new-arrivals digest can personalize their
+// 3 picks. POST /api/cron/preferences-nudge (header x-cron-secret).
+// ?to=address sends a single preview without touching anyone else.
+app.post('/api/cron/preferences-nudge', async (req, res) => {
+  try {
+    const secret = process.env.CRON_SECRET;
+    if (!secret) return res.status(503).json({ ok: false, error: 'CRON_SECRET not configured' });
+    const a = Buffer.from(req.get('x-cron-secret') || ''), b = Buffer.from(secret);
+    if (a.length !== b.length || !crypto.timingSafeEqual(a, b))
+      return res.status(401).json({ ok: false, error: 'unauthorized' });
+    if (!RESEND_API_KEY) return res.status(503).json({ ok: false, error: 'email not configured (set RESEND_API_KEY)' });
+
+    const previewTo = String(req.query.to || '').trim().toLowerCase();
+    const accountLink = 'https://andysshoesupply.com/#account';
+    const bodyHtml = (first, unsub) =>
+      `<p style="font-size:14px;font-weight:700;letter-spacing:2px;color:#d22;margin:0 0 4px">MAKE IT YOURS</p>`
+      + `<p style="font-size:28px;font-weight:800;margin:0 0 10px;color:#111111">Get picks made for YOU 👟</p>`
+      + `<p style="font-size:17px;font-weight:700;color:#333333;margin:0 0 10px">Hi${first ? ' ' + escHtml(first) : ''}! 👋</p>`
+      + `<p style="font-size:16px;line-height:1.65;color:#333333;margin:0 0 12px">Quick favor that takes 20 seconds: add your <strong>favorite brand</strong> and your <strong>shoe size</strong> to your account. That way, when new pairs land, the email we send you shows the ones <strong>you'll actually love</strong> — your brand, your size, first.</p>`
+      + `<p style="font-size:15px;line-height:1.6;color:#555555;margin:0 0 20px">Go to <strong>My Account → My preferences</strong>, pick your brand and size, hit save. Done. ✅</p>`
+      + `<p style="text-align:center;margin:6px 0 18px"><a href="${accountLink}" style="display:inline-block;background:#d22;color:#fff;font-size:17px;font-weight:700;text-decoration:none;padding:15px 40px;border-radius:999px">Update my preferences</a></p>`
+      + `<p style="font-size:13px;color:#888888;text-align:center;margin:0 0 10px">100% authentic · Always 15% OFF the eBay price · Free pickup in Hereford, TX</p>`
+      + (unsub ? `<p style="font-size:12px;color:#888;margin-top:10px">You're receiving this because you have an account at Andy's Shoe Supply. <a href="${unsub}">Unsubscribe</a></p>` : '');
+
+    if (previewTo) {
+      await sendEmail({
+        to: previewTo,
+        subject: `[Preview] Get picks made for you — Andy's Shoe Supply`,
+        html: emailShell(`<p style="font-size:14px;font-weight:700;letter-spacing:2px;color:#d22;margin:0 0 4px">👀 PREVIEW — NOT MAILED TO ANYONE</p>` + bodyHtml('', '')),
+        text: `PREVIEW (not mailed). Add your favorite brand and size in My Account so our new-arrivals emails show your pairs first: ${accountLink}`,
+      });
+      return res.json({ ok: true, sent: 0, reason: 'preview', previewTo });
+    }
+
+    const users = db.prepare("SELECT id, email, name FROM users WHERE unsubscribed = 0 AND (favorite_brand IS NULL OR favorite_brand = '' OR favorite_size IS NULL OR favorite_size = '') AND email <> ? AND email NOT LIKE ? ORDER BY id")
+      .all('roinelpadin@gmail.com', 'roinelpadin+%');
+    let sent = 0, failed = 0;
+    for (const u of users) {
+      const first = String(u.name || '').trim().split(/\s+/)[0];
+      const unsub = unsubscribeUrl(req, u.id, u.email);
+      const r = await sendEmail({
+        to: u.email,
+        subject: `Get shoe picks made for you 👟 — Andy's Shoe Supply`,
+        html: emailShell(bodyHtml(first, unsub)),
+        text: `Hi${first ? ' ' + first : ''}! Add your favorite brand and shoe size in My Account (My preferences) so our new-arrivals emails show the pairs you'll actually love — your brand, your size, first: ${accountLink}\n\n—\nDon't want these emails? Unsubscribe here: ${unsub}`,
+        headers: { 'List-Unsubscribe': `<${unsub}>` },
+      });
+      if (r.ok) sent++; else failed++;
+      if (users.length > 1) await new Promise(done => setTimeout(done, 350));
+    }
+    console.log(`[email] preferences nudge: ${sent} sent, ${failed} failed, ${users.length} recipients`);
+    res.json({ ok: true, sent, failed, recipients: users.length });
+  } catch (e) {
+    console.error('preferences nudge error:', e.message);
+    res.status(500).json({ ok: false, error: 'nudge failed', detail: e.message });
   }
 });
 
