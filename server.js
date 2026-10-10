@@ -167,6 +167,7 @@ try {
 // sellers / New arrivals / Top picks choices) and 'overrides' (per-product
 // price_direct / hidden set from the admin panel).
 db.exec('CREATE TABLE IF NOT EXISTS settings (key TEXT PRIMARY KEY, value TEXT)');
+db.exec('CREATE TABLE IF NOT EXISTS visits (day TEXT NOT NULL, visitor TEXT NOT NULL, PRIMARY KEY (day, visitor))');
 function getSetting(key, fallback) {
   try {
     const row = db.prepare('SELECT value FROM settings WHERE key = ?').get(key);
@@ -1277,6 +1278,34 @@ app.get('/api/orders/recent', requireAdmin, (req, res) => {
 // ---------- Inventory (for the private admin panel to sync) ----------
 app.get('/api/inventory', requireAdmin, (req, res) => {
   res.json(db.prepare('SELECT product_id AS id, qty FROM inventory').all());
+});
+
+// ---------- Visit counter (Maria asked 2026-10-10: her own visitor stats) ----------
+// The storefront POSTs one beacon per page load; we count distinct visitors
+// per Chicago day (hash of IP+UA, raw IPs are never stored; obvious bots out).
+app.post('/api/visit', (req, res) => {
+  try {
+    const ua = String(req.get('user-agent') || '');
+    if (!/bot|crawler|spider|headless|lighthouse/i.test(ua)) {
+      const ip = String(req.get('x-forwarded-for') || req.ip || '').split(',')[0].trim();
+      const visitor = crypto.createHash('sha256').update(ip + '|' + ua).digest('hex').slice(0, 24);
+      const day = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Chicago' }).format(new Date());
+      db.prepare('INSERT OR IGNORE INTO visits (day, visitor) VALUES (?, ?)').run(day, visitor);
+    }
+  } catch (e) { console.error('visit log failed:', e.message); }
+  res.status(204).end();
+});
+app.get('/api/admin/visits', requireAdmin, (req, res) => {
+  const rows = db.prepare('SELECT day, COUNT(*) AS visitors FROM visits GROUP BY day ORDER BY day DESC LIMIT 30').all();
+  const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Chicago' }).format(new Date());
+  const sum = (list) => list.reduce((a, r) => a + r.visitors, 0);
+  res.json({
+    today: (rows.find(r => r.day === today) || { visitors: 0 }).visitors,
+    last7: sum(rows.slice(0, 7)),
+    last30: sum(rows),
+    total: sum(db.prepare('SELECT COUNT(*) AS visitors FROM visits GROUP BY day').all().map(v => ({ visitors: v.visitors }))),
+    byDay: rows.slice(0, 14),
+  });
 });
 
 app.get('/api/admin/users', requireAdmin, (req, res) => {
