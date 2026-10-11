@@ -1139,11 +1139,9 @@ app.post('/api/checkout', async (req, res) => {
     for (const [id, q] of wantedById) {
       if (invQty(id) < q) return res.status(400).json({ ok: false, error: 'Sold out' });
     }
-    if (fulfillment === 'shipping') {
-      for (const f of ['line1', 'city', 'state', 'zip']) {
-        if (!String(shipTo[f] || '').trim()) return res.status(400).json({ ok: false, error: `Missing shipping field: ${f}` });
-      }
-    }
+    // Maria 2026-10-11: Stripe Checkout collects the buyer's shipping address
+    // on its own page, so the storefront no longer asks for it up front.
+    // shipTo is accepted when provided but never required.
     // Fallback to the per-product Payment Link (single-item carts only).
     const fallback = () => {
       if (lines.length !== 1 || lines[0].qty !== 1)
@@ -1183,7 +1181,7 @@ app.post('/api/checkout', async (req, res) => {
       },
     };
     if (fulfillment === 'shipping') {
-      const q = await computeShipping(lines, { state: shipTo.state, zip: shipTo.zip });
+      const q = await computeShipping(lines, {}); // flat $11.95, no address needed
       params.shipping_address_collection = { allowed_countries: ['US'] };
       params.shipping_options = [{
         shipping_rate_data: {
