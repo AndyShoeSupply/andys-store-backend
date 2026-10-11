@@ -1168,6 +1168,9 @@ app.post('/api/checkout', async (req, res) => {
       success_url: 'https://andysshoesupply.com/?paid=1',
       cancel_url: 'https://andysshoesupply.com/',
       customer_email: String(buyer.email || '').trim() || undefined,
+      // Maria 2026-10-11: let Stripe calculate sales tax automatically.
+      // No-op until Stripe Tax is activated and TX registration added in dashboard.
+      automatic_tax: { enabled: true },
       metadata: {
         source: 'direct-store',
         items: JSON.stringify(lines.map(l => ({
