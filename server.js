@@ -1607,10 +1607,12 @@ app.post('/api/views', (req, res) => {
   } catch (e) { res.json({ ok: false }); }
 });
 app.get('/api/admin/product-views', requireAdmin, (req, res) => {
-  const rows = db.prepare(`SELECT product_id, SUM(views) AS views FROM product_views
-    GROUP BY product_id ORDER BY views DESC LIMIT 20`).all();
   const byId = {};
   try { for (const p of CATALOG) byId[String(p.id || p.itemId)] = p; } catch (e) {}
+  // Only real catalog products (ignores stray/test ids).
+  const rows = db.prepare(`SELECT product_id, SUM(views) AS views FROM product_views
+    GROUP BY product_id ORDER BY views DESC LIMIT 60`).all()
+    .filter(r => byId[String(r.product_id)]).slice(0, 20);
   res.json(rows.map(r => {
     const p = byId[String(r.product_id)] || {};
     return { id: r.product_id, views: r.views, title: p.title || p.name || r.product_id,
