@@ -1606,6 +1606,18 @@ app.post('/api/views', (req, res) => {
     res.json({ ok: true });
   } catch (e) { res.json({ ok: false }); }
 });
+app.get('/api/admin/product-likes', requireAdmin, (req, res) => {
+  const byId = {};
+  try { for (const p of CATALOG) byId[String(p.id || p.itemId)] = p; } catch (e) {}
+  const rows = db.prepare(`SELECT product_id, count AS likes FROM likes
+    ORDER BY count DESC LIMIT 60`).all()
+    .filter(r => byId[String(r.product_id)] && Number(r.likes) > 0).slice(0, 20);
+  res.json(rows.map(r => {
+    const p = byId[String(r.product_id)] || {};
+    return { id: r.product_id, likes: r.likes, title: p.title || p.name || r.product_id,
+             price: p.price_direct || null, image: p.image || null };
+  }));
+});
 app.get('/api/admin/product-views', requireAdmin, (req, res) => {
   const byId = {};
   try { for (const p of CATALOG) byId[String(p.id || p.itemId)] = p; } catch (e) {}
