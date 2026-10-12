@@ -895,6 +895,15 @@ app.post('/api/likes/:productId/toggle', (req, res) => {
   res.json({ productId: id, likes: count, liked });
 });
 
+// ---------- Favorites: products the current visitor liked ----------
+app.get('/api/likes/mine', (req, res) => {
+  const v = String(req.query.voter || req.get('x-voter') || '').trim();
+  if (!/^[A-Za-z0-9-]{8,64}$/.test(v)) return res.json({ voter: null, favorites: [] });
+  const voter = 'v:' + v;
+  const rows = db.prepare('SELECT product_id FROM like_votes WHERE voter = ? ORDER BY rowid DESC').all(voter);
+  res.json({ voter, favorites: rows.map(r => r.product_id) });
+});
+
 // ---------- Reviews (public) ----------
 app.get('/api/reviews/:productId', (req, res) => {
   const id = String(req.params.productId);
