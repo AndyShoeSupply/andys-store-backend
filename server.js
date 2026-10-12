@@ -203,6 +203,7 @@ try {
 // price_direct / hidden set from the admin panel).
 db.exec('CREATE TABLE IF NOT EXISTS settings (key TEXT PRIMARY KEY, value TEXT)');
 db.exec('CREATE TABLE IF NOT EXISTS visits (day TEXT NOT NULL, visitor TEXT NOT NULL, PRIMARY KEY (day, visitor))');
+db.exec('CREATE TABLE IF NOT EXISTS product_views (product_id TEXT NOT NULL, day TEXT NOT NULL, views INTEGER NOT NULL DEFAULT 0, PRIMARY KEY (product_id, day))'); // Maria 2026-10-11: per-product views for admin 'Más vistos'
 function getSetting(key, fallback) {
   try {
     const row = db.prepare('SELECT value FROM settings WHERE key = ?').get(key);
@@ -1592,6 +1593,29 @@ app.post('/api/visit', (req, res) => {
     }
   } catch (e) { console.error('visit log failed:', e.message); }
   res.status(204).end();
+});
+// Maria 2026-10-11: product view tracking for the admin "Más vistos" list.
+// Fire-and-forget from the storefront when a product is viewed.
+app.post('/api/views', (req, res) => {
+  try {
+    const id = String((req.body && req.body.id) || '').slice(0, 64);
+    if (!id) return res.json({ ok: false });
+    const day = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Chicago' }).format(new Date());
+    db.prepare(`INSERT INTO product_views (product_id, day, views) VALUES (?, ?, 1)
+      ON CONFLICT(product_id, day) DO UPDATE SET views = views + 1`).run(id, day);
+    res.json({ ok: true });
+  } catch (e) { res.json({ ok: false }); }
+});
+app.get('/api/admin/product-views', requireAdmin, (req, res) => {
+  const rows = db.prepare(`SELECT product_id, SUM(views) AS views FROM product_views
+    GROUP BY product_id ORDER BY views DESC LIMIT 20`).all();
+  const byId = {};
+  try { for (const p of CATALOG) byId[String(p.id || p.itemId)] = p; } catch (e) {}
+  res.json(rows.map(r => {
+    const p = byId[String(r.product_id)] || {};
+    return { id: r.product_id, views: r.views, title: p.title || p.name || r.product_id,
+             price: p.price_direct || null, image: p.image || null };
+  }));
 });
 app.get('/api/admin/visits', requireAdmin, (req, res) => {
   const rows = db.prepare('SELECT day, COUNT(*) AS visitors FROM visits GROUP BY day ORDER BY day DESC LIMIT 30').all();
