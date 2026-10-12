@@ -1721,10 +1721,12 @@ function accountUser(req) {
   const h = req.get('authorization') || '';
   const m = h.match(/^Bearer\s+(.+)$/i);
   if (!m) return null;
-  const row = db.prepare("SELECT s.user_id, s.expires_at, u.id, u.email, u.name, u.created_at FROM sessions s JOIN users u ON u.id = s.user_id WHERE s.token = ?").get(m[1]);
+  const row = db.prepare("SELECT s.user_id, s.expires_at, u.id, u.email, u.name, u.created_at, u.favorite_brand, u.favorite_size FROM sessions s JOIN users u ON u.id = s.user_id WHERE s.token = ?").get(m[1]);
   if (!row) return null;
   if (new Date(row.expires_at) < new Date()) { db.prepare('DELETE FROM sessions WHERE token = ?').run(m[1]); return null; }
-  return { id: row.id, email: row.email, name: row.name, created_at: row.created_at };
+  return { id: row.id, email: row.email, name: row.name, created_at: row.created_at,
+           favorite_brand: row.favorite_brand || '', favorite_size: row.favorite_size || '',
+           favoriteBrand: row.favorite_brand || '', favoriteSize: row.favorite_size || '' };
 }
 function requireAccount(req, res, next) {
   const u = accountUser(req);
