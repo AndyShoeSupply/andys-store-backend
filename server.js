@@ -1142,6 +1142,18 @@ app.post('/api/checkout', async (req, res) => {
         ? Math.round(Number(ov.price_direct) * 100)
         : Math.round(storePriceOf(l.p) * 100);
     }
+    // Maria 2026-10-14: customers who created an account get an EXTRA 3% OFF
+    // the item price (on top of the 15% OFF direct price). The discount is
+    // decided HERE from the account session token — never from anything the
+    // browser claims — and shipping stays the flat $11.95 either way.
+    const acctUser = accountUser(req);
+    let accountDiscountCents = 0;
+    if (acctUser) {
+      for (const l of lines) {
+        const d = Math.round(l.unitCents * 0.03);
+        if (d > 0) { l.unitCents -= d; accountDiscountCents += d * l.qty; }
+      }
+    }
     // Inventory: per-size variant quantities from the catalog first, then the
     // tracked total stock for the product.
     const wantedById = new Map();
@@ -1196,6 +1208,7 @@ app.post('/api/checkout', async (req, res) => {
           ...(l.qty > 1 ? { qty: l.qty } : {}),
         }))),
         fulfillment,
+        ...(acctUser ? { account_email: acctUser.email, account_discount_cents: String(accountDiscountCents) } : {}),
         buyer_email: String(buyer.email || '').slice(0, 120),
         buyer_name: String(buyer.name || '').slice(0, 80),
       },
