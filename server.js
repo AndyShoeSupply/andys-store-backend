@@ -1767,10 +1767,18 @@ app.post('/api/account/login', async (req, res) => {
       return res.status(401).json({ error: 'invalid credentials' });
     if (!u.email_verified)
       return res.status(403).json({ error: 'email_not_verified', message: 'Please confirm your email first — we sent you a confirmation link.' });
+    // "Keep me signed in" (remember me): checked (default) keeps the 30-day
+    // persistent session; unchecked gives a short 12-hour server session and
+    // a browser-session cookie (no Max-Age, dies with the browser). The
+    // storefront mirrors this by keeping the token in localStorage only when
+    // remember is on, and in sessionStorage when it is off.
+    const remember = req.body.remember !== false;
     const token = newSessionToken();
-    const exp = new Date(Date.now() + 30*24*3600*1000).toISOString();
+    const ttlMs = remember ? 30*24*3600*1000 : 12*3600*1000;
+    const exp = new Date(Date.now() + ttlMs).toISOString();
     db.prepare('INSERT INTO sessions (token, user_id, expires_at) VALUES (?, ?, ?)').run(token, u.id, exp);
-    res.json({ token, user: { email: u.email, name: u.name, favoriteBrand: u.favorite_brand || '', favoriteSize: u.favorite_size || '' } });
+    res.set('Set-Cookie', 'ass_session=' + encodeURIComponent(token) + '; Path=/; HttpOnly; Secure; SameSite=Lax' + (remember ? '; Max-Age=' + String(30*24*3600) : ''));
+    res.json({ token, remember, expiresAt: exp, user: { email: u.email, name: u.name, favoriteBrand: u.favorite_brand || '', favoriteSize: u.favorite_size || '' } });
   } catch (e) { res.status(500).json({ error: 'login failed' }); }
 });
 // Email confirmation link: verifies the account, sends the welcome email,
