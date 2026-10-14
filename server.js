@@ -653,6 +653,73 @@ app.post('/api/admin/send-promo', requireAdmin, async (req, res) => {
   }
 });
 
+// ---------- October giveaway promo to subscribers (Maria, 2026-10-14) ----------
+// One-off blast about the October Community Giveaway. POST
+// /api/cron/send-giveaway-promo (header x-cron-secret) — the subject and
+// body are FIXED here (approved copy, not taken from the request), and the
+// send is guarded by a setting so it can only go out once.
+const GIVEAWAY_PROMO_SUBJECT = "🎁 You're invited: win up to $400 cash or $500 in shoes — free to enter";
+const GIVEAWAY_PROMO_TEXT = `Hi! This is Andy's Shoe Supply — thanks for being part of our store. 💛
+
+We're running our October Community Giveaway, and as one of our customers/subscribers, we want YOU in it:
+
+💰 Win $50 to $400 in CASH
+👟 or brand-new shoes worth $80 to $500 (your size, shipped free anywhere in the US)
+
+Entering is 100% FREE and takes less than a minute:
+1. Follow us on Facebook: Andy's Shoe Supply
+2. Follow our eBay store: andysshoesupply
+3. Comment DONE on the giveaway post on Facebook
+
+Want extra chances? Follow us on TikTok (+1 entry) and invite friends with your personal referral code (+1 per friend, up to 4). Get your code by texting the word CODE to (806) 344-8673.
+
+⏰ Entries close Sunday, October 25 — the winner is drawn LIVE on Facebook that day at 8:00 PM Central.
+
+Full rules: https://andysshoesupply.com/reglas-sorteo/
+
+Good luck — and thank you for supporting our small Hereford, Texas store!
+— Andy's Shoe Supply`;
+
+app.post('/api/cron/send-giveaway-promo', async (req, res) => {
+  try {
+    const secret = process.env.CRON_SECRET;
+    if (!secret) return res.status(503).json({ ok: false, error: 'CRON_SECRET not configured' });
+    const a = Buffer.from(req.get('x-cron-secret') || ''), b = Buffer.from(secret);
+    if (a.length !== b.length || !crypto.timingSafeEqual(a, b))
+      return res.status(401).json({ ok: false, error: 'unauthorized' });
+    if (!RESEND_API_KEY) return res.status(503).json({ ok: false, error: 'email not configured (set RESEND_API_KEY)' });
+
+    const already = getSetting('giveaway_promo_sent_at', null);
+    if (already)
+      return res.json({ ok: true, alreadySent: true, sentAt: already, recipients: 0, sent: 0, failed: 0 });
+
+    const users = db.prepare('SELECT id, email, name FROM users WHERE unsubscribed = 0 ORDER BY id').all();
+    let sent = 0, failed = 0;
+    for (const u of users) {
+      const unsub = unsubscribeUrl(req, u.id, u.email);
+      const r = await sendEmail({
+        to: u.email,
+        subject: GIVEAWAY_PROMO_SUBJECT,
+        html: emailShell(
+          `<div>${textToHtml(GIVEAWAY_PROMO_TEXT)}</div>`
+          + `<p style="font-size:12px;color:#888;margin-top:20px">You're receiving this because you have an account at Andy's Shoe Supply. <a href="${unsub}">Unsubscribe</a></p>`
+        ),
+        text: `${GIVEAWAY_PROMO_TEXT}\n\n—\nDon't want these emails? Unsubscribe here: ${unsub}`,
+        headers: { 'List-Unsubscribe': `<${unsub}>` },
+      });
+      if (r.ok) sent++; else failed++;
+      // Gentle pacing to stay under Resend's per-second rate limits.
+      if (users.length > 1) await new Promise(done => setTimeout(done, 350));
+    }
+    console.log(`[email] giveaway promo "${GIVEAWAY_PROMO_SUBJECT}": ${sent} sent, ${failed} failed, ${users.length} recipients`);
+    if (sent > 0) setSetting('giveaway_promo_sent_at', new Date().toISOString());
+    res.json({ ok: true, recipients: users.length, sent, failed });
+  } catch (e) {
+    console.error('giveaway promo error:', e.message);
+    res.status(500).json({ ok: false, error: 'giveaway promo failed', detail: e.message });
+  }
+});
+
 // ---------- New-arrivals digest emails (Maria, 2026-10-10) ----------
 // A cron job calls POST /api/cron/new-arrivals (header x-cron-secret).
 // The email goes out ONLY when 20+ un-mailed new arrivals pile up, and
