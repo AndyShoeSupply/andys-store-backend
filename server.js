@@ -306,8 +306,17 @@ const EMAIL_SIGNING_SECRET = process.env.EMAIL_SECRET || ADMIN_TOKEN || '';
 const escHtml = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const textToHtml = (s) => escHtml(s).replace(/\n/g, '<br>');
 
+// Store logo shown at the top of every outgoing email. The image is a
+// dark wordmark banner hosted on the store domain (assets/logo-email.png
+// in the store source + deploy folder) so it blends with the dark
+// header band the standalone templates already use.
+const EMAIL_LOGO_URL = 'https://andysshoesupply.com/assets/logo-email.png';
+const EMAIL_LOGO_IMG = (width) => '<img src="' + EMAIL_LOGO_URL + '" alt="Andy\'s Shoe Supply" width="' + width + '" style="display:inline-block;width:' + width + 'px;max-width:90%;height:auto;border:0">';
+const EMAIL_LOGO_HEADER = '<div style="text-align:center;margin:0 0 20px">' + EMAIL_LOGO_IMG(240) + '</div>';
+
 function emailShell(innerHtml) {
   return '<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.55;color:#1a1a1a">'
+    + EMAIL_LOGO_HEADER
     + innerHtml
     + '<hr style="border:none;border-top:1px solid #ddd;margin:24px 0">'
     + '<p style="font-size:13px;color:#666">Thanks for shopping small!<br>'
@@ -362,8 +371,7 @@ By creating an account you agree to our Terms & Conditions: https://andysshoesup
     + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f1ea"><tr><td align="center" style="padding:24px 12px">'
     + '<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:14px;overflow:hidden">'
     + '<tr><td style="background:#111111;padding:34px 28px;text-align:center">'
-    + '<div style="font-size:30px;font-weight:800;letter-spacing:1px;color:#ffffff">ANDY\'S SHOE SUPPLY</div>'
-    + '<div style="font-size:15px;color:#ffd23f;margin-top:8px">Hereford, Texas</div>'
+    + EMAIL_LOGO_IMG(320)
     + '</td></tr>'
     + '<tr><td style="padding:34px 30px 6px;color:#1a1a1a">'
     + `<p style="font-size:22px;font-weight:700;margin:0 0 12px">Hi${first ? ' ' + escHtml(first) : ''}, welcome aboard!</p>`
@@ -406,8 +414,7 @@ Andy's Shoe Supply · Hereford, TX`;
     + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f1ea"><tr><td align="center" style="padding:24px 12px">'
     + '<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:14px;overflow:hidden">'
     + '<tr><td style="background:#111111;padding:34px 28px;text-align:center">'
-    + '<div style="font-size:30px;font-weight:800;letter-spacing:1px;color:#ffffff">ANDY\'S SHOE SUPPLY</div>'
-    + '<div style="font-size:15px;color:#ffd23f;margin-top:8px">Hereford, Texas</div>'
+    + EMAIL_LOGO_IMG(320)
     + '</td></tr>'
     + '<tr><td style="padding:34px 30px 8px;color:#1a1a1a;text-align:center">'
     + `<p style="font-size:24px;font-weight:800;margin:0 0 12px">One last step, ${first ? escHtml(first) : 'friend'}! ✉️</p>`
