@@ -25,7 +25,8 @@
    "w": 8,
    "h": 6
   },
-  "size": "US 6"
+  "size": "US 6",
+  "units_sold": 0
  },
  {
   "id": "398452420766",
@@ -55,7 +56,8 @@
    "https://i.ebayimg.com/images/g/7EAAAeSwDZZqvwuF/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/~4wAAeSwgA5qvwuL/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/jXEAAeSwrRRqvwuM/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409123317",
@@ -95,11 +97,12 @@
    "https://i.ebayimg.com/images/g/YcEAAeSw4FBqret1/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/4GMAAeSwfmBqret5/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Kc0AAeSwfohqret~/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398408803116",
-  "title": "Chuck Taylor All Star 2V Easy-On \u2014 Valentine\u2019s Day 2025",
+  "title": "Chuck Taylor All Star 2V Easy-On — Valentine’s Day 2025",
   "price": "$25.00",
   "price_direct": 21.25,
   "image": "https://i.ebayimg.com/images/g/EhQAAeSwJs5qrcEB/s-l1600.jpg",
@@ -110,7 +113,7 @@
   "payment_url": "https://buy.stripe.com/9B6bJ1bWa1vD9i5bKxdZ70f",
   "weight_lbs": 0.75,
   "weight_estimated": false,
-  "description": "You can't go wrong with the Chuck Taylor All Star 2V Easy-On \u2014 Valentine\u2019s Day 2025, a unisex sneaker made to be worn on repeat. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "You can't go wrong with the Chuck Taylor All Star 2V Easy-On — Valentine’s Day 2025, a unisex sneaker made to be worn on repeat. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -123,11 +126,12 @@
    "https://i.ebayimg.com/images/g/MLMAAeSwRrRqrcE-/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/NTsAAeSwlOpqrcFf/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/rq0AAeSweGhqrcFi/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398408950883",
-  "title": "Minnie Mouse \u201cMinie High Top\u201d \u2013 Toddler",
+  "title": "Minnie Mouse “Minie High Top” – Toddler",
   "price": "$26.00",
   "price_direct": 22.1,
   "image": "assets/catalog/398408950883-1.jpg",
@@ -138,7 +142,7 @@
   "payment_url": "https://buy.stripe.com/3cIbJ15xM7U1fGtcOBdZ709",
   "weight_lbs": 0.75,
   "weight_estimated": false,
-  "description": "The Minnie Mouse \u201cMinie High Top\u201d \u2013 Toddler is a go-to kids' sneaker that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "The Minnie Mouse “Minie High Top” – Toddler is a go-to kids' sneaker that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -173,7 +177,8 @@
    "assets/catalog/398408950883-3.jpg",
    "assets/catalog/398408950883-4.jpg",
    "assets/catalog/398408950883-5.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920008954662",
@@ -197,13 +202,14 @@
   "payment_url": "https://buy.stripe.com/14A14ne4i3DLeCp29XdZ607",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Reebok Rush Runner 5 SYN Kids Black White Running Sneakers US \u2014 a kids' sneaker with a clean, standout look. Listed here in size 1. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Reebok Rush Runner 5 SYN Kids Black White Running Sneakers US — a kids' sneaker with a clean, standout look. Listed here in size 1. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 10,
    "h": 8
   },
-  "size": "US 1"
+  "size": "US 1",
+  "units_sold": 0
  },
  {
   "id": "398429704184",
@@ -231,7 +237,8 @@
    "https://i.ebayimg.com/images/g/v4cAAeSwvOBqtewO/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/1GYAAeSwpAVqtewU/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/1kIAAeSwJOVqtewW/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398429703221",
@@ -259,7 +266,8 @@
    "https://i.ebayimg.com/images/g/v4cAAeSwvOBqtewO/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/1GYAAeSwpAVqtewU/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/1kIAAeSwJOVqtewW/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409001733",
@@ -287,7 +295,8 @@
    "https://i.ebayimg.com/images/g/EugAAeSw69Rqrd33/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/HyAAAeSwYjtqrd3-/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Mc4AAeSwamhqrd4A/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398408970955",
@@ -314,7 +323,7 @@
   ],
   "weight_lbs": 0.625,
   "weight_estimated": false,
-  "description": "The PAW PATROL HIGH TOP is a go-to unisex sneaker that goes with just about anything. Select your size from the options \u2014 each size has its own Buy Now button. Brand new and comes with its box.",
+  "description": "The PAW PATROL HIGH TOP is a go-to unisex sneaker that goes with just about anything. Select your size from the options — each size has its own Buy Now button. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -323,11 +332,12 @@
   "size": "US 10",
   "photos": [
    "https://i.ebayimg.com/images/g/-ogAAeSwf55qrdux/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398408862793",
-  "title": "Converse Chuck Taylor All Star 2V Low \u2013 Toddler",
+  "title": "Converse Chuck Taylor All Star 2V Low – Toddler",
   "price": "$28.00",
   "price_direct": 23.8,
   "image": "https://i.ebayimg.com/images/g/FJEAAeSw34pqrxLn/s-l1600.jpg",
@@ -338,7 +348,7 @@
   "payment_url": "https://buy.stripe.com/bJe3cv8JYeip3XLbKxdZ70c",
   "weight_lbs": 0.75,
   "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the Converse Chuck Taylor All Star 2V Low \u2013 Toddler, a kids' sneaker in a head-turning colorway. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "Add some fresh style to your rotation with the Converse Chuck Taylor All Star 2V Low – Toddler, a kids' sneaker in a head-turning colorway. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -368,7 +378,8 @@
    "https://i.ebayimg.com/images/g/RecAAeSwKkJqrxLy/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/hEMAAeSwkxFqrxL3/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/A00AAeSwjBpqrxL6/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398408837402",
@@ -396,7 +407,8 @@
    "https://i.ebayimg.com/images/g/6DUAAeSwFVVqrciK/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/pMUAAeSwchVqrciN/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/6KIAAeSwFVVqrciS/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398408830030",
@@ -424,7 +436,8 @@
    "https://i.ebayimg.com/images/g/6DUAAeSwFVVqrciK/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/pMUAAeSwchVqrciN/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/6KIAAeSwFVVqrciS/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920008913624",
@@ -452,7 +465,8 @@
    "w": 10,
    "h": 8
   },
-  "size": "US 13"
+  "size": "US 13",
+  "units_sold": 0
  },
  {
   "id": "920005933900",
@@ -480,7 +494,8 @@
    "https://i.ebayimg.com/images/g/Q5QAAeSw585qwcsJ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/mmQAAeSwu1Jqwcuz/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/UiQAAeSwWrFqwcu9/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398452570059",
@@ -509,7 +524,8 @@
    "https://i.ebayimg.com/images/g/q~wAAeSwFr5qvxvq/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/zQsAAeSwmwpqvxvr/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/flsAAeSwpM9qvxvs/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398452256929",
@@ -537,7 +553,8 @@
    "https://i.ebayimg.com/images/g/V38AAeSwsutqvvjJ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/JcYAAeSw7tFqvvjP/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/POUAAeSwLuRqvvjX/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398429715616",
@@ -564,7 +581,8 @@
    "https://i.ebayimg.com/images/g/x-wAAeSw~UZqte4x/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/6lQAAeSwZ-Rqte44/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/8KQAAeSw3cFqte5Q/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398429715191",
@@ -591,7 +609,8 @@
    "https://i.ebayimg.com/images/g/x-wAAeSw~UZqte4x/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/6lQAAeSwZ-Rqte44/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/8KQAAeSw3cFqte5Q/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398429682790",
@@ -620,7 +639,8 @@
    "https://i.ebayimg.com/images/g/yRAAAeSwC05qtepP/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/x0AAAeSwj-tqtepS/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/xRkAAeSwU2FqtepN/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409169987",
@@ -665,7 +685,8 @@
    "https://i.ebayimg.com/images/g/eDMAAeSwFqxqre-p/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/i~gAAeSw4FBqre-s/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/zcIAAeSwiyFqre-y/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409147466",
@@ -693,7 +714,8 @@
    "https://i.ebayimg.com/images/g/ylAAAeSwlOpqre5A/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/YdQAAeSw4Z1qre5D/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/fdoAAeSwTbZqre5H/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409142313",
@@ -721,7 +743,8 @@
    "https://i.ebayimg.com/images/g/ylAAAeSwlOpqre5A/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/YdQAAeSw4Z1qre5D/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/fdoAAeSwTbZqre5H/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409141325",
@@ -736,7 +759,7 @@
   "payment_url": "https://buy.stripe.com/aFa8wP9O27U179XbKxdZ645",
   "weight_lbs": 0.5,
   "weight_estimated": false,
-  "description": "Meet the Crocs Unisex Kids Casual Clog \u2014 a kids' clog with a clean, standout look. Available in 10. Comes brand new with its box included.",
+  "description": "Meet the Crocs Unisex Kids Casual Clog — a kids' clog with a clean, standout look. Available in 10. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 6,
@@ -749,7 +772,8 @@
    "https://i.ebayimg.com/images/g/eaoAAeSwnJNqre3I/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/xwcAAeSwO7Zqre3L/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/m5kAAeSwKcBqre3O/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409125035",
@@ -777,11 +801,12 @@
    "https://i.ebayimg.com/images/g/DmkAAeSwwelqrewl/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/yDMAAeSwwlhqrews/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/eb8AAeSwaw5qrewx/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409104372",
-  "title": "Crocs Classic Valentine\u2019s Day Clog Toddler",
+  "title": "Crocs Classic Valentine’s Day Clog Toddler",
   "price": "$29.00",
   "price_direct": 24.65,
   "image": "assets/catalog/398409104372-1.jpg",
@@ -792,7 +817,7 @@
   "payment_url": "https://buy.stripe.com/14A9ATgcq5LTam9eWJdZ700",
   "weight_lbs": 0.5,
   "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the Crocs Classic Valentine\u2019s Day Clog Toddler, a kids' clog in a head-turning colorway. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Add some fresh style to your rotation with the Crocs Classic Valentine’s Day Clog Toddler, a kids' clog in a head-turning colorway. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -806,7 +831,8 @@
    "assets/catalog/398409104372-4.jpg",
    "assets/catalog/398409104372-5.jpg",
    "assets/catalog/398409104372-6.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409079926",
@@ -821,7 +847,7 @@
   "payment_url": "https://buy.stripe.com/8x2eVd7FU6PX51P4i5dZ702",
   "weight_lbs": 0.5,
   "weight_estimated": false,
-  "description": "Meet the Crocs Unisex Kids Casual Clog \u2014 a kids' clog with a clean, standout look. Sized at 10. Brand new and comes with its box.",
+  "description": "Meet the Crocs Unisex Kids Casual Clog — a kids' clog with a clean, standout look. Sized at 10. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 12,
@@ -834,7 +860,8 @@
    "https://i.ebayimg.com/images/g/WV4AAeSwqR1qregF/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/eM4AAeSwuXtqregN/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/zBgAAeSwMqpqregW/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409062915",
@@ -863,7 +890,8 @@
    "assets/catalog/398409062915-4.jpg",
    "assets/catalog/398409062915-5.jpg",
    "assets/catalog/398409062915-6.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398408881315",
@@ -900,7 +928,7 @@
   ],
   "weight_lbs": 0.75,
   "weight_estimated": false,
-  "description": "You can't go wrong with the Converse Chuck Taylor All Star Strawberries Easy-On, a unisex sneaker made to be worn on repeat. Select your size from the options \u2014 each size has its own Buy Now button. Ships brand new in its box.",
+  "description": "You can't go wrong with the Converse Chuck Taylor All Star Strawberries Easy-On, a unisex sneaker made to be worn on repeat. Select your size from the options — each size has its own Buy Now button. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -912,7 +940,8 @@
    "https://i.ebayimg.com/images/g/auMAAeSwpalqrdG-/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/8rgAAeSwCZ5qrdHC/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/bRgAAeSw4lxqrdHF/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 1
  },
  {
   "id": "398382884584",
@@ -941,7 +970,8 @@
    "assets/catalog/398382884584-4.jpg",
    "assets/catalog/398382884584-5.jpg",
    "assets/catalog/398382884584-6.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398366266809",
@@ -973,7 +1003,7 @@
   ],
   "weight_lbs": 0.5,
   "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the Crocs Classic Butterfly Graphic Clog Butterfly Print, a unisex clog in a head-turning colorway. Select your size from the options \u2014 each size has its own Buy Now button. Comes brand new with its box included.",
+  "description": "Add some fresh style to your rotation with the Crocs Classic Butterfly Graphic Clog Butterfly Print, a unisex clog in a head-turning colorway. Select your size from the options — each size has its own Buy Now button. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -986,7 +1016,8 @@
    "https://i.ebayimg.com/images/g/CLcAAeSw1qNqnZxV/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/N-IAAeSwG9FqnZxa/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/MbUAAeSwPmRqnZxc/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398363801611",
@@ -1001,7 +1032,7 @@
   "payment_url": "https://buy.stripe.com/8x2bJ14tI7U1dyl4i5dZ71Y",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "Meet the Eddie Bauer Surrey Women's Blue Lace-Up Loafer Shoes Casual \u2014 a women's shoe with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "Meet the Eddie Bauer Surrey Women's Blue Lace-Up Loafer Shoes Casual — a women's shoe with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -1024,7 +1055,8 @@
    "https://i.ebayimg.com/images/g/dx0AAeSwEQFqnK2J/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ucAAAeSwS3BqnK2U/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/EVEAAeSwdK5qnK27/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398408917829",
@@ -1056,7 +1088,7 @@
   ],
   "weight_lbs": 0.75,
   "weight_estimated": false,
-  "description": "Meet the Skechers S-Lights Unicorn Chaser \u2014 a unisex sneaker with a clean, standout look. Select your size from the options \u2014 each size has its own Buy Now button. Ships brand new in its box.",
+  "description": "Meet the Skechers S-Lights Unicorn Chaser — a unisex sneaker with a clean, standout look. Select your size from the options — each size has its own Buy Now button. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 6,
@@ -1069,7 +1101,8 @@
    "https://i.ebayimg.com/images/g/bqwAAeSw6N9qrdQy/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/-KkAAeSwlspqrdQ3/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/W0QAAeSwKcdqrdQ8/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920005570958",
@@ -1097,7 +1130,8 @@
    "w": 8,
    "h": 6
   },
-  "size": "US 12"
+  "size": "US 12",
+  "units_sold": 0
  },
  {
   "id": "920005534897",
@@ -1125,7 +1159,8 @@
    "https://i.ebayimg.com/images/g/i3EAAeSwniBqwaN~/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/AywAAeSwO2lqwaOC/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/tekAAeSwclBqwaOE/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920007852708",
@@ -1153,7 +1188,8 @@
    "w": 8,
    "h": 6
   },
-  "size": "US 6"
+  "size": "US 6",
+  "units_sold": 0
  },
  {
   "id": "398409178352",
@@ -1182,7 +1218,8 @@
    "assets/catalog/398409178352-4.jpg",
    "assets/catalog/398409178352-5.jpg",
    "assets/catalog/398409178352-6.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398438908723",
@@ -1197,7 +1234,7 @@
   "payment_url": "https://buy.stripe.com/4gMaEX4tI1vD1PDeWJdZ61Q",
   "weight_lbs": 0.75,
   "weight_estimated": false,
-  "description": "Meet the New Balance 1000 \u2014 a kids' sneaker with a clean, standout look. This pair is a 4C. Comes brand new with its box included.",
+  "description": "Meet the New Balance 1000 — a kids' sneaker with a clean, standout look. This pair is a 4C. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -1210,7 +1247,8 @@
    "https://i.ebayimg.com/images/g/TWkAAeSwjtRqueEK/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/LPwAAeSwnm9queE5/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/5IcAAeSwaNtqueE~/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398438879920",
@@ -1237,7 +1275,7 @@
   ],
   "weight_lbs": 0.75,
   "weight_estimated": false,
-  "description": "Meet the New Balance 1000 Bungee Lace \u2014 a kids' sneaker with a clean, standout look. Select your size from the options \u2014 each size has its own Buy Now button. Brand new and comes with its box.",
+  "description": "Meet the New Balance 1000 Bungee Lace — a kids' sneaker with a clean, standout look. Select your size from the options — each size has its own Buy Now button. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 6,
@@ -1250,7 +1288,8 @@
    "https://i.ebayimg.com/images/g/C~8AAeSwNjpqud5a/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Co8AAeSwEkpqud5o/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/BZwAAeSw9tNqud5t/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398435952337",
@@ -1278,11 +1317,12 @@
    "https://i.ebayimg.com/images/g/~IwAAeSw-htquKEr/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/H9YAAeSwV~VquKEw/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/KwEAAeSwVgFquKEy/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398435842786",
-  "title": "Vans Knu Skool \u2013 Leopard Pop Black/Multi 12C",
+  "title": "Vans Knu Skool – Leopard Pop Black/Multi 12C",
   "price": "$33.00",
   "price_direct": 28.05,
   "image": "https://i.ebayimg.com/images/g/zN0AAeSwy5ZquJMo/s-l1600.jpg",
@@ -1293,7 +1333,7 @@
   "payment_url": "https://buy.stripe.com/5kQ9AT7FU3DL8e1bKxdZ623",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the Vans Knu Skool \u2013 Leopard Pop Black/Multi, a kids' sneaker in a head-turning colorway. This pair is a 12C. New with box, ready to wear straight out of the package.",
+  "description": "Add some fresh style to your rotation with the Vans Knu Skool – Leopard Pop Black/Multi, a kids' sneaker in a head-turning colorway. This pair is a 12C. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -1306,7 +1346,8 @@
    "https://i.ebayimg.com/images/g/kAIAAeSwtR1quJMz/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/A0YAAeSwVrpquJM2/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/zosAAeSwrgBquJM5/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432921344",
@@ -1334,7 +1375,8 @@
    "https://i.ebayimg.com/images/g/42wAAeSw9uZqtzvt/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/LEgAAeSwbZtqtzvv/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ZhUAAeSwVJRqtzvy/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432920326",
@@ -1362,7 +1404,8 @@
    "https://i.ebayimg.com/images/g/42wAAeSw9uZqtzvt/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/LEgAAeSwbZtqtzvv/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ZhUAAeSwVJRqtzvy/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432919916",
@@ -1377,7 +1420,7 @@
   "payment_url": "https://buy.stripe.com/6oUaEX3pEfmtdyl15TdZ62j",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "Meet the adidas Superstar Low Triple White \u2014 a kids' sneaker with a clean, standout look. Available in 7K. New with box, ready to wear straight out of the package.",
+  "description": "Meet the adidas Superstar Low Triple White — a kids' sneaker with a clean, standout look. Available in 7K. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -1390,7 +1433,8 @@
    "https://i.ebayimg.com/images/g/42wAAeSw9uZqtzvt/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/LEgAAeSwbZtqtzvv/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ZhUAAeSwVJRqtzvy/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432907407",
@@ -1405,7 +1449,7 @@
   "payment_url": "https://buy.stripe.com/9B64gzf8m2zH8e1cOBdZ62n",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "Meet the adidas Superstar Low Triple White \u2014 a kids' sneaker with a clean, standout look. Available in 5K. New with box, ready to wear straight out of the package.",
+  "description": "Meet the adidas Superstar Low Triple White — a kids' sneaker with a clean, standout look. Available in 5K. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -1418,7 +1462,8 @@
    "https://i.ebayimg.com/images/g/42wAAeSw9uZqtzvt/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/LEgAAeSwbZtqtzvv/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ZhUAAeSwVJRqtzvy/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432900898",
@@ -1446,7 +1491,8 @@
    "https://i.ebayimg.com/images/g/42wAAeSw9uZqtzvt/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/LEgAAeSwbZtqtzvv/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ZhUAAeSwVJRqtzvy/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409172330",
@@ -1474,11 +1520,12 @@
    "https://i.ebayimg.com/images/g/AAEAAeSwwlhqrfEG/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/wAgAAeSw6EJqrfEJ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/4C0AAeSwHahqrfEN/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409040451",
-  "title": "Minecraft Creeper Canvas Slip-On \u2013 Kids",
+  "title": "Minecraft Creeper Canvas Slip-On – Kids",
   "price": "$33.00",
   "price_direct": 28.05,
   "image": "https://i.ebayimg.com/images/g/VP4AAeSwSyBqreOZ/s-l1600.jpg",
@@ -1506,7 +1553,7 @@
   ],
   "weight_lbs": 0.75,
   "weight_estimated": false,
-  "description": "The Minecraft Creeper Canvas Slip-On \u2013 Kids brings classic style to your everyday lineup. Select your size from the options \u2014 each size has its own Buy Now button. Comes brand new with its box included.",
+  "description": "The Minecraft Creeper Canvas Slip-On – Kids brings classic style to your everyday lineup. Select your size from the options — each size has its own Buy Now button. Comes brand new with its box included.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -1516,11 +1563,12 @@
   "photos": [
    "https://i.ebayimg.com/images/g/VP4AAeSwSyBqreOZ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Eq8AAeSw5nNqreOd/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409013132",
-  "title": "Minecraft Creeper Canvas Slip-On \u2013 Kids,",
+  "title": "Minecraft Creeper Canvas Slip-On – Kids,",
   "price": "$33.00",
   "price_direct": 28.05,
   "image": "https://i.ebayimg.com/images/g/vuUAAeSwLcNqrd~T/s-l1600.jpg",
@@ -1531,7 +1579,7 @@
   "payment_url": "https://buy.stripe.com/3cI8wP8JYa292THbKxdZ705",
   "weight_lbs": 0.75,
   "weight_estimated": false,
-  "description": "The Minecraft Creeper Canvas Slip-On \u2013 Kids is a go-to kids' sneaker that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "The Minecraft Creeper Canvas Slip-On – Kids is a go-to kids' sneaker that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -1541,7 +1589,8 @@
   "photos": [
    "https://i.ebayimg.com/images/g/vuUAAeSwLcNqrd~T/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/NbgAAeSwW2dqrd~W/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920008902683",
@@ -1570,7 +1619,8 @@
    "w": 10,
    "h": 8
   },
-  "size": "US 5"
+  "size": "US 5",
+  "units_sold": 0
  },
  {
   "id": "398432918836",
@@ -1599,7 +1649,8 @@
    "https://i.ebayimg.com/images/g/7igAAeSwYxRqtz70/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/a4kAAeSwxSZqtz72/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/7SEAAeSwEcVqtz76/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432916988",
@@ -1628,7 +1679,8 @@
    "https://i.ebayimg.com/images/g/7igAAeSwYxRqtz70/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/a4kAAeSwxSZqtz72/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/7SEAAeSwEcVqtz76/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432851825",
@@ -1657,7 +1709,8 @@
    "https://i.ebayimg.com/images/g/7igAAeSwYxRqtz70/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/a4kAAeSwxSZqtz72/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/7SEAAeSwEcVqtz76/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920008965022",
@@ -1679,13 +1732,14 @@
   "payment_url": "https://buy.stripe.com/00w00jbWagqx3XLeWJdZ605",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Reebok Energen Lux Black Pure Grey W \u2014 a women's sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Reebok Energen Lux Black Pure Grey W — a women's sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 10,
    "h": 8
   },
-  "size": "US 8"
+  "size": "US 8",
+  "units_sold": 0
  },
  {
   "id": "920005330053",
@@ -1714,7 +1768,8 @@
    "https://i.ebayimg.com/images/g/LI0AAeSwgeNqwZE1/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/hOMAAeSwdLZqwZE5/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/8aAAAeSw9VhqwZE9/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432868538",
@@ -1742,7 +1797,8 @@
    "https://i.ebayimg.com/images/g/6gsAAeSwvOBqt0Ad/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/hiYAAeSwMhhqt0Af/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/-joAAeSwcthqt0Ak/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432847208",
@@ -1770,7 +1826,8 @@
    "https://i.ebayimg.com/images/g/42wAAeSw9uZqtzvt/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/LEgAAeSwbZtqtzvv/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ZhUAAeSwVJRqtzvy/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432836257",
@@ -1798,7 +1855,8 @@
    "https://i.ebayimg.com/images/g/42wAAeSw9uZqtzvt/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/LEgAAeSwbZtqtzvv/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ZhUAAeSwVJRqtzvy/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432834863",
@@ -1813,7 +1871,7 @@
   "payment_url": "https://buy.stripe.com/9B6dR9gcq3DLcuhaGtdZ62w",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "Meet the adidas Superstar Low Triple White \u2014 a kids' sneaker with a clean, standout look. Available in 12k. Ships brand new in its box.",
+  "description": "Meet the adidas Superstar Low Triple White — a kids' sneaker with a clean, standout look. Available in 12k. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -1826,7 +1884,8 @@
    "https://i.ebayimg.com/images/g/42wAAeSw9uZqtzvt/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/LEgAAeSwbZtqtzvv/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ZhUAAeSwVJRqtzvy/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432825037",
@@ -1841,7 +1900,7 @@
   "payment_url": "https://buy.stripe.com/dRmcN59O2deleCp5m9dZ62x",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "Meet the adidas Superstar Low Triple White \u2014 a kids' sneaker with a clean, standout look. Sized at 10k. Comes brand new with its box included.",
+  "description": "Meet the adidas Superstar Low Triple White — a kids' sneaker with a clean, standout look. Sized at 10k. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -1854,7 +1913,8 @@
    "https://i.ebayimg.com/images/g/42wAAeSw9uZqtzvt/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/LEgAAeSwbZtqtzvv/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ZhUAAeSwVJRqtzvy/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432816441",
@@ -1882,7 +1942,8 @@
    "https://i.ebayimg.com/images/g/Py0AAeSwM99qtzwZ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/fZcAAeSwl2pqtzwb/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/3G4AAeSwcthqtzwd/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398429754413",
@@ -1897,7 +1958,7 @@
   "payment_url": "https://buy.stripe.com/cNi7sL8JY2zHcuh7uhdZ62R",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the New Balance B480 Lace \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the New Balance B480 Lace — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -1911,7 +1972,8 @@
    "https://i.ebayimg.com/images/g/JHYAAeSwIRlqtfHE/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/~sMAAeSwrgBqtfF6/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/CXUAAeSwoLZqtfG7/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398429749997",
@@ -1940,7 +2002,8 @@
    "https://i.ebayimg.com/images/g/A9MAAeSwQn1qtfB5/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/5l4AAeSw-zpqtfB-/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/55UAAeSwlQNqtfCD/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398426180940",
@@ -1955,7 +2018,7 @@
   "payment_url": "https://buy.stripe.com/6oU3cv7FU0rz8e129XdZ63a",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Nizza RF Triple White \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "Meet the Adidas Nizza RF Triple White — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -1968,7 +2031,8 @@
    "https://i.ebayimg.com/images/g/R58AAeSwSb1qtJw1/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/4MQAAeSwvbtqtJw3/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Vr4AAeSw0PxqtJw6/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409011905",
@@ -1993,7 +2057,8 @@
   "photos": [
    "https://i.ebayimg.com/images/g/DSYAAeSw8SBqrd95/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/D74AAeSwR7Vqrd99/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398402386705",
@@ -2021,7 +2086,8 @@
    "https://i.ebayimg.com/images/g/mr0AAeSwM3Jqq0AQ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/FfsAAeSwf8pqq0AT/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/LssAAeSwBDhqq0AW/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920008932262",
@@ -2043,13 +2109,14 @@
   "payment_url": "https://buy.stripe.com/3cI00j6BQb6dcuhg0NdZ608",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Reebok Smash Edge Kids Sneakers in beautiful light pink and whit \u2014 a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "Meet the Reebok Smash Edge Kids Sneakers in beautiful light pink and whit — a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
    "h": 8
   },
-  "size": "US 7"
+  "size": "US 7",
+  "units_sold": 0
  },
  {
   "id": "920005330677",
@@ -2078,7 +2145,8 @@
    "https://i.ebayimg.com/images/g/LI0AAeSwgeNqwZE1/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/hOMAAeSwdLZqwZE5/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/8aAAAeSw9VhqwZE9/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920008959845",
@@ -2106,7 +2174,8 @@
    "w": 10,
    "h": 8
   },
-  "size": "US 7.5"
+  "size": "US 7.5",
+  "units_sold": 0
  },
  {
   "id": "920008891517",
@@ -2134,7 +2203,8 @@
    "w": 10,
    "h": 8
   },
-  "size": "US 7"
+  "size": "US 7",
+  "units_sold": 0
  },
  {
   "id": "398452329200",
@@ -2162,11 +2232,12 @@
    "https://i.ebayimg.com/images/g/heIAAeSwNrpqvv~v/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/xS8AAeSwGNdqvv~w/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/lgkAAeSwZOZqvv~0/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398435731172",
-  "title": "Vans Sport Low \u2013 Black/White",
+  "title": "Vans Sport Low – Black/White",
   "price": "$39.00",
   "price_direct": 33.15,
   "image": "https://i.ebayimg.com/images/g/LJMAAeSw-htquIgN/s-l1600.jpg",
@@ -2177,7 +2248,7 @@
   "payment_url": "https://buy.stripe.com/9B68wPf8mgqxbqdcOBdZ629",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Vans Sport Low \u2013 Black/White \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Vans Sport Low – Black/White — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -2190,7 +2261,8 @@
    "https://i.ebayimg.com/images/g/mu8AAeSwHQtquIgH/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/bDsAAeSw2EJquIgK/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/dywAAeSwuhlquIgQ/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398435610038",
@@ -2205,7 +2277,7 @@
   "payment_url": "https://buy.stripe.com/9B67sLbWab6dbqd7uhdZ62b",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "Meet the Air Jordan Flight Court Black Anthracite \u2014 a kids' sneaker with a clean, standout look. This pair is a 8C. Comes brand new with its box included.",
+  "description": "Meet the Air Jordan Flight Court Black Anthracite — a kids' sneaker with a clean, standout look. This pair is a 8C. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -2221,7 +2293,8 @@
    "https://i.ebayimg.com/images/g/sWcAAeSwuiJqn3yY/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/9n8AAeSwSyZqn3yi/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/EMUAAeSw0S1qtJQF/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398435566804",
@@ -2249,7 +2322,8 @@
    "https://i.ebayimg.com/images/g/5PEAAeSwJh9quHQU/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/sFAAAeSwU6ZquHQW/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/btMAAeSw1rlquHQi/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432912808",
@@ -2264,7 +2338,7 @@
   "payment_url": "https://buy.stripe.com/4gM4gz6BQgqx9i5g0NdZ62m",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the adidas Superstar II \u2014 a kids' sneaker with a clean, standout look. Sized at 7k. Ships brand new in its box.",
+  "description": "Meet the adidas Superstar II — a kids' sneaker with a clean, standout look. Sized at 7k. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -2277,7 +2351,8 @@
    "https://i.ebayimg.com/images/g/VWMAAeSwCbVqtzzl/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/bEkAAeSwVJRqtzzn/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/DiAAAeSwVrpqtz0G/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432840275",
@@ -2305,11 +2380,12 @@
    "https://i.ebayimg.com/images/g/VWMAAeSwCbVqtzzl/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/bEkAAeSwVJRqtzzn/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/DiAAAeSwVrpqtz0G/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432784285",
-  "title": "adidas Samba OG EL I \u2013 Black / White / Gum 6K",
+  "title": "adidas Samba OG EL I – Black / White / Gum 6K",
   "price": "$39.00",
   "price_direct": 33.15,
   "image": "https://i.ebayimg.com/images/g/CDsAAeSw7xdqtzf5/s-l1600.jpg",
@@ -2320,7 +2396,7 @@
   "payment_url": "https://buy.stripe.com/8x200jbWa7U151P4i5dZ62A",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the adidas Samba OG EL I \u2013 Black / White / Gum \u2014 a kids' sneaker with a clean, standout look. Listed here in size 6K. Comes brand new with its box included.",
+  "description": "Meet the adidas Samba OG EL I – Black / White / Gum — a kids' sneaker with a clean, standout look. Listed here in size 6K. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -2333,7 +2409,8 @@
    "https://i.ebayimg.com/images/g/QdMAAeSwZMBqtzgA/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/PSgAAeSwiQdqtzgD/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/wG4AAeSwvwJqtzgI/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432773213",
@@ -2363,7 +2440,8 @@
    "https://i.ebayimg.com/images/g/wI0AAeSwEb1qtyR~/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/zYMAAeSwEhhqtySD/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/9g0AAeSwj-tqtySI/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432771507",
@@ -2391,7 +2469,8 @@
    "https://i.ebayimg.com/images/g/ig0AAeSwDG9qr2dx/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/RDIAAeSwMp1qr2d0/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/IZ8AAeSwLGlqr2d2/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432768581",
@@ -2419,7 +2498,8 @@
    "https://i.ebayimg.com/images/g/ig0AAeSwDG9qr2dx/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/RDIAAeSwMp1qr2d0/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/IZ8AAeSwLGlqr2d2/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432765199",
@@ -2449,7 +2529,8 @@
    "https://i.ebayimg.com/images/g/wI0AAeSwEb1qtyR~/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/zYMAAeSwEhhqtySD/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/9g0AAeSwj-tqtySI/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432762270",
@@ -2477,7 +2558,8 @@
    "https://i.ebayimg.com/images/g/ig0AAeSwDG9qr2dx/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/RDIAAeSwMp1qr2d0/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/IZ8AAeSwLGlqr2d2/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432728982",
@@ -2505,7 +2587,8 @@
    "https://i.ebayimg.com/images/g/ig0AAeSwDG9qr2dx/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/RDIAAeSwMp1qr2d0/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/IZ8AAeSwLGlqr2d2/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432712938",
@@ -2535,7 +2618,8 @@
    "https://i.ebayimg.com/images/g/wI0AAeSwEb1qtyR~/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/zYMAAeSwEhhqtySD/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/9g0AAeSwj-tqtySI/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432688013",
@@ -2550,7 +2634,7 @@
   "payment_url": "https://buy.stripe.com/3cI28r9O28Y5bqd7uhdZ62J",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Samba OG Kids Preschool Bright Red Cream White \u2014 a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Adidas Samba OG Kids Preschool Bright Red Cream White — a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12.0,
    "w": 10.0,
@@ -2563,7 +2647,8 @@
    "https://i.ebayimg.com/images/g/KiUAAeSwM95qty2V/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/byQAAeSwA3Fqty2Y/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/RtkAAeSwTy1qty2a/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398429644141",
@@ -2591,7 +2676,8 @@
    "https://i.ebayimg.com/images/g/NuwAAeSwFwNqteci/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ri4AAeSw0O5qtecm/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/n~sAAeSwZ-Rqtecq/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398426231013",
@@ -2622,7 +2708,8 @@
    "https://i.ebayimg.com/images/g/vh0AAeSw4VZqtKIu/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/vr8AAeSw0O5qtKIy/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/gWIAAeSwioJqtKI1/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398399305110",
@@ -2650,7 +2737,8 @@
    "https://i.ebayimg.com/images/g/NJIAAeSwRMlqqhWS/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/QX8AAeSwaw5qqhWW/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/brkAAeSwM3JqqhWf/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398399285270",
@@ -2678,7 +2766,8 @@
    "assets/catalog/398399285270-3.webp",
    "assets/catalog/398399285270-4.webp",
    "assets/catalog/398399285270-5.webp"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398391806320",
@@ -2693,7 +2782,7 @@
   "payment_url": "https://buy.stripe.com/3cI28r7FU5LTam97uhdZ710",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the New Columbia Crestwood Men's Hiking Shoes Gray/Black US Mens 14 BM4595 - 011 \u2014 a men's shoe with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "Meet the New Columbia Crestwood Men's Hiking Shoes Gray/Black US Mens 14 BM4595 - 011 — a men's shoe with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 15,
    "w": 11,
@@ -2706,11 +2795,12 @@
    "https://i.ebayimg.com/images/g/0usAAeSw52lqpyI0/s-l1600.webp",
    "https://i.ebayimg.com/images/g/7PAAAeSwf55qpyI3/s-l1600.webp",
    "https://i.ebayimg.com/images/g/AYkAAeSw3c5qpyIv/s-l1600.webp"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398389568293",
-  "title": "adidas Women\u2019s VL Court 3.0",
+  "title": "adidas Women’s VL Court 3.0",
   "price": "$39.00",
   "price_direct": 33.15,
   "image": "https://i.ebayimg.com/images/g/ig8AAeSwKcBqpiZT/s-l1600.jpg",
@@ -2721,7 +2811,7 @@
   "payment_url": "https://buy.stripe.com/3cI28r5xMgqx79X8yldZ71f",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "You can't go wrong with the adidas Women\u2019s VL Court 3.0, a women's sneaker made to be worn on repeat. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "You can't go wrong with the adidas Women’s VL Court 3.0, a women's sneaker made to be worn on repeat. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 7,
@@ -2735,7 +2825,8 @@
    "https://i.ebayimg.com/images/g/o5wAAeSwfUpqpiZd/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/S1MAAeSwMaJqpiZg/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/uYwAAeSwYHhqpiZj/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398386074548",
@@ -2763,7 +2854,8 @@
    "https://i.ebayimg.com/images/g/Nn8AAeSw1GpqpLYe/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/YB4AAeSwaOxqpLYg/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/tdEAAeSwsKFqpLYi/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920005612537",
@@ -2778,7 +2870,7 @@
   "payment_url": "https://buy.stripe.com/00waEXaS6cah0Lz7uhdZ723",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Nike Jr Mercurial Vapor 16 Little Kids Soccer Cleats \u2014 a kids' cleat with a clean, standout look. Sized at 12c. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Nike Jr Mercurial Vapor 16 Little Kids Soccer Cleats — a kids' cleat with a clean, standout look. Sized at 12c. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -2792,7 +2884,8 @@
    "https://i.ebayimg.com/images/g/8XcAAeSw4dRqwan7/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/1W8AAeSwGcxqwan7/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/O3YAAeSwk7Bqwan7/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920005606270",
@@ -2821,7 +2914,8 @@
    "https://i.ebayimg.com/images/g/8XcAAeSw4dRqwan7/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/1W8AAeSwGcxqwan7/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/O3YAAeSwk7Bqwan7/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920005642303",
@@ -2852,7 +2946,8 @@
    "https://i.ebayimg.com/images/g/NRcAAeSwX9Nqwa1R/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/7YQAAeSwsutqwa1R/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/D-MAAeSwED5qwa1R/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920005640934",
@@ -2883,7 +2978,8 @@
    "https://i.ebayimg.com/images/g/NRcAAeSwX9Nqwa1R/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/7YQAAeSwsutqwa1R/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/D-MAAeSwED5qwa1R/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920005660835",
@@ -2914,7 +3010,8 @@
    "https://i.ebayimg.com/images/g/NRcAAeSwX9Nqwa1R/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/7YQAAeSwsutqwa1R/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/D-MAAeSwED5qwa1R/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920005645235",
@@ -2945,7 +3042,8 @@
    "https://i.ebayimg.com/images/g/NRcAAeSwX9Nqwa1R/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/7YQAAeSwsutqwa1R/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/D-MAAeSwED5qwa1R/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920005601435",
@@ -2974,7 +3072,8 @@
    "w": 10,
    "h": 8
   },
-  "size": "US 8"
+  "size": "US 8",
+  "units_sold": 0
  },
  {
   "id": "920005955457",
@@ -3003,11 +3102,12 @@
    "https://i.ebayimg.com/images/g/alYAAeSwbItqwc0V/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/br0AAeSw95Nqwc0f/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/C5gAAeSwc~Rqwc0c/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398414730510",
-  "title": "Brahma Men\u2019s Combustion 6\" Steel Toe Work Boots",
+  "title": "Brahma Men’s Combustion 6\" Steel Toe Work Boots",
   "price": "$40.00",
   "price_direct": 34.0,
   "image": "https://i.ebayimg.com/images/g/FzYAAeSwdIRqsEyC/s-l1600.jpg",
@@ -3026,13 +3126,14 @@
   "payment_url": "https://buy.stripe.com/3cI3cvbWaa2979X4i5dZ63p",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "The Brahma Men\u2019s Combustion 6\" Steel Toe Work Boots is a go-to men's boot that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "The Brahma Men’s Combustion 6\" Steel Toe Work Boots is a go-to men's boot that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 10,
    "h": 8
   },
-  "size": "US 8"
+  "size": "US 8",
+  "units_sold": 0
  },
  {
   "id": "920006016562",
@@ -3047,7 +3148,7 @@
   "payment_url": "https://buy.stripe.com/6oU3cve4i7U11PDdSFdZ60u",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the adidas Gazelle Bold \u2014 a women's sneaker with a clean, standout look. Listed here in size US 7 / EU 40 - women's US 8. New with box, ready to wear straight out of the package.",
+  "description": "Meet the adidas Gazelle Bold — a women's sneaker with a clean, standout look. Listed here in size US 7 / EU 40 - women's US 8. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -3061,7 +3162,8 @@
    "https://i.ebayimg.com/images/g/dzUAAeSwGcxqwdO7/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/2a0AAeSw2t1qwdO5/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/daEAAeSw1tRqwdO~/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398452587762",
@@ -3089,7 +3191,8 @@
    "https://i.ebayimg.com/images/g/4nAAAeSwa5lqvx90/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/N~sAAeSw4dRqvx96/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/40gAAeSwa5lqvx-F/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398452309367",
@@ -3117,11 +3220,12 @@
    "https://i.ebayimg.com/images/g/g6kAAeSwJS9qvv7-/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/zH8AAeSw~XZqvv8D/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/racAAeSwNYZqvv8I/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398435615991",
-  "title": "Air Jordan 12 Retro TD \u201cPearl Pink\u201d 10C",
+  "title": "Air Jordan 12 Retro TD “Pearl Pink” 10C",
   "price": "$41.00",
   "price_direct": 34.85,
   "image": "https://i.ebayimg.com/images/g/o~sAAeSwnNlquHoh/s-l1600.jpg",
@@ -3132,7 +3236,7 @@
   "payment_url": "https://buy.stripe.com/eVqbJ15xM2zH51P6qddZ62a",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "You can't go wrong with the Air Jordan 12 Retro TD \u201cPearl Pink\u201d, a kids' sneaker made to be worn on repeat. Listed here in size 10C. Comes brand new with its box included.",
+  "description": "You can't go wrong with the Air Jordan 12 Retro TD “Pearl Pink”, a kids' sneaker made to be worn on repeat. Listed here in size 10C. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8.0,
@@ -3145,7 +3249,8 @@
    "https://i.ebayimg.com/images/g/oQQAAeSwLmFquHom/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/PTEAAeSwRddquHor/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/9~QAAeSwrwFquHov/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398339771010",
@@ -3174,7 +3279,8 @@
    "assets/catalog/398339771010-4.webp",
    "assets/catalog/398339771010-5.webp",
    "assets/catalog/398339771010-6.webp"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398438956188",
@@ -3189,7 +3295,7 @@
   "payment_url": "https://buy.stripe.com/eVq6oH5xMb6d65Tg0NdZ61M",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "Meet the New Balance 990v6 \u2014 a kids' sneaker with a clean, standout look. Listed here in size 4C. Brand new and comes with its box.",
+  "description": "Meet the New Balance 990v6 — a kids' sneaker with a clean, standout look. Listed here in size 4C. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -3203,7 +3309,8 @@
    "https://i.ebayimg.com/images/g/u2gAAeSwZHxqueYL/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/lLwAAeSw8sxqueYT/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/gwcAAeSwFkVqueYX/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398389520149",
@@ -3231,7 +3338,8 @@
    "https://i.ebayimg.com/images/g/H8gAAeSwMaJqpiCY/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/hMcAAeSwNsRqpiCb/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Z68AAeSw2MBqpiCf/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398371493727",
@@ -3259,7 +3367,8 @@
    "https://i.ebayimg.com/images/g/XrwAAeSwIcBqn28r/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/8GAAAeSw~bRqn28u/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/LzkAAeSwpPFqn286/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920006238773",
@@ -3287,7 +3396,8 @@
    "w": 8,
    "h": 6
   },
-  "size": "US 12"
+  "size": "US 12",
+  "units_sold": 0
  },
  {
   "id": "920006237360",
@@ -3309,13 +3419,14 @@
   "payment_url": "https://buy.stripe.com/9B69ATbWa7U165T4i5dZ60l",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Campus 00s Comfort Closure \u2014 a kids' sneaker with a clean, standout look. This pair is a 11C. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Adidas Campus 00s Comfort Closure — a kids' sneaker with a clean, standout look. This pair is a 11C. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 8,
    "h": 6
   },
-  "size": "US 11"
+  "size": "US 11",
+  "units_sold": 0
  },
  {
   "id": "398435606423",
@@ -3330,7 +3441,7 @@
   "payment_url": "https://buy.stripe.com/aFa28rd0e2zH0LzdSFdZ62c",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "You can't go wrong with the Jordan Spizike Low PS \u201cLet\u2019s PlayAir Jordan Spizike Low PS, a kids' sneaker made to be worn on repeat. Available in 5C. Brand new and comes with its box.",
+  "description": "You can't go wrong with the Jordan Spizike Low PS “Let’s PlayAir Jordan Spizike Low PS, a kids' sneaker made to be worn on repeat. Available in 5C. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -3344,11 +3455,12 @@
    "assets/catalog/398435606423-4.jpg",
    "assets/catalog/398435606423-5.jpg",
    "assets/catalog/398435606423-6.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398422722635",
-  "title": "Nike Jr. Mercurial Superfly 10 Academy Kylian Mbapp\u00e9 TF",
+  "title": "Nike Jr. Mercurial Superfly 10 Academy Kylian Mbappé TF",
   "price": "$44.00",
   "price_direct": 37.4,
   "image": "https://i.ebayimg.com/images/g/1dwAAeSwshlqs0UD/s-l1600.jpg",
@@ -3359,7 +3471,7 @@
   "payment_url": "https://buy.stripe.com/14A5kD7FUcah3XLeWJdZ63f",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The Nike Jr. Mercurial Superfly 10 Academy Kylian Mbapp\u00e9 TF is a go-to kids' sneaker that goes with just about anything. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "The Nike Jr. Mercurial Superfly 10 Academy Kylian Mbappé TF is a go-to kids' sneaker that goes with just about anything. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -3372,7 +3484,8 @@
    "https://i.ebayimg.com/images/g/BdgAAeSwCFNqs0UJ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/2wEAAeSw21hqs0UM/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/~LQAAeSwzVBqs0UO/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920006256850",
@@ -3400,7 +3513,8 @@
    "w": 8,
    "h": 6
   },
-  "size": "US 3"
+  "size": "US 3",
+  "units_sold": 0
  },
  {
   "id": "398452573700",
@@ -3428,7 +3542,8 @@
    "https://i.ebayimg.com/images/g/JmwAAeSwcWhqvx1y/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/DlcAAeSwoH1qvx12/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ja8AAeSw4mRqvx14/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398449182890",
@@ -3443,7 +3558,7 @@
   "payment_url": "https://buy.stripe.com/8x27sL2lAgqx0Lz4i5dZ612",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Nike Court Borough 2 Mid Black Game Royal \u2014 a kids' sneaker with a clean, standout look. Sized at 7 (GS). Ships brand new in its box.",
+  "description": "Meet the Nike Court Borough 2 Mid Black Game Royal — a kids' sneaker with a clean, standout look. Sized at 7 (GS). Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -3458,7 +3573,8 @@
    "https://i.ebayimg.com/images/g/MNsAAeSwnpJqvc19/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/VEwAAeSwqcpqvc1~/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/TYMAAeSwKRpqvc2C/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398442183239",
@@ -3487,7 +3603,8 @@
    "https://i.ebayimg.com/images/g/uxgAAeSwAGRquy~d/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/olQAAeSwfndquy~f/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/sScAAeSw5etquy~l/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398435931940",
@@ -3516,7 +3633,8 @@
    "assets/catalog/398435931940-4.jpg",
    "assets/catalog/398435931940-5.jpg",
    "assets/catalog/398435931940-6.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398429778986",
@@ -3545,7 +3663,8 @@
    "https://i.ebayimg.com/images/g/A9MAAeSwQn1qtfB5/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/5l4AAeSw-zpqtfB-/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/55UAAeSwlQNqtfCD/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398426217633",
@@ -3560,7 +3679,7 @@
   "payment_url": "https://buy.stripe.com/8x214n3pEcah1PDg0NdZ639",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas SL 72 RS GS / Big Kid \u2014 a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Adidas SL 72 RS GS / Big Kid — a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -3573,7 +3692,8 @@
    "https://i.ebayimg.com/images/g/XncAAeSwFrlqtJ9C/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/YjcAAeSwiSVqtJ9K/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/W3gAAeSwtXlqtJ9R/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398399296089",
@@ -3601,11 +3721,12 @@
    "https://i.ebayimg.com/images/g/90oAAeSw52lqqhQQ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/UT0AAeSwABRqqhQT/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/9-QAAeSwCJxqqhQY/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398386333792",
-  "title": "Nike Ebernon Low Women\u2019s",
+  "title": "Nike Ebernon Low Women’s",
   "price": "$45.00",
   "price_direct": 38.25,
   "image": "https://i.ebayimg.com/images/g/6acAAeSw-0FqpNL3/s-l1600.jpg",
@@ -3616,7 +3737,7 @@
   "payment_url": "https://buy.stripe.com/3cI3cv0dsdel1PDg0NdZ71s",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the Nike Ebernon Low Women\u2019s, a women's sneaker in a head-turning colorway. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "Add some fresh style to your rotation with the Nike Ebernon Low Women’s, a women's sneaker in a head-turning colorway. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 7,
@@ -3629,11 +3750,12 @@
    "https://i.ebayimg.com/images/g/yTEAAeSwzkdqpNNa/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/RvMAAeSwZjhqpNNe/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/INUAAeSwQR5qpNNu/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398366082499",
-  "title": "YZY YS-01 / Yeezy Slide \u201cFudge\u201d",
+  "title": "YZY YS-01 / Yeezy Slide “Fudge”",
   "price": "$45.00",
   "price_direct": 38.25,
   "image": "https://i.ebayimg.com/images/g/Q0UAAeSwE~FqnYau/s-l1600.jpg",
@@ -3644,7 +3766,7 @@
   "payment_url": "https://buy.stripe.com/6oU00j9O26PXfGt01PdZ71P",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "The YZY YS-01 / Yeezy Slide \u201cFudge\u201d brings classic Yeezy style to your everyday lineup. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "The YZY YS-01 / Yeezy Slide “Fudge” brings classic Yeezy style to your everyday lineup. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 13,
    "w": 8,
@@ -3657,7 +3779,8 @@
    "https://i.ebayimg.com/images/g/7t8AAeSw~lNqnYdq/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/9QAAAeSwiIVqnYdu/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/S3IAAeSwMfVqnYeJ/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398364734316",
@@ -3685,7 +3808,8 @@
    "https://i.ebayimg.com/images/g/WroAAeSwguZqnQhz/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/34QAAeSwoAJqnQh2/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/1loAAeSwQUJqnQh5/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398438955169",
@@ -3713,7 +3837,8 @@
    "https://i.ebayimg.com/images/g/BIMAAeSw8Edqueb4/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/OwoAAeSwM99queb7/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/oQAAAeSwwHBqueb-/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398405542872",
@@ -3741,11 +3866,12 @@
    "https://i.ebayimg.com/images/g/Fo8AAeSwMH9qrIJS/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/KwcAAeSwiiJqrINF/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/UtIAAeSwpr5qrIN~/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398422852270",
-  "title": "Nike Jr. Mercurial Superfly 10 Academy Mbapp\u00e9 FG/MG",
+  "title": "Nike Jr. Mercurial Superfly 10 Academy Mbappé FG/MG",
   "price": "$47.50",
   "price_direct": 40.38,
   "image": "https://i.ebayimg.com/images/g/0XMAAeSw185qs1ak/s-l1600.jpg",
@@ -3756,7 +3882,7 @@
   "payment_url": "https://buy.stripe.com/aFacN53pE6PX1PD4i5dZ63e",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The Nike Jr. Mercurial Superfly 10 Academy Mbapp\u00e9 FG/MG brings classic Nike style to your everyday lineup. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "The Nike Jr. Mercurial Superfly 10 Academy Mbappé FG/MG brings classic Nike style to your everyday lineup. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -3769,7 +3895,8 @@
    "https://i.ebayimg.com/images/g/ti0AAeSwJURqs1ap/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/8ooAAeSwVyFqs1a0/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/66YAAeSw4yFqs1an/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398448964832",
@@ -3797,7 +3924,8 @@
    "https://i.ebayimg.com/images/g/KBQAAeSw~i1quKP3/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/pgcAAeSwLGtquKQG/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/UikAAeSwMCtquKQX/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398405579373",
@@ -3825,7 +3953,8 @@
    "https://i.ebayimg.com/images/g/KY8AAeSwTadqrIfT/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/5EAAAeSwM3JqrIfW/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/gxgAAeSwShxqrIfY/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398405551410",
@@ -3840,7 +3969,7 @@
   "payment_url": "https://buy.stripe.com/3cIfZh5xM2zHbqd4i5dZ70n",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Converse Weapon Luxe Mid Days \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Converse Weapon Luxe Mid Days — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -3853,7 +3982,8 @@
    "https://i.ebayimg.com/images/g/LXAAAeSwKcBqrIJO/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Fo8AAeSwMH9qrIJS/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/UtIAAeSwpr5qrIN~/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398452406429",
@@ -3883,7 +4013,8 @@
    "https://i.ebayimg.com/images/g/E08AAeSwV71qvwkI/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/NrsAAeSwZ2hqvwkL/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/O4oAAeSwZ2ZqvwkN/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398449188010",
@@ -3898,7 +4029,7 @@
   "payment_url": "https://buy.stripe.com/5kQbJ10dsdel79XaGtdZ611",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the ASICS Gel Zaraca 5 Blue Black \u2014 a unisex sneaker with a clean, standout look. Available in 8. Brand new and comes with its box.",
+  "description": "Meet the ASICS Gel Zaraca 5 Blue Black — a unisex sneaker with a clean, standout look. Available in 8. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -3913,7 +4044,8 @@
    "https://i.ebayimg.com/images/g/VkcAAeSw7sxqvc5H/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/bjQAAeSwHeFqvc5Q/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/DhwAAeSwIG5qvc5U/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398445774458",
@@ -3941,7 +4073,8 @@
    "https://i.ebayimg.com/images/g/cVAAAeSw6XBqvJFY/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/WWEAAeSwusxqvJFS/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/WJwAAeSwLuRqvJDA/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398445722156",
@@ -3969,7 +4102,8 @@
    "https://i.ebayimg.com/images/g/PvMAAeSw8uNqvI2s/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/FYUAAeSwUbVqvI4s/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/RMAAAeSweVZqvI42/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398442360360",
@@ -3997,7 +4131,8 @@
    "https://i.ebayimg.com/images/g/Yy8AAeSwinFqu0Ve/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/wOIAAeSwp~tqu0Vh/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/YbQAAeSwZ2hqu0Vk/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398442290334",
@@ -4012,7 +4147,7 @@
   "payment_url": "https://buy.stripe.com/28E8wPaS61vD0Lz5m9dZ61t",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The Adidas Anthony Edwards 2 \u201cEaster\u201d brings classic Adidas style to your everyday lineup. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "The Adidas Anthony Edwards 2 “Easter” brings classic Adidas style to your everyday lineup. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -4025,7 +4160,8 @@
    "https://i.ebayimg.com/images/g/D14AAeSwsilqt0Ms/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/L3sAAeSwGTZqt0Mu/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/hUoAAeSwQIlqt0M2/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398442118170",
@@ -4053,7 +4189,8 @@
    "https://i.ebayimg.com/images/g/ZUkAAeSwVw1quyjO/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/aqoAAeSwFr5quyjQ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/YgAAAeSw--pquylE/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398438988381",
@@ -4068,7 +4205,7 @@
   "payment_url": "https://buy.stripe.com/8x228r3pEa29fGt01PdZ61J",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the New Balance 550 White Black \u2014 a women's sneaker with a clean, standout look. Available in men's 7 / women's 8.5. Ships brand new in its box.",
+  "description": "Meet the New Balance 550 White Black — a women's sneaker with a clean, standout look. Available in men's 7 / women's 8.5. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 12,
@@ -4082,7 +4219,8 @@
    "https://i.ebayimg.com/images/g/uYMAAeSwrwFqueoY/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/oZcAAeSwyBBqueob/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/lTkAAeSwJ4ZqueoQ/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432698583",
@@ -4112,7 +4250,8 @@
    "https://i.ebayimg.com/images/g/wI0AAeSwEb1qtyR~/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/zYMAAeSwEhhqtySD/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/9g0AAeSwj-tqtySI/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398412281604",
@@ -4140,11 +4279,12 @@
    "https://i.ebayimg.com/images/g/LtkAAeSwGb1qrzd7/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/XiIAAeSw2aZqrzd-/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/PFMAAeSwXwlqrzeC/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409083762",
-  "title": "Crocs x Dragon Ball Z Echo Clog \u2013 Vegeta Kids",
+  "title": "Crocs x Dragon Ball Z Echo Clog – Vegeta Kids",
   "price": "$49.00",
   "price_direct": 41.65,
   "image": "assets/catalog/398409083762-1.jpg",
@@ -4155,7 +4295,7 @@
   "payment_url": "https://buy.stripe.com/8x2fZh3pEeipgKx01PdZ701",
   "weight_lbs": 0.75,
   "weight_estimated": false,
-  "description": "The Crocs x Dragon Ball Z Echo Clog \u2013 Vegeta Kids is a go-to kids' clog that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "The Crocs x Dragon Ball Z Echo Clog – Vegeta Kids is a go-to kids' clog that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 21.0,
    "w": 12.0,
@@ -4168,11 +4308,12 @@
    "assets/catalog/398409083762-3.jpg",
    "assets/catalog/398409083762-4.jpg",
    "assets/catalog/398409083762-5.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398398960907",
-  "title": "Nike Ava Rover GS \u201cBlack Sequoia\u201d",
+  "title": "Nike Ava Rover GS “Black Sequoia”",
   "price": "$49.00",
   "price_direct": 41.65,
   "image": "https://i.ebayimg.com/images/g/0-MAAeSwtMVqqfRB/s-l1600.jpg",
@@ -4183,7 +4324,7 @@
   "payment_url": "https://buy.stripe.com/00w00j4tIb6dbqd6qddZ70P",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Nike Ava Rover GS \u201cBlack Sequoia\u201d \u2014 a kids' sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Nike Ava Rover GS “Black Sequoia” — a kids' sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -4196,7 +4337,8 @@
    "https://i.ebayimg.com/images/g/mq0AAeSwi8lqqfRG/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/llAAAeSwfEZqqfRL/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/hCkAAeSwDK9qqfRR/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398366041190",
@@ -4228,7 +4370,7 @@
   ],
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the Yeezy Slides Black YS-01 Original Bag As Pictures With Dust Bag-New, a unisex slide in a head-turning colorway. Select your size from the options \u2014 each size has its own Buy Now button. Ships brand new in its box.",
+  "description": "Add some fresh style to your rotation with the Yeezy Slides Black YS-01 Original Bag As Pictures With Dust Bag-New, a unisex slide in a head-turning colorway. Select your size from the options — each size has its own Buy Now button. Ships brand new in its box.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -4241,7 +4383,8 @@
    "assets/catalog/398366041190-3.webp",
    "assets/catalog/398366041190-4.webp",
    "assets/catalog/398366041190-5.webp"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398435734501",
@@ -4269,7 +4412,8 @@
    "https://i.ebayimg.com/images/g/ZOgAAeSwEhhquIi8/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/w6wAAeSwr5dquIjB/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/hWIAAeSwtctquIj4/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398429699022",
@@ -4298,7 +4442,8 @@
    "https://i.ebayimg.com/images/g/uV4AAeSw~7tqterv/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/N2AAAeSw~7tqterv/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/riQAAeSwmbxqter2/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398429696896",
@@ -4327,7 +4472,8 @@
    "https://i.ebayimg.com/images/g/uV4AAeSw~7tqterv/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/N2AAAeSw~7tqterv/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/riQAAeSwmbxqter2/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398429701545",
@@ -4356,7 +4502,8 @@
    "w": 8,
    "h": 6
   },
-  "size": "US 4.5"
+  "size": "US 4.5",
+  "units_sold": 0
  },
  {
   "id": "398429744582",
@@ -4384,7 +4531,8 @@
    "https://i.ebayimg.com/images/g/~MwAAeSwrwFqte~M/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/-MkAAeSwWhxqte~P/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/AbAAAeSwUupqtfA3/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398435851201",
@@ -4414,7 +4562,8 @@
    "https://i.ebayimg.com/images/g/CC0AAeSwKqZquJXU/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/DTkAAeSwHQtquJXX/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ADgAAeSwvwJquJXb/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 1
  },
  {
   "id": "920007777362",
@@ -4443,7 +4592,8 @@
    "w": 10,
    "h": 8
   },
-  "size": "US 5"
+  "size": "US 5",
+  "units_sold": 0
  },
  {
   "id": "398452374952",
@@ -4471,11 +4621,12 @@
    "https://i.ebayimg.com/images/g/1yUAAeSw7odqvwWL/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/~w0AAeSw9nRqvwWP/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/3WkAAeSwgJJqvwWS/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920006186995",
-  "title": "Adidas Campus 00s Women\u2019s 6 Red/Pink",
+  "title": "Adidas Campus 00s Women’s 6 Red/Pink",
   "price": "$52.00",
   "price_direct": 44.2,
   "image": "https://i.ebayimg.com/images/g/WhYAAeSwzN1qweXV/s-l1600.jpg",
@@ -4495,13 +4646,14 @@
   "payment_url": "https://buy.stripe.com/8x2cN5e4icahfGtdSFdZ60n",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Campus 00s Women\u2019s 6 Red/Pink \u2014 a women's sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Adidas Campus 00s Women’s 6 Red/Pink — a women's sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 10,
    "h": 8
   },
-  "size": "US 6"
+  "size": "US 6",
+  "units_sold": 0
  },
  {
   "id": "398442356566",
@@ -4530,7 +4682,8 @@
    "https://i.ebayimg.com/images/g/SyAAAeSw7odqu0S7/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/l-0AAeSwoDtqu0TA/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/YFMAAeSw~XZqu0TE/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398389587575",
@@ -4558,7 +4711,8 @@
    "https://i.ebayimg.com/images/g/C~cAAeSwH2Jqpif4/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/iI8AAeSwaOxqpif8/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/4zAAAeSwzmBqpigT/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920006060347",
@@ -4587,7 +4741,8 @@
    "w": 10,
    "h": 8
   },
-  "size": "US 5"
+  "size": "US 5",
+  "units_sold": 0
  },
  {
   "id": "398402424010",
@@ -4615,7 +4770,8 @@
    "https://i.ebayimg.com/images/g/lzkAAeSw4~Bqq0RY/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/QC8AAeSwyXtqq0Re/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/d04AAeSwXUJqq0Rk/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398402421865",
@@ -4630,7 +4786,7 @@
   "payment_url": "https://buy.stripe.com/eVq7sL1hw7U13XL01PdZ70B",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Chuck Taylor All Star Classic High Top \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Chuck Taylor All Star Classic High Top — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -4643,7 +4799,8 @@
    "https://i.ebayimg.com/images/g/lzkAAeSw4~Bqq0RY/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/QC8AAeSwyXtqq0Re/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/d04AAeSwXUJqq0Rk/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398429667353",
@@ -4658,7 +4815,7 @@
   "payment_url": "https://buy.stripe.com/6oU28r5xM3DL51P5m9dZ631",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Vans Knu Skool GS \u2014 a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Vans Knu Skool GS — a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -4672,7 +4829,8 @@
    "https://i.ebayimg.com/images/g/zCYAAeSwr5dqtekL/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/uS0AAeSwrwFqtekN/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/r74AAeSwbu5qtekQ/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398429581723",
@@ -4700,7 +4858,8 @@
    "https://i.ebayimg.com/images/g/dN8AAeSw4j1qtd~s/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Q-0AAeSwX6dqteCl/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/VPQAAeSwrwFqteCp/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398412700662",
@@ -4728,7 +4887,8 @@
    "https://i.ebayimg.com/images/g/GwYAAeSwABRqr2Td/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/wRAAAeSwKfZqr2Ta/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/eC0AAeSwvoBqr2TV/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398412697871",
@@ -4756,7 +4916,8 @@
    "https://i.ebayimg.com/images/g/1Y0AAeSwH2Jqr2Qx/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/gX0AAeSwweKZqr2Qz/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ZJYAAeSwiyFqr2Q3/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398402384474",
@@ -4771,7 +4932,7 @@
   "payment_url": "https://buy.stripe.com/3cI4gz7FUa29cuhbKxdZ70D",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Converse Chuck Taylor All Star Canvas High Top White \u2014 a unisex sneaker with a clean, standout look. Sized at 7.5. Comes brand new with its box included.",
+  "description": "Meet the Converse Chuck Taylor All Star Canvas High Top White — a unisex sneaker with a clean, standout look. Sized at 7.5. Comes brand new with its box included.",
   "parcel_in": {
    "l": 14,
    "w": 10,
@@ -4784,7 +4945,8 @@
    "https://i.ebayimg.com/images/g/YFgAAeSwJs5qqz9Z/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/T4QAAeSwmuBqqz9c/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/SGoAAeSwlOpqqz9U/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398392060887",
@@ -4812,7 +4974,8 @@
    "https://i.ebayimg.com/images/g/GSgAAeSwS2xqpzvi/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/2VwAAeSwAwdqpzvk/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/LMkAAeSwM~hqpzvr/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398442319345",
@@ -4827,7 +4990,7 @@
   "payment_url": "https://buy.stripe.com/aFa9ATf8mgqx3XL8yldZ61r",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the New Balance 1000 \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the New Balance 1000 — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -4840,11 +5003,12 @@
    "https://i.ebayimg.com/images/g/RHsAAeSw5etqu0Dz/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/NcwAAeSwJOtqu0D7/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/d2MAAeSwdLZqu0D-/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432466822",
-  "title": "Adidas UBounce DNA Women\u2019s size  5.5 men or 6.5 women",
+  "title": "Adidas UBounce DNA Women’s size  5.5 men or 6.5 women",
   "price": "$54.21",
   "price_direct": 46.08,
   "image": "https://i.ebayimg.com/images/g/XzcAAeSwrgpqr1fR/s-l1600.jpg",
@@ -4855,7 +5019,7 @@
   "payment_url": "https://buy.stripe.com/3cI00j4tI2zH65T8yldZ62O",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The Adidas UBounce DNA Women\u2019s brings classic Adidas style to your everyday lineup. Sized at men's 5.5 / women's 6.5. Ships brand new in its box.",
+  "description": "The Adidas UBounce DNA Women’s brings classic Adidas style to your everyday lineup. Sized at men's 5.5 / women's 6.5. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -4868,11 +5032,12 @@
    "https://i.ebayimg.com/images/g/3ZwAAeSwKZ9qr1fl/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/O48AAeSw-TFqr1fi/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/UbAAAeSwCZ5qr1fg/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398412382933",
-  "title": "Adidas Samba XLG J \u2013 Junior/Grade School",
+  "title": "Adidas Samba XLG J – Junior/Grade School",
   "price": "$54.33",
   "price_direct": 46.18,
   "image": "https://i.ebayimg.com/images/g/biwAAeSwSyBqr0DT/s-l1600.jpg",
@@ -4883,7 +5048,7 @@
   "payment_url": "https://buy.stripe.com/eVqdR9bWacah51P9CpdZ63H",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Samba XLG J \u2013 Junior/Grade School \u2014 a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "Meet the Adidas Samba XLG J – Junior/Grade School — a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -4896,7 +5061,8 @@
    "https://i.ebayimg.com/images/g/c40AAeSwjTNqr0Dl/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/jrkAAeSw8SBqr0ES/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/nFkAAeSwiiJqr0EW/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398412768858",
@@ -4924,7 +5090,8 @@
    "https://i.ebayimg.com/images/g/ig0AAeSwDG9qr2dx/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/RDIAAeSwMp1qr2d0/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/IZ8AAeSwLGlqr2d2/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398412734458",
@@ -4952,7 +5119,8 @@
    "https://i.ebayimg.com/images/g/ig0AAeSwDG9qr2dx/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/RDIAAeSwMp1qr2d0/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/IZ8AAeSwLGlqr2d2/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920006268257",
@@ -4980,7 +5148,8 @@
    "w": 10,
    "h": 8
   },
-  "size": "US 4"
+  "size": "US 4",
+  "units_sold": 0
  },
  {
   "id": "920005972218",
@@ -5008,7 +5177,8 @@
    "https://i.ebayimg.com/images/g/xMoAAeSwRbVqwc8~/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/CVkAAeSwmh9qwc8~/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Z-YAAeSw5opqwc9M/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 1
  },
  {
   "id": "398445807549",
@@ -5038,7 +5208,8 @@
    "https://i.ebayimg.com/images/g/5zsAAeSwp~tqvJSo/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/dnwAAeSwjjZqvJSs/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/d8IAAeSwgktqvJSv/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398445728299",
@@ -5067,7 +5238,8 @@
    "https://i.ebayimg.com/images/g/Jt0AAeSw7PpqvI7t/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/MUMAAeSwA9VqvI7x/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/MlQAAeSw4dRqvI71/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398442031978",
@@ -5097,7 +5269,8 @@
    "https://i.ebayimg.com/images/g/AVUAAeSw1uFqux-F/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/EAwAAeSwqYhqux-I/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/D0oAAeSwASdqux-L/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398435814399",
@@ -5112,7 +5285,7 @@
   "payment_url": "https://buy.stripe.com/28E6oHf8m5LT9i501PdZ624",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Vans Knu Skool \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "Meet the Vans Knu Skool — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -5125,7 +5298,8 @@
    "https://i.ebayimg.com/images/g/~MwAAeSwrwFqte~M/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/-MkAAeSwWhxqte~P/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/AbAAAeSwUupqtfA3/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432606475",
@@ -5155,11 +5329,12 @@
    "https://i.ebayimg.com/images/g/wI0AAeSwEb1qtyR~/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/zYMAAeSwEhhqtySD/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/9g0AAeSwj-tqtySI/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432492308",
-  "title": "UGG Goldenstar Sandal \u2013 Big Kids",
+  "title": "UGG Goldenstar Sandal – Big Kids",
   "price": "$55.00",
   "price_direct": 46.75,
   "image": "https://i.ebayimg.com/images/g/Y0wAAeSwbu5qtxdF/s-l1600.jpg",
@@ -5170,7 +5345,7 @@
   "payment_url": "https://buy.stripe.com/bJe5kD9O20rzdyl8yldZ62N",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The UGG Goldenstar Sandal \u2013 Big Kids is a go-to kids' sandal that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "The UGG Goldenstar Sandal – Big Kids is a go-to kids' sandal that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -5183,7 +5358,8 @@
    "https://i.ebayimg.com/images/g/918AAeSwyBBqtxdA/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/a44AAeSwZ-RqtxdQ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/YdYAAeSwjhxqtxdc/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398429634784",
@@ -5210,7 +5386,8 @@
    "https://i.ebayimg.com/images/g/ec0AAeSwWw1qteYA/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/nMgAAeSwl~pqteYC/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/nfYAAeSw40FqteYF/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398429571046",
@@ -5225,7 +5402,7 @@
   "payment_url": "https://buy.stripe.com/4gMdR92lAgqx3XLdSFdZ637",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Taekwondo Lace Black White Gum W \u2014 a women's sneaker with a clean, standout look. This pair is a 8.5. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Adidas Taekwondo Lace Black White Gum W — a women's sneaker with a clean, standout look. This pair is a 8.5. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -5238,7 +5415,8 @@
    "https://i.ebayimg.com/images/g/PuEAAeSwlCJqtd6v/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/MPkAAeSwvwJqtd6y/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/QV4AAeSwMhhqtd63/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398392068097",
@@ -5265,7 +5443,7 @@
   ],
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Converse Chuck Taylor All Star Canvas High Top White \u2014 a unisex sneaker with a clean, standout look. Select your size from the options \u2014 each size has its own Buy Now button. Brand new and comes with its box.",
+  "description": "Meet the Converse Chuck Taylor All Star Canvas High Top White — a unisex sneaker with a clean, standout look. Select your size from the options — each size has its own Buy Now button. Brand new and comes with its box.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -5278,7 +5456,8 @@
    "https://i.ebayimg.com/images/g/tIoAAeSwyXtqpzxx/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/uRMAAeSwFXJqpzxt/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/MkoAAeSwMxpqpzx0/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398391799601",
@@ -5306,7 +5485,8 @@
    "https://i.ebayimg.com/images/g/kxAAAeSwfGNqpyDf/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/H~MAAeSw03ZqpyDi/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/G88AAeSwoFlqpyDo/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398389782038",
@@ -5334,7 +5514,8 @@
    "https://i.ebayimg.com/images/g/6tAAAeSwnkFqpkJ2/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/x~MAAeSwZlFqpkJ8/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/mq0AAeSw2WZqpkJy/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920008981771",
@@ -5356,17 +5537,18 @@
   "payment_url": "https://buy.stripe.com/eVq3cv0ds4HP79X9CpdZ604",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Reebok Classic Nylon HS Low Black \u2014 a women's sneaker with a clean, standout look. Available in 8 or 9.5 Women. Comes brand new with its box included.",
+  "description": "Meet the Reebok Classic Nylon HS Low Black — a women's sneaker with a clean, standout look. Available in 8 or 9.5 Women. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 10,
    "h": 8
   },
-  "size": "US 8"
+  "size": "US 8",
+  "units_sold": 0
  },
  {
   "id": "398412632475",
-  "title": "Adidas Sambae Women\u2019s",
+  "title": "Adidas Sambae Women’s",
   "price": "$56.21",
   "price_direct": 47.78,
   "image": "https://i.ebayimg.com/images/g/2ZAAAeSw4FBqr1ly/s-l1600.jpg",
@@ -5377,7 +5559,7 @@
   "payment_url": "https://buy.stripe.com/fZu5kD8JYeip79XdSFdZ63F",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "You can't go wrong with the Adidas Sambae Women\u2019s, a women's sneaker made to be worn on repeat. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "You can't go wrong with the Adidas Sambae Women’s, a women's sneaker made to be worn on repeat. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 8.0,
@@ -5390,7 +5572,8 @@
    "https://i.ebayimg.com/images/g/WdIAAeSwLgNqr1l7/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/uHMAAeSwfGNqr1l-/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/44UAAeSwqrhqr1mD/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398449192498",
@@ -5418,7 +5601,8 @@
    "https://i.ebayimg.com/images/g/RXcAAeSwsutqvc8t/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/SlEAAeSwxd1qvc8w/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/QK4AAeSwajdqvc80/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398442389846",
@@ -5447,7 +5631,8 @@
    "https://i.ebayimg.com/images/g/g9IAAeSwVhNqu0h-/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/iNEAAeSwVw1qu0iB/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/if0AAeSwJYJqu0iE/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398429764372",
@@ -5476,7 +5661,8 @@
    "https://i.ebayimg.com/images/g/A9MAAeSwQn1qtfB5/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/5l4AAeSw-zpqtfB-/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/55UAAeSwlQNqtfCD/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398412672764",
@@ -5504,7 +5690,8 @@
    "https://i.ebayimg.com/images/g/uXYAAeSw6Blqr2AV/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/sV4AAeSwh9Bqr2Ab/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/eGEAAeSwIWdqr2AY/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398452301408",
@@ -5533,7 +5720,8 @@
    "https://i.ebayimg.com/images/g/n9sAAeSwkIlqvv4x/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/cy0AAeSw03dqvv4z/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/zA0AAeSwusFqvv42/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398445843264",
@@ -5561,7 +5749,8 @@
    "https://i.ebayimg.com/images/g/wQIAAeSweVZqvJfe/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/haAAAeSw8z5qvJfh/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ocwAAeSw-ftqvJfz/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398444836154",
@@ -5589,7 +5778,8 @@
    "https://i.ebayimg.com/images/g/6BEAAeSwuxRqvCt-/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/6agAAeSw1MJqvC10/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/-9AAAeSwimhqvC12/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398442134336",
@@ -5604,7 +5794,7 @@
   "payment_url": "https://buy.stripe.com/cNiaEXd0e1vD3XL4i5dZ61x",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Campus 00s Core Black Gum \u2014 a kids' sneaker with a clean, standout look. This pair is a 4.5Y. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Adidas Campus 00s Core Black Gum — a kids' sneaker with a clean, standout look. This pair is a 4.5Y. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -5617,7 +5807,8 @@
    "https://i.ebayimg.com/images/g/gp0AAeSwrPpquyqJ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/fRwAAeSwVhNquyqL/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/a3QAAeSw7sxquyqP/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398442133066",
@@ -5645,7 +5836,8 @@
    "https://i.ebayimg.com/images/g/gp0AAeSwrPpquyqJ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/fRwAAeSwVhNquyqL/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/a3QAAeSw7sxquyqP/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398441859639",
@@ -5677,7 +5869,8 @@
    "https://i.ebayimg.com/images/g/ToIAAeSw3btquEz3/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/dA4AAeSwWV5quE0A/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/31QAAeSwIftquEz8/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398441758287",
@@ -5704,7 +5897,8 @@
    "https://i.ebayimg.com/images/g/J0oAAeSwJYJquwSX/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/l3YAAeSwp~tquwSZ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/O~MAAeSwFRlquwSc/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398438942530",
@@ -5719,7 +5913,7 @@
   "payment_url": "https://buy.stripe.com/dRm7sL9O20rz0Lz01PdZ61P",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the New Balance 1000 Kids Sneaker Purple/White \u2014 a kids' sneaker with a clean, standout look. Listed here in size men's US 7 / women's US 8.5. Ships brand new in its box.",
+  "description": "Meet the New Balance 1000 Kids Sneaker Purple/White — a kids' sneaker with a clean, standout look. Listed here in size men's US 7 / women's US 8.5. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -5732,7 +5926,8 @@
    "https://i.ebayimg.com/images/g/o1EAAeSwuWBqueP4/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Wk0AAeSwh-dqueP6/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/fK8AAeSwbu5queP-/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398435871521",
@@ -5747,7 +5942,7 @@
   "payment_url": "https://buy.stripe.com/aFa8wPe4i6PXdyl5m9dZ620",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Vans Old Skool Navy \u2014 a unisex sneaker with a clean, standout look. Available in 9.5. Ships brand new in its box.",
+  "description": "Meet the Vans Old Skool Navy — a unisex sneaker with a clean, standout look. Available in 9.5. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -5760,7 +5955,8 @@
    "https://i.ebayimg.com/images/g/DtgAAeSw1xZquJes/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/A~EAAeSwU2FquJez/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/BWQAAeSwZ-RquJe4/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398435244338",
@@ -5792,7 +5988,8 @@
    "https://i.ebayimg.com/images/g/ToIAAeSw3btquEz3/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/dA4AAeSwWV5quE0A/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/31QAAeSwIftquEz8/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398412659120",
@@ -5832,7 +6029,8 @@
    "https://i.ebayimg.com/images/g/~RIAAeSwt3xqr1zj/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/YesAAeSwR25qr1zp/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/fdgAAeSw6Lpqr1zy/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398412638519",
@@ -5860,7 +6058,8 @@
    "https://i.ebayimg.com/images/g/WdIAAeSwLgNqr1l7/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/uHMAAeSwfGNqr1l-/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/44UAAeSwqrhqr1mD/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398389745925",
@@ -5875,7 +6074,7 @@
   "payment_url": "https://buy.stripe.com/6oU3cv5xM4HPbqdg0NdZ719",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Superstar 2 Black Scarlet \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "Meet the Adidas Superstar 2 Black Scarlet — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 14.0,
    "w": 12.0,
@@ -5888,7 +6087,8 @@
    "https://i.ebayimg.com/images/g/T8YAAeSwdAJqpj0b/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/nBQAAeSwj0lqpj0p/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/AngAAeSwuvJqpj0v/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398389361084",
@@ -5916,7 +6116,8 @@
    "https://i.ebayimg.com/images/g/nxEAAeSwCZ5qpg4-/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/nyQAAeSwCZ5qpg5C/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/6ncAAeSwm3xqpg5G/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398382984607",
@@ -5956,7 +6157,8 @@
    "https://i.ebayimg.com/images/g/qQEAAeSwVkhqo3iD/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/dXwAAeSwLhhqo3iF/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/SlsAAeSw7ppqo3iI/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398379147565",
@@ -5984,7 +6186,8 @@
    "https://i.ebayimg.com/images/g/mwUAAeSw3mhqogJn/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/h-kAAeSwf4ZqogJq/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/K90AAeSwDahqogJs/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398375735418",
@@ -5999,7 +6202,7 @@
   "payment_url": "https://buy.stripe.com/cNieVd3pEdel8e1g0NdZ71A",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Nike P-6000 GS Big Kids University Red Silver \u2014 a kids' sneaker with a clean, standout look. Available in 7Y. Comes brand new with its box included.",
+  "description": "Meet the Nike P-6000 GS Big Kids University Red Silver — a kids' sneaker with a clean, standout look. Available in 7Y. Comes brand new with its box included.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -6014,7 +6217,8 @@
    "assets/catalog/398375735418-5.jpg",
    "assets/catalog/398375735418-6.jpg",
    "assets/catalog/398375735418-7.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398365974035",
@@ -6053,7 +6257,8 @@
    "https://i.ebayimg.com/images/g/8i0AAeSwJxBqnXpi/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/2mAAAeSwNRJqnXpm/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/l3wAAeSwo5FqnXps/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398399086442",
@@ -6081,7 +6286,8 @@
    "w": 12,
    "h": 9
   },
-  "size": "US 3.5"
+  "size": "US 3.5",
+  "units_sold": 0
  },
  {
   "id": "398412737328",
@@ -6109,11 +6315,12 @@
    "https://i.ebayimg.com/images/g/7C4AAeSwH2Jqr2fC/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/qsYAAeSwSZJqr2fG/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/nEUAAeSwXUJqr2e-/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398412338004",
-  "title": "Adidas Samba XLG J \u2013 Junior/Grade School",
+  "title": "Adidas Samba XLG J – Junior/Grade School",
   "price": "$59.43",
   "price_direct": 50.52,
   "image": "https://i.ebayimg.com/images/g/BHEAAeSwE6lqrz4p/s-l1600.jpg",
@@ -6124,7 +6331,7 @@
   "payment_url": "https://buy.stripe.com/00w00j9O26PXdylcOBdZ63I",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The Adidas Samba XLG J \u2013 Junior/Grade School brings classic Adidas style to your everyday lineup. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "The Adidas Samba XLG J – Junior/Grade School brings classic Adidas style to your everyday lineup. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -6138,11 +6345,12 @@
    "https://i.ebayimg.com/images/g/haUAAeSw6Lpqrz4z/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/bmcAAeSwvd5qrz48/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/sCIAAeSwH2Jqrz45/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398402429038",
-  "title": "Converse Chuck Taylor All Star Malden Street Low \u2013 Pale Surplus",
+  "title": "Converse Chuck Taylor All Star Malden Street Low – Pale Surplus",
   "price": "$59.66",
   "price_direct": 50.71,
   "image": "https://i.ebayimg.com/images/g/tDIAAeSw7ydqq0YI/s-l1600.jpg",
@@ -6153,7 +6361,7 @@
   "payment_url": "https://buy.stripe.com/dRm5kD9O21vDgKxeWJdZ70z",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "You can't go wrong with the Converse Chuck Taylor All Star Malden Street Low \u2013 Pale Surplus, a unisex sneaker made to be worn on repeat. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "You can't go wrong with the Converse Chuck Taylor All Star Malden Street Low – Pale Surplus, a unisex sneaker made to be worn on repeat. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -6166,11 +6374,12 @@
    "https://i.ebayimg.com/images/g/NnoAAeSw4FBqq0XG/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/m8UAAeSwLgNqq0YL/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/B8kAAeSw96Jqq0YN/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398442170195",
-  "title": "Adidas Campus 00s J \u2013 \u201cCream Semi Pink Spark\u201d 4Y",
+  "title": "Adidas Campus 00s J – “Cream Semi Pink Spark” 4Y",
   "price": "$59.95",
   "price_direct": 50.96,
   "image": "https://i.ebayimg.com/images/g/M9UAAeSw-UZquyKZ/s-l1600.jpg",
@@ -6181,7 +6390,7 @@
   "payment_url": "https://buy.stripe.com/6oU5kD6BQ4HP8e1aGtdZ61w",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The Adidas Campus 00s J \u2013 \u201cCream Semi Pink Spark\u201d brings classic Adidas style to your everyday lineup. Sized at 4Y. Comes brand new with its box included.",
+  "description": "The Adidas Campus 00s J – “Cream Semi Pink Spark” brings classic Adidas style to your everyday lineup. Sized at 4Y. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -6194,11 +6403,12 @@
    "https://i.ebayimg.com/images/g/PdMAAeSwmL1quyKe/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/HhAAAeSwznhquyKg/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/L~0AAeSw24tquyKj/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398442070545",
-  "title": "Adidas Campus 00s J \u2013 \u201cCream Semi Pink Spark\u201d 5Y or 6 Women",
+  "title": "Adidas Campus 00s J – “Cream Semi Pink Spark” 5Y or 6 Women",
   "price": "$59.95",
   "price_direct": 50.96,
   "image": "https://i.ebayimg.com/images/g/M9UAAeSw-UZquyKZ/s-l1600.jpg",
@@ -6209,7 +6419,7 @@
   "payment_url": "https://buy.stripe.com/eVq28r3pE3DLcuh5m9dZ61A",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the Adidas Campus 00s J \u2013 \u201cCream Semi Pink Spark\u201d 5Y or 6, a kids' sneaker in a head-turning colorway. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "Add some fresh style to your rotation with the Adidas Campus 00s J – “Cream Semi Pink Spark” 5Y or 6, a kids' sneaker in a head-turning colorway. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -6222,7 +6432,8 @@
    "https://i.ebayimg.com/images/g/PdMAAeSwmL1quyKe/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/HhAAAeSwznhquyKg/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/L~0AAeSw24tquyKj/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398435846692",
@@ -6250,7 +6461,8 @@
    "https://i.ebayimg.com/images/g/3YYAAeSwU6ZquJRm/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/stoAAeSwIF5quJRy/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/3IcAAeSwy1FquJRv/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432664074",
@@ -6279,7 +6491,8 @@
    "https://i.ebayimg.com/images/g/haUAAeSw6Lpqrz4z/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/bmcAAeSwvd5qrz48/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/sCIAAeSwH2Jqrz45/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398371352058",
@@ -6310,7 +6523,8 @@
    "https://i.ebayimg.com/images/g/xSYAAeSwgyJqn2OO/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Z-QAAeSwWrpqn2OT/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/4OsAAeSw4tlqn2OW/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920007696043",
@@ -6339,7 +6553,8 @@
    "w": 10,
    "h": 8
   },
-  "size": "US 4"
+  "size": "US 4",
+  "units_sold": 0
  },
  {
   "id": "920007695328",
@@ -6368,7 +6583,8 @@
    "w": 10,
    "h": 8
   },
-  "size": "US 4.5"
+  "size": "US 4.5",
+  "units_sold": 0
  },
  {
   "id": "398409365552",
@@ -6397,7 +6613,8 @@
    "https://i.ebayimg.com/images/g/rvMAAeSwDaxqrgTc/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/eJgAAeSwaw5qrgTf/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/pJ0AAeSwlOpqrgTi/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920006153284",
@@ -6425,7 +6642,8 @@
    "https://i.ebayimg.com/images/g/5qcAAeSwUMdqweML/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/X-MAAeSwUMVqweMO/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/M~cAAeSwdqFqweMR/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920006105043",
@@ -6454,7 +6672,8 @@
    "https://i.ebayimg.com/images/g/xyEAAeSwU6Jqwdyh/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/sxAAAeSwsutqwdyh/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ua8AAeSw1tRqwdyh/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920005334459",
@@ -6482,7 +6701,8 @@
    "https://i.ebayimg.com/images/g/UXQAAeSw5AlqwZLG/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/dfEAAeSwZPtqwZLJ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/InQAAeSwpvhqwZLM/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398441761159",
@@ -6511,7 +6731,8 @@
    "https://i.ebayimg.com/images/g/JYQAAeSw9D9quwKj/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/GGYAAeSw5oZquwM1/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/KbYAAeSwgQBquwM4/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398441753657",
@@ -6540,7 +6761,8 @@
    "https://i.ebayimg.com/images/g/JYQAAeSw9D9quwKj/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/GGYAAeSw5oZquwM1/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/KbYAAeSwgQBquwM4/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398441751374",
@@ -6569,7 +6791,8 @@
    "https://i.ebayimg.com/images/g/JYQAAeSw9D9quwKj/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/GGYAAeSw5oZquwM1/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/KbYAAeSwgQBquwM4/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398419217447",
@@ -6597,7 +6820,8 @@
    "w": 7,
    "h": 4.5
   },
-  "size": "US 11"
+  "size": "US 11",
+  "units_sold": 0
  },
  {
   "id": "398419212917",
@@ -6625,7 +6849,8 @@
    "w": 7,
    "h": 4.5
   },
-  "size": "US 7.5"
+  "size": "US 7.5",
+  "units_sold": 0
  },
  {
   "id": "398412662505",
@@ -6654,7 +6879,8 @@
    "https://i.ebayimg.com/images/g/9FUAAeSwTvFqr14t/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/CXwAAeSwj7pqr14z/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/nMAAAeSwS2xqr145/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398402746985",
@@ -6669,7 +6895,7 @@
   "payment_url": "https://buy.stripe.com/fZu00jgcq6PX8e1dSFdZ70p",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The ASICS GEL-Venture 10 Women\u2019s is a go-to women's sneaker that goes with just about anything. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "The ASICS GEL-Venture 10 Women’s is a go-to women's sneaker that goes with just about anything. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -6685,7 +6911,8 @@
    "https://i.ebayimg.com/images/g/NfoAAeSw25dqq2bN/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/7r8AAeSwM-xqq2bX/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/mnIAAeSwMaJqq2bh/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398391833249",
@@ -6713,7 +6940,8 @@
    "https://i.ebayimg.com/images/g/GUwAAeSwKjZqpyRE/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/1FQAAeSweGhqpyRK/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/FpYAAeSw2DJqpyRW/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398389833894",
@@ -6741,7 +6969,8 @@
    "https://i.ebayimg.com/images/g/YlwAAeSwIIxqpkfP/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/z1YAAeSwwDVqpkfh/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/zxkAAeSw1Gpqpkfm/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398389662635",
@@ -6769,7 +6998,8 @@
    "https://i.ebayimg.com/images/g/8I0AAeSw32NqpjBv/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/1vwAAeSwVXhqpjBx/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/K5gAAeSwbLhqpjB1/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398389221692",
@@ -6809,7 +7039,8 @@
    "https://i.ebayimg.com/images/g/JrgAAeSwZjhqpgCU/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/7EQAAeSwfEhqpgCZ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/hNIAAeSwh4BqpgCf/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398389766370",
@@ -6835,18 +7066,19 @@
   "payment_url": "https://buy.stripe.com/9B6dR94tIfmtdyl5m9dZ72H",
   "weight_lbs": 3.0,
   "weight_estimated": true,
-  "description": "Meet the adidas Superstar II Patent Black Red \u2014 a men's sneaker with a bold patent-leather look in black and red. Size: Men US 9. Condition: New with box. Includes original box, ready to wear straight out of the package.",
+  "description": "Meet the adidas Superstar II Patent Black Red — a men's sneaker with a bold patent-leather look in black and red. Size: Men US 9. Condition: New with box. Includes original box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 13,
    "w": 8,
    "h": 5
   },
   "store_only": true,
-  "size": "US 9"
+  "size": "US 9",
+  "units_sold": 0
  },
  {
   "id": "398435811615",
-  "title": "Vans Knu Skool Flame \u2013 Black/Red/Yellow 6TD",
+  "title": "Vans Knu Skool Flame – Black/Red/Yellow 6TD",
   "price": "$63.74",
   "price_direct": 54.18,
   "image": "https://i.ebayimg.com/images/g/uDcAAeSwCJlquI96/s-l1600.jpg",
@@ -6857,7 +7089,7 @@
   "payment_url": "https://buy.stripe.com/eVq9AT6BQb6dam9eWJdZ625",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The Vans Knu Skool Flame \u2013 Black/Red/Yellow 6TD brings classic Vans style to your everyday lineup. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "The Vans Knu Skool Flame – Black/Red/Yellow 6TD brings classic Vans style to your everyday lineup. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -6870,11 +7102,12 @@
    "https://i.ebayimg.com/images/g/p5cAAeSwEkpquI96/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/flwAAeSwlvRquI96/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/4lcAAeSwHQtquI-O/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398435810576",
-  "title": "Vans Knu Skool Flame \u2013 Black/Red/Yellow",
+  "title": "Vans Knu Skool Flame – Black/Red/Yellow",
   "price": "$63.74",
   "price_direct": 54.18,
   "image": "https://i.ebayimg.com/images/g/uDcAAeSwCJlquI96/s-l1600.jpg",
@@ -6885,7 +7118,7 @@
   "payment_url": "https://buy.stripe.com/aFa5kD7FU7U1bqdbKxdZ626",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The Vans Knu Skool Flame \u2013 Black/Red/Yellow is a go-to unisex sneaker that goes with just about anything. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "The Vans Knu Skool Flame – Black/Red/Yellow is a go-to unisex sneaker that goes with just about anything. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -6898,11 +7131,12 @@
    "https://i.ebayimg.com/images/g/p5cAAeSwEkpquI96/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/flwAAeSwlvRquI96/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/4lcAAeSwHQtquI-O/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398435810216",
-  "title": "Vans Knu Skool Flame \u2013 Black/Red/Yellow",
+  "title": "Vans Knu Skool Flame – Black/Red/Yellow",
   "price": "$63.74",
   "price_direct": 54.18,
   "image": "https://i.ebayimg.com/images/g/uDcAAeSwCJlquI96/s-l1600.jpg",
@@ -6913,7 +7147,7 @@
   "payment_url": "https://buy.stripe.com/8x2bJ18JY0rz8e13e1dZ627",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The Vans Knu Skool Flame \u2013 Black/Red/Yellow brings classic Vans style to your everyday lineup. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "The Vans Knu Skool Flame – Black/Red/Yellow brings classic Vans style to your everyday lineup. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -6926,7 +7160,8 @@
    "https://i.ebayimg.com/images/g/p5cAAeSwEkpquI96/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/flwAAeSwlvRquI96/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/4lcAAeSwHQtquI-O/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920006140208",
@@ -6954,7 +7189,8 @@
    "https://i.ebayimg.com/images/g/tNkAAeSw-ftqwcno/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/IKgAAeSw1tRqwcnr/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/LrwAAeSw5oZqwcnt/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398402734525",
@@ -6982,7 +7218,8 @@
    "https://i.ebayimg.com/images/g/zJAAAeSwaENqq2Pu/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/3AcAAeSwVyhqq2R3/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/rUQAAeSwZlFqq2R7/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432574052",
@@ -7010,7 +7247,8 @@
    "https://i.ebayimg.com/images/g/1X0AAeSw1kVqtyFG/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/X8EAAeSwGB1qtyFJ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/u34AAeSwzetqtyFP/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 1
  },
  {
   "id": "398442366309",
@@ -7039,11 +7277,12 @@
    "https://i.ebayimg.com/images/g/YsMAAeSw16hqu0aO/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/aSsAAeSw8wtqu0aS/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/cagAAeSwamhqu0aW/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432893204",
-  "title": "Adidas Anthony Edwards 2 \u201cEaster\u201d",
+  "title": "Adidas Anthony Edwards 2 “Easter”",
   "price": "$64.99",
   "price_direct": 55.24,
   "image": "https://i.ebayimg.com/images/g/7EUAAeSwpPxqt0Ml/s-l1600.jpg",
@@ -7054,7 +7293,7 @@
   "payment_url": "https://buy.stripe.com/bJecN57FU7U1bqd4i5dZ62p",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "The Adidas Anthony Edwards 2 \u201cEaster\u201d brings classic Adidas style to your everyday lineup. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "The Adidas Anthony Edwards 2 “Easter” brings classic Adidas style to your everyday lineup. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -7067,7 +7306,8 @@
    "https://i.ebayimg.com/images/g/D14AAeSwsilqt0Ms/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/L3sAAeSwGTZqt0Mu/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/hUoAAeSwQIlqt0M2/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398444813512",
@@ -7095,11 +7335,12 @@
    "https://i.ebayimg.com/images/g/6BEAAeSwuxRqvCt-/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/6agAAeSw1MJqvC10/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/-9AAAeSwimhqvC12/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398442353452",
-  "title": "Nike Run Swift 3 SE Women\u2019s Grey Pink Running Shoes",
+  "title": "Nike Run Swift 3 SE Women’s Grey Pink Running Shoes",
   "price": "$65.00",
   "price_direct": 55.25,
   "image": "https://i.ebayimg.com/images/g/U9kAAeSwqcpqu0Qs/s-l1600.jpg",
@@ -7110,7 +7351,7 @@
   "payment_url": "https://buy.stripe.com/dRm28r2lA4HPeCpeWJdZ61q",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "The Nike Run Swift 3 SE Women\u2019s Grey Pink Running Shoes brings classic Nike style to your everyday lineup. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "The Nike Run Swift 3 SE Women’s Grey Pink Running Shoes brings classic Nike style to your everyday lineup. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -7123,7 +7364,8 @@
    "https://i.ebayimg.com/images/g/WYwAAeSwPGRqu0Qx/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/UVkAAeSwo29qu0Q0/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Uv8AAeSwpvhqu0Q2/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398438981818",
@@ -7151,7 +7393,8 @@
    "https://i.ebayimg.com/images/g/dUcAAeSwuhlqueZ5/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/gRcAAeSwjtRqueZ9/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/5ekAAeSw~7tqueaC/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398438953265",
@@ -7179,7 +7422,8 @@
    "https://i.ebayimg.com/images/g/dUcAAeSwuhlqueZ5/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/gRcAAeSwjtRqueZ9/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/5ekAAeSw~7tqueaC/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398419238316",
@@ -7207,7 +7451,8 @@
    "w": 8,
    "h": 6
   },
-  "size": "US 10.5"
+  "size": "US 10.5",
+  "units_sold": 0
  },
  {
   "id": "398399251923",
@@ -7235,7 +7480,8 @@
    "https://i.ebayimg.com/images/g/GogAAeSwfmBqqg8r/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/tNwAAeSweKZqqg8u/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/7twAAeSwKkJqqg82/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398391761848",
@@ -7263,11 +7509,12 @@
    "https://i.ebayimg.com/images/g/sz4AAeSwZlFqpxx-/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/2~MAAeSw6LpqpxyB/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/iv0AAeSwPOlqpxyG/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398375667745",
-  "title": "UGG GoldenGlow Kids Sandal \u2013 Sea Salt",
+  "title": "UGG GoldenGlow Kids Sandal – Sea Salt",
   "price": "$65.00",
   "price_direct": 55.25,
   "image": "https://i.ebayimg.com/images/g/5j8AAeSwXVhqoMiV/s-l1600.jpg",
@@ -7278,7 +7525,7 @@
   "payment_url": "https://buy.stripe.com/00w7sL5xMa2951PcOBdZ71B",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the UGG GoldenGlow Kids Sandal \u2013 Sea Salt, a kids' sandal in a head-turning colorway. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "Add some fresh style to your rotation with the UGG GoldenGlow Kids Sandal – Sea Salt, a kids' sandal in a head-turning colorway. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -7291,11 +7538,12 @@
    "https://i.ebayimg.com/images/g/kxgAAeSwnz9qoMig/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/8ZoAAeSwFFJqoMih/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/8jAAAeSwrjtqoMii/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398375628510",
-  "title": "UGG GoldenGlow Kids Sandal \u2013 Sea Salt",
+  "title": "UGG GoldenGlow Kids Sandal – Sea Salt",
   "price": "$65.00",
   "price_direct": 55.25,
   "image": "https://i.ebayimg.com/images/g/5j8AAeSwXVhqoMiV/s-l1600.jpg",
@@ -7306,7 +7554,7 @@
   "payment_url": "https://buy.stripe.com/dRm14naS62zHcuheWJdZ71C",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The UGG GoldenGlow Kids Sandal \u2013 Sea Salt brings classic Ugg style to your everyday lineup. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "The UGG GoldenGlow Kids Sandal – Sea Salt brings classic Ugg style to your everyday lineup. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -7319,11 +7567,12 @@
    "https://i.ebayimg.com/images/g/kxgAAeSwnz9qoMig/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/8ZoAAeSwFFJqoMih/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/8jAAAeSwrjtqoMii/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398375354755",
-  "title": "PUMA Scoot Zeros II 2K Men\u2019s Size 11 Basketball Shoes Multicolor",
+  "title": "PUMA Scoot Zeros II 2K Men’s Size 11 Basketball Shoes Multicolor",
   "price": "$65.00",
   "price_direct": 55.25,
   "image": "https://i.ebayimg.com/images/g/ricAAeSwN-9qoLRM/s-l1600.jpg",
@@ -7334,7 +7583,7 @@
   "payment_url": "https://buy.stripe.com/bJedR91hweip3XLaGtdZ71G",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "The PUMA Scoot Zeros II 2K Men\u2019s Basketball Shoes Multicolor is a go-to kids' shoe that goes with just about anything. Sized at 11. Ships brand new in its box.",
+  "description": "The PUMA Scoot Zeros II 2K Men’s Basketball Shoes Multicolor is a go-to kids' shoe that goes with just about anything. Sized at 11. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 6,
@@ -7347,7 +7596,8 @@
    "https://i.ebayimg.com/images/g/ldgAAeSw-1lqoLRW/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/NKYAAeSwN1tqoLRc/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/9~4AAeSwa5VqoLRg/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398399249971",
@@ -7375,7 +7625,8 @@
    "https://i.ebayimg.com/images/g/GogAAeSwfmBqqg8r/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/tNwAAeSweKZqqg8u/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/7twAAeSwKkJqqg82/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398388895265",
@@ -7390,7 +7641,7 @@
   "payment_url": "https://buy.stripe.com/8x25kDaS62zH51P6qddZ71q",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Nike Giannis Freak 7 Spotlight \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Nike Giannis Freak 7 Spotlight — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 13,
    "w": 8,
@@ -7403,7 +7654,8 @@
    "https://i.ebayimg.com/images/g/fbgAAeSwgQFqpeOO/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ntQAAeSwM0NqpeOR/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/7poAAeSwXFhqpeOZ/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398364576903",
@@ -7418,7 +7670,7 @@
   "payment_url": "https://buy.stripe.com/4gMeVdgcq3DLeCp01PdZ71W",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Nike Zoom Air Fire White University Red W \u2014 a women's sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Nike Zoom Air Fire White University Red W — a women's sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -7431,7 +7683,8 @@
    "https://i.ebayimg.com/images/g/yaoAAeSwyIRqnPXI/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/okgAAeSw7RNqnPXK/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/IhgAAeSwcztqnPY9/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398412668639",
@@ -7459,7 +7712,8 @@
    "https://i.ebayimg.com/images/g/Fs4AAeSwj~Zqr18o/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/n7EAAeSwYntqr18q/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/l-YAAeSwZsZqr18u/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398445709784",
@@ -7474,7 +7728,7 @@
   "payment_url": "https://buy.stripe.com/5kQ6oHaS6gqx3XL4i5dZ61b",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Nike V5 RNR GS Aura Platinum Tint 6Y or 7.5Women \u2014 a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "Meet the Nike V5 RNR GS Aura Platinum Tint 6Y or 7.5Women — a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12.0,
    "w": 10.0,
@@ -7492,7 +7746,8 @@
    "https://i.ebayimg.com/images/g/Bs4AAeSwgktqvIuV/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/FjAAAeSwLuRqvIua/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/EFUAAeSwD7NqvIu2/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398445709147",
@@ -7525,7 +7780,8 @@
    "https://i.ebayimg.com/images/g/Bs4AAeSwgktqvIuV/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/FjAAAeSwLuRqvIua/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/EFUAAeSwD7NqvIu2/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398412285448",
@@ -7553,7 +7809,8 @@
    "https://i.ebayimg.com/images/g/vzkAAeSw~dlqrzf3/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/SjMAAeSwKjZqrzf7/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/5CYAAeSw5nNqrzf~/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398419208354",
@@ -7575,14 +7832,15 @@
   "payment_url": "https://buy.stripe.com/8x214nf8m6PX79XcOBdZ72K",
   "weight_lbs": 3.0,
   "weight_estimated": true,
-  "description": "Meet the adidas AE 2 Georgia Bulldogs \u2014 a men's basketball sneaker in Georgia Bulldogs colors. Size: Men US 10.5. Condition: New with box. Includes original box, ready to wear straight out of the package.",
+  "description": "Meet the adidas AE 2 Georgia Bulldogs — a men's basketball sneaker in Georgia Bulldogs colors. Size: Men US 10.5. Condition: New with box. Includes original box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 13,
    "w": 8,
    "h": 5
   },
   "store_only": true,
-  "size": "US 10.5"
+  "size": "US 10.5",
+  "units_sold": 0
  },
  {
   "id": "920006263780",
@@ -7611,7 +7869,8 @@
    "w": 10,
    "h": 8
   },
-  "size": "US 4"
+  "size": "US 4",
+  "units_sold": 0
  },
  {
   "id": "398419242487",
@@ -7642,7 +7901,8 @@
    "https://i.ebayimg.com/images/g/bWwAAeSwk21qsgaU/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/KMcAAeSwchBqsgaX/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/koIAAeSwFNNqsgad/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920006221041",
@@ -7670,7 +7930,8 @@
    "w": 10,
    "h": 8
   },
-  "size": "US 7"
+  "size": "US 7",
+  "units_sold": 0
  },
  {
   "id": "920006174487",
@@ -7692,13 +7953,14 @@
   "payment_url": "https://buy.stripe.com/5kQ3cv8JY7U13XL9CpdZ60o",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Campus 00s \u2014 a women's sneaker with a clean, standout look. Sized at US 6- women's US 7. Brand new and comes with its box.",
+  "description": "Meet the Adidas Campus 00s — a women's sneaker with a clean, standout look. Sized at US 6- women's US 7. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
    "h": 8
   },
-  "size": "US 5"
+  "size": "US 5",
+  "units_sold": 0
  },
  {
   "id": "920006136903",
@@ -7727,7 +7989,8 @@
    "https://i.ebayimg.com/images/g/FNkAAeSwgeNqwcLB/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/lYgAAeSw7bpqwcK9/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/3PgAAeSwRMlqwcLG/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920006110335",
@@ -7756,7 +8019,8 @@
    "https://i.ebayimg.com/images/g/xyEAAeSwU6Jqwdyh/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/sxAAAeSwsutqwdyh/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ua8AAeSw1tRqwdyh/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920005922383",
@@ -7784,7 +8048,8 @@
    "https://i.ebayimg.com/images/g/tNkAAeSw-ftqwcno/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/IKgAAeSw1tRqwcnr/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/LrwAAeSw5oZqwcnt/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920007658440",
@@ -7812,7 +8077,8 @@
    "https://i.ebayimg.com/images/g/Hd0AAeSwpb1qwci0/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/A-YAAeSw7odqwcjH/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/NIcAAeSw8wtqwcjN/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920033212916",
@@ -7827,7 +8093,7 @@
   "payment_url": "https://buy.stripe.com/14A00j4tIgqxgKx29XdZ73x",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Campus 00s Core Black Gum \u2014 a women's sneaker with a clean, standout look. Available in US 7- women's US 8. Comes brand new with its box included.",
+  "description": "Meet the Adidas Campus 00s Core Black Gum — a women's sneaker with a clean, standout look. Available in US 7- women's US 8. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -7842,7 +8108,8 @@
    "https://i.ebayimg.com/images/g/lYgAAeSw7bpqwcK9/s-l1600.webp",
    "https://i.ebayimg.com/images/g/3PgAAeSwRMlqwcLG/s-l1600.webp"
   ],
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "398444847637",
@@ -7870,7 +8137,8 @@
    "https://i.ebayimg.com/images/g/HdsAAeSwhp5qvDEQ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/JlcAAeSw~XZqvDEA/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/JzIAAeSwOoxqvDEL/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398442318009",
@@ -7898,7 +8166,8 @@
    "https://i.ebayimg.com/images/g/PJoAAeSw28Nqu0CG/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/SDsAAeSwyI1qu0Cc/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/PggAAeSwO2lqu0CQ/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398442252485",
@@ -7926,11 +8195,12 @@
    "https://i.ebayimg.com/images/g/8bAAAeSwED5quzg3/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/8DcAAeSwimhquzhr/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/53EAAeSwjuhquzhy/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398422860736",
-  "title": "Nike Jr. Mercurial Superfly 10 Academy Mbapp\u00e9 FG/MG",
+  "title": "Nike Jr. Mercurial Superfly 10 Academy Mbappé FG/MG",
   "price": "$69.00",
   "price_direct": 58.65,
   "image": "https://i.ebayimg.com/images/g/B4wAAeSwwD1qs1f9/s-l1600.jpg",
@@ -7941,7 +8211,7 @@
   "payment_url": "https://buy.stripe.com/cNi3cvf8m2zHcuhbKxdZ63c",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The Nike Jr. Mercurial Superfly 10 Academy Mbapp\u00e9 FG/MG is a go-to kids' sneaker that goes with just about anything. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "The Nike Jr. Mercurial Superfly 10 Academy Mbappé FG/MG is a go-to kids' sneaker that goes with just about anything. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -7954,7 +8224,8 @@
    "https://i.ebayimg.com/images/g/3D8AAeSwfPNqs1gB/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/4pEAAeSwfMJqs1gD/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/6hIAAeSwCchqs1gI/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398415141044",
@@ -7986,7 +8257,8 @@
    "w": 10,
    "h": 8
   },
-  "size": "US 8"
+  "size": "US 8",
+  "units_sold": 0
  },
  {
   "id": "398412634865",
@@ -8001,7 +8273,7 @@
   "payment_url": "https://buy.stripe.com/6oUeVd0ds1vDam96qddZ63E",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Sambae Linen Green \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Adidas Sambae Linen Green — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -8014,11 +8286,12 @@
    "https://i.ebayimg.com/images/g/Ot4AAeSwfEhqr1qj/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/WYIAAeSw3c5qr1ql/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/8WUAAeSwEu1qr1qp/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398412609065",
-  "title": "UGG Bea Mary Jane Kids \u2013 Chestnut",
+  "title": "UGG Bea Mary Jane Kids – Chestnut",
   "price": "$69.00",
   "price_direct": 58.65,
   "image": "https://i.ebayimg.com/images/g/kHEAAeSwOZRqr1bf/s-l1600.jpg",
@@ -8029,7 +8302,7 @@
   "payment_url": "https://buy.stripe.com/dRm9AT6BQ4HP79Xg0NdZ63G",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "You can't go wrong with the UGG Bea Mary Jane Kids \u2013 Chestnut, a kids' sneaker made to be worn on repeat. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "You can't go wrong with the UGG Bea Mary Jane Kids – Chestnut, a kids' sneaker made to be worn on repeat. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 8.0,
@@ -8042,7 +8315,8 @@
    "https://i.ebayimg.com/images/g/baAAAeSwf55qr1bd/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/afwAAeSwICxqr1bk/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/YlsAAeSwJYxqr1cb/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409466734",
@@ -8057,7 +8331,7 @@
   "payment_url": "https://buy.stripe.com/9B6dR95xMfmtam9dSFdZ63N",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "The Jordan Spizike Low PS \u201cLet\u2019s PlayAir Jordan Spizike Low PS is a go-to kids' sneaker that goes with just about anything. Available in 13c. Brand new and comes with its box.",
+  "description": "The Jordan Spizike Low PS “Let’s PlayAir Jordan Spizike Low PS is a go-to kids' sneaker that goes with just about anything. Available in 13c. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -8071,7 +8345,8 @@
    "assets/catalog/398409466734-4.jpg",
    "assets/catalog/398409466734-5.jpg",
    "assets/catalog/398409466734-6.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409370277",
@@ -8086,7 +8361,7 @@
   "payment_url": "https://buy.stripe.com/7sY00j4tI4HP2TH5m9dZ63V",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Nike Air Force 1 GS W \u2014 a kids' sneaker with a clean, standout look. Available in 6. Brand new and comes with its box.",
+  "description": "Meet the Nike Air Force 1 GS W — a kids' sneaker with a clean, standout look. Available in 6. Brand new and comes with its box.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -8099,7 +8374,8 @@
    "https://i.ebayimg.com/images/g/hGAAAeSwuqxqrgWd/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/taYAAeSwmXNqrgWg/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/o3AAAeSwEutqrgWm/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398402255120",
@@ -8114,7 +8390,7 @@
   "payment_url": "https://buy.stripe.com/9B67sL8JY8Y52TH01PdZ70F",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the ASICS GEL-Contend 9 Women\u2019s \u2014 a women's sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "Meet the ASICS GEL-Contend 9 Women’s — a women's sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -8127,7 +8403,8 @@
    "https://i.ebayimg.com/images/g/ga0AAeSw-TFqqzM~/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/fiwAAeSwt3xqqzM7/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/cccAAeSwANVqqzM2/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398398916606",
@@ -8155,7 +8432,8 @@
    "https://i.ebayimg.com/images/g/tqgAAeSwABRqqe9B/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/9f8AAeSw-M1qqe84/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/1OUAAeSwdIRqqe87/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398426092968",
@@ -8183,7 +8461,8 @@
    "https://i.ebayimg.com/images/g/FWwAAeSwfEhqpzR3/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ZlEAAeSwkFdqpzR7/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/48MAAeSw4~BqpzR-/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398391810367",
@@ -8211,7 +8490,8 @@
    "https://i.ebayimg.com/images/g/9BAAAeSwAMdqpyMm/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ErEAAeSwXz1qpyMp/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/CnIAAeSweQVqpyMx/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398389866363",
@@ -8226,7 +8506,7 @@
   "payment_url": "https://buy.stripe.com/28EaEXe4i8Y53XL9CpdZ715",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Asics Gel Venture 9 Feather Grey Birch \u2014 a unisex sneaker with a clean, standout look. This pair is a 8.5. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Asics Gel Venture 9 Feather Grey Birch — a unisex sneaker with a clean, standout look. This pair is a 8.5. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 13,
    "w": 8,
@@ -8239,7 +8519,8 @@
    "https://i.ebayimg.com/images/g/gOUAAeSwLB5qpk1B/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/OrsAAeSwKK1qpk1P/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/L8cAAeSwpCRqpk1U/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398389806281",
@@ -8254,7 +8535,7 @@
   "payment_url": "https://buy.stripe.com/4gM8wP7FU0rz2TH3e1dZ717",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the adidas Japan Off White Collegiate Green W \u2014 a women's sneaker with a clean, standout look. Listed here in size 10. Brand new and comes with its box.",
+  "description": "Meet the adidas Japan Off White Collegiate Green W — a women's sneaker with a clean, standout look. Listed here in size 10. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 7,
@@ -8267,7 +8548,8 @@
    "https://i.ebayimg.com/images/g/fNUAAeSw4OBqpkYg/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/q04AAeSwfBJqpkYs/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/23QAAeSw2aZqpkYu/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398389493287",
@@ -8295,7 +8577,8 @@
    "https://i.ebayimg.com/images/g/kDMAAeSw~dBqphw8/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/oG8AAeSwqcpqphxB/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/OTgAAeSwbHlqphxL/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398364700538",
@@ -8323,7 +8606,8 @@
    "https://i.ebayimg.com/images/g/v8gAAeSw-qlqnQVD/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/R18AAeSwRUZqnQWK/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/O3wAAeSwBD9qnQW5/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 1
  },
  {
   "id": "398426080084",
@@ -8356,7 +8640,8 @@
    "https://i.ebayimg.com/images/g/RIgAAeSwJxBqnLW4/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/WI8AAeSw1qNqnLTs/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/bL0AAeSwzVlqnLVA/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398402619899",
@@ -8384,7 +8669,8 @@
    "https://i.ebayimg.com/images/g/R5kAAeSwFx9qq1lc/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/VVYAAeSwZBRqq1lh/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/du0AAeSw4ptqq1lm/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398402598853",
@@ -8412,7 +8698,8 @@
    "https://i.ebayimg.com/images/g/OiIAAeSwquFqq1Xm/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/7vMAAeSwcGZqq1X3/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/hOkAAeSwXS5qq1X9/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398412747770",
@@ -8442,7 +8729,8 @@
    "https://i.ebayimg.com/images/g/mAkAAeSw4jxqr1-g/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Wl8AAeSwvoBqr1-k/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/O7gAAeSwFwNqtyqx/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398412670939",
@@ -8471,7 +8759,8 @@
    "https://i.ebayimg.com/images/g/mAkAAeSw4jxqr1-g/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Wl8AAeSwvoBqr1-k/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/dE0AAeSw7U5qr1-i/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398411993398",
@@ -8500,7 +8789,8 @@
    "https://i.ebayimg.com/images/g/LFEAAeSwXFhqrxdG/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ErYAAeSwpwVqrxdO/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/~zgAAeSw6pdqrxdT/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398371137816",
@@ -8531,7 +8821,8 @@
    "https://i.ebayimg.com/images/g/LxkAAeSw6wZqn06S/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/AwIAAeSw9J9qn06V/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/0rwAAeSwvtNqn06Y/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 1
  },
  {
   "id": "398405613354",
@@ -8553,18 +8844,19 @@
   "payment_url": "https://buy.stripe.com/eVq7sLbWa0rz9i529XdZ72L",
   "weight_lbs": 2.5,
   "weight_estimated": true,
-  "description": "Meet the ASICS Gel Pulse 16 Mineral \u2014 a women's road-running sneaker with GEL cushioning in a mineral colorway. Size: Women US 9. Condition: New with box. Includes original box, ready to wear straight out of the package.",
+  "description": "Meet the ASICS Gel Pulse 16 Mineral — a women's road-running sneaker with GEL cushioning in a mineral colorway. Size: Women US 9. Condition: New with box. Includes original box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 7,
    "h": 4.5
   },
   "store_only": true,
-  "size": "US 9"
+  "size": "US 9",
+  "units_sold": 0
  },
  {
   "id": "398449011367",
-  "title": "Nike Air Max Solo \u2013 White/Hemp/Noble Red/White Size 7 men or 8.5 Women",
+  "title": "Nike Air Max Solo – White/Hemp/Noble Red/White Size 7 men or 8.5 Women",
   "price": "$71.23",
   "price_direct": 60.55,
   "image": "https://i.ebayimg.com/images/g/IcMAAeSwgQBqvbuq/s-l1600.jpg",
@@ -8575,7 +8867,7 @@
   "payment_url": "https://buy.stripe.com/5kQaEX8JYa290Lz5m9dZ613",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Nike Air Max Solo \u2013 White/Hemp/Noble Red/White \u2014 a women's sneaker with a clean, standout look. Available in men's 7 / women's 8.5. Comes brand new with its box included.",
+  "description": "Meet the Nike Air Max Solo – White/Hemp/Noble Red/White — a women's sneaker with a clean, standout look. Available in men's 7 / women's 8.5. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -8588,7 +8880,8 @@
    "https://i.ebayimg.com/images/g/J8AAAeSw8z5qvbut/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/JAwAAeSwExFqvbu0/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Qe8AAeSwmL1qvbvA/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398444827454",
@@ -8616,7 +8909,8 @@
    "https://i.ebayimg.com/images/g/qhgAAeSw1tRqvC4-/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/9WEAAeSw7odqvC5B/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/-nEAAeSwgktqvC5E/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398435925109",
@@ -8645,7 +8939,8 @@
    "https://i.ebayimg.com/images/g/BNEAAeSwpPxquJ5r/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/s5oAAeSw8EdquJ58/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/A6kAAeSwgI1quJ6H/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398392041621",
@@ -8674,7 +8969,8 @@
    "https://i.ebayimg.com/images/g/bRwAAeSwMaJqpzrw/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/6~oAAeSwl9hqpzrz/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/3vwAAeSwpr5qpzr3/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398435437616",
@@ -8702,7 +8998,8 @@
    "https://i.ebayimg.com/images/g/tPEAAeSwf9tqq171/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/-pwAAeSwUjZqq174/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/-~IAAeSwM3Jqq18A/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 1
  },
  {
   "id": "398402502307",
@@ -8730,7 +9027,8 @@
    "https://i.ebayimg.com/images/g/rK8AAeSwf9tqq0sw/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/hIgAAeSw-1xqq0sz/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/PVcAAeSwfGNqq0s6/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398371626232",
@@ -8761,7 +9059,8 @@
    "https://i.ebayimg.com/images/g/sWcAAeSwuiJqn3yY/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/9n8AAeSwSyZqn3yi/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/EMUAAeSw0S1qtJQF/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398405651274",
@@ -8785,14 +9084,15 @@
   "payment_url": "https://buy.stripe.com/eVq28rd0eb6d0LzdSFdZ72I",
   "weight_lbs": 3.0,
   "weight_estimated": true,
-  "description": "Meet the Air Jordan 2 Retro Python \u2014 a men's retro basketball sneaker with a snakeskin-style python finish. Size: Men US 5.5. Condition: New with box. Includes original box, ready to wear straight out of the package.",
+  "description": "Meet the Air Jordan 2 Retro Python — a men's retro basketball sneaker with a snakeskin-style python finish. Size: Men US 5.5. Condition: New with box. Includes original box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 13,
    "w": 8,
    "h": 5
   },
   "store_only": true,
-  "size": "US 5.5"
+  "size": "US 5.5",
+  "units_sold": 0
  },
  {
   "id": "398405600531",
@@ -8820,7 +9120,8 @@
    "https://i.ebayimg.com/images/g/QWUAAeSwSbhqrIo-/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/XJ8AAeSwSZJqrIpC/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/paUAAeSwBDhqrIrW/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398448974750",
@@ -8848,7 +9149,8 @@
    "https://i.ebayimg.com/images/g/~rYAAeSwDJpqvbaL/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/FFcAAeSwgeNqvbaP/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/~ucAAeSwnpJqvbce/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398445507508",
@@ -8879,7 +9181,8 @@
    "https://i.ebayimg.com/images/g/AloAAeSw8DZqvHlx/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/DXMAAeSwxk5qvHl1/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/E44AAeSwu-lqvHl5/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398445506907",
@@ -8910,7 +9213,8 @@
    "https://i.ebayimg.com/images/g/AloAAeSw8DZqvHlx/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/DXMAAeSwxk5qvHl1/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/E44AAeSwu-lqvHl5/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398405623965",
@@ -8941,7 +9245,8 @@
    "https://i.ebayimg.com/images/g/8mEAAeSwE01qrI6C/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/rSYAAeSwh4BqrI6F/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ASwAAeSwABRqrI6J/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398402607794",
@@ -8969,7 +9274,8 @@
    "https://i.ebayimg.com/images/g/mdUAAeSwtpFqpi~R/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/rOUAAeSw1Gpqpi~g/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/AQEAAeSwf9tqpi~n/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398398954519",
@@ -8997,7 +9303,8 @@
    "https://i.ebayimg.com/images/g/gWgAAeSwfHtqqfMc/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/u98AAeSwK7pqqfMg/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/icMAAeSw-0FqqfMj/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920012364557",
@@ -9027,7 +9334,8 @@
    "w": 10,
    "h": 8
   },
-  "size": "US 12"
+  "size": "US 12",
+  "units_sold": 0
  },
  {
   "id": "398452423338",
@@ -9055,7 +9363,8 @@
    "https://i.ebayimg.com/images/g/lOMAAeSwrRRqvwxT/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/d1sAAeSwGgtqvwxY/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/MMoAAeSwoW5qvwxi/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398449217354",
@@ -9083,7 +9392,8 @@
    "https://i.ebayimg.com/images/g/YKsAAeSwnBtqvdBq/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ZMwAAeSwS8JqvdBt/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/PkgAAeSwu-lqvdBv/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398445651649",
@@ -9111,7 +9421,8 @@
    "https://i.ebayimg.com/images/g/2c4AAeSwSWNqvIXe/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/vaAAAeSw7sxqvIXh/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/B6wAAeSwoDtqvIZV/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398445506110",
@@ -9126,7 +9437,7 @@
   "payment_url": "https://buy.stripe.com/fZu14n3pE6PXam9aGtdZ61g",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Nike Vomero 5 GS Ghost Summit White Platinum 7Y or 8.5 \u2014 a kids' sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Nike Vomero 5 GS Ghost Summit White Platinum 7Y or 8.5 — a kids' sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -9142,7 +9453,8 @@
    "https://i.ebayimg.com/images/g/AloAAeSw8DZqvHlx/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/DXMAAeSwxk5qvHl1/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/E44AAeSwu-lqvHl5/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398438966023",
@@ -9157,7 +9469,7 @@
   "payment_url": "https://buy.stripe.com/4gM00j3pE4HP8e115TdZ61L",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "Meet the New Balance 9060 Lace \u2014 a kids' sneaker with a clean, standout look. Listed here in size 2Y. Comes brand new with its box included.",
+  "description": "Meet the New Balance 9060 Lace — a kids' sneaker with a clean, standout look. Listed here in size 2Y. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -9173,7 +9485,8 @@
    "https://i.ebayimg.com/images/g/28wAAeSwaNtquKKI/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/DN8AAeSw1rlquKKL/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/th4AAeSwsfJquKKP/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398432887723",
@@ -9203,7 +9516,8 @@
    "https://i.ebayimg.com/images/g/5nIAAeSwqM1qt0Ir/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/dp4AAeSw3btqt0Iu/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/N5gAAeSwIRlqt0Ix/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398429662528",
@@ -9231,7 +9545,8 @@
    "https://i.ebayimg.com/images/g/mWwAAeSwGAhqteh9/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/KN8AAeSwUb1qteiA/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/qYUAAeSwxSZqteiH/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398422883328",
@@ -9262,7 +9577,8 @@
    "assets/catalog/398422883328-6.jpg",
    "assets/catalog/398422883328-7.jpg",
    "assets/catalog/398422883328-8.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398422857699",
@@ -9290,7 +9606,8 @@
    "https://i.ebayimg.com/images/g/1HUAAeSwNv5qs1dd/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/8HYAAeSwfAZqs1dh/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/~EMAAeSwbw5qs1dk/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398426073442",
@@ -9318,7 +9635,8 @@
    "w": 8,
    "h": 6
   },
-  "size": "US 4.5"
+  "size": "US 4.5",
+  "units_sold": 0
  },
  {
   "id": "398412729819",
@@ -9346,7 +9664,8 @@
    "https://i.ebayimg.com/images/g/nxMAAeSwMH9qr2Yq/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/25YAAeSw7ydqr2Yt/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/tzMAAeSwLgNqr2Y2/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398412001594",
@@ -9374,7 +9693,8 @@
    "https://i.ebayimg.com/images/g/fH4AAeSwTctqrxkR/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/GvMAAeSwCJxqrxkU/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/qucAAeSwUjZqrxkX/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409436711",
@@ -9389,7 +9709,7 @@
   "payment_url": "https://buy.stripe.com/28EaEXe4i8Y579X7uhdZ63P",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Air Jordan 1 Slip Low Infra-Bred W \u2014 a women's sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Air Jordan 1 Slip Low Infra-Bred W — a women's sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -9402,11 +9722,12 @@
    "https://i.ebayimg.com/images/g/rKQAAeSweKZqrg5G/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/-k8AAeSwuQZqrg5K/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/~p8AAeSwfUpqrg5N/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409430618",
-  "title": "Air Jordan 1 Mid SE GS \u201cChristmas\u201d",
+  "title": "Air Jordan 1 Mid SE GS “Christmas”",
   "price": "$74.00",
   "price_direct": 62.9,
   "image": "https://i.ebayimg.com/images/g/GTYAAeSwfBJqrgzr/s-l1600.jpg",
@@ -9417,7 +9738,7 @@
   "payment_url": "https://buy.stripe.com/5kQfZhbWaeip51PaGtdZ63R",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "You can't go wrong with the Air Jordan 1 Mid SE GS \u201cChristmas\u201d, a kids' sneaker made to be worn on repeat. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "You can't go wrong with the Air Jordan 1 Mid SE GS “Christmas”, a kids' sneaker made to be worn on repeat. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -9430,7 +9751,8 @@
    "https://i.ebayimg.com/images/g/af8AAeSwWt1qrgzx/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/CLcAAeSwm3xqrgz0/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/xuoAAeSwguFqrgz3/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398405656995",
@@ -9457,7 +9779,8 @@
    "https://i.ebayimg.com/images/g/JEYAAeSwABRqrJKQ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/owMAAeSwDTZqrJK6/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/pDQAAeSwSZJqrJK9/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398405618126",
@@ -9485,7 +9808,8 @@
    "https://i.ebayimg.com/images/g/o5EAAeSweP9qrI2E/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/RJwAAeSwyD9qrI2J/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/UIkAAeSwYD5qrI2N/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398402560630",
@@ -9500,7 +9824,7 @@
   "payment_url": "https://buy.stripe.com/5kQbJ13pEgqxeCp8yldZ70w",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Converse CL98 Suede Deep Bordeaux \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Converse CL98 Suede Deep Bordeaux — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 14,
    "w": 10,
@@ -9513,7 +9837,8 @@
    "https://i.ebayimg.com/images/g/es4AAeSwiHtqqzy9/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/GokAAeSwSmdqqzzA/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/INoAAeSwId5qqzzE/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398402360446",
@@ -9541,7 +9866,8 @@
    "https://i.ebayimg.com/images/g/es4AAeSwiHtqqzy9/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/GokAAeSwSmdqqzzA/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/INoAAeSwId5qqzzE/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398391974095",
@@ -9570,7 +9896,8 @@
    "https://i.ebayimg.com/images/g/O1IAAeSwHAJqpzYo/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/7j0AAeSwFXdqpzYv/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/9VgAAeSwtMVqpzY2/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398389730175",
@@ -9585,7 +9912,7 @@
   "payment_url": "https://buy.stripe.com/fZu3cv5xMeip79X4i5dZ71a",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Campus 00s Triple Black \u2014 a men's sneaker with a clean, standout look. This pair is a 8 Men. Ships brand new in its box.",
+  "description": "Meet the Adidas Campus 00s Triple Black — a men's sneaker with a clean, standout look. This pair is a 8 Men. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -9598,11 +9925,12 @@
    "https://i.ebayimg.com/images/g/L34AAeSwKxVqpjmk/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/lT8AAeSwollqpjm0/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/QGAAAeSw-hBqpjm3/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 1
  },
  {
   "id": "398389713519",
-  "title": "Adidas Anthony Edwards 1 Low / AE 1 Low Metamorphosis \u201cArctic Night\u201d",
+  "title": "Adidas Anthony Edwards 1 Low / AE 1 Low Metamorphosis “Arctic Night”",
   "price": "$74.00",
   "price_direct": 62.9,
   "image": "https://i.ebayimg.com/images/g/jSgAAeSw03ZqpjiT/s-l1600.jpg",
@@ -9613,7 +9941,7 @@
   "payment_url": "https://buy.stripe.com/28E7sL9O2eip79XbKxdZ71b",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the Adidas Anthony Edwards 1 Low / AE 1 Low Metamorphosis \u201cArctic Night\u201d, a unisex sneaker in a head-turning colorway. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "Add some fresh style to your rotation with the Adidas Anthony Edwards 1 Low / AE 1 Low Metamorphosis “Arctic Night”, a unisex sneaker in a head-turning colorway. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -9627,7 +9955,8 @@
    "https://i.ebayimg.com/images/g/NZwAAeSwqrhqpjic/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/WqkAAeSwJs5qpjif/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/G64AAeSwxfNqpjii/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398389641591",
@@ -9655,7 +9984,8 @@
    "https://i.ebayimg.com/images/g/mdUAAeSwtpFqpi~R/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/rOUAAeSw1Gpqpi~g/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/AQEAAeSwf9tqpi~n/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398389562153",
@@ -9670,7 +10000,7 @@
   "payment_url": "https://buy.stripe.com/00w14n9O2cah9i56qddZ71g",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Adizero RC 4 Halo Silver Black \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "Meet the Adidas Adizero RC 4 Halo Silver Black — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 13,
    "w": 8,
@@ -9683,7 +10013,8 @@
    "https://i.ebayimg.com/images/g/MCEAAeSwFNNqpiVA/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/4AAAAeSwsKFqpiVD/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/BRYAAeSwZXtqpiVK/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398389513269",
@@ -9698,7 +10029,7 @@
   "payment_url": "https://buy.stripe.com/fZuaEXd0e4HPam96qddZ71i",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Adidas Supernova Stride M \u2014 a men's sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Adidas Supernova Stride M — a men's sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -9711,7 +10042,8 @@
    "https://i.ebayimg.com/images/g/fq0AAeSwx9pqph6R/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/N9sAAeSwiHtqph6T/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/WYgAAeSwvx5qph6m/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398375489374",
@@ -9751,7 +10083,8 @@
    "https://i.ebayimg.com/images/g/fecAAeSw9LdqoL8x/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/fXQAAeSwZxRqoL84/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/gKcAAeSw9P9qoL88/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398375410953",
@@ -9766,7 +10099,7 @@
   "payment_url": "https://buy.stripe.com/bJe6oHbWa5LTeCp6qddZ71E",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Inter Miami x adidas Samba Third \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "Meet the Inter Miami x adidas Samba Third — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -9779,7 +10112,8 @@
    "https://i.ebayimg.com/images/g/LxcAAeSw6nVqoLl7/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/TacAAeSwywhqoLl-/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/6SYAAeSwK41qoLmA/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398364809729",
@@ -9807,7 +10141,8 @@
    "https://i.ebayimg.com/images/g/r64AAeSwpLBqnQ6F/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/M74AAeSwKVxqnQ8U/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/s9cAAeSwUxNqnQ8t/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398339652878",
@@ -9849,7 +10184,7 @@
   ],
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the NIKE JORDAN SPIZIKE LOW (GS) GYM RED/BLACK \u2014 a kids' sneaker with a clean, standout look. Select your size from the options \u2014 each size has its own Buy Now button. New with box, ready to wear straight out of the package.",
+  "description": "Meet the NIKE JORDAN SPIZIKE LOW (GS) GYM RED/BLACK — a kids' sneaker with a clean, standout look. Select your size from the options — each size has its own Buy Now button. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 8,
@@ -9861,7 +10196,8 @@
    "https://i.ebayimg.com/images/g/BgoAAeSw1Pxqk-HS/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/~tUAAeSwguZqk-HW/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/l3wAAeSwMtZqk-HY/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398339539891",
@@ -9890,7 +10226,8 @@
    "https://i.ebayimg.com/images/g/CCUAAeSwZsBqk9PM/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/7EIAAeSwdb9qsfyV/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/zHcAAeSw6Lpqsfyf/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920002467885",
@@ -9919,7 +10256,8 @@
    "https://i.ebayimg.com/images/g/qMEAAeSw4dRqwFJe/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/uegAAeSwGNdqwFJ0/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/tOMAAeSwJYJqwFJ3/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920002461512",
@@ -9948,11 +10286,12 @@
    "https://i.ebayimg.com/images/g/wKcAAeSwJOtqwFHE/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/WGYAAeSw24tqwFHL/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/SbUAAeSwD7NqwFHO/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409383966",
-  "title": "Jordan MVP GS \u201cTwine / Geode Teal\u201d",
+  "title": "Jordan MVP GS “Twine / Geode Teal”",
   "price": "$82.00",
   "price_direct": 69.7,
   "image": "https://i.ebayimg.com/images/g/XiUAAeSwyXtqrgZt/s-l1600.jpg",
@@ -9963,7 +10302,7 @@
   "payment_url": "https://buy.stripe.com/cNidR9d0egqxbqd4i5dZ63U",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "You can't go wrong with the Jordan MVP GS \u201cTwine / Geode Teal\u201d, a kids' sneaker made to be worn on repeat. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "You can't go wrong with the Jordan MVP GS “Twine / Geode Teal”, a kids' sneaker made to be worn on repeat. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -9976,7 +10315,8 @@
    "https://i.ebayimg.com/images/g/v4gAAeSwM-NqrgZ2/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/v4QAAeSwPphqrgZ5/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/otgAAeSwnLRqrgZ9/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398435890533",
@@ -10004,7 +10344,8 @@
    "https://i.ebayimg.com/images/g/nswAAeSwSb1quFDI/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/fxgAAeSwrgBquFDL/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/iZUAAeSwLAJquFDu/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398435889968",
@@ -10032,7 +10373,8 @@
    "https://i.ebayimg.com/images/g/nswAAeSwSb1quFDI/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/fxgAAeSwrgBquFDL/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/iZUAAeSwLAJquFDu/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409321392",
@@ -10060,7 +10402,8 @@
    "https://i.ebayimg.com/images/g/SPoAAeSw4ptqrf-9/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/06EAAeSwwelqrf~B/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/gKIAAeSwKkJqrf~E/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409393093",
@@ -10088,7 +10431,8 @@
    "https://i.ebayimg.com/images/g/vRUAAeSwa15qrgiw/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/C~8AAeSwBa1qrgi0/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/piQAAeSwK45qrgi5/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398389902219",
@@ -10116,7 +10460,8 @@
    "https://i.ebayimg.com/images/g/p9oAAeSwnJNqplFn/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/uw0AAeSwAetqplFt/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/n4cAAeSwSbhqplFy/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398375273705",
@@ -10143,7 +10488,8 @@
    "https://i.ebayimg.com/images/g/070AAeSwrNRqoKx2/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/03oAAeSwezVqoKx6/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/94wAAeSwWrpqoKyC/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398364764774",
@@ -10171,7 +10517,8 @@
    "https://i.ebayimg.com/images/g/SvsAAeSwXrdquGhG/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/PSQAAeSwwaTFquGhI/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/k5QAAeSwIRlquGhY/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409434347",
@@ -10199,11 +10546,12 @@
    "https://i.ebayimg.com/images/g/9kYAAeSwbUdqrg2s/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/qYkAAeSwCJxqrg2w/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/mFYAAeSwkOJqrg21/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398389875573",
-  "title": "ASICS GT\u20112160",
+  "title": "ASICS GT‑2160",
   "price": "$88.00",
   "price_direct": 74.8,
   "image": "https://i.ebayimg.com/images/g/ULIAAeSwDG9qpk8L/s-l1600.jpg",
@@ -10214,7 +10562,7 @@
   "payment_url": "https://buy.stripe.com/28E00je4i1vD8e18yldZ714",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "The ASICS GT\u20112160 is a go-to unisex sneaker that goes with just about anything. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "The ASICS GT‑2160 is a go-to unisex sneaker that goes with just about anything. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 13,
    "w": 8,
@@ -10227,7 +10575,8 @@
    "https://i.ebayimg.com/images/g/jKwAAeSwJMFqpk8G/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/R54AAeSwEu1qpk8X/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/basAAeSwUERqpk8e/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398419192899",
@@ -10256,7 +10605,8 @@
    "w": 8,
    "h": 6
   },
-  "size": "US 4.5"
+  "size": "US 4.5",
+  "units_sold": 0
  },
  {
   "id": "398402689726",
@@ -10284,11 +10634,12 @@
    "https://i.ebayimg.com/images/g/dFgAAeSwKJBqq2Al/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/LG8AAeSwLcNqq2Ao/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/vAMAAeSwS5hqq2Ah/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398399156883",
-  "title": "HOKA Hopara 2 Women\u2019s",
+  "title": "HOKA Hopara 2 Women’s",
   "price": "$89.00",
   "price_direct": 75.65,
   "image": "https://i.ebayimg.com/images/g/P~cAAeSwFx9qqgWP/s-l1600.jpg",
@@ -10299,7 +10650,7 @@
   "payment_url": "https://buy.stripe.com/8x200j6BQ4HP1PD01PdZ70M",
   "weight_lbs": 2.5,
   "weight_estimated": true,
-  "description": "Add some fresh style to your rotation with the HOKA Hopara 2 Women\u2019s, a women's sneaker in a head-turning colorway. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "Add some fresh style to your rotation with the HOKA Hopara 2 Women’s, a women's sneaker in a head-turning colorway. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 7,
@@ -10312,7 +10663,8 @@
    "https://i.ebayimg.com/images/g/ntQAAeSw4kFqqgWV/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/o~0AAeSwahRqqgWY/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Q6gAAeSwpwVqqgWe/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398391914897",
@@ -10327,7 +10679,7 @@
   "payment_url": "https://buy.stripe.com/9B600j7FU0rzdylg0NdZ70X",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the New Balance 9060 Great Plains True Red \u2014 a unisex sneaker with a clean, standout look. Listed here in size 10.5. Ships brand new in its box.",
+  "description": "Meet the New Balance 9060 Great Plains True Red — a unisex sneaker with a clean, standout look. Listed here in size 10.5. Ships brand new in its box.",
   "parcel_in": {
    "l": 13,
    "w": 8,
@@ -10340,7 +10692,8 @@
    "https://i.ebayimg.com/images/g/eVUAAeSwLgNqpy8Y/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/SEkAAeSw2MBqpy8b/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/my4AAeSw1qtqpy8g/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398389343567",
@@ -10368,7 +10721,8 @@
    "https://i.ebayimg.com/images/g/2GQAAeSwGb1qpgry/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/nxEAAeSwTvFqpgr2/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/qCIAAeSw4Zdqpgr6/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398386346847",
@@ -10395,7 +10749,8 @@
    "assets/catalog/398386346847-2.webp",
    "assets/catalog/398386346847-3.webp",
    "assets/catalog/398386346847-4.webp"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398386002267",
@@ -10423,7 +10778,8 @@
    "https://i.ebayimg.com/images/g/u1QAAeSwkUhqpORQ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ykoAAeSwbmZqpORa/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/NHUAAeSwxXtqpORc/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398371561923",
@@ -10450,7 +10806,7 @@
   ],
   "weight_lbs": 4.0,
   "weight_estimated": false,
-  "description": "You can't go wrong with the Nike Air Force 1 '07 White Midnight Navy, a unisex sneaker made to be worn on repeat. Select your size from the options \u2014 each size has its own Buy Now button. Ships brand new in its box.",
+  "description": "You can't go wrong with the Nike Air Force 1 '07 White Midnight Navy, a unisex sneaker made to be worn on repeat. Select your size from the options — each size has its own Buy Now button. Ships brand new in its box.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -10463,7 +10819,8 @@
    "https://i.ebayimg.com/images/g/q8QAAeSwo-5qn3Uw/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/a7UAAeSwlr9qn3ZT/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/sJQAAeSwL2lqn3Zi/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920012351793",
@@ -10491,7 +10848,8 @@
    "w": 10,
    "h": 8
   },
-  "size": "US 6"
+  "size": "US 6",
+  "units_sold": 0
  },
  {
   "id": "398436004855",
@@ -10506,7 +10864,7 @@
   "payment_url": "https://buy.stripe.com/eVq14nd0e0rzbqd5m9dZ61S",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the Size 6 New Balance 2002R Steel Orca \u2014 a women's sneaker with a clean, standout look. This pair is a 6 or 7.5 Women. Brand new and comes with its box.",
+  "description": "Meet the Size 6 New Balance 2002R Steel Orca — a women's sneaker with a clean, standout look. This pair is a 6 or 7.5 Women. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
@@ -10522,7 +10880,8 @@
    "https://i.ebayimg.com/images/g/80QAAeSwwsfJquKgA/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/BvAAAeSwabxquKgE/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/-DAAAeSwNV9quKgL/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398402454419",
@@ -10550,11 +10909,12 @@
    "https://i.ebayimg.com/images/g/nswAAeSwSb1quFDI/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/fxgAAeSwrgBquFDL/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/iZUAAeSwLAJquFDu/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398375213137",
-  "title": "Nike Air Force 1 Retro / Low \u201cValentine\u2019s Day\u201d 2026",
+  "title": "Nike Air Force 1 Retro / Low “Valentine’s Day” 2026",
   "price": "$91.00",
   "price_direct": 77.35,
   "image": "https://i.ebayimg.com/images/g/CBoAAeSwlr9qoJf9/s-l1600.jpg",
@@ -10565,7 +10925,7 @@
   "payment_url": "https://buy.stripe.com/28E28r7FU6PX9i501PdZ71I",
   "weight_lbs": 2.8,
   "weight_estimated": true,
-  "description": "Add some fresh style to your rotation with the Nike Air Force 1 Retro / Low \u201cValentine\u2019s Day\u201d 2026, a unisex sneaker in a head-turning colorway. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "Add some fresh style to your rotation with the Nike Air Force 1 Retro / Low “Valentine’s Day” 2026, a unisex sneaker in a head-turning colorway. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 13,
    "w": 8,
@@ -10577,7 +10937,8 @@
    "https://i.ebayimg.com/images/g/6SYAAeSw7v5qoJiT/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/5dIAAeSwGDRqoJiy/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/58MAAeSwxoJqoJjB/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920005390926",
@@ -10605,7 +10966,8 @@
    "https://i.ebayimg.com/images/g/Q7EAAeSw5oZqwZjU/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/JUAAAeSwyIdqwZjW/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/msgAAeSwNG5qwZjZ/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409357183",
@@ -10634,7 +10996,8 @@
    "https://i.ebayimg.com/images/g/8k4AAeSwdb9qrgL3/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/WNMAAeSwR25qrgMc/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/jAcAAeSwamhqrgNs/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398402241172",
@@ -10662,7 +11025,8 @@
    "https://i.ebayimg.com/images/g/o8IAAeSwSyBqqfaE/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/WMAAAeSwOZRqqfaT/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/KQQAAeSw2GhqqfaY/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398426073438",
@@ -10677,7 +11041,7 @@
   "payment_url": "https://buy.stripe.com/28E7sL0ds6PXgKxaGtdZ70O",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Nike Air Zoom Structure 25 Wide White Metallic Silver \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
+  "description": "Meet the Nike Air Zoom Structure 25 Wide White Metallic Silver — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
   "parcel_in": {
    "l": 14,
    "w": 12,
@@ -10690,7 +11054,8 @@
    "https://i.ebayimg.com/images/g/W4IAAeSwTadqqfaH/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/WMAAAeSwOZRqqfaT/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/KQQAAeSw2GhqqfaY/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398389289873",
@@ -10705,7 +11070,7 @@
   "payment_url": "https://buy.stripe.com/3cI3cvbWaeip51Pg0NdZ71n",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Asics Gel Kumo Lyte 2 Sheet Rock \u2014 a unisex sneaker with a clean, standout look. Listed here in size 12. Ships brand new in its box.",
+  "description": "Meet the Asics Gel Kumo Lyte 2 Sheet Rock — a unisex sneaker with a clean, standout look. Listed here in size 12. Ships brand new in its box.",
   "parcel_in": {
    "l": 13,
    "w": 8,
@@ -10718,7 +11083,8 @@
    "https://i.ebayimg.com/images/g/GowAAeSw2GhqpgYB/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/nZ0AAeSwShxqpgYK/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/dHYAAeSwVCxqpgX-/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409445526",
@@ -10733,7 +11099,7 @@
   "payment_url": "https://buy.stripe.com/5kQ4gz9O2b6d0LzeWJdZ63O",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Air Jordan 1 Zoom Comfort 2 High Valentine's Day W \u2014 a women's sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "Meet the Air Jordan 1 Zoom Comfort 2 High Valentine's Day W — a women's sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 7,
@@ -10746,7 +11112,8 @@
    "https://i.ebayimg.com/images/g/OOIAAeSw6Lpqrg9a/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/9qEAAeSwD91qrg9j/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Q1sAAeSwxM9qrg9o/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398389019314",
@@ -10774,11 +11141,12 @@
    "https://i.ebayimg.com/images/g/kvYAAeSwKJBqpew9/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Ju4AAeSwZXtqpexC/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/lUwAAeSwvx5qpexG/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398386300465",
-  "title": "Air Diamond Turf II GS \u201cRoyals\u201d",
+  "title": "Air Diamond Turf II GS “Royals”",
   "price": "$98.00",
   "price_direct": 83.3,
   "image": "https://i.ebayimg.com/images/g/FJwAAeSwxfNqpM9m/s-l1600.jpg",
@@ -10789,7 +11157,7 @@
   "payment_url": "https://buy.stripe.com/28E5kD8JYgqxbqd3e1dZ71t",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "The Air Diamond Turf II GS \u201cRoyals\u201d is a go-to kids' sneaker that goes with just about anything. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "The Air Diamond Turf II GS “Royals” is a go-to kids' sneaker that goes with just about anything. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 6,
@@ -10803,7 +11171,8 @@
    "https://i.ebayimg.com/images/g/0mYAAeSw-0FqpM-~/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/FSkAAeSwuIVqpM~B/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/300AAeSw~n5qpM~E/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398448988745",
@@ -10818,7 +11187,7 @@
   "payment_url": "https://buy.stripe.com/3cI8wPe4igqx2THaGtdZ614",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the HOKA Clifton One9/ Men 5 or 6 \u2014 a women's sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
+  "description": "Meet the HOKA Clifton One9/ Men 5 or 6 — a women's sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 7,
@@ -10831,7 +11200,8 @@
    "https://i.ebayimg.com/images/g/YX4AAeSw4kFqqes2/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/AwYAAeSwSbhqsflD/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/7I0AAeSwZkVqsflK/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398441785222",
@@ -10859,7 +11229,8 @@
    "https://i.ebayimg.com/images/g/OCYAAeSwSWNquwZW/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/QLwAAeSwLuRquwZZ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Q9gAAeSwRblquwaG/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398422207962",
@@ -10888,7 +11259,8 @@
    "https://i.ebayimg.com/images/g/QAkAAeSwEjRqsfXY/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/GqoAAeSwMXRqsfXc/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/HGMAAeSwSg9qsfXe/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398422200554",
@@ -10917,7 +11289,8 @@
    "https://i.ebayimg.com/images/g/QAkAAeSwEjRqsfXY/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/GqoAAeSwMXRqsfXc/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/HGMAAeSwSg9qsfXe/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398419069793",
@@ -10940,13 +11313,14 @@
   "payment_url": "https://buy.stripe.com/5kQ14nbWadel0Lz15TdZ63n",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "Meet the HOKA Clifton One9 Carbon Black \u2014 a women's sneaker with a clean, standout look. Sized at men's 7.5 / women's 8.5. Comes brand new with its box included.",
+  "description": "Meet the HOKA Clifton One9 Carbon Black — a women's sneaker with a clean, standout look. Sized at men's 7.5 / women's 8.5. Comes brand new with its box included.",
   "parcel_in": {
    "l": 14,
    "w": 12,
    "h": 9
   },
-  "size": "US 7.5"
+  "size": "US 7.5",
+  "units_sold": 0
  },
  {
   "id": "398409389121",
@@ -10974,7 +11348,8 @@
    "https://i.ebayimg.com/images/g/oxYAAeSwKcBqrgco/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/s3QAAeSwSkFqrgcq/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/X4sAAeSwj7pqrgcw/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398409266368",
@@ -10989,7 +11364,7 @@
   "payment_url": "https://buy.stripe.com/4gM9ATbWadel51PeWJdZ63Z",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the HOKA Clifton One9/ Men 6 or 7 \u2014 a women's sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "description": "Meet the HOKA Clifton One9/ Men 6 or 7 — a women's sneaker with a clean, standout look. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 7,
@@ -11002,7 +11377,8 @@
    "https://i.ebayimg.com/images/g/YX4AAeSw4kFqqes2/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/AwYAAeSwSbhqsflD/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/7I0AAeSwZkVqsflK/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920002548266",
@@ -11031,7 +11407,8 @@
    "https://i.ebayimg.com/images/g/I0QAAeSwkNpqwFxy/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/jKsAAeSwVWZqwFx0/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/-j8AAeSwGcxqwFx3/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920002543099",
@@ -11061,7 +11438,8 @@
    "https://i.ebayimg.com/images/g/vYoAAeSw9D9qwFtL/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/6gwAAeSwADBqwFtN/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/MVcAAeSw5AlqwFtR/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920002509158",
@@ -11090,7 +11468,8 @@
    "https://i.ebayimg.com/images/g/sHQAAeSwp0JqwFg6/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/vagAAeSwJS9qwFg8/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/-loAAeSwkNpqwFg-/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920012279514",
@@ -11113,13 +11492,14 @@
   "payment_url": "https://buy.stripe.com/3cIdR99O2gqxcuhcOBdZ603",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "Meet the Hoka Clifton 9 Cloud Blue Ice Flow \u2014 a men's sneaker with a clean, standout look. Listed here in size US 8.5 / EU 42. New with box, ready to wear straight out of the package.",
+  "description": "Meet the Hoka Clifton 9 Cloud Blue Ice Flow — a men's sneaker with a clean, standout look. Listed here in size US 8.5 / EU 42. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
    "w": 10,
    "h": 8
   },
-  "size": "US 8.5"
+  "size": "US 8.5",
+  "units_sold": 0
  },
  {
   "id": "398375399582",
@@ -11147,7 +11527,8 @@
    "https://i.ebayimg.com/images/g/yUMAAeSwHkNqoLfq/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/73cAAeSwHGpqoLfu/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/H~MAAeSwIf5qoLfy/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398426056823",
@@ -11175,7 +11556,8 @@
    "https://i.ebayimg.com/images/g/2cgAAeSwvx5qrJNw/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/yxMAAeSwMXRqrJNz/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/0V4AAeSwmuBqrJN2/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920002552955",
@@ -11205,7 +11587,8 @@
    "https://i.ebayimg.com/images/g/OgMAAeSwjnBqwF0d/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Zr8AAeSw4lBqwF0f/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/XdEAAeSwWsdqwF0p/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "398441630578",
@@ -11234,7 +11617,8 @@
    "https://i.ebayimg.com/images/g/lmIAAeSwzN1quvAb/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/kqYAAeSwo29quvAf/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/96MAAeSwp~tquvAi/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920012349311",
@@ -11263,7 +11647,8 @@
    "w": 10,
    "h": 8
   },
-  "size": "US 8"
+  "size": "US 8",
+  "units_sold": 0
  },
  {
   "id": "398441818783",
@@ -11294,7 +11679,8 @@
    "https://i.ebayimg.com/images/g/62cAAeSw7mFqo2t-/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/4wAAAeSwCtNqo2vj/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Z3kAAeSw~yNquwpC/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920005380643",
@@ -11323,7 +11709,8 @@
    "https://i.ebayimg.com/images/g/buEAAeSwD1JqwZft/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/hewAAeSwfndqwZfy/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/fvYAAeSwExFqwZf1/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "store-lebron-22-mogul-7y",
@@ -11356,7 +11743,9 @@
   "size": "US 7",
   "payment_url": "https://buy.stripe.com/14AaEX7FU5LTfGt9CpdZ73s",
   "added": "2026-10-08",
-  "ebay_id": "920022153999"
+  "ebay_id": "920022153999",
+  "store_only": true,
+  "units_sold": 0
  },
  {
   "id": "store-adidas-runfalcon-5-105",
@@ -11389,7 +11778,9 @@
   "size": "US 10.5",
   "payment_url": "https://buy.stripe.com/28E28r6BQfmtdyl01PdZ73r",
   "added": "2026-10-08",
-  "ebay_id": "920022167462"
+  "ebay_id": "920022167462",
+  "store_only": true,
+  "units_sold": 0
  },
  {
   "id": "store-adidas-ae2-allstar-6y",
@@ -11422,7 +11813,9 @@
   "size": "US 7.5",
   "payment_url": "https://buy.stripe.com/cNifZhd0eb6dfGtg0NdZ73q",
   "added": "2026-10-08",
-  "ebay_id": "920022176276"
+  "ebay_id": "920022176276",
+  "store_only": true,
+  "units_sold": 0
  },
  {
   "id": "store-hoka-clifton-one9-10",
@@ -11455,7 +11848,9 @@
   "size": "US 10",
   "payment_url": "https://buy.stripe.com/3cIaEXf8mcaheCp15TdZ73p",
   "added": "2026-10-08",
-  "ebay_id": "920022180293"
+  "ebay_id": "920022180293",
+  "store_only": true,
+  "units_sold": 0
  },
  {
   "id": "398429657657",
@@ -11470,7 +11865,7 @@
   "payment_url": "https://buy.stripe.com/eVqaEXf8meip1PDg0NdZ633",
   "weight_lbs": 1.0,
   "weight_estimated": false,
-  "description": "Meet the Vans Old Skool V Glitter \u2014 a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
+  "description": "Meet the Vans Old Skool V Glitter — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 4,
@@ -11484,7 +11879,8 @@
    "https://i.ebayimg.com/images/g/y2wAAeSw4VZqtefP/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/dGAAAeSw6wBqtefp/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/tBkAAeSwDONqtefv/s-l1600.jpg"
-  ]
+  ],
+  "units_sold": 0
  },
  {
   "id": "920031046823",
@@ -11513,7 +11909,8 @@
    "h": 8
   },
   "size": "US 9.5",
-  "added": "2026-10-11"
+  "added": "2026-10-11",
+  "units_sold": 0
  },
  {
   "id": "920031046370",
@@ -11542,7 +11939,8 @@
    "h": 9
   },
   "size": "US 12",
-  "added": "2026-10-11"
+  "added": "2026-10-11",
+  "units_sold": 0
  },
  {
   "id": "920031071391",
@@ -11571,7 +11969,8 @@
    "h": 5
   },
   "size": "US 6.5",
-  "added": "2026-10-11"
+  "added": "2026-10-11",
+  "units_sold": 0
  },
  {
   "id": "920033401072",
@@ -11601,7 +12000,8 @@
    "h": 8
   },
   "size": "US 4",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033391842",
@@ -11632,7 +12032,8 @@
    "h": 8
   },
   "size": "US 8",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033381057",
@@ -11662,7 +12063,8 @@
    "h": 8
   },
   "size": "US 9.5",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 1
  },
  {
   "id": "920033366934",
@@ -11692,7 +12094,8 @@
    "h": 8
   },
   "size": "US 8",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033365277",
@@ -11722,7 +12125,8 @@
    "h": 8
   },
   "size": "US 7.5",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033364680",
@@ -11752,7 +12156,8 @@
    "h": 8
   },
   "size": "US 5.5",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033360877",
@@ -11782,7 +12187,8 @@
    "h": 8
   },
   "size": "US 5",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033343296",
@@ -11812,7 +12218,8 @@
    "h": 8
   },
   "size": "US 2",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033327912",
@@ -11841,7 +12248,8 @@
    "h": 8
   },
   "size": "US 7",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033319090",
@@ -11872,7 +12280,8 @@
    "h": 8
   },
   "size": "US 9",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033313246",
@@ -11902,7 +12311,8 @@
    "h": 8
   },
   "size": "US 11",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033294674",
@@ -11933,7 +12343,8 @@
    "h": 8
   },
   "size": "US 7.5",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033268727",
@@ -11963,7 +12374,8 @@
    "h": 8
   },
   "size": "US 13",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033663987",
@@ -11992,7 +12404,8 @@
    "h": 8
   },
   "size": "US 6",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033658250",
@@ -12022,7 +12435,8 @@
    "h": 8
   },
   "size": "US 3",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033648293",
@@ -12052,7 +12466,8 @@
    "h": 8
   },
   "size": "US 4.5",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033638305",
@@ -12082,7 +12497,8 @@
    "h": 8
   },
   "size": "US 12",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033593197",
@@ -12112,7 +12528,8 @@
    "h": 8
   },
   "size": "US 3",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033581388",
@@ -12135,14 +12552,15 @@
   "payment_url": "https://buy.stripe.com/fZu14n5xM8Y59i5eWJdZ73Q",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "The Nike Air Force 1 '07 in Triple White \u2014 the clean everyday classic in full leather. Men US 8.5. New with box and ready to wear.",
+  "description": "The Nike Air Force 1 '07 in Triple White — the clean everyday classic in full leather. Men US 8.5. New with box and ready to wear.",
   "parcel_in": {
    "l": 12,
    "w": 10,
    "h": 8
   },
   "size": "US 8.5",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033538108",
@@ -12172,7 +12590,8 @@
    "h": 8
   },
   "size": "US 10",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033536088",
@@ -12202,7 +12621,8 @@
    "h": 8
   },
   "size": "US 10",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033522044",
@@ -12231,7 +12651,8 @@
    "h": 8
   },
   "size": "US 8.5",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033516117",
@@ -12262,7 +12683,8 @@
    "h": 8
   },
   "size": "US 2",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033484715",
@@ -12293,7 +12715,8 @@
    "h": 8
   },
   "size": "US 12",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033466882",
@@ -12322,7 +12745,8 @@
    "h": 8
   },
   "size": "US 3",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 1
  },
  {
   "id": "920033444553",
@@ -12352,7 +12776,8 @@
    "h": 8
   },
   "size": "US 13.5",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033440777",
@@ -12382,7 +12807,8 @@
    "h": 8
   },
   "size": "US 7",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
  },
  {
   "id": "920033435530",
@@ -12405,13 +12831,74 @@
   "payment_url": "https://buy.stripe.com/7sYdR95xM4HPam9cOBdZ73Z",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "The Nike V5 RNR in all white \u2014 mesh, swoosh and sole in clean white with light silver accents. Women US 9. New with box, ready to wear.",
+  "description": "The Nike V5 RNR in all white — mesh, swoosh and sole in clean white with light silver accents. Women US 9. New with box, ready to wear.",
   "parcel_in": {
    "l": 12,
    "w": 10,
    "h": 8
   },
   "size": "US 9",
-  "added": "2026-10-12"
+  "added": "2026-10-12",
+  "units_sold": 0
+ },
+ {
+  "id": "398402603626",
+  "title": "New Balance 9060 Melon Water - Men US 10.5",
+  "price": "$67.31",
+  "price_direct": 57.21,
+  "image": "https://i.ebayimg.com/images/g/GyAAAeSw34pqq1Cs/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/398402603626",
+  "brand": "New Balance",
+  "department": "Men",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/GyAAAeSw34pqq1Cs/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/bngAAeSwErFqq1Cy/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/D8UAAeSwVbhqq1C1/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/-08AAeSwS5hqq1C4/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/uTAAAeSw5nNqq1C-/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/8x23cv3pEeip79X01PdZ72M",
+  "weight_lbs": 3.0,
+  "weight_estimated": true,
+  "description": "Meet the New Balance 9060 Melon Water — a men's sneaker from the Saturated Suedes Pack. Size: Men US 10.5. Condition: New with box. Includes original box, ready to wear straight out of the package.",
+  "parcel_in": {
+   "l": 13,
+   "w": 8,
+   "h": 5
+  },
+  "store_only": true,
+  "size": "US 10.5",
+  "units_sold": 0
+ },
+ {
+  "id": "398402549202",
+  "title": "New Balance 9060 Melon Water - Men US 9.5",
+  "price": "$68.11",
+  "price_direct": 57.89,
+  "image": "https://i.ebayimg.com/images/g/GyAAAeSw34pqq1Cs/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/398402549202",
+  "brand": "New Balance",
+  "department": "Men",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/GyAAAeSw34pqq1Cs/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/bngAAeSwErFqq1Cy/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/D8UAAeSwVbhqq1C1/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/-08AAeSwS5hqq1C4/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/uTAAAeSw5nNqq1C-/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/5kQ7sLaS61vD3XLdSFdZ741",
+  "weight_lbs": 3.0,
+  "weight_estimated": true,
+  "description": "Meet the New Balance 9060 Melon Water — a men's sneaker from the Saturated Suedes Pack. Size: Men US 9.5. Condition: New with box. Includes original box, ready to wear straight out of the package.",
+  "parcel_in": {
+   "l": 13,
+   "w": 8,
+   "h": 5
+  },
+  "store_only": true,
+  "size": "US 9.5",
+  "units_sold": 0
  }
 ]
