@@ -2295,35 +2295,6 @@
   "units_sold": 0
  },
  {
-  "id": "398432784285",
-  "title": "adidas Samba OG EL I – Black / White / Gum 6C",
-  "price": "$39.00",
-  "price_direct": 33.15,
-  "image": "https://i.ebayimg.com/images/g/CDsAAeSw7xdqtzf5/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398432784285",
-  "brand": "Adidas",
-  "department": "Kids",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/8x200jbWa7U151P4i5dZ62A",
-  "weight_lbs": 2.0,
-  "weight_estimated": false,
-  "description": "Meet the adidas Samba OG EL I – Black / White / Gum — a kids' sneaker with a clean, standout look. Listed here in size 6K. Comes brand new with its box included.",
-  "parcel_in": {
-   "l": 12,
-   "w": 8,
-   "h": 6
-  },
-  "size": "US 6",
-  "photos": [
-   "https://i.ebayimg.com/images/g/CDsAAeSw7xdqtzf5/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/QW0AAeSwDWBqtzf9/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/QdMAAeSwZMBqtzgA/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/PSgAAeSwiQdqtzgD/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/wG4AAeSwvwJqtzgI/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "398432773213",
   "title": "Adidas Samba OG C 11C",
   "price": "$39.00",
@@ -5883,35 +5854,6 @@
    "https://i.ebayimg.com/images/g/~RIAAeSwt3xqr1zj/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/YesAAeSwR25qr1zp/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/fdgAAeSw6Lpqr1zy/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
-  "id": "398412638519",
-  "title": "Adidas Sambae 7.5 Women or 6.5 Men",
-  "price": "$59.00",
-  "price_direct": 50.15,
-  "image": "https://i.ebayimg.com/images/g/W1YAAeSwR2Jqr1l3/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398412638519",
-  "brand": "Adidas",
-  "department": "Women",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/5kQ5kDgcq0rzam9bKxdZ63D",
-  "weight_lbs": 2.0,
-  "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the Adidas Sambae, a unisex sneaker in a head-turning colorway. See the listing title for the exact size details. Comes brand new with its box included.",
-  "parcel_in": {
-   "l": 12,
-   "w": 8,
-   "h": 6
-  },
-  "size": "US 7.5",
-  "photos": [
-   "https://i.ebayimg.com/images/g/W1YAAeSwR2Jqr1l3/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/2ZAAAeSw4FBqr1ly/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/WdIAAeSwLgNqr1l7/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/uHMAAeSwfGNqr1l-/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/44UAAeSwqrhqr1mD/s-l1600.jpg"
   ],
   "units_sold": 0
  },
