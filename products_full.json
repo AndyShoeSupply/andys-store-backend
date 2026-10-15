@@ -1,11 +1,11 @@
 [
  {
-  "id": "920007875563",
-  "title": "New 6k Adidas Campus 00s EL I KI5921 Black Blue Toddler Infant Summer Shoe Size 6C",
+  "id": "920041647318",
+  "title": "Adidas Campus 00s EL I Size 6C",
   "price": "$21.19",
   "price_direct": 18.01,
   "image": "https://i.ebayimg.com/images/g/sKQAAeSw-Cpqwplp/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/920007875563",
+  "url": "https://www.ebay.com/itm/920041647318",
   "brand": "Adidas",
   "department": "Infant",
   "qty": 1,
@@ -30,7 +30,7 @@
  },
  {
   "id": "398452420766",
-  "title": "Adidas Bubblecomfy I Toddler Red White JI1609 Size 5K",
+  "title": "Adidas Bubblecomfy I Toddler Red White JI1609 Size 5C",
   "price": "$25.00",
   "price_direct": 21.25,
   "image": "https://i.ebayimg.com/images/g/CMEAAeSwZPtqvwuH/s-l1600.jpg",
@@ -494,36 +494,6 @@
    "https://i.ebayimg.com/images/g/Q5QAAeSw585qwcsJ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/mmQAAeSwu1Jqwcuz/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/UiQAAeSwWrFqwcu9/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
-  "id": "398452570059",
-  "title": "Nike V5 RNR Infant Toddler Cave Stone Grey Black",
-  "price": "$29.00",
-  "price_direct": 24.65,
-  "image": "https://i.ebayimg.com/images/g/MHoAAeSwZ2Zqvxuk/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398452570059",
-  "brand": "Nike",
-  "department": "Infant",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/dRm9AT5xMdelgKx7uhdZ60P",
-  "weight_lbs": 1.0,
-  "weight_estimated": false,
-  "description": "The Nike V5 RNR Infant Toddler Cave Stone Grey Black is a go-to infant sneaker that goes with just about anything. See the listing title for the exact size details. Comes brand new with its box included.",
-  "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
-  },
-  "size": "US 7",
-  "photos": [
-   "https://i.ebayimg.com/images/g/MHoAAeSwZ2Zqvxuk/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/wdoAAeSw-UZqvxvh/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/0XEAAeSwrHJqvxvj/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/q~wAAeSwFr5qvxvq/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/zQsAAeSwmwpqvxvr/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/flsAAeSwpM9qvxvs/s-l1600.jpg"
   ],
   "units_sold": 0
  },
@@ -1351,7 +1321,7 @@
  },
  {
   "id": "398432921344",
-  "title": "adidas Superstar Low Triple White 10K",
+  "title": "adidas Superstar Low Triple White 10C",
   "price": "$33.00",
   "price_direct": 28.05,
   "image": "https://i.ebayimg.com/images/g/XEEAAeSwHJdqtztJ/s-l1600.jpg",
@@ -1409,7 +1379,7 @@
  },
  {
   "id": "398432919916",
-  "title": "adidas Superstar Low Triple White 7K",
+  "title": "adidas Superstar Low Triple White 7C",
   "price": "$33.00",
   "price_direct": 28.05,
   "image": "https://i.ebayimg.com/images/g/XEEAAeSwHJdqtztJ/s-l1600.jpg",
@@ -1438,7 +1408,7 @@
  },
  {
   "id": "398432907407",
-  "title": "adidas Superstar Low Triple White 5K",
+  "title": "adidas Superstar Low Triple White 5C",
   "price": "$33.00",
   "price_direct": 28.05,
   "image": "https://i.ebayimg.com/images/g/XEEAAeSwHJdqtztJ/s-l1600.jpg",
@@ -1467,7 +1437,7 @@
  },
  {
   "id": "398432900898",
-  "title": "adidas Superstar Low Triple White 4K",
+  "title": "adidas Superstar Low Triple White 4C",
   "price": "$33.00",
   "price_direct": 28.05,
   "image": "https://i.ebayimg.com/images/g/XEEAAeSwHJdqtztJ/s-l1600.jpg",
@@ -1624,7 +1594,7 @@
  },
  {
   "id": "398432918836",
-  "title": "adidas Superstar II C 9K",
+  "title": "adidas Superstar II C 9C",
   "price": "$34.00",
   "price_direct": 28.9,
   "image": "https://i.ebayimg.com/images/g/GEgAAeSwtUBqtz7v/s-l1600.jpg",
@@ -1654,7 +1624,7 @@
  },
  {
   "id": "398432916988",
-  "title": "adidas Superstar II C 5K",
+  "title": "adidas Superstar II C 5C",
   "price": "$34.00",
   "price_direct": 28.9,
   "image": "https://i.ebayimg.com/images/g/GEgAAeSwtUBqtz7v/s-l1600.jpg",
@@ -1831,7 +1801,7 @@
  },
  {
   "id": "398432836257",
-  "title": "adidas Superstar Low Triple White 13k",
+  "title": "adidas Superstar Low Triple White 13C",
   "price": "$35.00",
   "price_direct": 29.75,
   "image": "https://i.ebayimg.com/images/g/XEEAAeSwHJdqtztJ/s-l1600.jpg",
@@ -1860,7 +1830,7 @@
  },
  {
   "id": "398432834863",
-  "title": "adidas Superstar Low Triple White 12k",
+  "title": "adidas Superstar Low Triple White 12C",
   "price": "$35.00",
   "price_direct": 29.75,
   "image": "https://i.ebayimg.com/images/g/XEEAAeSwHJdqtztJ/s-l1600.jpg",
@@ -1889,7 +1859,7 @@
  },
  {
   "id": "398432825037",
-  "title": "adidas Superstar Low Triple White 10k",
+  "title": "adidas Superstar Low Triple White 10C",
   "price": "$35.00",
   "price_direct": 29.75,
   "image": "https://i.ebayimg.com/images/g/XEEAAeSwHJdqtztJ/s-l1600.jpg",
@@ -1918,7 +1888,7 @@
  },
  {
   "id": "398432816441",
-  "title": "adidas Superstar Low Triple White 11k",
+  "title": "adidas Superstar Low Triple White 11C",
   "price": "$35.00",
   "price_direct": 29.75,
   "image": "https://i.ebayimg.com/images/g/XEEAAeSwHJdqtztJ/s-l1600.jpg",
@@ -2327,7 +2297,7 @@
  },
  {
   "id": "398432912808",
-  "title": "adidas Superstar II  7k",
+  "title": "adidas Superstar II  7C",
   "price": "$39.00",
   "price_direct": 33.15,
   "image": "https://i.ebayimg.com/images/g/bmoAAeSwMhhqtzzg/s-l1600.jpg",
@@ -2356,7 +2326,7 @@
  },
  {
   "id": "398432840275",
-  "title": "adidas Superstar II C 12k",
+  "title": "adidas Superstar II C 12C",
   "price": "$39.00",
   "price_direct": 33.15,
   "image": "https://i.ebayimg.com/images/g/bmoAAeSwMhhqtzzg/s-l1600.jpg",
@@ -2385,7 +2355,7 @@
  },
  {
   "id": "398432784285",
-  "title": "adidas Samba OG EL I – Black / White / Gum 6K",
+  "title": "adidas Samba OG EL I – Black / White / Gum 6C",
   "price": "$39.00",
   "price_direct": 33.15,
   "image": "https://i.ebayimg.com/images/g/CDsAAeSw7xdqtzf5/s-l1600.jpg",
@@ -2414,7 +2384,7 @@
  },
  {
   "id": "398432773213",
-  "title": "Adidas Samba OG C 11K",
+  "title": "Adidas Samba OG C 11C",
   "price": "$39.00",
   "price_direct": 33.15,
   "image": "https://i.ebayimg.com/images/g/5cAAAeSwsGZqtyRw/s-l1600.jpg",
@@ -2445,7 +2415,7 @@
  },
  {
   "id": "398432771507",
-  "title": "Adidas Samba OG C 11K",
+  "title": "Adidas Samba OG C 11C",
   "price": "$39.00",
   "price_direct": 33.15,
   "image": "https://i.ebayimg.com/images/g/yGgAAeSwuqxqr2dr/s-l1600.jpg",
@@ -2474,7 +2444,7 @@
  },
  {
   "id": "398432768581",
-  "title": "Adidas Samba OG C 12K",
+  "title": "Adidas Samba OG C 12C",
   "price": "$39.00",
   "price_direct": 33.15,
   "image": "https://i.ebayimg.com/images/g/yGgAAeSwuqxqr2dr/s-l1600.jpg",
@@ -2503,7 +2473,7 @@
  },
  {
   "id": "398432765199",
-  "title": "Adidas Samba OG C 13K",
+  "title": "Adidas Samba OG C 13C",
   "price": "$39.00",
   "price_direct": 33.15,
   "image": "https://i.ebayimg.com/images/g/5cAAAeSwsGZqtyRw/s-l1600.jpg",
@@ -2534,7 +2504,7 @@
  },
  {
   "id": "398432762270",
-  "title": "Adidas Samba OG C 13K",
+  "title": "Adidas Samba OG C 13C",
   "price": "$39.00",
   "price_direct": 33.15,
   "image": "https://i.ebayimg.com/images/g/yGgAAeSwuqxqr2dr/s-l1600.jpg",
