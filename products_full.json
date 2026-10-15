@@ -270,35 +270,6 @@
   "units_sold": 0
  },
  {
-  "id": "398409001733",
-  "title": "spider man high top",
-  "price": "$28.00",
-  "price_direct": 23.8,
-  "image": "https://i.ebayimg.com/images/g/NL0AAeSwx6lqrd3v/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398409001733",
-  "brand": "Other",
-  "department": "Infant",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/3cIbJ19O27U1dyl7uhdZ707",
-  "weight_lbs": 0.75,
-  "weight_estimated": false,
-  "description": "The spider man high top brings classic style to your everyday lineup. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
-  "parcel_in": {
-   "l": 12,
-   "w": 8,
-   "h": 6
-  },
-  "size": "US 13C",
-  "photos": [
-   "https://i.ebayimg.com/images/g/NL0AAeSwx6lqrd3v/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/9nUAAeSwCxdqrd30/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/EugAAeSw69Rqrd33/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/HyAAAeSwYjtqrd3-/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/Mc4AAeSwamhqrd4A/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "398408970955",
   "title": "PAW PATROL HIGH TOP Toddler US 9C 10C",
   "price": "$28.00",
@@ -1159,36 +1130,6 @@
    "h": 6
   },
   "size": "US 6",
-  "units_sold": 0
- },
- {
-  "id": "398409178352",
-  "title": "Crocs Classic Camo Clog for Unisex, Size 13",
-  "price": "$32.99",
-  "price_direct": 28.04,
-  "image": "assets/catalog/398409178352-1.jpg",
-  "url": "https://www.ebay.com/itm/398409178352",
-  "brand": "Crocs",
-  "department": "Unisex",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/bJe7sL7FU4HPcuh9CpdZ640",
-  "weight_lbs": 2.0,
-  "weight_estimated": false,
-  "description": "You can't go wrong with the Crocs Classic Camo Clog for Unisex, a unisex clog made to be worn on repeat. This pair is a 13. Ships brand new in its box.",
-  "parcel_in": {
-   "l": 21,
-   "w": 12,
-   "h": 4
-  },
-  "size": "US 7",
-  "photos": [
-   "assets/catalog/398409178352-1.jpg",
-   "assets/catalog/398409178352-2.jpg",
-   "assets/catalog/398409178352-3.jpg",
-   "assets/catalog/398409178352-4.jpg",
-   "assets/catalog/398409178352-5.jpg",
-   "assets/catalog/398409178352-6.jpg"
-  ],
   "units_sold": 0
  },
  {
