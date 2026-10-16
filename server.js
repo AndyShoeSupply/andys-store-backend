@@ -2299,6 +2299,30 @@ app.put('/api/account/preferences', requireAccount, (req, res) => {
   } catch (e) { res.status(500).json({ error: 'preferences update failed' }); }
 });
 
+// Self-service account deletion (Maria, 2026-10-16): a signed-in customer can
+// permanently delete their own account from My Account. The current password
+// is required so an unlocked phone can't erase an account. Sessions and the
+// customer's mirrored cart rows go with it; favorites are device-based (not
+// tied to accounts), and past orders stay untouched in `orders` — that table
+// is the store's sales record, keyed by email with no user foreign key.
+// House accounts can never be deleted through this route.
+app.delete('/api/account', requireAccount, async (req, res) => {
+  try {
+    if (isHouseEmail(req.account.email))
+      return res.status(403).json({ ok: false, error: 'house_account', message: 'This account cannot be deleted.' });
+    const password = String((req.body && req.body.password) || '');
+    const u = db.prepare('SELECT id, password_hash FROM users WHERE id = ?').get(req.account.id);
+    if (!u) return res.status(404).json({ ok: false, error: 'account not found' });
+    if (!(await bcrypt.compare(password, u.password_hash)))
+      return res.status(403).json({ ok: false, error: 'wrong_password', message: 'Incorrect password — your account was not deleted.' });
+    db.prepare('DELETE FROM sessions WHERE user_id = ?').run(u.id);
+    db.prepare('DELETE FROM carts WHERE lower(email) = lower(?)').run(req.account.email);
+    db.prepare('DELETE FROM users WHERE id = ?').run(u.id);
+    res.set('Set-Cookie', 'ass_session=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0');
+    res.json({ ok: true });
+  } catch (e) { res.status(500).json({ ok: false, error: 'account deletion failed' }); }
+});
+
 app.get('/api/health', (req, res) => res.json({
   ok: true,
   catalog: CATALOG.length,
