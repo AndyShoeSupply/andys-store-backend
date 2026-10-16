@@ -5858,35 +5858,6 @@
   "units_sold": 0
  },
  {
-  "id": "398389745925",
-  "title": "Adidas Superstar 2 Black Scarlet",
-  "price": "$59.00",
-  "price_direct": 50.15,
-  "image": "https://i.ebayimg.com/images/g/XPIAAeSwICxqpjyo/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398389745925",
-  "brand": "Adidas",
-  "department": "Unisex",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/6oU3cv5xM4HPbqdg0NdZ719",
-  "weight_lbs": 3.0,
-  "weight_estimated": false,
-  "description": "Meet the Adidas Superstar 2 Black Scarlet — a unisex sneaker with a clean, standout look. See the listing title for the exact size details. Brand new and comes with its box.",
-  "parcel_in": {
-   "l": 14.0,
-   "w": 12.0,
-   "h": 9.0
-  },
-  "size": "US 8.5",
-  "photos": [
-   "https://i.ebayimg.com/images/g/XPIAAeSwICxqpjyo/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/6OoAAeSw7LZqpj0X/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/T8YAAeSwdAJqpj0b/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/nBQAAeSwj0lqpj0p/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/AngAAeSwuvJqpj0v/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "398389361084",
   "title": "ASICS GEL-RENMA",
   "price": "$59.00",
