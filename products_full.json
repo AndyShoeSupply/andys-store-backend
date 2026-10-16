@@ -12819,5 +12819,382 @@
   "size": "US 7",
   "added": "2026-10-13",
   "units_sold": 0
+ },
+ {
+  "id": "920043583829",
+  "title": "New Balance 2002R Sea Salt Pink Granite US 11C / EU 28.5",
+  "price": "$59.00",
+  "price_direct": 50.15,
+  "image": "https://i.ebayimg.com/images/g/9HYAAeSwFUpq0YKc/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/920043583829",
+  "brand": "New Balance",
+  "department": "Kids",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/9HYAAeSwFUpq0YKc/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/E9IAAeSwsm5q0YIV/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/8zYAAeSwJgVq0YIL/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/6hYAAeSwaaZq0YIN/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/IHoAAeSwaulq0YIh/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/00w4gz3pEcaheCp15TdZ801",
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The New Balance 2002R for toddlers in Sea Salt with Pink Granite accents and hook-and-loop straps for easy on and off. Size US 11C / EU 28.5. Brand new, never worn.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 11",
+  "added": "2026-10-15",
+  "units_sold": 0
+ },
+ {
+  "id": "920043574783",
+  "title": "New Balance 2002R GS Black Sea Salt Gold Metallic/ Size: US 7Y / Women US 8.5",
+  "price": "$72.95",
+  "price_direct": 62.01,
+  "image": "https://i.ebayimg.com/images/g/5zoAAeSwZjlq0YES/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/920043574783",
+  "brand": "New Balance",
+  "department": "Kids",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/5zoAAeSwZjlq0YES/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/3ucAAeSwNr5q0YEV/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/CkcAAeSwZ3Nq0YEl/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/Cr0AAeSwQBZq0YEd/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/52sAAeSwYjlq0YEf/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/EM4AAeSwdclq0YEi/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/aFa4gz2lA7U18e19CpdZ802",
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The New Balance 2002R GS in Black and Sea Salt with Gold Metallic details - a retro runner with premium layered styling. Size US 7Y / Women US 8.5. Brand new, never worn.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 8.5",
+  "added": "2026-10-15",
+  "units_sold": 0
+ },
+ {
+  "id": "920043538927",
+  "title": "Hey Dude Wally Youth Red US 5Y / EU 37",
+  "price": "$34.14",
+  "price_direct": 29.02,
+  "image": "https://i.ebayimg.com/images/g/lrAAAeSwMD9q0XuP/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/920043538927",
+  "brand": "Hey Dude",
+  "department": "Kids",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/lrAAAeSwMD9q0XuP/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/j~gAAeSwJp5q0Xub/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/mF8AAeSwycVq0XuU/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/mJYAAeSwJgVq0XuZ/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/uSwAAeSwm~lq0XuS/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/00w4gz6BQfmt2THeWJdZ803",
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The Hey Dude Wally Youth in Red - a featherlight slip-on with an easy, all-day casual fit. Size US 5Y / EU 37. Brand new, never worn.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 5",
+  "added": "2026-10-15",
+  "units_sold": 0
+ },
+ {
+  "id": "920043532696",
+  "title": "New Balance Fresh Foam Arishi v4 Marblehead Castlerock/ Size: Men US 15 / Women US 16.5",
+  "price": "$65.00",
+  "price_direct": 55.25,
+  "image": "https://i.ebayimg.com/images/g/hCwAAeSwKxxq0XpE/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/920043532696",
+  "brand": "New Balance",
+  "department": "Men",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/hCwAAeSwKxxq0XpE/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/pfwAAeSwmIVq0XpH/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/hhUAAeSwK~Vq0XpK/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/iUwAAeSwqipq0XpM/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/pqkAAeSwJ55q0XpP/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/p8gAAeSwQ75q0XpQ/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/rmQAAeSwke9q0XpU/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/dRm00j1hwfmtfGtdSFdZ804",
+  "weight_lbs": 3.0,
+  "weight_estimated": true,
+  "description": "The New Balance Fresh Foam Arishi v4 in Marblehead and Castlerock with a gum outsole, extra-wide 4E fit and plush Fresh Foam cushioning. Size Men US 15. Brand new, never worn.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 15",
+  "added": "2026-10-15",
+  "units_sold": 0
+ },
+ {
+  "id": "920043522126",
+  "title": "Nike Revolution 8 Deep Royal Blue White/ Size: Men US 11.5 / Women US 13",
+  "price": "$57.31",
+  "price_direct": 48.71,
+  "image": "https://i.ebayimg.com/images/g/a70AAeSwAoxq0XlE/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/920043522126",
+  "brand": "Nike",
+  "department": "Men",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/a70AAeSwAoxq0XlE/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/aMQAAeSw3lBq0XlI/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/klsAAeSwmIVq0XlG/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/k~UAAeSwcP1q0XlO/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/cM0AAeSwwNtq0XlK/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/k9wAAeSwcP1q0XlN/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/mn8AAeSwrjFq0XlR/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/dRm14n8JY6PXcuh6qddZ805",
+  "weight_lbs": 3.0,
+  "weight_estimated": true,
+  "description": "The Nike Revolution 8 in Deep Royal Blue and White - a light, breathable everyday trainer with soft foam cushioning. Size Men US 11.5 / Women US 13. Brand new, never worn.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 11.5",
+  "added": "2026-10-15",
+  "units_sold": 0
+ },
+ {
+  "id": "920043507758",
+  "title": "adidas Galaxy 7 Core Black/ Size: Men US 10.5 / Women US 11.5",
+  "price": "$44.71",
+  "price_direct": 38.0,
+  "image": "https://i.ebayimg.com/images/g/jtQAAeSwyHFq0Xiw/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/920043507758",
+  "brand": "Adidas",
+  "department": "Men",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/jtQAAeSwyHFq0Xiw/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/aUMAAeSwDPBq0Xiy/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/jm4AAeSwS09q0Xi0/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/iGoAAeSwI5tq0Xi2/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/j4AAAeSwbiFq0Xi7/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/jvEAAeSwSflq0Xi4/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/h50AAeSw2XRq0Xi9/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/4gM5kDf8m6PXeCpbKxdZ806",
+  "weight_lbs": 3.0,
+  "weight_estimated": true,
+  "description": "The adidas Galaxy 7 in all-black Core Black - a clean, versatile daily trainer with Cloudfoam comfort. Size Men US 10.5 / Women US 11.5. Brand new, never worn.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 10.5",
+  "added": "2026-10-15",
+  "units_sold": 0
+ },
+ {
+  "id": "920043503845",
+  "title": "Adidas X_PLR Path Clay Carbon Charcoal/ Size: Men US 9.5 / Women US 10.5",
+  "price": "$42.11",
+  "price_direct": 35.79,
+  "image": "https://i.ebayimg.com/images/g/fycAAeSwUutq0Xe2/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/920043503845",
+  "brand": "Adidas",
+  "department": "Men",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/fycAAeSwUutq0Xe2/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/WZYAAeSwsBBq0Xeu/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/VRwAAeSw7Upq0Xew/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/TkwAAeSwRZ5q0Xey/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/fdMAAeSwlHtq0Xe0/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/UZQAAeSwTxBq0Xe4/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/fxoAAeSwaNxq0Xe6/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/eAYAAeSwChBq0Xe8/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/eVqcN58JY6PXeCpg0NdZ807",
+  "weight_lbs": 3.0,
+  "weight_estimated": true,
+  "description": "The adidas X_PLR Path in Clay, Carbon and Charcoal - a sleek, lightweight sneaker built for everyday miles. Size Men US 9.5 / Women US 10.5. Brand new, never worn.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 9.5",
+  "added": "2026-10-15",
+  "units_sold": 0
+ },
+ {
+  "id": "920043493990",
+  "title": "Hoka Clifton 8 Black Black/ Size: Women US 5",
+  "price": "$85.05",
+  "price_direct": 72.29,
+  "image": "https://i.ebayimg.com/images/g/NhgAAeSwTHdq0XW2/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/920043493990",
+  "brand": "Hoka",
+  "department": "Women",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/NhgAAeSwTHdq0XW2/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/Ne8AAeSwH1hq0XXQ/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/PmAAAeSwYmVq0XXT/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/ZUkAAeSwbrBq0XXV/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/ZeEAAeSw6NZq0XXX/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/X0IAAeSwOTtq0XXa/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/dRm00j8JY1vDfGtcOBdZ808",
+  "weight_lbs": 2.5,
+  "weight_estimated": true,
+  "description": "The Hoka Clifton 8 in Black/Black - Hoka's beloved cushioned trainer with a smooth, balanced ride. Size Women US 5. Brand new, never worn.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 5",
+  "added": "2026-10-15",
+  "units_sold": 0
+ },
+ {
+  "id": "920043492261",
+  "title": "Hey Dude Marty Oceano/ Size: Men US 8 / Women US 9",
+  "price": "$43.15",
+  "price_direct": 36.68,
+  "image": "https://i.ebayimg.com/images/g/KQUAAeSwojpq0XS9/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/920043492261",
+  "brand": "Hey Dude",
+  "department": "Men",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/KQUAAeSwojpq0XS9/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/aFUAAeSwkF5q0XZ5/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/MNYAAeSw11lq0XTC/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/bhkAAeSwyeFq0XZ2/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/P1UAAeSw4f9q0XZ-/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/7sYaEX6BQ5LT1PDg0NdZ809",
+  "weight_lbs": 3.0,
+  "weight_estimated": true,
+  "description": "The Hey Dude Marty in Oceano - an open-heel mule in dark charcoal canvas you can slip on and go. Size Men US 8 / Women US 9. Brand new, never worn.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 8",
+  "added": "2026-10-15",
+  "units_sold": 0
+ },
+ {
+  "id": "920043473199",
+  "title": "Bearpaw Retro Shorty Black Black/ Size: Women US 10",
+  "price": "$59.16",
+  "price_direct": 50.29,
+  "image": "https://i.ebayimg.com/images/g/SDgAAeSwsDBq0XOh/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/920043473199",
+  "brand": "Bearpaw",
+  "department": "Women",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/SDgAAeSwsDBq0XOh/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/SJAAAeSwj1lq0XOj/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/SPkAAeSwredq0XOl/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/Q5IAAeSwoJtq0XOo/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/uhIAAeSw1qxq0XOr/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/dRm8wPf8meipcuh15TdZ80a",
+  "weight_lbs": 2.5,
+  "weight_estimated": true,
+  "description": "The Bearpaw Retro Shorty in Black/Black - a cozy suede mini boot with plush wool-blend lining. Size Women US 10. Brand new, never worn.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 10",
+  "added": "2026-10-15",
+  "units_sold": 0
+ },
+ {
+  "id": "920043456267",
+  "title": "Puma Thunder Desert Bright White Gray Violet/ Size: Men US 7.5 / Women US 9",
+  "price": "$74.14",
+  "price_direct": 63.02,
+  "image": "https://i.ebayimg.com/images/g/OxMAAeSwMaJq0XCH/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/920043456267",
+  "brand": "Puma",
+  "department": "Men",
+  "qty": 2,
+  "photos": [
+   "https://i.ebayimg.com/images/g/OxMAAeSwMaJq0XCH/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/HDEAAeSw1wtq0XCE/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/1dUAAeSwvwdq0XCN/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/HMAAAeSwd8Vq0XCQ/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/FlMAAeSwI5tq0XCS/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/NXQAAeSwl6Jq0XCV/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/MYcAAeSwdmBq0XCe/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/Fx4AAeSwOTtq0XCj/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/9B68wP2lA0rzam9eWJdZ80b",
+  "weight_lbs": 3.0,
+  "weight_estimated": true,
+  "description": "The Puma Thunder Desert in Bright White and Gray Violet - a chunky retro-inspired sneaker with bold layered panels. Size Men US 7.5 / Women US 9. Brand new, never worn.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 7.5",
+  "added": "2026-10-15",
+  "units_sold": 0
+ },
+ {
+  "id": "920043429822",
+  "title": "Adidas Adizero Aruku J Cloud White Pure Ruby/ Size: US 5Y / Women US 6.5",
+  "price": "$73.22",
+  "price_direct": 62.24,
+  "image": "https://i.ebayimg.com/images/g/2EUAAeSwJcVq0W2E/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/920043429822",
+  "brand": "Adidas",
+  "department": "Kids",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/2EUAAeSwJcVq0W2E/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/EFUAAeSwxblq0W2A/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/yxIAAeSwlilq0W2G/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/GS8AAeSwEE5q0W2I/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/CZ8AAeSwM5Zq0W2P/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/3cwAAeSwRZJq0W2L/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/D-QAAeSwbgNq0W2T/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/EDoAAeSwsiZq0W2W/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/dRm8wP5xMfmtgKx01PdZ80c",
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The adidas Adizero Aruku J in Cloud White, Pure Ruby and Core Black - a light junior runner with responsive cushioning. Size US 5Y / Women US 6.5. Brand new, never worn.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 6.5",
+  "added": "2026-10-15",
+  "units_sold": 0
  }
 ]
