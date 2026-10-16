@@ -13196,5 +13196,36 @@
   "size": "US 6.5",
   "added": "2026-10-15",
   "units_sold": 0
+ },
+ {
+  "id": "920043419530",
+  "title": "Crocs Classic Camo Clog for Men, Size 7",
+  "price": "$33.00",
+  "price_direct": 28.05,
+  "image": "assets/catalog/398409178352-1.jpg",
+  "url": "https://www.ebay.com/itm/920043419530",
+  "brand": "Crocs",
+  "department": "Men",
+  "qty": 1,
+  "photos": [
+   "assets/catalog/398409178352-1.jpg",
+   "assets/catalog/398409178352-2.jpg",
+   "assets/catalog/398409178352-3.jpg",
+   "assets/catalog/398409178352-4.jpg",
+   "assets/catalog/398409178352-5.jpg",
+   "assets/catalog/398409178352-6.jpg"
+  ],
+  "payment_url": "https://buy.stripe.com/eVq7sL9O2b6deCpdSFdZ80d",
+  "weight_lbs": 3.0,
+  "weight_estimated": true,
+  "description": "The Crocs Classic Camo Clog for Men - the lightweight, easy-on clog made to be worn on repeat. Size Men US 7. Brand new in its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 7",
+  "added": "2026-10-15",
+  "units_sold": 0
  }
 ]
