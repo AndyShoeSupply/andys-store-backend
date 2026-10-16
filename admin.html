@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Pedidos — Andy's Shoe Supply (privado)</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#f4f4f5;color:#111;padding:0 0 60px}
+  header{background:#111;color:#fff;padding:14px 16px;position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between}
+  header h1{font-size:1.05rem}
+  header .sub{font-size:.7rem;color:#bbb;font-weight:400}
+  .btn{background:#111;color:#fff;border:0;border-radius:8px;padding:10px 14px;font-size:.85rem;font-weight:700;cursor:pointer}
+  .btn:disabled{opacity:.45;cursor:default}
+  .btn.sec{background:#fff;color:#111;border:1px solid #d4d4d8}
+  .btn.green{background:#067a3f}
+  .btn.small{padding:7px 10px;font-size:.78rem;border-radius:7px}
+  main{padding:14px;max-width:720px;margin:0 auto}
+  #login{max-width:380px;margin:60px auto;padding:24px;background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+  #login h2{margin-bottom:6px}
+  #login p{font-size:.82rem;color:#555;margin-bottom:14px}
+  #login input{width:100%;padding:12px;border:1px solid #d4d4d8;border-radius:8px;font-size:1rem;margin-bottom:12px}
+  #login .err{color:#b00020;font-size:.82rem;margin-bottom:10px;min-height:1.2em}
+  .status{background:#fff;border-radius:10px;padding:12px 14px;margin-bottom:14px;font-size:.82rem;display:flex;gap:14px;flex-wrap:wrap;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+  .status b{display:block;font-size:.68rem;color:#777;text-transform:uppercase;letter-spacing:.05em}
+  .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}
+  .ok{background:#16a34a}.bad{background:#dc2626}.warn{background:#f59e0b}
+  .order{background:#fff;border-radius:12px;padding:14px;margin-bottom:12px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+  .order .top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+  .order .oid{font-weight:900;font-size:1rem}
+  .order .date{font-size:.75rem;color:#777}
+  .order .row{font-size:.85rem;margin:4px 0}
+  .order .row .lbl{color:#777;font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;display:block}
+  .tags{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+  .tag{font-size:.7rem;font-weight:800;padding:4px 8px;border-radius:20px;background:#eee}
+  .tag.paid{background:#dcfce7;color:#166534}
+  .tag.label{background:#dbeafe;color:#1e40af}
+  .tag.nolabel{background:#fef3c7;color:#92400e}
+  .tag.notified{background:#f3e8ff;color:#6b21a8}
+  .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .empty{text-align:center;color:#777;padding:40px 10px}
+  .empty .zero-orders{display:block;color:#111;font-size:2.2rem;font-weight:900;line-height:1;margin-bottom:10px}
+  .subs{background:#fff;border-radius:10px;padding:12px 14px;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+  .subs h3{font-size:.9rem;margin-bottom:8px}
+  .subrow{display:flex;justify-content:space-between;gap:8px;font-size:.82rem;padding:7px 0;border-top:1px solid #eee}
+  .subrow small{color:#777}
+  .total{font-weight:900;font-size:1.05rem}
+  a.lblink{color:#1d4ed8;font-weight:700}
+  #errbar{background:#fee2e2;color:#991b1b;padding:10px 14px;border-radius:8px;font-size:.82rem;margin-bottom:12px;display:none}
+  .editbox{background:#fff;border-radius:10px;padding:12px 14px;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+  .editbox h3{font-size:.95rem;margin-bottom:6px}
+  .editbox .hint{font-size:.78rem;color:#777;margin-bottom:8px}
+  .editbox input[type=search]{width:100%;padding:10px;border:1px solid #d4d4d8;border-radius:8px;font-size:.95rem;margin-bottom:8px}
+  .prod-row{display:flex;gap:10px;padding:10px 0;border-top:1px solid #eee;align-items:flex-start}
+  .prod-row img{width:52px;height:52px;object-fit:contain;background:#fff;border:1px solid #eee;border-radius:6px;flex:0 0 52px}
+  .prod-main{flex:1;min-width:0}
+  .prod-main .t{font-size:.82rem;font-weight:800;line-height:1.3}
+  .prod-main .p{font-size:.8rem;color:#555;margin-top:2px}
+  .badge{display:inline-block;font-size:.68rem;font-weight:800;padding:3px 7px;border-radius:20px;background:#fef3c7;color:#92400e;margin:3px 4px 0 0}
+  .badge.hiddenb{background:#fee2e2;color:#991b1b}
+  .prod-acts{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;align-items:center}
+  .prod-acts input[type=number]{width:110px;padding:8px;border:1px solid #d4d4d8;border-radius:7px;font-size:.85rem}
+  .saved-note{color:#067a3f;font-weight:800;font-size:.78rem}
+  .view-count{white-space:nowrap;font-size:.84rem;font-weight:900;color:#555;margin-left:auto;padding-top:2px}
+  .visit-optout{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px;padding-top:11px;border-top:1px solid #eee}
+  .visit-optout-label{font-size:.78rem;font-weight:700;line-height:1.35;color:#444}
+  .visit-toggle{display:inline-flex;align-items:center;gap:6px;flex:0 0 auto;border:1px solid #d4d4d8;border-radius:999px;background:#f4f4f5;color:#52525b;padding:6px 9px;font-size:.7rem;font-weight:900;cursor:pointer}
+  .visit-toggle::before{content:"";width:9px;height:9px;border-radius:50%;background:#a1a1aa}
+  .visit-toggle[aria-pressed="true"]{background:#dcfce7;border-color:#86efac;color:#166534}
+  .visit-toggle[aria-pressed="true"]::before{background:#16a34a}
+  .visit-toggle:focus-visible{outline:3px solid #f59e0b;outline-offset:2px}
+</style>
+</head>
+<body>
+<header>
+  <div><h1>Pedidos</h1><div class="sub">Andy's Shoe Supply · privado</div></div>
+  <div><button class="btn sec small" id="refreshBtn" style="display:none">↻ Actualizar</button>
+  <button class="btn sec small" id="logoutBtn" style="display:none">Salir</button></div>
+</header>
+<main>
+  <div id="login">
+    <h2>Entrar</h2>
+    <p>Escribe tu contraseña de administradora.</p>
+    <div class="err" id="loginErr"></div>
+    <input type="password" id="pw" placeholder="Contraseña" autocomplete="current-password">
+    <button class="btn" id="loginBtn" style="width:100%">Entrar</button>
+  </div>
+  <div id="app" style="display:none">
+    <div id="errbar"></div>
+    <div class="status" id="healthBox">Cargando estado…</div>
+    <div id="orders"></div>
+    <div class="editbox" id="feedbackBox">
+      <h3>Feedback de clientes <span id="feedbackCount"></span></h3>
+      <p class="hint">Lo que escriben los clientes en la página de reseñas (el QR de la tarjeta de agradecimiento). Solo lectura.</p>
+      <div id="feedbackList"><p class="hint">Cargando…</p></div>
+    </div>
+    <div class="editbox" id="cartsBox">
+      <h3>Carritos activos</h3>
+      <p class="hint">Lo que los clientes tienen en su carrito ahora mismo. Se actualiza solo cuando agregan, quitan o cambian cantidades. Los carritos de la casa no se muestran.</p>
+      <div id="cartsList"><p class="hint">Cargando…</p></div>
+    </div>
+    <div class="editbox" id="mostViewedBox">
+      <h3>Más vistos</h3>
+      <p class="hint">Los 20 productos que más han abierto los clientes.</p>
+      <div id="mostViewedList"><p class="hint">Cargando…</p></div>
+    </div>
+    <div class="editbox" id="mostLikedBox">
+      <h3>Más likes</h3>
+      <p class="hint">Los 20 productos con más likes.</p>
+      <div id="mostLikedList"><p class="hint">Cargando…</p></div>
+    </div>
+    <div class="status" id="subsBox"><div><b>Suscriptores</b><span id="subsCount">…</span></div></div>
+    <div id="subsList"></div>
+    <div class="status" id="visitsBox" style="display:block"><h3 style="font-size:.9rem;margin-bottom:8px">👀 Visitas</h3><div>Cargando…</div><div class="visit-optout"><span class="visit-optout-label">No contar mis visitas en este dispositivo</span><button type="button" class="visit-toggle" id="visitOptout" aria-pressed="false">Desactivado</button></div></div>
+    <div id="editBox" class="editbox">
+      <h3>Editar tienda</h3>
+      <div id="editNote"></div>
+      <p class="hint">Busca un zapato para ponerle un precio especial u ocultarlo de la tienda.</p>
+      <input type="search" id="prodSearch" placeholder="Buscar zapato por nombre…" autocomplete="off">
+      <div id="prodResults"></div>
+      <h3 style="margin-top:16px">Precios especiales y ocultos</h3>
+      <div id="overrideSummary"><p class="hint">Cargando…</p></div>
+    </div>
+  </div>
+</main>
+<script>
+const API = 'https://andys-store-backend.onrender.com';
+const $ = s => document.querySelector(s);
+let token = localStorage.getItem('ass_admin_token') || '';
+let catalog = {};
+
+async function api(path, opts={}) {
+  const r = await fetch(API + path, {
+    ...opts,
+    headers: { 'x-admin-token': token, 'Content-Type': 'application/json', ...(opts.headers||{}) }
+  });
+  if (r.status === 401) throw new Error('badpw');
+  if (!r.ok) { const j = await r.json().catch(()=>({})); throw new Error(j.error || ('HTTP '+r.status)); }
+  return r.json();
+}
+function showErr(m){ const e=$('#errbar'); e.textContent=m; e.style.display='block'; setTimeout(()=>e.style.display='none',6000); }
+function money(c){ return '$'+(Number(c||0)/100).toFixed(2); }
+function fmtDate(s){ try{ return new Date(s.replace(' ','T')+'Z').toLocaleString('es-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'}); }catch(e){ return s||''; } }
+
+async function loadHealth(){
+  try{
+    const h = await fetch(API+'/api/health').then(r=>r.json());
+    $('#healthBox').innerHTML =
+      `<div><b>Servidor</b><span class="dot ${h.ok?'ok':'bad'}"></span>${h.ok?'En línea':'Caído'}</div>
+       <div><b>Stripe</b><span class="dot ${h.stripe?'ok':'bad'}"></span>${h.stripe?'Conectado':'No'}</div>
+       <div><b>Envíos</b><span class="dot ${(h.shipping==='shippo'||h.usps)?'ok':'warn'}"></span>${h.shipping==='shippo'?'Listo (Shippo)':(h.usps?'Listo':'Pendiente token')}</div>
+       <div><b>Productos</b>${h.catalog||'?'}</div>`;
+  }catch(e){ $('#healthBox').innerHTML = '<div><b>Servidor</b><span class="dot bad"></span>Sin respuesta</div>'; }
+}
+
+async function loadCatalog(){
+  try{ const l = await fetch(API+'/api/products/lite').then(r=>r.json());
+    l.forEach(p=>catalog[String(p.id)]=p); }catch(e){}
+}
+
+function itemLine(it){
+  const raw = String(it.id || '');
+  const m = raw.match(/^(.+?)__size_(.+)$/);
+  const p = catalog[m ? m[1] : raw];
+  const name = p ? p.title : ('Producto ' + (m ? m[1] : raw));
+  const size = m ? m[2] : (it.size != null && String(it.size) !== '' ? String(it.size) : '');
+  return `<div class="row">• ${escapeHtml(name)}${size ? ' — Talla ' + escapeHtml(size) : ''} <b>× ${it.qty}</b></div>`;
+}
+function escapeHtml(s){ return String(s||'').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+async function loadOrders(){
+  const box = $('#orders'); box.innerHTML = '<div class="empty">Cargando pedidos…</div>';
+  try{
+    const orders = await api('/api/orders/recent');
+    if(!orders.length){ box.innerHTML = '<div class="empty"><strong class="zero-orders">0 pedidos</strong>Cuando alguien compre, aparecen aquí.</div>'; return; }
+    box.innerHTML = orders.map(o=>{
+      let items=[], ship={};
+      try{ items = JSON.parse(o.items||'[]'); }catch(e){}
+      try{ ship = JSON.parse(o.ship_to||'{}'); }catch(e){}
+      const addr = [ship.name, ship.line1, ship.line2, ship.city, ship.state, ship.zip].filter(Boolean).join(', ');
+      const tags = [`<span class="tag paid">${escapeHtml(o.status||'paid')}</span>`];
+      if(o.fulfillment==='pickup') tags.push('<span class="tag">Recoger en tienda</span>');
+      tags.push(o.label_url
+        ? `<span class="tag label">Etiqueta lista</span>`
+        : `<span class="tag nolabel">Sin etiqueta</span>`);
+      if(o.notified) tags.push('<span class="tag notified">Avisado</span>');
+      return `<div class="order" data-id="${o.id}">
+        <div class="top"><span class="oid">Pedido #${o.id}</span><span class="date">${fmtDate(o.created_at)}</span></div>
+        <div class="tags">${tags.join('')}</div>
+        ${items.map(itemLine).join('')}
+        <div class="row"><span class="lbl">Total cobrado</span><span class="total">${money(o.amount_total)}</span></div>
+        <div class="row"><span class="lbl">Cliente</span>${escapeHtml(o.email||'—')}</div>
+        <div class="row"><span class="lbl">Enviar a</span>${escapeHtml(addr||'Recoger en tienda')}</div>
+        ${o.tracking_number?`<div class="row"><span class="lbl">Tracking</span><b>${escapeHtml(o.tracking_number)}</b></div>`:''}
+        <div class="actions">
+          ${o.label_url
+            ? `<a class="btn small green" href="${escapeHtml(o.label_url)}" target="_blank">Abrir etiqueta</a>`
+            : `<button class="btn small" data-act="buy">Comprar etiqueta</button>`}
+          ${!o.notified && o.label_url ? `<button class="btn small sec" data-act="notified">Marcar avisado</button>` : ''}
+        </div>
+      </div>`;
+    }).join('');
+  }catch(e){
+    if(e.message==='badpw'){ logout(true); return; }
+    box.innerHTML = '<div class="empty">Error cargando pedidos: '+escapeHtml(e.message)+'</div>';
+  }
+}
+
+async function loadFeedback(){
+  const box = $('#feedbackList'); if(!box) return;
+  try{
+    const rows = await api('/api/admin/feedback');
+    const list = Array.isArray(rows) ? rows : [];
+    $('#feedbackCount').textContent = list.length ? '(' + list.length + ')' : '';
+    if(!list.length){ box.innerHTML = '<div class="empty"><strong class="zero-orders">Sin feedback todavía</strong>Cuando un cliente escanee el QR de la tarjeta y escriba, aparece aquí.</div>'; return; }
+    box.innerHTML = list.map(f=>{
+      const stars = f.rating ? '★'.repeat(f.rating) + '☆'.repeat(5 - f.rating) + ' (' + f.rating + '/5)' : 'Sin calificación';
+      const meta = [f.product ? 'Compró: ' + escapeHtml(f.product) : '', f.name ? 'Nombre: ' + escapeHtml(f.name) : ''].filter(Boolean).join(' · ');
+      return `<div class="order">
+        <div class="top"><span class="oid" style="font-size:.92rem">${stars}</span><span class="date">${fmtDate(f.created_at)}</span></div>
+        ${f.improve ? `<div class="row">${escapeHtml(f.improve)}</div>` : '<div class="row" style="color:#777">Sin comentario escrito.</div>'}
+        ${meta ? `<div class="row"><span class="lbl">${meta}</span></div>` : ''}
+      </div>`;
+    }).join('');
+  }catch(e){
+    if(e.message==='badpw'){ logout(true); return; }
+    box.innerHTML = '<div class="empty">Error cargando feedback: '+escapeHtml(e.message)+'</div>';
+  }
+}
+
+async function loadCarts(){
+  const box = $('#cartsList'); if(!box) return;
+  try{
+    const carts = await api('/api/admin/carts');
+    if(!carts.length){ box.innerHTML = '<div class="empty">Ningún carrito activo.</div>'; return; }
+    box.innerHTML = carts.map(c=>`
+      <div class="order">
+        <div class="top"><span class="oid">${c.email ? escapeHtml(c.email) : 'Invitado'}</span><span class="date">${fmtDate(c.updated_at)}</span></div>
+        ${c.items.map(it=>`<div class="row">• ${escapeHtml(it.title)} <b>× ${it.qty}</b></div>`).join('')}
+        <div class="row"><span class="lbl">Subtotal (precio directo)</span><span class="total">${money(c.subtotal_cents)}</span></div>
+      </div>`).join('');
+  }catch(e){
+    if(e.message==='badpw'){ logout(true); return; }
+    box.innerHTML = '<div class="empty">Error cargando carritos: '+escapeHtml(e.message)+'</div>';
+  }
+}
+
+async function loadSubs(){
+  try{
+    const d = await api('/api/admin/users');
+    $('#subsCount').textContent = d.count + ' registrado' + (d.count===1?'':'s');
+    $('#subsList').innerHTML = d.count ? '<div class="subs"><h3>Correos de suscriptores</h3>' + d.users.map(u=>
+      '<div class="subrow"><span><b>'+escapeHtml(u.email)+'</b><br><small>'+escapeHtml(u.name||'—')+' · desde '+fmtDate(u.created_at)+'</small><br><small>Preferences: '+escapeHtml(u.favoriteBrand||'No preference')+' · '+escapeHtml(u.favoriteSize||'No preference')+'</small></span><span><small>'+u.orders+' pedido'+(u.orders===1?'':'s')+'</small></span></div>'
+    ).join('') + '</div>' : '';
+  }catch(e){ /* silent */ }
+}
+function visitOptoutMarkup(){
+  return '<div class="visit-optout"><span class="visit-optout-label">No contar mis visitas en este dispositivo</span><button type="button" class="visit-toggle" id="visitOptout" aria-pressed="false">Desactivado</button></div>';
+}
+function visitOptoutEnabled(){
+  try{return localStorage.getItem('andy_nocount')==='1';}catch(e){return false;}
+}
+function renderVisitOptout(){
+  const btn = $('#visitOptout'); if(!btn) return;
+  const enabled = visitOptoutEnabled();
+  btn.setAttribute('aria-pressed', enabled ? 'true' : 'false');
+  btn.textContent = enabled ? 'Activado' : 'Desactivado';
+  btn.setAttribute('aria-label', 'No contar mis visitas en este dispositivo: ' + (enabled ? 'activado' : 'desactivado'));
+}
+async function loadVisits(){
+  const box = $('#visitsBox');
+  try{
+    const v = await api('/api/admin/visits');
+    const num = n => Number(n||0).toLocaleString('es-US');
+    box.innerHTML =
+      '<h3 style="font-size:.9rem;margin-bottom:8px">👀 Visitas</h3>' +
+      '<div style="display:flex;gap:14px;flex-wrap:wrap">' +
+      '<div><b>Hoy</b>'+num(v.today)+'</div>' +
+      '<div><b>Últimos 7 días</b>'+num(v.last7)+'</div>' +
+      '<div><b>Últimos 30 días</b>'+num(v.last30)+'</div>' +
+      '<div><b>Total</b>'+num(v.total)+'</div>' +
+      '</div>' +
+      (Array.isArray(v.byDay) && v.byDay.length
+        ? v.byDay.map(d=>'<div class="subrow"><span>'+escapeHtml(String(d.day||''))+'</span><span><b>'+num(d.visitors)+'</b> visita'+(Number(d.visitors||0)===1?'':'s')+'</span></div>').join('')
+        : '<p style="font-size:.82rem;color:#777;margin-top:8px">Todavía no hay visitas registradas.</p>') +
+      visitOptoutMarkup();
+  }catch(e){
+    box.innerHTML = '<h3 style="font-size:.9rem;margin-bottom:8px">👀 Visitas</h3><p style="font-size:.82rem;color:#777">No se pudieron cargar las visitas.</p>' + visitOptoutMarkup();
+  }
+  renderVisitOptout();
+}
+
+async function loadMostViewed(){
+  const box = $('#mostViewedList');
+  try{
+    const data = await api('/api/admin/product-views');
+    const rows = (Array.isArray(data) ? data : (data.products || data.items || data.views || []))
+      .map(row => {
+        const id = String(row.id ?? row.product_id ?? row.productId ?? '');
+        const product = catalog[id] || {};
+        return {
+          id,
+          title: row.title || product.title || ('Producto ' + id),
+          image: row.image || product.image || '',
+          views: Number(row.views ?? row.view_count ?? row.count ?? 0)
+        };
+      })
+      .sort((a,b) => b.views - a.views)
+      .slice(0,20);
+    if(!rows.length){ box.innerHTML = '<p class="hint">Todavía no hay productos vistos.</p>'; return; }
+    box.innerHTML = rows.map(row => `<div class="prod-row">
+      ${row.image ? `<img src="${escapeHtml(row.image)}" alt="">` : ''}
+      <div class="prod-main"><div class="t">${escapeHtml(row.title)}</div></div>
+      <div class="view-count">${row.views.toLocaleString('es-US')} vista${row.views===1?'':'s'}</div>
+    </div>`).join('');
+  }catch(e){
+    if(e.message==='badpw'){ logout(true); return; }
+    box.innerHTML = '<p class="hint" style="color:#b00020;font-weight:700">No se pudieron cargar los productos más vistos.</p>';
+  }
+}
+
+async function loadMostLiked(){
+  const box = $('#mostLikedList');
+  try{
+    const data = await api('/api/admin/product-likes');
+    const rows = (Array.isArray(data) ? data : (data.products || data.items || data.likes || []))
+      .map(row => {
+        const id = String(row.id ?? row.product_id ?? row.productId ?? '');
+        const product = catalog[id] || {};
+        return {
+          id,
+          title: row.title || product.title || ('Producto ' + id),
+          image: row.image || product.image || '',
+          likes: Number(row.likes ?? row.like_count ?? row.count ?? 0)
+        };
+      })
+      .sort((a,b) => b.likes - a.likes)
+      .slice(0,20);
+    if(!rows.length){ box.innerHTML = '<p class="hint">Todavía no hay productos con likes.</p>'; return; }
+    box.innerHTML = rows.map(row => `<div class="prod-row">
+      ${row.image ? `<img src="${escapeHtml(row.image)}" alt="">` : ''}
+      <div class="prod-main"><div class="t">${escapeHtml(row.title)}</div></div>
+      <div class="view-count">${row.likes.toLocaleString('es-US')} like${row.likes===1?'':'s'}</div>
+    </div>`).join('');
+  }catch(e){
+    if(e.message==='badpw'){ logout(true); return; }
+    box.innerHTML = '<p class="hint" style="color:#b00020;font-weight:700">No se pudieron cargar los productos con más likes.</p>';
+  }
+}
+
+/* ===== Editar tienda: precios especiales y ocultos ===== */
+let overrideState = {};
+
+function ovBadges(id){
+  const o = overrideState[String(id)]; if(!o) return '';
+  let h = '';
+  if(typeof o.price_direct === 'number') h += '<span class="badge">Precio especial $' + Number(o.price_direct).toFixed(2) + '</span>';
+  if(o.hidden) h += '<span class="badge hiddenb">Oculto</span>';
+  return h;
+}
+function prodTitle(id){ const p = catalog[String(id)]; return p ? p.title : ('Producto ' + id); }
+function searchCatalog(q){
+  q = String(q||'').trim().toLowerCase(); if(!q) return [];
+  return Object.values(catalog).filter(p => String(p.title||'').toLowerCase().includes(q)).slice(0,12);
+}
+function renderProdResults(list){
+  const box = $('#prodResults');
+  if(!list.length){ box.innerHTML=''; return; }
+  box.innerHTML = list.map(p=>{
+    const id = String(p.id); const o = overrideState[id] || {};
+    const cur = typeof o.price_direct === 'number' ? o.price_direct : p.price;
+    return `<div class="prod-row" data-pid="${escapeHtml(id)}">
+      ${p.image ? `<img src="${escapeHtml(p.image)}" alt="">` : ''}
+      <div class="prod-main">
+        <div class="t">${escapeHtml(p.title)}</div>
+        <div class="p">Precio de tienda: <b>$${Number(p.price).toFixed(2)}</b> <span class="ovb">${ovBadges(id)}</span></div>
+        <div class="prod-acts">
+          <input type="number" step="0.01" min="0" class="np" placeholder="${Number(cur).toFixed(2)}" aria-label="Nuevo precio">
+          <button class="btn small" data-pact="save-price">Guardar precio</button>
+          <button class="btn small sec" data-pact="clear-price">Quitar precio especial</button>
+          <button class="btn small sec" data-pact="toggle-hidden">${o.hidden ? 'Mostrar' : 'Ocultar'}</button>
+          <span class="saved-note" style="display:none">Guardado ✓</span>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+function renderOverrideSummary(){
+  const ids = Object.keys(overrideState).filter(id=>{ const o = overrideState[id]; return o && (typeof o.price_direct === 'number' || o.hidden); });
+  const box = $('#overrideSummary');
+  if(!ids.length){ box.innerHTML = '<p class="hint">No tienes precios especiales ni productos ocultos.</p>'; return; }
+  box.innerHTML = ids.map(id=>`<div class="subrow"><span>${escapeHtml(prodTitle(id))}</span><span>${ovBadges(id)}</span></div>`).join('');
+}
+async function loadEditor(){
+  try{
+    const o = await api('/api/admin/overrides');
+    overrideState = (o && typeof o === 'object') ? o : {};
+  }catch(e){
+    $('#editNote').innerHTML = '<p class="hint" style="color:#b00020;font-weight:700">Esta parte del servidor aún no responde — inténtalo en unos minutos.</p>';
+  }
+  renderOverrideSummary();
+}
+function flashSaved(scope){
+  const note = scope && scope.querySelector('.saved-note');
+  if(note){ note.style.display=''; setTimeout(()=>note.style.display='none', 2500); }
+}
+
+$('#editBox').addEventListener('input', e=>{
+  if(e.target.id === 'prodSearch') renderProdResults(searchCatalog(e.target.value));
+});
+$('#editBox').addEventListener('click', async e=>{
+  const pactBtn = e.target.closest('[data-pact]');
+  if(pactBtn){
+    const row = pactBtn.closest('.prod-row'); const id = row.dataset.pid;
+    pactBtn.disabled = true;
+    try{
+      if(pactBtn.dataset.pact === 'save-price'){
+        const v = row.querySelector('.np').value.trim();
+        await api('/api/admin/overrides', { method:'PUT', body: JSON.stringify({ id: id, price_direct: v === '' ? null : Number(v) }) });
+        if(!overrideState[id]) overrideState[id] = {};
+        overrideState[id].price_direct = v === '' ? null : Number(v);
+        if(typeof overrideState[id].price_direct !== 'number' && !overrideState[id].hidden) delete overrideState[id];
+      } else if(pactBtn.dataset.pact === 'clear-price'){
+        await api('/api/admin/overrides', { method:'PUT', body: JSON.stringify({ id: id, price_direct: null }) });
+        if(overrideState[id]){ delete overrideState[id].price_direct; if(!overrideState[id].hidden) delete overrideState[id]; }
+      } else if(pactBtn.dataset.pact === 'toggle-hidden'){
+        const nowHidden = !((overrideState[id] || {}).hidden);
+        await api('/api/admin/overrides', { method:'PUT', body: JSON.stringify({ id: id, hidden: nowHidden }) });
+        if(!overrideState[id]) overrideState[id] = {};
+        overrideState[id].hidden = nowHidden;
+        if(!nowHidden && typeof overrideState[id].price_direct !== 'number') delete overrideState[id];
+      }
+      renderProdResults(searchCatalog($('#prodSearch').value));
+      renderOverrideSummary();
+      flashSaved($(`.prod-row[data-pid="${CSS.escape(id)}"]`));
+    }catch(err){ showErr('Error: ' + err.message); pactBtn.disabled = false; }
+    return;
+  }
+});
+
+$('#visitsBox').addEventListener('click', e=>{
+  const btn = e.target.closest('#visitOptout'); if(!btn) return;
+  try{
+    if(visitOptoutEnabled()) localStorage.removeItem('andy_nocount');
+    else localStorage.setItem('andy_nocount','1');
+  }catch(err){
+    showErr('Este dispositivo no permite guardar esta preferencia.');
+  }
+  renderVisitOptout();
+});
+renderVisitOptout();
+
+async function boot(){
+  $('#login').style.display='none'; $('#app').style.display='block';
+  $('#refreshBtn').style.display=''; $('#logoutBtn').style.display='';
+  await loadHealth(); await loadCatalog(); await loadOrders(); await loadFeedback(); await loadCarts(); await loadMostViewed(); await loadMostLiked(); await loadSubs(); await loadVisits(); await loadEditor();
+}
+function logout(bad){
+  token=''; localStorage.removeItem('ass_admin_token');
+  $('#app').style.display='none'; $('#login').style.display='block';
+  $('#refreshBtn').style.display='none'; $('#logoutBtn').style.display='none';
+  $('#loginErr').textContent = bad ? 'Contraseña incorrecta, intenta de nuevo.' : '';
+  $('#pw').value=''; $('#pw').focus();
+}
+
+$('#loginBtn').onclick = async ()=>{
+  token = $('#pw').value.trim(); if(!token) return;
+  $('#loginErr').textContent='';
+  try{ await api('/api/orders/recent'); localStorage.setItem('ass_admin_token', token); boot(); }
+  catch(e){ $('#loginErr').textContent = e.message==='badpw' ? 'Contraseña incorrecta.' : 'Error: '+e.message; }
+};
+$('#pw').addEventListener('keydown', e=>{ if(e.key==='Enter') $('#loginBtn').click(); });
+$('#logoutBtn').onclick = ()=>logout(false);
+$('#refreshBtn').onclick = ()=>{ loadHealth(); loadOrders(); loadFeedback(); loadCarts(); loadMostViewed(); loadMostLiked(); };
+$('#orders').addEventListener('click', async e=>{
+  const btn = e.target.closest('button[data-act]'); if(!btn) return;
+  const card = btn.closest('.order'); const id = card.dataset.id;
+  btn.disabled = true;
+  try{
+    if(btn.dataset.act==='buy'){
+      btn.textContent='Comprando…';
+      const r = await api('/api/labels/buy',{method:'POST',body:JSON.stringify({orderId:Number(id)})});
+      if(r.label_url){ showErr('¡Etiqueta lista!'); } else showErr('Respuesta: '+JSON.stringify(r));
+    }else if(btn.dataset.act==='notified'){
+      await api('/api/orders/'+id+'/notified',{method:'POST',body:'{}'});
+    }
+    loadOrders();
+  }catch(err){ showErr('Error: '+err.message); btn.disabled=false; if(btn.dataset.act==='buy') btn.textContent='Comprar etiqueta'; }
+});
+
+if(token){ $('#pw').value = token; $('#loginBtn').click(); } else { $('#pw').focus(); }
+</script>
+</body>
+</html>
