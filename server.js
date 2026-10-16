@@ -243,6 +243,14 @@ try {
 db.exec('CREATE TABLE IF NOT EXISTS settings (key TEXT PRIMARY KEY, value TEXT)');
 db.exec('CREATE TABLE IF NOT EXISTS visits (day TEXT NOT NULL, visitor TEXT NOT NULL, PRIMARY KEY (day, visitor))');
 db.exec('CREATE TABLE IF NOT EXISTS product_views (product_id TEXT NOT NULL, day TEXT NOT NULL, views INTEGER NOT NULL DEFAULT 0, PRIMARY KEY (product_id, day))'); // Maria 2026-10-11: per-product views for admin 'Más vistos'
+db.exec(`CREATE TABLE IF NOT EXISTS feedback (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  rating INTEGER,
+  improve TEXT,
+  product TEXT,
+  name TEXT,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+)`); // Maria 2026-10-16: customer feedback from the printed thank-you card QR (andysshoesupply.com/feedback)
 function getSetting(key, fallback) {
   try {
     const row = db.prepare('SELECT value FROM settings WHERE key = ?').get(key);
@@ -1347,6 +1355,47 @@ app.get('/api/admin/carts', requireAdmin, (req, res) => {
         created_at: r.created_at,
       };
     }));
+});
+
+// ---------- Customer feedback (printed thank-you card QR, 2026-10-16) ----------
+// The public form at https://andysshoesupply.com/feedback POSTs here — no
+// account needed. A star rating (1-5) and/or the "how can we improve?" text;
+// at least one of the two is required. Stored only for the admin panel:
+// nothing is published automatically.
+// Basic abuse brake: max 5 submissions per IP per 10 minutes (in-memory).
+const feedbackHits = new Map();
+function feedbackRateOk(ip) {
+  const now = Date.now(), win = 10 * 60 * 1000, max = 5;
+  const arr = (feedbackHits.get(ip) || []).filter(t => now - t < win);
+  if (arr.length >= max) { feedbackHits.set(ip, arr); return false; }
+  arr.push(now); feedbackHits.set(ip, arr);
+  return true;
+}
+app.post('/api/feedback', (req, res) => {
+  try {
+    if (!feedbackRateOk(req.ip || 'unknown'))
+      return res.status(429).json({ ok: false, error: 'Too many submissions — please try again in a few minutes.' });
+    const b = req.body || {};
+    const rawRating = (b.rating === undefined || b.rating === null || b.rating === '') ? null : Number(b.rating);
+    if (rawRating !== null && (!Number.isInteger(rawRating) || rawRating < 1 || rawRating > 5))
+      return res.status(400).json({ ok: false, error: 'Rating must be between 1 and 5 stars.' });
+    const improve = typeof b.improve === 'string' ? b.improve.trim().slice(0, 2000) : '';
+    const product = typeof b.product === 'string' ? b.product.trim().slice(0, 200) : '';
+    const name = typeof b.name === 'string' ? b.name.trim().slice(0, 100) : '';
+    if (rawRating === null && !improve)
+      return res.status(400).json({ ok: false, error: 'Please tap a star rating or tell us how we can improve.' });
+    const info = db.prepare('INSERT INTO feedback (rating, improve, product, name) VALUES (?, ?, ?, ?)')
+      .run(rawRating, improve || null, product || null, name || null);
+    res.json({ ok: true, id: Number(info.lastInsertRowid) });
+  } catch (e) {
+    res.status(e.status || 500).json({ ok: false, error: e.message || 'feedback failed' });
+  }
+});
+
+// Admin: most recent customer feedback first.
+app.get('/api/admin/feedback', requireAdmin, (req, res) => {
+  const rows = db.prepare('SELECT id, rating, improve, product, name, created_at FROM feedback ORDER BY id DESC LIMIT 200').all();
+  res.json(rows);
 });
 
 // Validate + group raw cart entries [{id, size?, qty?}] against the catalog.
