@@ -176,6 +176,45 @@ try {
     console.log('migration: orders.ship_charged_cents column added');
   }
 } catch (e) { console.warn('migration orders columns skipped:', e.message); }
+// Migration: orders.shipped_notified + orders.delivered_notified (2026-10-15) —
+// one-shot guards for the customer "on its way" and "delivered" emails, so a
+// label re-buy or a repeated delivery check never emails the customer twice.
+// Safe to run on every boot.
+try {
+  const oCols2 = db.prepare('PRAGMA table_info(orders)').all().map(c => c.name);
+  if (!oCols2.includes('shipped_notified')) {
+    db.exec('ALTER TABLE orders ADD COLUMN shipped_notified INTEGER NOT NULL DEFAULT 0');
+    console.log('migration: orders.shipped_notified column added');
+  }
+  if (!oCols2.includes('delivered_notified')) {
+    db.exec('ALTER TABLE orders ADD COLUMN delivered_notified INTEGER NOT NULL DEFAULT 0');
+    console.log('migration: orders.delivered_notified column added');
+  }
+} catch (e) { console.warn('migration orders notify columns skipped:', e.message); }
+// Migration: like_votes.house (2026-10-15) — flags votes cast by the house
+// (nocount-marked devices / house accounts) so they never move the public
+// like counter. Pre-existing votes keep house=0: their voter ids are
+// anonymous device ids never linked to an email, so house votes cast before
+// this deploy cannot be identified retroactively.
+try {
+  const lvCols = db.prepare('PRAGMA table_info(like_votes)').all().map(c => c.name);
+  if (!lvCols.includes('house')) {
+    db.exec('ALTER TABLE like_votes ADD COLUMN house INTEGER NOT NULL DEFAULT 0');
+    console.log('migration: like_votes.house column added');
+  }
+} catch (e) { console.warn('migration like_votes.house skipped:', e.message); }
+// Server-side carts (2026-10-15): mirrored from the storefront so the owner
+// can see live carts in /admin. One row per device (or account), only while
+// the cart is non-empty.
+db.exec(`CREATE TABLE IF NOT EXISTS carts (
+  cart_key TEXT PRIMARY KEY,
+  email TEXT,
+  items TEXT NOT NULL DEFAULT '[]',
+  item_count INTEGER NOT NULL DEFAULT 0,
+  subtotal_cents INTEGER NOT NULL DEFAULT 0,
+  updated_at TEXT NOT NULL DEFAULT (datetime('now')),
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);`);
 try {
   const reviewCols = db.prepare('PRAGMA table_info(reviews)').all().map(c => c.name);
   if (!reviewCols.includes('verified')) {
@@ -291,6 +330,24 @@ const voterOf = (req, productId) => {
   const v = String((req.body && req.body.voter) || req.query.voter || req.get('x-voter') || '').trim();
   if (/^[A-Za-z0-9-]{8,64}$/.test(v)) return 'v:' + v;
   return 'ip:' + crypto.createHash('sha256').update((req.ip || '') + '|' + productId + '|' + (process.env.VOTE_SALT || 'andys')).digest('hex');
+};
+
+// ---------- House identities (2026-10-15) ----------
+// The owner's own emails and devices are NOT customers: their likes, carts
+// and accounts must never inflate any customer count or list in the panel.
+// Devices are recognized by the same andy_nocount mark the visit counter
+// uses (the storefront sends header x-nocount: 1 when the mark is set);
+// accounts by the emails below (all three belong to the house).
+const HOUSE_EMAILS = new Set([
+  'maria6234montez@gmail.com',
+  'roinelpadin@gmail.com',
+  'roinelpf99@gmail.com',
+]);
+const isHouseEmail = (email) => HOUSE_EMAILS.has(String(email || '').trim().toLowerCase());
+const isHouseRequest = (req) => {
+  if (String(req.get('x-nocount') || '') === '1') return true;
+  const u = accountUser(req);
+  return !!(u && isHouseEmail(u.email));
 };
 
 // ---------- Email (Resend) ----------
@@ -469,7 +526,7 @@ function orderIncludesProduct(orderId, productId) {
   return items.some(it => base(it.id) === String(productId));
 }
 
-async function sendPurchaseConfirmation(session, items, reviewToken) {
+async function sendPurchaseConfirmation(session, items, reviewToken, orderId) {
   const to = session.customer_email || session.customer_details?.email || '';
   if (!to) {
     console.log('[email] purchase confirmation skipped: no customer email on session', session.id);
@@ -481,6 +538,7 @@ async function sendPurchaseConfirmation(session, items, reviewToken) {
   });
   const totalCents = Number(session.amount_total) || 0;
   const totalLine = totalCents > 0 ? `Total charged: $${(totalCents / 100).toFixed(2)}` : '';
+  const orderLine = orderId ? `Order #${orderId}` : '';
   // Review links carry this order's token — only buyers can review (Maria's
   // rule), and the token proves this purchase at the API.
   const storeUrl = reviewToken
@@ -497,7 +555,7 @@ async function sendPurchaseConfirmation(session, items, reviewToken) {
     }
   }
   const text = `Thanks for your order!
-
+${orderLine ? '\n' + orderLine + '\n' : ''}
 Your payment went through and we're getting everything ready. Here's your order:
 
 ${lines.map(l => `• ${l.label}${l.qty > 1 ? ` × ${l.qty}` : ''}`).join('\n')}
@@ -510,6 +568,7 @@ ${itemLinks.length ? `\nReview your items too — your review gets a Verified Pu
 — Andy's Shoe Supply`;
   const html = emailShell(
     '<p>Thanks for your order!</p>'
+    + (orderLine ? `<p><strong>${escHtml(orderLine)}</strong></p>` : '')
     + '<p>Your payment went through and we\'re getting everything ready. Here\'s your order:</p>'
     + '<ul>' + lines.map(l => `<li>${escHtml(l.label)}${l.qty > 1 ? ` × ${l.qty}` : ''}</li>`).join('') + '</ul>'
     + (totalLine ? `<p><strong>${escHtml(totalLine)}</strong></p>` : '')
@@ -543,6 +602,157 @@ function sendOrderNotification(session, items, orderId) {
   );
   return Promise.all(ORDER_NOTIFY_EMAILS.map(to =>
     sendEmail({ to, subject: `Nueva venta en tu tienda — $${total}`, html, text })));
+}
+
+// ---------- Shipped + delivered customer emails (2026-10-15) ----------
+// "On its way" fires once per order, right after its shipping label is bought
+// (notifyOrderShipped, called by both label buyers). "Delivered + review
+// invite" fires once when the carrier tracking reports DELIVERED
+// (refreshOrderDelivery). There are no Shippo webhooks registered today, so
+// delivery is detected by a light tracking check: when the customer consults
+// the order (thank-you screen / My Account) and from the cron sweep
+// POST /api/cron/delivery-check. Both emails use the standard shell + logo.
+function trackingUrlFor(carrier, tn) {
+  const c = String(carrier || '').toLowerCase(), n = encodeURIComponent(String(tn || ''));
+  if (!n) return '';
+  if (c.includes('ups')) return 'https://www.ups.com/track?tracknum=' + n;
+  if (c.includes('fedex')) return 'https://www.fedex.com/fedextrack/?trknbr=' + n;
+  return 'https://tools.usps.com/go/TrackConfirmAction?tLabels=' + n; // USPS: our labels
+}
+function orderItemsOf(order) {
+  try { const v = JSON.parse(order.items || '[]'); return Array.isArray(v) ? v : []; }
+  catch { return []; }
+}
+function orderLinesOf(order) {
+  return orderItemsOf(order).map(it => ({
+    label: orderItemTitle(it),
+    qty: Math.max(1, Number(it.qty) || 1),
+  }));
+}
+
+async function sendShippedEmail(order, carrier) {
+  const to = String(order.email || '').trim();
+  if (!to) return { skipped: true };
+  const lines = orderLinesOf(order);
+  const tn = String(order.tracking_number || '');
+  const trackUrl = trackingUrlFor(carrier, tn);
+  const text = `Good news — your order is on its way!
+
+Order #${order.id}
+
+${lines.map(l => `• ${l.label}${l.qty > 1 ? ` × ${l.qty}` : ''}`).join('\n')}
+
+Tracking number: ${tn}
+${trackUrl ? `Track your package: ${trackUrl}\n` : ''}
+Thanks for shopping with us!
+— Andy's Shoe Supply`;
+  const html = emailShell(
+    '<p><strong>Good news — your order is on its way!</strong></p>'
+    + `<p>Order #${order.id}</p>`
+    + '<ul>' + lines.map(l => `<li>${escHtml(l.label)}${l.qty > 1 ? ` × ${l.qty}` : ''}</li>`).join('') + '</ul>'
+    + `<p>Tracking number: <strong>${escHtml(tn)}</strong></p>`
+    + (trackUrl ? `<p><a href="${trackUrl}">Track your package</a></p>` : '')
+    + '<p>Thanks for shopping with us!</p>'
+  );
+  return sendEmail({ to, subject: `Your Andy's Shoe Supply order #${order.id} is on its way`, html, text });
+}
+
+// Fire-and-forget from the label buyers. Guarded by orders.shipped_notified
+// so the customer is emailed exactly once per order.
+async function notifyOrderShipped(orderId, carrier) {
+  try {
+    const order = db.prepare('SELECT * FROM orders WHERE id = ?').get(Number(orderId));
+    if (!order || !order.email || !order.tracking_number || order.shipped_notified) return;
+    const r = await sendShippedEmail(order, carrier);
+    if (r && r.ok) db.prepare('UPDATE orders SET shipped_notified = 1 WHERE id = ?').run(order.id);
+  } catch (e) { console.error('shipped email failed:', e.message); }
+}
+
+async function sendDeliveredEmail(order) {
+  const to = String(order.email || '').trim();
+  if (!to) return { skipped: true };
+  const lines = orderLinesOf(order);
+  // Review links carry THIS order's purchase token (same gate as the
+  // confirmation email): only the buyer can review, with a Verified badge.
+  const tokenRow = db.prepare('SELECT token FROM review_tokens WHERE order_id = ? ORDER BY created_at ASC LIMIT 1').get(order.id);
+  const reviewToken = tokenRow ? tokenRow.token : null;
+  const storeUrl = reviewToken
+    ? `https://andysshoesupply.com/?rt=${reviewToken}#reviews`
+    : 'https://andysshoesupply.com/#reviews';
+  const itemLinks = [];
+  if (reviewToken) {
+    const seen = new Set();
+    for (const it of orderItemsOf(order)) {
+      const baseId = String(it.id || '').split('__size_')[0];
+      if (!baseId || seen.has(baseId)) continue;
+      seen.add(baseId);
+      itemLinks.push({ label: orderItemTitle(it), url: `https://andysshoesupply.com/?rt=${reviewToken}` });
+    }
+  }
+  const text = `Your order was delivered!
+
+Order #${order.id}
+
+${lines.map(l => `• ${l.label}${l.qty > 1 ? ` × ${l.qty}` : ''}`).join('\n')}
+
+Thank you for shopping with Andy's Shoe Supply — we hope you love your pair!
+
+Enjoying them? A quick review helps our small family store a lot:
+Review our store: ${storeUrl}
+${itemLinks.length ? `\nReview your items too:\n${itemLinks.map(l => `• ${l.label}: ${l.url}`).join('\n')}\n` : ''}
+— Andy's Shoe Supply`;
+  const html = emailShell(
+    '<p><strong>Your order was delivered!</strong></p>'
+    + `<p>Order #${order.id}</p>`
+    + '<ul>' + lines.map(l => `<li>${escHtml(l.label)}${l.qty > 1 ? ` × ${l.qty}` : ''}</li>`).join('') + '</ul>'
+    + '<p>Thank you for shopping with Andy\'s Shoe Supply — we hope you love your pair!</p>'
+    + `<p><strong>Enjoying them?</strong> A quick review helps our small family store a lot: <a href="${storeUrl}">Review our store</a></p>`
+    + (itemLinks.length
+      ? '<p>Review your items too:</p><ul>'
+        + itemLinks.map(l => `<li><a href="${l.url}">${escHtml(l.label)}</a></li>`).join('') + '</ul>'
+      : '')
+  );
+  return sendEmail({ to, subject: `Delivered: your Andy's Shoe Supply order #${order.id}`, html, text });
+}
+
+// Carrier tracking status lookups (best-effort; null = unknown / no tracker).
+async function shippoTrackingStatus(tn) {
+  const r = await fetch(`${SHIPPO_API}/tracks/usps/${encodeURIComponent(tn)}`, {
+    headers: shippoHeaders(), signal: AbortSignal.timeout(5000),
+  });
+  if (!r.ok) return null;
+  const j = await r.json().catch(() => ({}));
+  return j && j.tracking_status ? String(j.tracking_status.status || '') : null;
+}
+async function easypostTrackingStatus(tn) {
+  const r = await fetch(`${EASYPOST_API}/trackers?tracking_code=${encodeURIComponent(tn)}`, {
+    headers: epHeaders(), signal: AbortSignal.timeout(5000),
+  });
+  if (!r.ok) return null;
+  const j = await r.json().catch(() => ({}));
+  const t = (j.trackers || [])[0];
+  return t ? String(t.status || '') : null;
+}
+
+// If the carrier already delivered this order: flip status to 'delivered'
+// and send the thank-you + review email (once, guarded by delivered_notified).
+// Never throws — safe to call from request handlers and the cron sweep.
+async function refreshOrderDelivery(order) {
+  try {
+    if (!order || !order.tracking_number || order.delivered_notified || order.status === 'delivered') return false;
+    let st = null;
+    if (process.env.EASYPOST_API_KEY) st = await easypostTrackingStatus(order.tracking_number);
+    else if (process.env.SHIPPO_TOKEN) st = await shippoTrackingStatus(order.tracking_number);
+    if (!st || st.toUpperCase() !== 'DELIVERED') return false;
+    db.prepare("UPDATE orders SET status = 'delivered', delivered_notified = 1 WHERE id = ?").run(order.id);
+    order.status = 'delivered'; order.delivered_notified = 1;
+    sendDeliveredEmail(order).catch(e => console.error('delivered email failed:', e.message));
+    console.log(`Order ${order.id} marked delivered (tracking ${order.tracking_number})`);
+    return true;
+  } catch (e) {
+    console.warn('delivery check failed for order', order && order.id, ':', e.message);
+    return false;
+  }
 }
 
 // SMS sale alerts (Maria approved 2026-10-09 20:08 CDT: texts to her numbers
@@ -963,19 +1173,27 @@ app.get('/api/likes/:productId', (req, res) => {
 app.post('/api/likes/:productId/toggle', (req, res) => {
   const id = String(req.params.productId);
   const voter = voterOf(req, id);
+  // House votes (owner's marked devices / house accounts) are still recorded
+  // — her own favorites keep working — but they NEVER move the public
+  // counter shown in the store or the panel (Maria, 2026-10-15).
+  const house = isHouseRequest(req) ? 1 : 0;
   let liked;
-  const voted = db.prepare('SELECT 1 FROM like_votes WHERE product_id=? AND voter=?').get(id, voter);
+  const voted = db.prepare('SELECT house FROM like_votes WHERE product_id=? AND voter=?').get(id, voter);
   if (voted) {
     db.prepare('DELETE FROM like_votes WHERE product_id=? AND voter=?').run(id, voter);
-    db.prepare('INSERT INTO likes (product_id, count) VALUES (?, 0) ON CONFLICT(product_id) DO UPDATE SET count = MAX(0, count - 1)').run(id);
+    if (!voted.house) {
+      db.prepare('INSERT INTO likes (product_id, count) VALUES (?, 0) ON CONFLICT(product_id) DO UPDATE SET count = MAX(0, count - 1)').run(id);
+    }
     liked = false;
   } else {
-    db.prepare('INSERT INTO like_votes (product_id, voter) VALUES (?, ?)').run(id, voter);
-    db.prepare('INSERT INTO likes (product_id, count) VALUES (?, 1) ON CONFLICT(product_id) DO UPDATE SET count = count + 1').run(id);
+    db.prepare('INSERT INTO like_votes (product_id, voter, house) VALUES (?, ?, ?)').run(id, voter, house);
+    if (!house) {
+      db.prepare('INSERT INTO likes (product_id, count) VALUES (?, 1) ON CONFLICT(product_id) DO UPDATE SET count = count + 1').run(id);
+    }
     liked = true;
   }
-  const count = db.prepare('SELECT count FROM likes WHERE product_id = ?').get(id).count;
-  res.json({ productId: id, likes: count, liked });
+  const row = db.prepare('SELECT count FROM likes WHERE product_id = ?').get(id);
+  res.json({ productId: id, likes: row ? row.count : 0, liked });
 });
 
 // ---------- Reviews (public) ----------
@@ -1076,6 +1294,61 @@ const itemParcelIn = (p) => {
   if (Number(pc.l) > 0 && Number(pc.w) > 0 && Number(pc.h) > 0) return { l: Number(pc.l), w: Number(pc.w), h: Number(pc.h) };
   return DEPT_PARCEL_IN[deptOf(p)] || { l: 13, w: 8, h: 5 };
 };
+// ---------- Server-side carts (admin visibility, 2026-10-15) ----------
+// The storefront mirrors every cart change here: keyed by a per-device id
+// for guests, attached to the account email when the customer is logged in.
+// Prices are recomputed from the catalog (storePriceOf) — numbers sent by
+// the client are never trusted. An empty cart deletes its row, so the panel
+// only ever lists live, non-empty carts. The local checkout flow is
+// unaffected: this is a mirror for visibility, not a checkout dependency.
+app.post('/api/cart/sync', (req, res) => {
+  try {
+    const cartKey = String((req.body && req.body.cartKey) || '').trim();
+    if (!/^[A-Za-z0-9-]{8,64}$/.test(cartKey)) return res.status(400).json({ ok: false, error: 'bad cart key' });
+    const rawItems = Array.isArray(req.body && req.body.items) ? req.body.items : [];
+    if (!rawItems.length) {
+      db.prepare('DELETE FROM carts WHERE cart_key = ?').run(cartKey);
+      return res.json({ ok: true, cleared: true });
+    }
+    const lines = resolveCartLines(rawItems.slice(0, 50));
+    const items = lines.map(l => ({ id: l.id, size: l.size, qty: l.qty }));
+    const itemCount = lines.reduce((a, l) => a + l.qty, 0);
+    const subtotal = lines.reduce((a, l) => a + Math.round(storePriceOf(l.p) * 100) * l.qty, 0);
+    const acct = accountUser(req);
+    db.prepare(`INSERT INTO carts (cart_key, email, items, item_count, subtotal_cents, updated_at)
+      VALUES (?, ?, ?, ?, ?, datetime('now'))
+      ON CONFLICT(cart_key) DO UPDATE SET email = COALESCE(excluded.email, carts.email),
+        items = excluded.items, item_count = excluded.item_count,
+        subtotal_cents = excluded.subtotal_cents, updated_at = datetime('now')`)
+      .run(cartKey, acct ? acct.email : null, JSON.stringify(items), itemCount, subtotal);
+    res.json({ ok: true, itemCount, subtotal_cents: subtotal });
+  } catch (e) {
+    res.status(e.status || 500).json({ ok: false, error: e.message || 'cart sync failed' });
+  }
+});
+
+// Admin: every non-empty cart, latest activity first — customer email when
+// known, items with size and quantity, subtotal at direct prices. House
+// carts (owner testing with her own accounts) are filtered out: they are
+// not customers.
+app.get('/api/admin/carts', requireAdmin, (req, res) => {
+  const rows = db.prepare(`SELECT cart_key, email, items, item_count, subtotal_cents, updated_at, created_at
+    FROM carts WHERE item_count > 0 ORDER BY updated_at DESC LIMIT 100`).all();
+  res.json(rows
+    .filter(r => !isHouseEmail(r.email))
+    .map(r => {
+      let items = []; try { items = JSON.parse(r.items || '[]'); } catch {}
+      return {
+        email: r.email || null,
+        items: items.map(it => ({ title: orderItemTitle(it), qty: Math.max(1, Number(it.qty) || 1) })),
+        item_count: r.item_count,
+        subtotal_cents: r.subtotal_cents,
+        updated_at: r.updated_at,
+        created_at: r.created_at,
+      };
+    }));
+});
+
 // Validate + group raw cart entries [{id, size?, qty?}] against the catalog.
 // Accepts the legacy "id__size_6" id form as well (size split out of the id).
 function resolveCartLines(rawItems) {
@@ -1261,7 +1534,7 @@ app.post('/api/checkout', async (req, res) => {
     const params = {
       mode: 'payment',
       line_items: lineItems,
-      success_url: 'https://andysshoesupply.com/?paid=1',
+      success_url: 'https://andysshoesupply.com/?paid=1&cs={CHECKOUT_SESSION_ID}',
       cancel_url: 'https://andysshoesupply.com/',
       customer_email: String(buyer.email || '').trim() || undefined,
       // Maria 2026-10-11: let Stripe calculate sales tax automatically.
@@ -1364,7 +1637,7 @@ async function onStripeWebhook(req, res) {
         const reviewToken = orderId
           ? createReviewToken(orderId, s.customer_email || s.customer_details?.email || '')
           : null;
-        sendPurchaseConfirmation(s, items, reviewToken).catch(e => console.error('purchase email failed:', e.message));
+        sendPurchaseConfirmation(s, items, reviewToken, orderId).catch(e => console.error('purchase email failed:', e.message));
         sendOrderNotification(s, items, orderId).catch(e => console.error('order notify email failed:', e.message));
         sendOrderSms(s, items, orderId).catch(e => console.error('order sms failed:', e.message));
       }
@@ -1507,6 +1780,7 @@ async function buyLabelShippo(orderId) {
   db.prepare('UPDATE orders SET tracking_number = ?, label_url = ? WHERE id = ?')
     .run(tx.tracking_number || '', tx.label_url || '', orderId);
   console.log(`Label bought for order ${orderId}: ${tx.tracking_number} $${tx.rate}`);
+  notifyOrderShipped(orderId, pick.provider); // customer "on its way" email, once
   return { label_url: tx.label_url, tracking_number: tx.tracking_number };
 }
 
@@ -1582,6 +1856,7 @@ async function buyLabelEasyPost(orderId) {
     .run(bought.tracking_code || '', bought.postage_label.label_url, orderId);
   const sr = bought.selected_rate || pick;
   console.log(`Label bought (EasyPost) for order ${orderId}: ${bought.tracking_code} ${sr.carrier} ${sr.service} $${sr.rate}`);
+  notifyOrderShipped(orderId, sr.carrier); // customer "on its way" email, once
   return { label_url: bought.postage_label.label_url, tracking_number: bought.tracking_code || '', carrier: sr.carrier, service: sr.service, rate: Number(sr.rate) };
 }
 
@@ -1665,9 +1940,55 @@ app.post('/api/orders/:id/notified', requireAdmin, (req, res) => {
   res.json({ ok: true });
 });
 
+// Public order summary for the post-payment thank-you screen. The Stripe
+// Checkout session id is the capability (unguessable, names exactly one
+// order); only a shopper-facing summary is returned — never the address.
+// found:false + pending:true while the webhook is still landing.
+app.get('/api/orders/by-session/:sessionId', async (req, res) => {
+  const sid = String(req.params.sessionId || '');
+  if (!/^cs_[A-Za-z0-9_]+$/.test(sid)) return res.status(400).json({ found: false });
+  const order = db.prepare('SELECT * FROM orders WHERE stripe_session = ?').get(sid);
+  if (!order) return res.json({ found: false, pending: true });
+  await refreshOrderDelivery(order); // light tracking check on consult
+  res.json({
+    found: true,
+    order: {
+      id: order.id,
+      items: orderLinesOf(order),
+      amount_total: order.amount_total,
+      fulfillment: order.fulfillment || 'shipping',
+      status: order.status,
+      tracking_number: order.tracking_number || '',
+      created_at: order.created_at,
+    },
+  });
+});
+
+// Cron sweep for delivered orders (header x-cron-secret, same guard as the
+// other cron endpoints): checks tracking on shipped orders not yet marked
+// delivered; each delivery flips the status + sends the thank-you/review
+// email exactly once (orders.delivered_notified).
+app.post('/api/cron/delivery-check', async (req, res) => {
+  try {
+    const secret = process.env.CRON_SECRET;
+    if (!secret) return res.status(503).json({ ok: false, error: 'CRON_SECRET not configured' });
+    const a = Buffer.from(req.get('x-cron-secret') || ''), b = Buffer.from(secret);
+    if (a.length !== b.length || !crypto.timingSafeEqual(a, b))
+      return res.status(401).json({ ok: false, error: 'unauthorized' });
+    const rows = db.prepare(`SELECT * FROM orders WHERE tracking_number IS NOT NULL AND tracking_number <> ''
+      AND delivered_notified = 0 AND status <> 'delivered' ORDER BY id DESC LIMIT 50`).all();
+    let delivered = 0;
+    for (const o of rows) { if (await refreshOrderDelivery(o)) delivered++; }
+    res.json({ ok: true, checked: rows.length, delivered });
+  } catch (e) {
+    console.error('delivery-check error:', e.message);
+    res.status(500).json({ ok: false, error: 'delivery check failed', detail: e.message });
+  }
+});
+
 app.get('/api/orders/recent', requireAdmin, (req, res) => {
   const rows = db.prepare(`SELECT id, email, items, amount_total, ship_to, tracking_number,
-    label_url, notified, status, created_at FROM orders ORDER BY id DESC LIMIT 50`).all();
+    label_url, notified, status, fulfillment, shipped_notified, delivered_notified, created_at FROM orders ORDER BY id DESC LIMIT 50`).all();
   res.json(rows);
 });
 // ---------- Inventory (for the private admin panel to sync) ----------
@@ -1741,7 +2062,10 @@ app.get('/api/admin/visits', requireAdmin, (req, res) => {
 });
 
 app.get('/api/admin/users', requireAdmin, (req, res) => {
-  const rows = db.prepare(`SELECT id, email, name, created_at FROM users ORDER BY id DESC`).all();
+  // House accounts (the owner's own emails) are not customers: excluded from
+  // both the count and the list the panel shows (Maria, 2026-10-15).
+  const rows = db.prepare(`SELECT id, email, name, created_at FROM users ORDER BY id DESC`).all()
+    .filter(u => !isHouseEmail(u.email));
   const withOrders = db.prepare(`SELECT lower(email) AS e, COUNT(*) AS n FROM orders GROUP BY lower(email)`).all();
   const orderCount = Object.fromEntries(withOrders.map(r => [r.e, r.n]));
   res.json({ count: rows.length, users: rows.map(u => ({ ...u, orders: orderCount[u.email.toLowerCase()] || 0 })) });
@@ -1904,8 +2228,13 @@ app.post('/api/account/logout', (req, res) => {  const h = req.get('authorizatio
   res.json({ ok: true });
 });
 app.get('/api/account/me', requireAccount, (req, res) => {
-  const orders = db.prepare(`SELECT id, items, amount_total, tracking_number, label_url, status, created_at
+  const orders = db.prepare(`SELECT id, items, amount_total, tracking_number, label_url, status, fulfillment, shipped_notified, delivered_notified, created_at
     FROM orders WHERE lower(email) = lower(?) ORDER BY id DESC LIMIT 20`).all(req.account.email);
+  // Light delivery check (fire-and-forget): a shipped order the carrier
+  // already delivered flips to 'delivered' + thank-you/review email, and the
+  // customer sees the fresh status on their next visit.
+  orders.filter(o => o.tracking_number && !o.delivered_notified).slice(0, 5)
+    .forEach(o => { refreshOrderDelivery(o); });
   res.json({ user: req.account, orders: orders.map(o => ({ ...o, items: JSON.parse(o.items || '[]') })) });
 });
 
