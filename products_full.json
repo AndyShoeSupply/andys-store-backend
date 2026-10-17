@@ -13111,5 +13111,225 @@
   "size": "US 7",
   "added": "2026-10-15",
   "units_sold": 0
+ },
+ {
+  "id": "920046859830",
+  "title": "Chaco Barbary Chukka Boot Castlerock/ Size: Women US 8",
+  "price": "$74.22",
+  "price_direct": 63.09,
+  "image": "https://i.ebayimg.com/images/g/h4AAAeSwiB5q0svv/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/920046859830",
+  "brand": "Chaco",
+  "department": "Women",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/h4AAAeSwiB5q0svv/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/fT8AAeSwAz9q0svz/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/P5EAAeSwQDxq0sv1/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/XxAAAeSwRvdq0sv5/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/sv0AAeSwd8Vq0sv8/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/v~QAAeSwrElq0sv~/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/x4IAAeSwoJtq0swG/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/dRmaEXaS6del8e13e1dZ80e",
+  "weight_lbs": 2.5,
+  "weight_estimated": true,
+  "description": "The Chaco Barbary Chukka Boot in Castlerock gray, a women's chukka boot with a casual, go-anywhere look. Size Women US 8. Brand new with box, never worn.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 8",
+  "added": "2026-10-16",
+  "units_sold": 0
+ },
+ {
+  "id": "920046857767",
+  "title": "Birkenstock Arizona EVA Black/ Size: Women US 5.5 / EU 36",
+  "price": "$32.11",
+  "price_direct": 27.29,
+  "image": "https://i.ebayimg.com/images/g/WA4AAeSwRvdq0stI/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/920046857767",
+  "brand": "Birkenstock",
+  "department": "Women",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/WA4AAeSwRvdq0stI/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/VwMAAeSwJgVq0stM/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/qocAAeSwredq0stP/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/RtUAAeSw3ppq0stS/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/wp0AAeSwcP1q0stV/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/3cI7sL5xMdel8e1g0NdZ80f",
+  "weight_lbs": 2.5,
+  "weight_estimated": true,
+  "description": "The Birkenstock Arizona EVA slide sandal in black, lightweight and waterproof for everyday wear. Size Women US 5.5 / EU 36. Brand new with box, never worn.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 5.5",
+  "added": "2026-10-16",
+  "units_sold": 0
+ },
+ {
+  "id": "920046827448",
+  "title": "Caterpillar Second Shift Steel Toe Work Boot Black/ Size: Men US 9.5 Wide",
+  "price": "$62.68",
+  "price_direct": 53.28,
+  "image": "https://i.ebayimg.com/images/g/KLkAAeSwi1pq0sjm/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/920046827448",
+  "brand": "Caterpillar",
+  "department": "Men",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/KLkAAeSwi1pq0sjm/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/F2gAAeSwaaZq0sja/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/VT8AAeSwZ4dq0sjS/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/I5cAAeSw4vpq0sjc/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/F5AAAeSwaaZq0sjf/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/F6kAAeSwaaZq0sji/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/4gM14n5xMb6dbqd3e1dZ80g",
+  "weight_lbs": 3.0,
+  "weight_estimated": true,
+  "description": "The Caterpillar Second Shift steel toe work boot in black, built tough for the job site with a wide fit. Size Men US 9.5 Wide. Brand new with box, never worn.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 9.5",
+  "added": "2026-10-16",
+  "units_sold": 0
+ },
+ {
+  "id": "920046821257",
+  "title": "Brooks Adrenaline GTS 20 Black/ Size: Men US 7.5 / Women US 9",
+  "price": "$74.00",
+  "price_direct": 62.9,
+  "image": "https://i.ebayimg.com/images/g/F~kAAeSweYxq0sca/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/920046821257",
+  "brand": "Brooks",
+  "department": "Women",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/F~kAAeSweYxq0sca/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/jNMAAeSwY5Zq0sd0/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/IL8AAeSwBoFq0sd3/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/GQcAAeSwRZVq0sd5/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/DcwAAeSw~gBq0sd8/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/FQsAAeSwKHFq0sd~/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/KhYAAeSwYC9q0seC/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/hcgAAeSwQBZq0seF/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/9B6dR98JY5LT65T15TdZ80h",
+  "weight_lbs": 2.5,
+  "weight_estimated": true,
+  "description": "The Brooks Adrenaline GTS 20 running shoe in black, a supportive daily trainer with smooth cushioning. Size Men US 7.5 / Women US 9. Brand new with box, never worn.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 7.5",
+  "added": "2026-10-16",
+  "units_sold": 0
+ },
+ {
+  "id": "920046792798",
+  "title": "Fila Vulc 13 Black White/ Size: Kids US 4Y / EU 36",
+  "price": "$32.22",
+  "price_direct": 27.39,
+  "image": "https://i.ebayimg.com/images/g/V3MAAeSwjmBq0sRB/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/920046792798",
+  "brand": "Fila",
+  "department": "Kids",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/V3MAAeSwjmBq0sRB/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/DSIAAeSw6Vxq0sRE/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/T8EAAeSw8ZZq0sRI/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/Tb0AAeSwR4Bq0sRU/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/Fc4AAeSwsm5q0sRd/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/00wcN56BQ1vD9i53e1dZ80i",
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The Fila Vulc 13 sneaker in black and white, a classic vulc-sole style for kids. Size Kids US 4Y / EU 36. Brand new with box, never worn.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 4",
+  "added": "2026-10-16",
+  "units_sold": 0
+ },
+ {
+  "id": "920046760836",
+  "title": "Adidas Forum Low Texas A&M Black Burgundy/ Size: Men US 9 / Women US 10",
+  "price": "$74.11",
+  "price_direct": 62.99,
+  "image": "https://i.ebayimg.com/images/g/11AAAeSwqipq0r9H/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/920046760836",
+  "brand": "Adidas",
+  "department": "Men",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/11AAAeSwqipq0r9H/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/Jp0AAeSwxvlq0r9J/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/INUAAeSwI5tq0r9M/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/FyIAAeSw8ZZq0r9O/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/vEUAAeSwRZ5q0r9R/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/KLYAAeSwFitq0r9U/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/vKEAAeSwRZ5q0r9X/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/0GQAAeSwURVq0r9d/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/8x24gzgcqa2951PbKxdZ80j",
+  "weight_lbs": 3.0,
+  "weight_estimated": true,
+  "description": "The Adidas Forum Low in the Texas A&M colorway, black with burgundy accents and the classic strap detail. Size Men US 9 / Women US 10. Brand new with box, never worn.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 9",
+  "added": "2026-10-16",
+  "units_sold": 0
+ },
+ {
+  "id": "920046722755",
+  "title": "Adidas Ultraboost 22 Triple Grey/ Size: Women US 6 /US 5Y",
+  "price": "$74.55",
+  "price_direct": 63.37,
+  "image": "https://i.ebayimg.com/images/g/sOkAAeSwqipq0rxE/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/920046722755",
+  "brand": "Adidas",
+  "department": "Women",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/sOkAAeSwqipq0rxE/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/9MkAAeSwbrBq0rw~/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/9wUAAeSwNRRq0rxC/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/EIUAAeSwHWZq0rxH/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/CKUAAeSwdpdq0rxM/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/nb0AAeSwcR5q0rxO/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/4gM8wPe4i8Y5am915TdZ80k",
+  "weight_lbs": 2.5,
+  "weight_estimated": true,
+  "description": "The Adidas Ultraboost 22 running shoe in Triple Grey, with responsive Boost cushioning and a stretchy knit upper. Size Women US 6. Brand new with box, never worn.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 6",
+  "added": "2026-10-16",
+  "units_sold": 0
  }
 ]
