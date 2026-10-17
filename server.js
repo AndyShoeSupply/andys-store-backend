@@ -429,6 +429,29 @@ async function sendEmail({ to, subject, html, text, headers }) {
   }
 }
 
+// ---------- Owner review copy (Maria, 2026-10-17) ----------
+// Maria wants to SEE every promotional email exactly as customers get it,
+// so she can review it and ask for improvements. ONE copy goes to her own
+// Gmail at send time, clearly labeled in the subject. This is NOT part of
+// the blast: house addresses stay excluded from every recipient list
+// (2026-10-16 rule); this is a separate single send to the owner only.
+const OWNER_REVIEW_EMAIL = 'maria6234montez@gmail.com';
+async function sendOwnerPromoCopy({ subject, html, text }) {
+  try {
+    const r = await sendEmail({
+      to: OWNER_REVIEW_EMAIL,
+      subject: `👀 TU COPIA — ${subject}`,
+      html,
+      text: `— Copia de revisión: así les llegó este correo a los clientes —\n\n${text || ''}`,
+    });
+    if (r && r.ok) console.log(`[email] owner review copy sent: "${subject}"`);
+    return r;
+  } catch (e) {
+    console.error('[email] owner review copy failed:', e.message);
+    return { ok: false, error: e.message };
+  }
+}
+
 async function sendWelcomeEmail(email, name) {
   const first = String(name || '').trim().split(/\s+/)[0];
   const text = `Hi${first ? ' ' + first : ''}!
@@ -878,7 +901,17 @@ app.post('/api/admin/send-promo', requireAdmin, async (req, res) => {
       if (users.length > 1) await new Promise(done => setTimeout(done, 350));
     }
     console.log(`[email] promo "${subject}": ${sent} sent, ${failed} failed, ${users.length} recipients`);
-    res.json({ ok: true, recipients: users.length, sent, failed });
+    if (sent > 0) {
+      await sendOwnerPromoCopy({
+        subject,
+        html: emailShell(
+          `<div>${textToHtml(text)}</div>`
+          + `<p style="font-size:12px;color:#888;margin-top:20px">Review copy for the owner — not sent to customers.</p>`
+        ),
+        text,
+      });
+    }
+    res.json({ ok: true, recipients: users.length, sent, failed, ownerCopy: sent > 0 });
   } catch (e) {
     console.error('send-promo error:', e.message);
     res.status(500).json({ error: 'promo send failed', detail: e.message });
@@ -945,8 +978,18 @@ app.post('/api/cron/send-giveaway-promo', async (req, res) => {
       if (users.length > 1) await new Promise(done => setTimeout(done, 350));
     }
     console.log(`[email] giveaway promo "${GIVEAWAY_PROMO_SUBJECT}": ${sent} sent, ${failed} failed, ${users.length} recipients`);
-    if (sent > 0) setSetting('giveaway_promo_sent_at', new Date().toISOString());
-    res.json({ ok: true, recipients: users.length, sent, failed });
+    if (sent > 0) {
+      setSetting('giveaway_promo_sent_at', new Date().toISOString());
+      await sendOwnerPromoCopy({
+        subject: GIVEAWAY_PROMO_SUBJECT,
+        html: emailShell(
+          `<div>${textToHtml(GIVEAWAY_PROMO_TEXT)}</div>`
+          + `<p style="font-size:12px;color:#888;margin-top:20px">Review copy for the owner — not sent to customers.</p>`
+        ),
+        text: GIVEAWAY_PROMO_TEXT,
+      });
+    }
+    res.json({ ok: true, recipients: users.length, sent, failed, ownerCopy: sent > 0 });
   } catch (e) {
     console.error('giveaway promo error:', e.message);
     res.status(500).json({ ok: false, error: 'giveaway promo failed', detail: e.message });
@@ -1078,6 +1121,7 @@ app.post('/api/cron/new-arrivals', async (req, res) => {
     const subject = `Fresh arrivals: ${pending} new pairs at Andy's Shoe Supply`;
     const featured = candidates.slice(0, 3);
     let sent = 0, failed = 0;
+    let sampleHtml = null, sampleText = null; // first successful send, for the owner's review copy
     for (const u of users) {
       const picks = pick3NewArrivals(u, candidates);
       const first = String(u.name || '').trim().split(/\s+/)[0];
@@ -1085,10 +1129,7 @@ app.post('/api/cron/new-arrivals', async (req, res) => {
       const personal = (u.favorite_brand || u.favorite_size)
         ? `Picked for you — ${escHtml([u.favorite_brand, u.favorite_size && ('size ' + u.favorite_size)].filter(Boolean).join(' · '))}.`
         : `Here are 3 of the ${pending} freshest pairs.`;
-      const r = await sendEmail({
-        to: u.email,
-        subject,
-        html: emailShell(
+      const mailHtml = emailShell(
           `<p style="font-size:14px;font-weight:700;letter-spacing:2px;color:#d22;margin:0 0 4px">FRESH IN STORE</p>`
           + `<p style="font-size:30px;font-weight:800;margin:0 0 10px;color:#111111">NEW ARRIVALS JUST LANDED 👟</p>`
           + `<p style="font-size:17px;font-weight:700;color:#333333;margin:0 0 10px">Hi${first ? ' ' + escHtml(first) : ''}! 👋</p>`
@@ -1099,11 +1140,16 @@ app.post('/api/cron/new-arrivals', async (req, res) => {
           + `<p style="text-align:center;margin:6px 0 18px"><a href="https://andysshoesupply.com/#new-arrivals-rail" style="display:inline-block;background:#d22;color:#fff;font-size:17px;font-weight:700;text-decoration:none;padding:15px 40px;border-radius:999px">Shop all ${pending} new arrivals</a></p>`
           + `<p style="font-size:13px;color:#888888;text-align:center;margin:0 0 10px">100% authentic · Fast US shipping · Free pickup in Hereford, TX</p>`
           + `<p style="font-size:12px;color:#888;margin-top:10px">You're receiving this because you have an account at Andy's Shoe Supply. <a href="${unsub}">Unsubscribe</a></p>`
-        ),
-        text: `Hi${first ? ' ' + first : ''}! ${pending} new pairs just landed at Andy's Shoe Supply (always 15% OFF the eBay price). See them: https://andysshoesupply.com/#new-arrivals-rail\n\n—\nDon't want these emails? Unsubscribe here: ${unsub}`,
+        );
+      const mailText = `Hi${first ? ' ' + first : ''}! ${pending} new pairs just landed at Andy's Shoe Supply (always 15% OFF the eBay price). See them: https://andysshoesupply.com/#new-arrivals-rail\n\n—\nDon't want these emails? Unsubscribe here: ${unsub}`;
+      const r = await sendEmail({
+        to: u.email,
+        subject,
+        html: mailHtml,
+        text: mailText,
         headers: { 'List-Unsubscribe': `<${unsub}>` },
       });
-      if (r.ok) sent++; else failed++;
+      if (r.ok) { sent++; if (!sampleHtml) { sampleHtml = mailHtml; sampleText = mailText; } } else failed++;
       if (users.length > 1) await new Promise(done => setTimeout(done, 350));
     }
     console.log(`[email] new-arrivals digest: ${sent} sent, ${failed} failed, ${users.length} recipients, ${pending} pairs`);
@@ -1111,7 +1157,10 @@ app.post('/api/cron/new-arrivals', async (req, res) => {
       setSetting('newarrivals_mailed', getMailedNewArrivals().concat(candidates.map(p => String(p.id))));
       setSetting('newarrivals_last_sent', new Date().toISOString());
     }
-    res.json({ ok: true, sent, failed, recipients: users.length, pending, mailed: sent > 0 });
+    if (sent > 0 && sampleHtml) {
+      await sendOwnerPromoCopy({ subject, html: sampleHtml, text: sampleText });
+    }
+    res.json({ ok: true, sent, failed, recipients: users.length, pending, mailed: sent > 0, ownerCopy: sent > 0 && !!sampleHtml });
   } catch (e) {
     console.error('new-arrivals digest error:', e.message);
     res.status(500).json({ ok: false, error: 'digest failed', detail: e.message });
@@ -1158,21 +1207,27 @@ app.post('/api/cron/preferences-nudge', async (req, res) => {
       .all()
       .filter(u => !isHouseEmail(u.email));
     let sent = 0, failed = 0;
+    let sampleHtml = null, sampleText = null; // first successful send, for the owner's review copy
     for (const u of users) {
       const first = String(u.name || '').trim().split(/\s+/)[0];
       const unsub = unsubscribeUrl(req, u.id, u.email);
+      const mailHtml = emailShell(bodyHtml(first, unsub));
+      const mailText = `Hi${first ? ' ' + first : ''}! Add your favorite brand and shoe size in My Account (My preferences) so our new-arrivals emails show the pairs you'll actually love — your brand, your size, first: ${accountLink}\n\n—\nDon't want these emails? Unsubscribe here: ${unsub}`;
       const r = await sendEmail({
         to: u.email,
         subject: `Get shoe picks made for you 👟 — Andy's Shoe Supply`,
-        html: emailShell(bodyHtml(first, unsub)),
-        text: `Hi${first ? ' ' + first : ''}! Add your favorite brand and shoe size in My Account (My preferences) so our new-arrivals emails show the pairs you'll actually love — your brand, your size, first: ${accountLink}\n\n—\nDon't want these emails? Unsubscribe here: ${unsub}`,
+        html: mailHtml,
+        text: mailText,
         headers: { 'List-Unsubscribe': `<${unsub}>` },
       });
-      if (r.ok) sent++; else failed++;
+      if (r.ok) { sent++; if (!sampleHtml) { sampleHtml = mailHtml; sampleText = mailText; } } else failed++;
       if (users.length > 1) await new Promise(done => setTimeout(done, 350));
     }
     console.log(`[email] preferences nudge: ${sent} sent, ${failed} failed, ${users.length} recipients`);
-    res.json({ ok: true, sent, failed, recipients: users.length });
+    if (sent > 0 && sampleHtml) {
+      await sendOwnerPromoCopy({ subject: `Get shoe picks made for you 👟 — Andy's Shoe Supply`, html: sampleHtml, text: sampleText });
+    }
+    res.json({ ok: true, sent, failed, recipients: users.length, ownerCopy: sent > 0 && !!sampleHtml });
   } catch (e) {
     console.error('preferences nudge error:', e.message);
     res.status(500).json({ ok: false, error: 'nudge failed', detail: e.message });
