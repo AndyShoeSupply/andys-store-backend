@@ -1121,7 +1121,7 @@ app.post('/api/cron/new-arrivals', async (req, res) => {
     const subject = `Fresh arrivals: ${pending} new pairs at Andy's Shoe Supply`;
     const featured = candidates.slice(0, 3);
     let sent = 0, failed = 0;
-    let sampleHtml = null, sampleText = null; // first successful send, for the owner's review copy
+    let sampleHtml = null, sampleText = null, sampleUnsub = ''; // first successful send, for the owner's review copy
     for (const u of users) {
       const picks = pick3NewArrivals(u, candidates);
       const first = String(u.name || '').trim().split(/\s+/)[0];
@@ -1149,7 +1149,7 @@ app.post('/api/cron/new-arrivals', async (req, res) => {
         text: mailText,
         headers: { 'List-Unsubscribe': `<${unsub}>` },
       });
-      if (r.ok) { sent++; if (!sampleHtml) { sampleHtml = mailHtml; sampleText = mailText; } } else failed++;
+      if (r.ok) { sent++; if (!sampleHtml) { sampleHtml = mailHtml; sampleText = mailText; sampleUnsub = unsub; } } else failed++;
       if (users.length > 1) await new Promise(done => setTimeout(done, 350));
     }
     console.log(`[email] new-arrivals digest: ${sent} sent, ${failed} failed, ${users.length} recipients, ${pending} pairs`);
@@ -1158,7 +1158,11 @@ app.post('/api/cron/new-arrivals', async (req, res) => {
       setSetting('newarrivals_last_sent', new Date().toISOString());
     }
     if (sent > 0 && sampleHtml) {
-      await sendOwnerPromoCopy({ subject, html: sampleHtml, text: sampleText });
+      // Owner copy only: neutralize the sampled customer's personal
+      // unsubscribe link so a tap can never unsubscribe a real customer.
+      const safeHtml = sampleUnsub ? sampleHtml.split(sampleUnsub).join('#') : sampleHtml;
+      const safeText = sampleUnsub ? sampleText.split(sampleUnsub).join('(unsubscribe link disabled in your review copy)') : sampleText;
+      await sendOwnerPromoCopy({ subject, html: safeHtml, text: safeText });
     }
     res.json({ ok: true, sent, failed, recipients: users.length, pending, mailed: sent > 0, ownerCopy: sent > 0 && !!sampleHtml });
   } catch (e) {
@@ -1207,7 +1211,7 @@ app.post('/api/cron/preferences-nudge', async (req, res) => {
       .all()
       .filter(u => !isHouseEmail(u.email));
     let sent = 0, failed = 0;
-    let sampleHtml = null, sampleText = null; // first successful send, for the owner's review copy
+    let sampleHtml = null, sampleText = null, sampleUnsub = ''; // first successful send, for the owner's review copy
     for (const u of users) {
       const first = String(u.name || '').trim().split(/\s+/)[0];
       const unsub = unsubscribeUrl(req, u.id, u.email);
@@ -1220,12 +1224,16 @@ app.post('/api/cron/preferences-nudge', async (req, res) => {
         text: mailText,
         headers: { 'List-Unsubscribe': `<${unsub}>` },
       });
-      if (r.ok) { sent++; if (!sampleHtml) { sampleHtml = mailHtml; sampleText = mailText; } } else failed++;
+      if (r.ok) { sent++; if (!sampleHtml) { sampleHtml = mailHtml; sampleText = mailText; sampleUnsub = unsub; } } else failed++;
       if (users.length > 1) await new Promise(done => setTimeout(done, 350));
     }
     console.log(`[email] preferences nudge: ${sent} sent, ${failed} failed, ${users.length} recipients`);
     if (sent > 0 && sampleHtml) {
-      await sendOwnerPromoCopy({ subject: `Get shoe picks made for you 👟 — Andy's Shoe Supply`, html: sampleHtml, text: sampleText });
+      // Owner copy only: neutralize the sampled customer's personal
+      // unsubscribe link so a tap can never unsubscribe a real customer.
+      const safeHtml = sampleUnsub ? sampleHtml.split(sampleUnsub).join('#') : sampleHtml;
+      const safeText = sampleUnsub ? sampleText.split(sampleUnsub).join('(unsubscribe link disabled in your review copy)') : sampleText;
+      await sendOwnerPromoCopy({ subject: `Get shoe picks made for you 👟 — Andy's Shoe Supply`, html: safeHtml, text: safeText });
     }
     res.json({ ok: true, sent, failed, recipients: users.length, ownerCopy: sent > 0 && !!sampleHtml });
   } catch (e) {
