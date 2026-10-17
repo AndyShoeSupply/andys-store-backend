@@ -431,11 +431,13 @@ async function sendEmail({ to, subject, html, text, headers }) {
 
 // ---------- Owner review copy (Maria, 2026-10-17) ----------
 // Maria wants to SEE every promotional email exactly as customers get it,
-// so she can review it and ask for improvements. ONE copy goes to her own
-// Gmail at send time, clearly labeled in the subject. This is NOT part of
-// the blast: house addresses stay excluded from every recipient list
-// (2026-10-16 rule); this is a separate single send to the owner only.
-const OWNER_REVIEW_EMAIL = 'maria6234montez@gmail.com';
+// so she can review it and ask for improvements. ONE copy goes at send time,
+// clearly labeled in the subject, to the inbox Maria actually monitors:
+// Roinel's Gmail (destination changed 2026-10-17 at Maria's instruction —
+// her personal Gmail is nearly full and she checks Roinel's). This is NOT
+// part of the blast: house addresses stay excluded from every recipient
+// list (2026-10-16 rule); this is a separate single send to the owner only.
+const OWNER_REVIEW_EMAIL = 'roinelpadin@gmail.com';
 async function sendOwnerPromoCopy({ subject, html, text }) {
   try {
     const r = await sendEmail({
