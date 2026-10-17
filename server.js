@@ -345,13 +345,26 @@ const voterOf = (req, productId) => {
 // and accounts must never inflate any customer count or list in the panel.
 // Devices are recognized by the same andy_nocount mark the visit counter
 // uses (the storefront sends header x-nocount: 1 when the mark is set);
-// accounts by the emails below (all three belong to the house).
+// accounts by the emails below (all four belong to the house).
 const HOUSE_EMAILS = new Set([
   'maria6234montez@gmail.com',
   'roinelpadin@gmail.com',
   'roinelpf99@gmail.com',
+  'roinelypf99@gmail.com',
 ]);
-const isHouseEmail = (email) => HOUSE_EMAILS.has(String(email || '').trim().toLowerCase());
+// Normalize before comparing: lowercase, trimmed, and with any "+tag"
+// stripped from the local part — Gmail delivers roinelpadin+anything@
+// to the same roinelpadin@ inbox, so every +variant is the same house
+// account (2026-10-16: a promo blast landed 4 times in Roinel's mailbox
+// because his test accounts were not recognized as house).
+const normalizeEmail = (email) => {
+  const e = String(email || '').trim().toLowerCase();
+  const at = e.lastIndexOf('@');
+  if (at < 1) return e;
+  const local = e.slice(0, at).split('+')[0];
+  return local + e.slice(at);
+};
+const isHouseEmail = (email) => HOUSE_EMAILS.has(normalizeEmail(email));
 const isHouseRequest = (req) => {
   if (String(req.get('x-nocount') || '') === '1') return true;
   const u = accountUser(req);
@@ -845,7 +858,8 @@ app.post('/api/admin/send-promo', requireAdmin, async (req, res) => {
     const text = String(req.body.text || '').trim().slice(0, 8000);
     if (!subject || !text) return res.status(400).json({ error: 'subject and text are required' });
     if (!RESEND_API_KEY) return res.status(503).json({ error: 'email not configured (set RESEND_API_KEY)' });
-    const users = db.prepare('SELECT id, email, name FROM users WHERE unsubscribed = 0 ORDER BY id').all();
+    const users = db.prepare('SELECT id, email, name FROM users WHERE unsubscribed = 0 ORDER BY id').all()
+      .filter(u => !isHouseEmail(u.email));
     let sent = 0, failed = 0;
     for (const u of users) {
       const unsub = unsubscribeUrl(req, u.id, u.email);
@@ -911,7 +925,8 @@ app.post('/api/cron/send-giveaway-promo', async (req, res) => {
     if (already)
       return res.json({ ok: true, alreadySent: true, sentAt: already, recipients: 0, sent: 0, failed: 0 });
 
-    const users = db.prepare('SELECT id, email, name FROM users WHERE unsubscribed = 0 ORDER BY id').all();
+    const users = db.prepare('SELECT id, email, name FROM users WHERE unsubscribed = 0 ORDER BY id').all()
+      .filter(u => !isHouseEmail(u.email));
     let sent = 0, failed = 0;
     for (const u of users) {
       const unsub = unsubscribeUrl(req, u.id, u.email);
@@ -1053,12 +1068,13 @@ app.post('/api/cron/new-arrivals', async (req, res) => {
     if (dry)
       return res.json({ ok: true, sent: 0, reason: 'dry_run_ready', pending, threshold: NEWARRIVALS_THRESHOLD,
         featured: candidates.slice(0, 3).map(p => ({ id: p.id, title: p.title, price_direct: p.price_direct, brand: p.brand, size: p.size })),
-        recipientCount: db.prepare('SELECT COUNT(*) AS c FROM users WHERE unsubscribed = 0').get().c });
+        recipientCount: db.prepare('SELECT email FROM users WHERE unsubscribed = 0').all().filter(r => !isHouseEmail(r.email)).length });
 
     if (!RESEND_API_KEY) return res.status(503).json({ ok: false, error: 'email not configured (set RESEND_API_KEY)' });
 
-    const users = db.prepare('SELECT id, email, name, favorite_brand, favorite_size FROM users WHERE unsubscribed = 0 AND email_verified = 1 AND email <> ? AND email NOT LIKE ? ORDER BY id')
-      .all('roinelpadin@gmail.com', 'roinelpadin+%');
+    const users = db.prepare('SELECT id, email, name, favorite_brand, favorite_size FROM users WHERE unsubscribed = 0 AND email_verified = 1 ORDER BY id')
+      .all()
+      .filter(u => !isHouseEmail(u.email));
     const subject = `Fresh arrivals: ${pending} new pairs at Andy's Shoe Supply`;
     const featured = candidates.slice(0, 3);
     let sent = 0, failed = 0;
@@ -1138,8 +1154,9 @@ app.post('/api/cron/preferences-nudge', async (req, res) => {
       return res.json({ ok: true, sent: 0, reason: 'preview', previewTo });
     }
 
-    const users = db.prepare("SELECT id, email, name FROM users WHERE unsubscribed = 0 AND email_verified = 1 AND (favorite_brand IS NULL OR favorite_brand = '' OR favorite_size IS NULL OR favorite_size = '') AND email <> ? AND email NOT LIKE ? ORDER BY id")
-      .all('roinelpadin@gmail.com', 'roinelpadin+%');
+    const users = db.prepare("SELECT id, email, name FROM users WHERE unsubscribed = 0 AND email_verified = 1 AND (favorite_brand IS NULL OR favorite_brand = '' OR favorite_size IS NULL OR favorite_size = '') ORDER BY id")
+      .all()
+      .filter(u => !isHouseEmail(u.email));
     let sent = 0, failed = 0;
     for (const u of users) {
       const first = String(u.name || '').trim().split(/\s+/)[0];
