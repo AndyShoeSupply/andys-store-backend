@@ -1,5 +1,36 @@
 [
  {
+  "id": "920049341038",
+  "title": "New Balance 9060 Lace Black Phantom US 12C",
+  "price": "$74.00",
+  "price_direct": 62.9,
+  "image": "https://i.ebayimg.com/images/g/qwgAAeSwjXpqzR7K/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/920049341038",
+  "brand": "New Balance",
+  "department": "Kids",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/qwgAAeSwjXpqzR7K/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/6KkAAeSwhNRqzR7O/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/yNIAAeSwLVtqzR7Q/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/GkEAAeSwP8lqzR7T/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/mhIAAeSwwHhqzR7V/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/vDgAAeSweINqzR8Z/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/aFafZhe4i1vD0LzbKxdZ80l",
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The New Balance 9060 in Black Phantom, a kids' lace-up sneaker with a bold retro-runner look. Size US 12C. Brand new with box, never worn.",
+  "parcel_in": {
+   "l": 12,
+   "w": 8,
+   "h": 6
+  },
+  "size": "US 12C",
+  "added": "2026-10-17",
+  "units_sold": 0
+ },
+ {
   "id": "920041647318",
   "title": "Adidas Campus 00s EL I Size 6C",
   "price": "$21.19",
@@ -6656,35 +6687,6 @@
   "units_sold": 0
  },
  {
-  "id": "398391833249",
-  "title": "New!  New Balance Breeze V2 Spikeless Golf Shoes Mens 10 4E Extra Wide",
-  "price": "$62.00",
-  "price_direct": 52.7,
-  "image": "https://i.ebayimg.com/images/g/Jq8AAeSwnkFqpyRI/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398391833249",
-  "brand": "New Balance",
-  "department": "Men",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/aFa5kDe4idel9i515TdZ70Y",
-  "weight_lbs": 3.0,
-  "weight_estimated": false,
-  "description": "The New! New Balance Breeze V2 Spikeless Golf Shoes Mens 10 4E Extra Wide brings classic New Balance style to your everyday lineup. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
-  "parcel_in": {
-   "l": 14.0,
-   "w": 10.0,
-   "h": 6.0
-  },
-  "size": "US 10",
-  "photos": [
-   "https://i.ebayimg.com/images/g/Jq8AAeSwnkFqpyRI/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/QREAAeSwf8FqpyRA/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/GUwAAeSwKjZqpyRE/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/1FQAAeSweGhqpyRK/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/FpYAAeSw2DJqpyRW/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "398389833894",
   "title": "10 Women or 9 Men - adidas Japan White Black W",
   "price": "$62.00",
@@ -11698,37 +11700,6 @@
    "h": 8
   },
   "size": "US 5",
-  "added": "2026-10-12",
-  "units_sold": 0
- },
- {
-  "id": "920033343296",
-  "title": "Air Jordan 1 Mid Chicago Black Toe US 2Y",
-  "price": "$55.00",
-  "price_direct": 46.75,
-  "image": "https://i.ebayimg.com/images/g/GrMAAeSwZXVqzSat/s-l1600.webp",
-  "url": "https://www.ebay.com/itm/920033343296",
-  "brand": "Jordan",
-  "department": "Kids",
-  "qty": 1,
-  "photos": [
-   "https://i.ebayimg.com/images/g/GrMAAeSwZXVqzSat/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/FagAAeSwpIdqzSaw/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/U6cAAeSwnahqzSay/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/ETMAAeSw8wZqzSa4/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/Az0AAeSwbNpqzSa7/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/A78AAeSwsNxqzSa-/s-l1600.webp"
-  ],
-  "payment_url": "https://buy.stripe.com/3cI6oH0dscah79X15TdZ73F",
-  "weight_lbs": 3.0,
-  "weight_estimated": false,
-  "description": "The Air Jordan 1 Mid Chicago Black Toe brings iconic Jordan color blocking to kids. Listed here in US 2Y. New with box, ready to wear straight out of the package.",
-  "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
-  },
-  "size": "US 2",
   "added": "2026-10-12",
   "units_sold": 0
  },
