@@ -10473,12 +10473,12 @@
   "url": "https://www.ebay.com/itm/398371561923",
   "brand": "Nike",
   "department": "Men",
-  "qty": 3,
+  "qty": 2,
   "payment_url": "https://buy.stripe.com/dRm28r1hw2zH65T15TdZ71K",
   "variants": [
    {
     "size": "11",
-    "qty": 2,
+    "qty": 1,
     "payment_url": "https://buy.stripe.com/6oU14naS6fmt8e1aGtdZ72A"
    },
    {
@@ -12911,36 +12911,6 @@
    "h": 8
   },
   "size": "US 8",
-  "added": "2026-10-16",
-  "units_sold": 0
- },
- {
-  "id": "920046857767",
-  "title": "Birkenstock Arizona EVA Black/ Size: Women US 5.5 / EU 36",
-  "price": "$32.11",
-  "price_direct": 27.29,
-  "image": "https://i.ebayimg.com/images/g/WA4AAeSwRvdq0stI/s-l1600.webp",
-  "url": "https://www.ebay.com/itm/920046857767",
-  "brand": "Birkenstock",
-  "department": "Women",
-  "qty": 1,
-  "photos": [
-   "https://i.ebayimg.com/images/g/WA4AAeSwRvdq0stI/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/VwMAAeSwJgVq0stM/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/qocAAeSwredq0stP/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/RtUAAeSw3ppq0stS/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/wp0AAeSwcP1q0stV/s-l1600.webp"
-  ],
-  "payment_url": "https://buy.stripe.com/3cI7sL5xMdel8e1g0NdZ80f",
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
-  "description": "The Birkenstock Arizona EVA slide sandal in black, lightweight and waterproof for everyday wear. Size Women US 5.5 / EU 36. Brand new with box, never worn.",
-  "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
-  },
-  "size": "US 5.5",
   "added": "2026-10-16",
   "units_sold": 0
  },
