@@ -7974,35 +7974,6 @@
   "units_sold": 0
  },
  {
-  "id": "398412609065",
-  "title": "UGG Bea Mary Jane Kids – Chestnut",
-  "price": "$69.00",
-  "price_direct": 58.65,
-  "image": "https://i.ebayimg.com/images/g/kHEAAeSwOZRqr1bf/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398412609065",
-  "brand": "Ugg",
-  "department": "Kids",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/dRm9AT6BQ4HP79Xg0NdZ63G",
-  "weight_lbs": 2.0,
-  "weight_estimated": false,
-  "description": "You can't go wrong with the UGG Bea Mary Jane Kids – Chestnut, a kids' sneaker made to be worn on repeat. See the listing title for the exact size details. Ships brand new in its box.",
-  "parcel_in": {
-   "l": 12,
-   "w": 8.0,
-   "h": 6.0
-  },
-  "size": "US 6",
-  "photos": [
-   "https://i.ebayimg.com/images/g/kHEAAeSwOZRqr1bf/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/xbIAAeSwDTZqr1cU/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/baAAAeSwf55qr1bd/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/afwAAeSwICxqr1bk/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/YlsAAeSwJYxqr1cb/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "398409466734",
   "title": "Jordan Spizike Low PS Size 13C",
   "price": "$69.00",
