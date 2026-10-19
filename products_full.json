@@ -9679,27 +9679,22 @@
   "url": "https://www.ebay.com/itm/398375489374",
   "brand": "Nike",
   "department": "Women",
-  "qty": 2,
+  "qty": 1,
   "payment_url": "https://buy.stripe.com/00w5kDbWa7U18e15m9dZ71D",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "The Nike Shox R4 Phantom Picante Red W brings classic Nike style to your everyday lineup. Please note the box by size: Women US 6 is brand new and ships WITHOUT its original box; Women US 7 is brand new WITH its original box.",
+  "description": "The Nike Shox R4 Phantom Picante Red W brings classic Nike style to your everyday lineup. Available now in Women US 6. Brand new — please note: this pair ships WITHOUT its original box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
    "h": 6
   },
-  "size": "US 6, US 7, US 8.5",
+  "size": "US 6, US 8.5",
   "variants": [
    {
     "size": "6",
     "qty": 1,
     "payment_url": "https://buy.stripe.com/9B64gz6BQdel3XLbKxdZ72X"
-   },
-   {
-    "size": "7",
-    "qty": 1,
-    "payment_url": "https://buy.stripe.com/dRm9AT4tIa29gKxg0NdZ80n"
    },
    {
     "size": "8.5",
