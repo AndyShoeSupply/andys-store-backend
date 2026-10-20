@@ -5555,7 +5555,7 @@
  },
  {
   "id": "398444836154",
-  "title": "New Balance 530 GS Pink Satin Shadow Red Size 4Y / Women 5.5 G5303XO New",
+  "title": "New Balance 530 GS Pink Satin Shadow Red Size 4Y / Women 5.5",
   "price": "$59.00",
   "price_direct": 50.15,
   "image": "https://i.ebayimg.com/images/g/zZIAAeSwBrlqvCt8/s-l1600.jpg",
@@ -5572,7 +5572,7 @@
    "w": 10,
    "h": 8
   },
-  "size": "US 5",
+  "size": "US 4Y",
   "photos": [
    "https://i.ebayimg.com/images/g/zZIAAeSwBrlqvCt8/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/7JkAAeSw-ftqvC1x/s-l1600.jpg",
@@ -6151,7 +6151,7 @@
  },
  {
   "id": "398442070545",
-  "title": "Adidas Campus 00s J – “Cream Semi Pink Spark” 5Y or 6 Women",
+  "title": "Adidas Campus 00s J Cream Semi Pink Spark US 5Y or 6 Women",
   "price": "$59.95",
   "price_direct": 50.96,
   "image": "https://i.ebayimg.com/images/g/M9UAAeSw-UZquyKZ/s-l1600.jpg",
@@ -6168,7 +6168,7 @@
    "w": 10,
    "h": 8
   },
-  "size": "US 6.5",
+  "size": "US 5Y",
   "photos": [
    "https://i.ebayimg.com/images/g/M9UAAeSw-UZquyKZ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Pn8AAeSwAGRquyKb/s-l1600.jpg",
@@ -9071,7 +9071,7 @@
    "w": 8,
    "h": 6
   },
-  "size": "US 6",
+  "size": "US 2Y",
   "photos": [
    "https://i.ebayimg.com/images/g/S7EAAeSwCJlquKJy/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/0VIAAeSwg0dquKJ0/s-l1600.jpg",
@@ -12956,5 +12956,36 @@
   "size": "US 9",
   "added": "2026-10-18",
   "units_sold": 0
+ },
+ {
+  "id": "920055500351",
+  "title": "Nike Court Vision Low Women 9 Women or 7.5 Men",
+  "price": "$59.00",
+  "price_direct": 50.15,
+  "image": "https://i.ebayimg.com/images/g/G6UAAeSw7odqvI7l/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920055500351",
+  "brand": "Nike",
+  "department": "Women",
+  "qty": 1,
+  "payment_url": "https://buy.stripe.com/9B68wP2lAb6d2TH01PdZ80o",
+  "weight_lbs": 2.5,
+  "weight_estimated": true,
+  "description": "The Nike Court Vision Low is a clean, classic everyday sneaker. Size Women US 9 (also fits Men US 7.5). Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 9",
+  "photos": [
+   "https://i.ebayimg.com/images/g/G6UAAeSw7odqvI7l/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/O6AAAeSwmwpqvI7i/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/LEQAAeSwED5qvI7q/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/Jt0AAeSw7PpqvI7t/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/MUMAAeSwA9VqvI7x/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/MlQAAeSw4dRqvI71/s-l1600.jpg"
+  ],
+  "units_sold": 0,
+  "added": "2026-10-19"
  }
 ]
