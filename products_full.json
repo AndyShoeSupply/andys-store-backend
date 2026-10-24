@@ -10918,36 +10918,6 @@
   "units_sold": 0
  },
  {
-  "id": "920012279514",
-  "title": "Hoka Clifton 9 Cloud Blue Ice Flow 8.5 Men or 9.5 Women / EU 42",
-  "price": "$99.40",
-  "price_direct": 84.49,
-  "image": "https://i.ebayimg.com/images/g/Kk4AAeSwoYdqxGUF/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/920012279514",
-  "brand": "Hoka",
-  "department": "Men",
-  "qty": 1,
-  "photos": [
-   "https://i.ebayimg.com/images/g/Kk4AAeSwoYdqxGUF/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/I-sAAeSwoDtqxGUN/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/IDwAAeSwxn9qxGUW/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/4KsAAeSw585qxGUO/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/7ZgAAeSwxE9qxGUQ/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/WdYAAeSwIMdqxGUT/s-l1600.jpg"
-  ],
-  "payment_url": "https://buy.stripe.com/3cIdR99O2gqxcuhcOBdZ603",
-  "weight_lbs": 3.0,
-  "weight_estimated": false,
-  "description": "Meet the Hoka Clifton 9 Cloud Blue Ice Flow — a men's sneaker with a clean, standout look. Listed here in size US 8.5 / EU 42. New with box, ready to wear straight out of the package.",
-  "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
-  },
-  "size": "US 8.5",
-  "units_sold": 0
- },
- {
   "id": "398375399582",
   "title": "Nike Air Max DN8 Black Volt 8.5 Men or 10 Women",
   "price": "$101.00",
