@@ -1379,35 +1379,6 @@
   "units_sold": 0
  },
  {
-  "id": "398432907407",
-  "title": "adidas Superstar Low Triple White 5C",
-  "price": "$33.00",
-  "price_direct": 28.05,
-  "image": "https://i.ebayimg.com/images/g/XEEAAeSwHJdqtztJ/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398432907407",
-  "brand": "Adidas",
-  "department": "Kids",
-  "qty": 3,
-  "payment_url": "https://buy.stripe.com/9B64gzf8m2zH8e1cOBdZ62n",
-  "weight_lbs": 1.0,
-  "weight_estimated": false,
-  "description": "Meet the adidas Superstar Low Triple White — a kids' sneaker with a clean, standout look. Available in 5K. New with box, ready to wear straight out of the package.",
-  "parcel_in": {
-   "l": 12,
-   "w": 8,
-   "h": 6
-  },
-  "size": "US 5",
-  "photos": [
-   "https://i.ebayimg.com/images/g/XEEAAeSwHJdqtztJ/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/rvkAAeSwSL1qtztL/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/42wAAeSw9uZqtzvt/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/LEgAAeSwbZtqtzvv/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/ZhUAAeSwVJRqtzvy/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "398432900898",
   "title": "adidas Superstar Low Triple White 4C",
   "price": "$33.00",
