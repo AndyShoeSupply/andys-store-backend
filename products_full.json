@@ -2509,35 +2509,6 @@
   "units_sold": 0
  },
  {
-  "id": "398432688013",
-  "title": "Adidas Samba OG Kids Preschool Bright Red Cream White",
-  "price": "$39.00",
-  "price_direct": 33.15,
-  "image": "https://i.ebayimg.com/images/g/QOIAAeSwYxRqty2Q/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398432688013",
-  "brand": "Adidas",
-  "department": "Kids",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/3cI28r9O28Y5bqd7uhdZ62J",
-  "weight_lbs": 2.0,
-  "weight_estimated": false,
-  "description": "Meet the Adidas Samba OG Kids Preschool Bright Red Cream White — a kids' sneaker with a clean, standout look. See the listing title for the exact size details. Comes brand new with its box included.",
-  "parcel_in": {
-   "l": 12.0,
-   "w": 10.0,
-   "h": 8.0
-  },
-  "size": "US 3",
-  "photos": [
-   "https://i.ebayimg.com/images/g/QOIAAeSwYxRqty2Q/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/39wAAeSwbyVqty2T/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/KiUAAeSwM95qty2V/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/byQAAeSwA3Fqty2Y/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/RtkAAeSwTy1qty2a/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "398429644141",
   "title": "adidas Handball Spezial C / Kids",
   "price": "$39.00",
@@ -6622,38 +6593,6 @@
    "https://i.ebayimg.com/images/g/9FUAAeSwTvFqr14t/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/CXwAAeSwj7pqr14z/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/nMAAAeSwS2xqr145/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
-  "id": "398402746985",
-  "title": "ASICS GEL-Venture 10 Women's 7 Women or 5.5 Men",
-  "price": "$62.00",
-  "price_direct": 52.7,
-  "image": "https://i.ebayimg.com/images/g/FQ8AAeSwSmdqq2bn/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398402746985",
-  "brand": "Asics",
-  "department": "Women",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/fZu00jgcq6PX8e1dSFdZ70p",
-  "weight_lbs": 2.0,
-  "weight_estimated": false,
-  "description": "The ASICS GEL-Venture 10 Women’s is a go-to women's sneaker that goes with just about anything. See the listing title for the exact size details. Comes brand new with its box included.",
-  "parcel_in": {
-   "l": 14,
-   "w": 12,
-   "h": 9
-  },
-  "size": "US 7",
-  "photos": [
-   "https://i.ebayimg.com/images/g/FQ8AAeSwSmdqq2bn/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/6yIAAeSwIWdqq2Zn/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/xY8AAeSwxM9qq2ba/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/qO0AAeSwt3xqq2Zv/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/HAIAAeSw2DJqq2Zz/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/NfoAAeSw25dqq2bN/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/7r8AAeSwM-xqq2bX/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/mnIAAeSwMaJqq2bh/s-l1600.jpg"
   ],
   "units_sold": 0
  },
