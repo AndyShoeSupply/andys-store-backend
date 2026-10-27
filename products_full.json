@@ -471,35 +471,6 @@
   "units_sold": 0
  },
  {
-  "id": "920005933900",
-  "title": "Adidas Gazelle Comfort Closure (toddler, casual) 5C",
-  "price": "$29.00",
-  "price_direct": 24.65,
-  "image": "https://i.ebayimg.com/images/g/QwcAAeSw585qwcr5/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/920005933900",
-  "brand": "Adidas",
-  "department": "Kids",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/4gM28r0dsa29cuhaGtdZ60x",
-  "weight_lbs": 0.75,
-  "weight_estimated": false,
-  "description": "The Adidas Gazelle Comfort Closure (toddler, casual) brings classic Adidas style to your everyday lineup. Available in 5C. Comes brand new with its box included.",
-  "parcel_in": {
-   "l": 12,
-   "w": 8,
-   "h": 6
-  },
-  "size": "US 5",
-  "photos": [
-   "https://i.ebayimg.com/images/g/QwcAAeSw585qwcr5/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/woUAAeSwS3ZqwcsB/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/Q5QAAeSw585qwcsJ/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/mmQAAeSwu1Jqwcuz/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/UiQAAeSwWrFqwcu9/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "398452256929",
   "title": "Nike Force 1 Crib Infant Shoes Triple Black Size 2C",
   "price": "$29.00",
@@ -1077,35 +1048,6 @@
   "units_sold": 0
  },
  {
-  "id": "920005570958",
-  "title": "Nike Star Runner 5 Size 12C",
-  "brand": "Nike",
-  "department": "Kids",
-  "price": "$31.00",
-  "price_direct": 26.35,
-  "qty": 1,
-  "image": "https://i.ebayimg.com/images/g/144AAeSwpvhqwabk/s-l1600.jpg",
-  "photos": [
-   "https://i.ebayimg.com/images/g/144AAeSwpvhqwabk/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/9CAAAeSw7plqwaa5/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/kJkAAeSwsQBqwaa-/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/PbAAAeSwNuFqwabZ/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/dBEAAeSwsSdqwabS/s-l1600.jpg"
-  ],
-  "url": "https://www.ebay.com/itm/920005570958",
-  "payment_url": "https://buy.stripe.com/cNi9ATe4i7U13XLeWJdZ72S",
-  "weight_lbs": 1.0,
-  "weight_estimated": false,
-  "description": "The Nike Star Runner 5 is a go-to kids' sneaker that goes with just about anything. This pair is a 12C. New with box, ready to wear straight out of the package.",
-  "parcel_in": {
-   "l": 12,
-   "w": 8,
-   "h": 6
-  },
-  "size": "US 12",
-  "units_sold": 0
- },
- {
   "id": "920005534897",
   "title": "Nike Cosmic Runner Unisex Kids 13C",
   "price": "$31.26",
@@ -1230,35 +1172,6 @@
    "https://i.ebayimg.com/images/g/C~8AAeSwNjpqud5a/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Co8AAeSwEkpqud5o/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/BZwAAeSw9tNqud5t/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
-  "id": "398435952337",
-  "title": "New Balance 740 Bungee Lace Infant/Toddler 4C",
-  "price": "$33.00",
-  "price_direct": 28.05,
-  "image": "https://i.ebayimg.com/images/g/Pr8AAeSwGTlquKCz/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398435952337",
-  "brand": "New Balance",
-  "department": "Infant",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/cNi4gzd0ea298e1eWJdZ61U",
-  "weight_lbs": 1.0,
-  "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the New Balance 740 Bungee Lace Infant/Toddler, a infant sneaker in a head-turning colorway. Listed here in size 4C. New with box, ready to wear straight out of the package.",
-  "parcel_in": {
-   "l": 12,
-   "w": 8,
-   "h": 6
-  },
-  "size": "US 4",
-  "photos": [
-   "https://i.ebayimg.com/images/g/Pr8AAeSwGTlquKCz/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/Tx0AAeSw9rpquKC3/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/~IwAAeSw-htquKEr/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/H9YAAeSwV~VquKEw/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/KwEAAeSwVgFquKEy/s-l1600.jpg"
   ],
   "units_sold": 0
  },
@@ -1565,36 +1478,6 @@
   "units_sold": 0
  },
  {
-  "id": "398432918836",
-  "title": "adidas Superstar II C 9C",
-  "price": "$34.00",
-  "price_direct": 28.9,
-  "image": "https://i.ebayimg.com/images/g/GEgAAeSwtUBqtz7v/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398432918836",
-  "brand": "Adidas",
-  "department": "Kids",
-  "qty": 2,
-  "payment_url": "https://buy.stripe.com/8x2cN5e4ia2979Xg0NdZ62k",
-  "weight_lbs": 2.0,
-  "weight_estimated": false,
-  "description": "You can't go wrong with the adidas Superstar II C, a kids' sneaker made to be worn on repeat. Sized at 9K. Comes brand new with its box included.",
-  "parcel_in": {
-   "l": 12,
-   "w": 8,
-   "h": 6
-  },
-  "size": "US 9",
-  "photos": [
-   "https://i.ebayimg.com/images/g/GEgAAeSwtUBqtz7v/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/AKgAAeSwbz5qtz8A/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/IO4AAeSwr5dqtz7x/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/7igAAeSwYxRqtz70/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/a4kAAeSwxSZqtz72/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/7SEAAeSwEcVqtz76/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "398432916988",
   "title": "adidas Superstar II C 5C",
   "price": "$34.00",
@@ -1710,35 +1593,6 @@
    "https://i.ebayimg.com/images/g/LI0AAeSwgeNqwZE1/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/hOMAAeSwdLZqwZE5/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/8aAAAeSw9VhqwZE9/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
-  "id": "398432868538",
-  "title": "adidas Superstar II C 1Y",
-  "price": "$35.00",
-  "price_direct": 29.75,
-  "image": "https://i.ebayimg.com/images/g/9ykAAeSwsilqt0AY/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398432868538",
-  "brand": "Adidas",
-  "department": "Kids",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/14AeVdd0e3DLdyl8yldZ62r",
-  "weight_lbs": 2.0,
-  "weight_estimated": false,
-  "description": "The adidas Superstar II C is a go-to kids' sneaker that goes with just about anything. Sized at 1Y. Brand new and comes with its box.",
-  "parcel_in": {
-   "l": 12,
-   "w": 8,
-   "h": 6
-  },
-  "size": "US 1",
-  "photos": [
-   "https://i.ebayimg.com/images/g/9ykAAeSwsilqt0AY/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/1GwAAeSw-zpqt0Aa/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/6gsAAeSwvOBqt0Ad/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/hiYAAeSwMhhqt0Af/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/-joAAeSwcthqt0Ak/s-l1600.jpg"
   ],
   "units_sold": 0
  },
@@ -2478,37 +2332,6 @@
   "units_sold": 0
  },
  {
-  "id": "398432712938",
-  "title": "Adidas Samba OG C",
-  "price": "$39.00",
-  "price_direct": 33.15,
-  "image": "https://i.ebayimg.com/images/g/5cAAAeSwsGZqtyRw/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398432712938",
-  "brand": "Adidas",
-  "department": "Infant",
-  "qty": 2,
-  "payment_url": "https://buy.stripe.com/cNi5kD0dsb6d65TaGtdZ62H",
-  "weight_lbs": 2.0,
-  "weight_estimated": false,
-  "description": "The Adidas Samba OG C brings classic Adidas style to your everyday lineup. See the listing title for the exact size details. Ships brand new in its box.",
-  "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 6
-  },
-  "size": "US 2C",
-  "photos": [
-   "https://i.ebayimg.com/images/g/5cAAAeSwsGZqtyRw/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/gOgAAeSw1xZqtyR1/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/8kIAAeSwTTtqtyR8/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/bCoAAeSw~VFqtySM/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/wI0AAeSwEb1qtyR~/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/zYMAAeSwEhhqtySD/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/9g0AAeSwj-tqtySI/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "398429644141",
   "title": "adidas Handball Spezial C / Kids",
   "price": "$39.00",
@@ -3142,35 +2965,6 @@
   "units_sold": 0
  },
  {
-  "id": "398371493727",
-  "title": "adidas VL Court 3.0 Shadow Red 12.5 Men or 13.5 Women",
-  "price": "$42.00",
-  "price_direct": 35.7,
-  "image": "https://i.ebayimg.com/images/g/0D0AAeSwFu9qn26A/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398371493727",
-  "brand": "Adidas",
-  "department": "Men",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/00w7sLf8mcahcuh6qddZ71L",
-  "weight_lbs": 3.0,
-  "weight_estimated": false,
-  "description": "You can't go wrong with the adidas VL Court 3.0 Shadow Red, a unisex sneaker made to be worn on repeat. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
-  "parcel_in": {
-   "l": 14,
-   "w": 12,
-   "h": 9
-  },
-  "size": "US 12.5",
-  "photos": [
-   "https://i.ebayimg.com/images/g/0D0AAeSwFu9qn26A/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/6qIAAeSwIHBqn28n/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/XrwAAeSwIcBqn28r/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/8GAAAeSw~bRqn28u/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/LzkAAeSwpPFqn286/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "920006238773",
   "title": "Adidas Campus 00s Comfort Closure 12C",
   "price": "$42.74",
@@ -3670,35 +3464,6 @@
   "units_sold": 0
  },
  {
-  "id": "398448964832",
-  "title": "New Balance 530 Unisex Kids Silver/Gray/Navy Mesh Lace-Up Sneakers US 9C  EU 26",
-  "price": "$47.75",
-  "price_direct": 40.59,
-  "image": "https://i.ebayimg.com/images/g/1rAAAeSwS4hquKOP/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398448964832",
-  "brand": "New Balance",
-  "department": "Kids",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/bJe4gz4tIcah3XL5m9dZ61T",
-  "weight_lbs": 1.0,
-  "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the New Balance 530 Unisex Kids Silver/Gray/Navy Mesh Lace-Up Sneakers, a kids' sneaker in a head-turning colorway. Sized at US 9C EU 26. Brand new and comes with its box.",
-  "parcel_in": {
-   "l": 12,
-   "w": 8.0,
-   "h": 6.0
-  },
-  "size": "US 9",
-  "photos": [
-   "https://i.ebayimg.com/images/g/1rAAAeSwS4hquKOP/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/MhYAAeSwqM1quKOf/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/KBQAAeSw~i1quKP3/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/pgcAAeSwLGtquKQG/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/UikAAeSwMCtquKQX/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "398405579373",
   "title": "Converse Chuck Taylor All Star Hi Floral Rained Out Womens 7.5 Women or 6 Men",
   "price": "$47.99",
@@ -4051,35 +3816,6 @@
    "https://i.ebayimg.com/images/g/LtkAAeSwGb1qrzd7/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/XiIAAeSw2aZqrzd-/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/PFMAAeSwXwlqrzeC/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
-  "id": "398409083762",
-  "title": "Crocs x Dragon Ball Z Echo Clog \u2013 Vegeta Kids",
-  "price": "$49.00",
-  "price_direct": 41.65,
-  "image": "assets/catalog/398409083762-1.jpg",
-  "url": "https://www.ebay.com/itm/398409083762",
-  "brand": "Crocs",
-  "department": "Kids",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/8x2fZh3pEeipgKx01PdZ701",
-  "weight_lbs": 0.75,
-  "weight_estimated": false,
-  "description": "The Crocs x Dragon Ball Z Echo Clog \u2013 Vegeta Kids is a go-to kids' clog that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
-  "parcel_in": {
-   "l": 21.0,
-   "w": 12.0,
-   "h": 4.0
-  },
-  "size": "US 12",
-  "photos": [
-   "assets/catalog/398409083762-1.jpg",
-   "assets/catalog/398409083762-2.jpg",
-   "assets/catalog/398409083762-3.jpg",
-   "assets/catalog/398409083762-4.jpg",
-   "assets/catalog/398409083762-5.jpg"
   ],
   "units_sold": 0
  },
@@ -4924,35 +4660,6 @@
   "units_sold": 0
  },
  {
-  "id": "920005972218",
-  "title": "Adidas Gazelle Indoor J Kids Better Scarlet White Gum Size 6Y or 7Women",
-  "price": "$55.00",
-  "price_direct": 46.75,
-  "image": "https://i.ebayimg.com/images/g/fgoAAeSw95Nqwc8~/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/920005972218",
-  "brand": "Adidas",
-  "department": "Kids",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/6oUeVd4tIeip2TH6qddZ60v",
-  "weight_lbs": 3.0,
-  "weight_estimated": false,
-  "description": "You can't go wrong with the Adidas Gazelle Indoor J Kids Better Scarlet White Gum, a kids' sneaker made to be worn on repeat. Sized at 6Y or 7Women. Ships brand new in its box.",
-  "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
-  },
-  "size": "US 6",
-  "photos": [
-   "https://i.ebayimg.com/images/g/fgoAAeSw95Nqwc8~/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/2t0AAeSwTMVqwc8~/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/xMoAAeSwRbVqwc8~/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/CVkAAeSwmh9qwc8~/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/Z-YAAeSw5opqwc9M/s-l1600.jpg"
-  ],
-  "units_sold": 1
- },
- {
   "id": "398445807549",
   "title": "Nike Flex Control TR4 7.5 Men or 9 Women",
   "price": "$55.00",
@@ -5287,35 +4994,6 @@
    "https://i.ebayimg.com/images/g/x~MAAeSwZlFqpkJ8/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/mq0AAeSw2WZqpkJy/s-l1600.jpg"
   ],
-  "units_sold": 0
- },
- {
-  "id": "920008981771",
-  "title": "Reebok Classic Nylon HS Low Black men Size 8 or 9.5 Women",
-  "price": "$55.46",
-  "price_direct": 47.14,
-  "image": "https://i.ebayimg.com/images/g/67IAAeSw2Vhqwxmz/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/920008981771",
-  "brand": "Reebok",
-  "department": "Women",
-  "qty": 1,
-  "photos": [
-   "https://i.ebayimg.com/images/g/67IAAeSw2Vhqwxmz/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/ygoAAeSwlspqwxmz/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/ZAEAAeSwUMdqwxmz/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/7lkAAeSwVI5qwxmz/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/ofsAAeSw-vZqwxmz/s-l1600.jpg"
-  ],
-  "payment_url": "https://buy.stripe.com/eVq3cv0ds4HP79X9CpdZ604",
-  "weight_lbs": 3.0,
-  "weight_estimated": false,
-  "description": "Meet the Reebok Classic Nylon HS Low Black \u2014 a women's sneaker with a clean, standout look. Available in 8 or 9.5 Women. Comes brand new with its box included.",
-  "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
-  },
-  "size": "US 8",
   "units_sold": 0
  },
  {
@@ -6111,35 +5789,6 @@
    "h": 8
   },
   "size": "US 4",
-  "photos": [
-   "https://i.ebayimg.com/images/g/M9UAAeSw-UZquyKZ/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/Pn8AAeSwAGRquyKb/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/PdMAAeSwmL1quyKe/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/HhAAAeSwznhquyKg/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/L~0AAeSw24tquyKj/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
-  "id": "398442070545",
-  "title": "Adidas Campus 00s J Cream Semi Pink Spark US 5Y or 6 Women",
-  "price": "$59.95",
-  "price_direct": 50.96,
-  "image": "https://i.ebayimg.com/images/g/M9UAAeSw-UZquyKZ/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398442070545",
-  "brand": "Adidas",
-  "department": "Kids",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/eVq28r3pE3DLcuh5m9dZ61A",
-  "weight_lbs": 2.0,
-  "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the Adidas Campus 00s J \u2013 \u201cCream Semi Pink Spark\u201d 5Y or 6, a kids' sneaker in a head-turning colorway. See the listing title for the exact size details. Ships brand new in its box.",
-  "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
-  },
-  "size": "US 5Y",
   "photos": [
    "https://i.ebayimg.com/images/g/M9UAAeSw-UZquyKZ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Pn8AAeSwAGRquyKb/s-l1600.jpg",
@@ -8867,38 +8516,6 @@
    "https://i.ebayimg.com/images/g/AloAAeSw8DZqvHlx/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/DXMAAeSwxk5qvHl1/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/E44AAeSwu-lqvHl5/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
-  "id": "398438966023",
-  "title": "New Balance 9060 Lace 2Y",
-  "price": "$74.00",
-  "price_direct": 62.9,
-  "image": "https://i.ebayimg.com/images/g/S7EAAeSwCJlquKJy/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398438966023",
-  "brand": "New Balance",
-  "department": "Kids",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/4gM00j3pE4HP8e115TdZ61L",
-  "weight_lbs": 1.0,
-  "weight_estimated": false,
-  "description": "Meet the New Balance 9060 Lace \u2014 a kids' sneaker with a clean, standout look. Listed here in size 2Y. Comes brand new with its box included.",
-  "parcel_in": {
-   "l": 12,
-   "w": 8,
-   "h": 6
-  },
-  "size": "US 2Y",
-  "photos": [
-   "https://i.ebayimg.com/images/g/S7EAAeSwCJlquKJy/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/0VIAAeSwg0dquKJ0/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/CU8AAeSwtR1quKJ3/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/QbwAAeSwmEBquKJ9/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/qm4AAeSwZD1quKJ~/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/28wAAeSwaNtquKKI/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/DN8AAeSw1rlquKKL/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/th4AAeSwsfJquKKP/s-l1600.jpg"
   ],
   "units_sold": 0
  },
@@ -13025,6 +12642,402 @@
    "https://i.ebayimg.com/images/g/nswAAeSwSb1quFDI/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/fxgAAeSwrgBquFDL/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/iZUAAeSwLAJquFDu/s-l1600.jpg"
+  ],
+  "units_sold": 0,
+  "added": "2026-10-26"
+ },
+ {
+  "id": "920077706233",
+  "title": "Adidas Gazelle Comfort Closure (toddler, casual) 5C",
+  "price": "$29.00",
+  "price_direct": 24.65,
+  "image": "https://i.ebayimg.com/images/g/QwcAAeSw585qwcr5/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920077706233",
+  "brand": "Adidas",
+  "department": "Kids",
+  "qty": 1,
+  "payment_url": "https://buy.stripe.com/4gM14nd0e8Y5fGt4i5dZ80E",
+  "weight_lbs": 0.75,
+  "weight_estimated": false,
+  "description": "The Adidas Gazelle Comfort Closure (toddler, casual) brings classic Adidas style to your everyday lineup. Available in 5C. Comes brand new with its box included.",
+  "parcel_in": {
+   "l": 12,
+   "w": 8,
+   "h": 6
+  },
+  "size": "US 5",
+  "photos": [
+   "https://i.ebayimg.com/images/g/QwcAAeSw585qwcr5/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/woUAAeSwS3ZqwcsB/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/Q5QAAeSw585qwcsJ/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/mmQAAeSwu1Jqwcuz/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/UiQAAeSwWrFqwcu9/s-l1600.jpg"
+  ],
+  "units_sold": 0,
+  "added": "2026-10-26"
+ },
+ {
+  "id": "920077708318",
+  "title": "Crocs x Dragon Ball Z Echo Clog \u2013 Vegeta Kids",
+  "price": "$49.00",
+  "price_direct": 41.65,
+  "image": "assets/catalog/398409083762-1.jpg",
+  "url": "https://www.ebay.com/itm/920077708318",
+  "brand": "Crocs",
+  "department": "Kids",
+  "qty": 1,
+  "payment_url": "https://buy.stripe.com/cNi4gz0ds4HP1PD01PdZ80F",
+  "weight_lbs": 0.75,
+  "weight_estimated": false,
+  "description": "The Crocs x Dragon Ball Z Echo Clog \u2013 Vegeta Kids is a go-to kids' clog that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "parcel_in": {
+   "l": 21.0,
+   "w": 12.0,
+   "h": 4.0
+  },
+  "size": "US 12",
+  "photos": [
+   "assets/catalog/398409083762-1.jpg",
+   "assets/catalog/398409083762-2.jpg",
+   "assets/catalog/398409083762-3.jpg",
+   "assets/catalog/398409083762-4.jpg",
+   "assets/catalog/398409083762-5.jpg"
+  ],
+  "units_sold": 0,
+  "added": "2026-10-26"
+ },
+ {
+  "id": "920077712179",
+  "title": "Reebok Classic Nylon HS Low Black men Size 8 or 9.5 Women",
+  "price": "$55.46",
+  "price_direct": 47.14,
+  "image": "https://i.ebayimg.com/images/g/67IAAeSw2Vhqwxmz/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920077712179",
+  "brand": "Reebok",
+  "department": "Women",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/67IAAeSw2Vhqwxmz/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/ygoAAeSwlspqwxmz/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/ZAEAAeSwUMdqwxmz/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/7lkAAeSwVI5qwxmz/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/ofsAAeSw-vZqwxmz/s-l1600.jpg"
+  ],
+  "payment_url": "https://buy.stripe.com/7sYaEXbWafmtfGtbKxdZ80G",
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
+  "description": "Meet the Reebok Classic Nylon HS Low Black \u2014 a women's sneaker with a clean, standout look. Available in 8 or 9.5 Women. Comes brand new with its box included.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 8",
+  "units_sold": 0,
+  "added": "2026-10-26"
+ },
+ {
+  "id": "920077720091",
+  "title": "Adidas Gazelle Indoor J Kids Better Scarlet White Gum Size 6Y or 7Women",
+  "price": "$55.00",
+  "price_direct": 46.75,
+  "image": "https://i.ebayimg.com/images/g/fgoAAeSw95Nqwc8~/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920077720091",
+  "brand": "Adidas",
+  "department": "Kids",
+  "qty": 1,
+  "payment_url": "https://buy.stripe.com/5kQeVd7FUa291PD7uhdZ80H",
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
+  "description": "You can't go wrong with the Adidas Gazelle Indoor J Kids Better Scarlet White Gum, a kids' sneaker made to be worn on repeat. Sized at 6Y or 7Women. Ships brand new in its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 6",
+  "photos": [
+   "https://i.ebayimg.com/images/g/fgoAAeSw95Nqwc8~/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/2t0AAeSwTMVqwc8~/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/xMoAAeSwRbVqwc8~/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/CVkAAeSwmh9qwc8~/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/Z-YAAeSw5opqwc9M/s-l1600.jpg"
+  ],
+  "units_sold": 0,
+  "added": "2026-10-26"
+ },
+ {
+  "id": "920077721640",
+  "title": "Nike Star Runner 5 Size 12C",
+  "brand": "Nike",
+  "department": "Kids",
+  "price": "$31.00",
+  "price_direct": 26.35,
+  "qty": 1,
+  "image": "https://i.ebayimg.com/images/g/144AAeSwpvhqwabk/s-l1600.jpg",
+  "photos": [
+   "https://i.ebayimg.com/images/g/144AAeSwpvhqwabk/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/9CAAAeSw7plqwaa5/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/kJkAAeSwsQBqwaa-/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/PbAAAeSwNuFqwabZ/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/dBEAAeSwsSdqwabS/s-l1600.jpg"
+  ],
+  "url": "https://www.ebay.com/itm/920077721640",
+  "payment_url": "https://buy.stripe.com/3cIcN50dscah9i53e1dZ80I",
+  "weight_lbs": 1.0,
+  "weight_estimated": false,
+  "description": "The Nike Star Runner 5 is a go-to kids' sneaker that goes with just about anything. This pair is a 12C. New with box, ready to wear straight out of the package.",
+  "parcel_in": {
+   "l": 12,
+   "w": 8,
+   "h": 6
+  },
+  "size": "US 12",
+  "units_sold": 0,
+  "added": "2026-10-26"
+ },
+ {
+  "id": "920077730883",
+  "title": "New Balance 530 Unisex Kids Silver/Gray/Navy Mesh Lace-Up Sneakers US 9C  EU 26",
+  "price": "$47.75",
+  "price_direct": 40.59,
+  "image": "https://i.ebayimg.com/images/g/1rAAAeSwS4hquKOP/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920077730883",
+  "brand": "New Balance",
+  "department": "Kids",
+  "qty": 1,
+  "payment_url": "https://buy.stripe.com/3cI6oH0ds4HP0Lz3e1dZ80J",
+  "weight_lbs": 1.0,
+  "weight_estimated": false,
+  "description": "Add some fresh style to your rotation with the New Balance 530 Unisex Kids Silver/Gray/Navy Mesh Lace-Up Sneakers, a kids' sneaker in a head-turning colorway. Sized at US 9C EU 26. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 8.0,
+   "h": 6.0
+  },
+  "size": "US 9",
+  "photos": [
+   "https://i.ebayimg.com/images/g/1rAAAeSwS4hquKOP/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/MhYAAeSwqM1quKOf/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/KBQAAeSw~i1quKP3/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/pgcAAeSwLGtquKQG/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/UikAAeSwMCtquKQX/s-l1600.jpg"
+  ],
+  "units_sold": 0,
+  "added": "2026-10-26"
+ },
+ {
+  "id": "920077738642",
+  "title": "Adidas Campus 00s J Cream Semi Pink Spark US 5Y or 6 Women",
+  "price": "$59.95",
+  "price_direct": 50.96,
+  "image": "https://i.ebayimg.com/images/g/M9UAAeSw-UZquyKZ/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920077738642",
+  "brand": "Adidas",
+  "department": "Kids",
+  "qty": 1,
+  "payment_url": "https://buy.stripe.com/00w4gz8JYgqx51PbKxdZ80K",
+  "weight_lbs": 2.0,
+  "weight_estimated": false,
+  "description": "Add some fresh style to your rotation with the Adidas Campus 00s J \u2013 \u201cCream Semi Pink Spark\u201d 5Y or 6, a kids' sneaker in a head-turning colorway. See the listing title for the exact size details. Ships brand new in its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 5Y",
+  "photos": [
+   "https://i.ebayimg.com/images/g/M9UAAeSw-UZquyKZ/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/Pn8AAeSwAGRquyKb/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/PdMAAeSwmL1quyKe/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/HhAAAeSwznhquyKg/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/L~0AAeSw24tquyKj/s-l1600.jpg"
+  ],
+  "units_sold": 0,
+  "added": "2026-10-26"
+ },
+ {
+  "id": "920077743604",
+  "title": "New Balance 9060 Lace 2Y",
+  "price": "$74.00",
+  "price_direct": 62.9,
+  "image": "https://i.ebayimg.com/images/g/S7EAAeSwCJlquKJy/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920077743604",
+  "brand": "New Balance",
+  "department": "Kids",
+  "qty": 1,
+  "payment_url": "https://buy.stripe.com/cNidR91hwgqx8e13e1dZ80L",
+  "weight_lbs": 1.0,
+  "weight_estimated": false,
+  "description": "Meet the New Balance 9060 Lace \u2014 a kids' sneaker with a clean, standout look. Listed here in size 2Y. Comes brand new with its box included.",
+  "parcel_in": {
+   "l": 12,
+   "w": 8,
+   "h": 6
+  },
+  "size": "US 2Y",
+  "photos": [
+   "https://i.ebayimg.com/images/g/S7EAAeSwCJlquKJy/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/0VIAAeSwg0dquKJ0/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/CU8AAeSwtR1quKJ3/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/QbwAAeSwmEBquKJ9/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/qm4AAeSwZD1quKJ~/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/28wAAeSwaNtquKKI/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/DN8AAeSw1rlquKKL/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/th4AAeSwsfJquKKP/s-l1600.jpg"
+  ],
+  "units_sold": 0,
+  "added": "2026-10-26"
+ },
+ {
+  "id": "920077746070",
+  "title": "New Balance 740 Bungee Lace Infant/Toddler 4C",
+  "price": "$33.00",
+  "price_direct": 28.05,
+  "image": "https://i.ebayimg.com/images/g/Pr8AAeSwGTlquKCz/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920077746070",
+  "brand": "New Balance",
+  "department": "Infant",
+  "qty": 1,
+  "payment_url": "https://buy.stripe.com/9B6aEXbWa1vD0LzaGtdZ80M",
+  "weight_lbs": 1.0,
+  "weight_estimated": false,
+  "description": "Add some fresh style to your rotation with the New Balance 740 Bungee Lace Infant/Toddler, a infant sneaker in a head-turning colorway. Listed here in size 4C. New with box, ready to wear straight out of the package.",
+  "parcel_in": {
+   "l": 12,
+   "w": 8,
+   "h": 6
+  },
+  "size": "US 4",
+  "photos": [
+   "https://i.ebayimg.com/images/g/Pr8AAeSwGTlquKCz/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/Tx0AAeSw9rpquKC3/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/~IwAAeSw-htquKEr/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/H9YAAeSwV~VquKEw/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/KwEAAeSwVgFquKEy/s-l1600.jpg"
+  ],
+  "units_sold": 0,
+  "added": "2026-10-26"
+ },
+ {
+  "id": "920077753074",
+  "title": "adidas Superstar II C 9C",
+  "price": "$34.00",
+  "price_direct": 28.9,
+  "image": "https://i.ebayimg.com/images/g/GEgAAeSwtUBqtz7v/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920077753074",
+  "brand": "Adidas",
+  "department": "Kids",
+  "qty": 2,
+  "payment_url": "https://buy.stripe.com/fZu3cv3pE1vDam93e1dZ80N",
+  "weight_lbs": 2.0,
+  "weight_estimated": false,
+  "description": "You can't go wrong with the adidas Superstar II C, a kids' sneaker made to be worn on repeat. Sized at 9K. Comes brand new with its box included.",
+  "parcel_in": {
+   "l": 12,
+   "w": 8,
+   "h": 6
+  },
+  "size": "US 9",
+  "photos": [
+   "https://i.ebayimg.com/images/g/GEgAAeSwtUBqtz7v/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/AKgAAeSwbz5qtz8A/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/IO4AAeSwr5dqtz7x/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/7igAAeSwYxRqtz70/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/a4kAAeSwxSZqtz72/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/7SEAAeSwEcVqtz76/s-l1600.jpg"
+  ],
+  "units_sold": 0,
+  "added": "2026-10-26"
+ },
+ {
+  "id": "920077755147",
+  "title": "adidas Superstar II C 1Y",
+  "price": "$35.00",
+  "price_direct": 29.75,
+  "image": "https://i.ebayimg.com/images/g/9ykAAeSwsilqt0AY/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920077755147",
+  "brand": "Adidas",
+  "department": "Kids",
+  "qty": 1,
+  "payment_url": "https://buy.stripe.com/fZu14nd0e0rz51PaGtdZ80O",
+  "weight_lbs": 2.0,
+  "weight_estimated": false,
+  "description": "The adidas Superstar II C is a go-to kids' sneaker that goes with just about anything. Sized at 1Y. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 8,
+   "h": 6
+  },
+  "size": "US 1",
+  "photos": [
+   "https://i.ebayimg.com/images/g/9ykAAeSwsilqt0AY/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/1GwAAeSw-zpqt0Aa/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/6gsAAeSwvOBqt0Ad/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/hiYAAeSwMhhqt0Af/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/-joAAeSwcthqt0Ak/s-l1600.jpg"
+  ],
+  "units_sold": 0,
+  "added": "2026-10-26"
+ },
+ {
+  "id": "920077757519",
+  "title": "Adidas Samba OG C",
+  "price": "$39.00",
+  "price_direct": 33.15,
+  "image": "https://i.ebayimg.com/images/g/5cAAAeSwsGZqtyRw/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920077757519",
+  "brand": "Adidas",
+  "department": "Infant",
+  "qty": 2,
+  "payment_url": "https://buy.stripe.com/8x28wPgcqgqx79X4i5dZ80P",
+  "weight_lbs": 2.0,
+  "weight_estimated": false,
+  "description": "The Adidas Samba OG C brings classic Adidas style to your everyday lineup. See the listing title for the exact size details. Ships brand new in its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 6
+  },
+  "size": "US 2C",
+  "photos": [
+   "https://i.ebayimg.com/images/g/5cAAAeSwsGZqtyRw/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/gOgAAeSw1xZqtyR1/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/8kIAAeSwTTtqtyR8/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/bCoAAeSw~VFqtySM/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/wI0AAeSwEb1qtyR~/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/zYMAAeSwEhhqtySD/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/9g0AAeSwj-tqtySI/s-l1600.jpg"
+  ],
+  "units_sold": 0,
+  "added": "2026-10-26"
+ },
+ {
+  "id": "920077765616",
+  "title": "adidas VL Court 3.0 Shadow Red 12.5 Men or 13.5 Women",
+  "price": "$42.00",
+  "price_direct": 35.7,
+  "image": "https://i.ebayimg.com/images/g/0D0AAeSwFu9qn26A/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920077765616",
+  "brand": "Adidas",
+  "department": "Men",
+  "qty": 1,
+  "payment_url": "https://buy.stripe.com/fZu28r4tIeip2THaGtdZ80Q",
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
+  "description": "You can't go wrong with the adidas VL Court 3.0 Shadow Red, a unisex sneaker made to be worn on repeat. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "parcel_in": {
+   "l": 14,
+   "w": 12,
+   "h": 9
+  },
+  "size": "US 12.5",
+  "photos": [
+   "https://i.ebayimg.com/images/g/0D0AAeSwFu9qn26A/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/6qIAAeSwIHBqn28n/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/XrwAAeSwIcBqn28r/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/8GAAAeSw~bRqn28u/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/LzkAAeSwpPFqn286/s-l1600.jpg"
   ],
   "units_sold": 0,
   "added": "2026-10-26"
