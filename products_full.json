@@ -4544,7 +4544,7 @@
  },
  {
   "id": "920006268257",
-  "title": "Adidas Campus 00s Core Black Gum Men: US 4 - Women: US 5",
+  "title": "Adidas Campus 00s Mustard Yellow Gum Men: US 4 - Women: US 5",
   "price": "$55.00",
   "price_direct": 46.75,
   "image": "https://i.ebayimg.com/images/g/748AAeSwqcpqwe-y/s-l1600.jpg",
@@ -4562,14 +4562,17 @@
   "payment_url": "https://buy.stripe.com/14A7sL4tI7U1fGt8yldZ60h",
   "weight_lbs": 3.0,
   "weight_estimated": false,
-  "description": "You can't go wrong with the Adidas Campus 00s Core Black Gum, a women's sneaker made to be worn on repeat. Listed here in size US 4 - women's US 5. Ships brand new in its box.",
+  "description": "You can't go wrong with the Adidas Campus 00s Mustard Yellow Gum, a women's sneaker made to be worn on repeat. Listed here in size US 4 - women's US 5. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
    "h": 8
   },
   "size": "US 4",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 39.74,
+  "clearance_payment_url": "https://buy.stripe.com/9B600j5xM0rzdyl5m9dZ81l"
  },
  {
   "id": "398445807549",
