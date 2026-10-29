@@ -10496,7 +10496,10 @@
   },
   "size": "US 9.5",
   "added": "2026-10-11",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 49.85,
+  "clearance_payment_url": "https://buy.stripe.com/4gM7sL7FUeip2THcOBdZ80T"
  },
  {
   "id": "920031046370",
@@ -10526,7 +10529,10 @@
   },
   "size": "US 12",
   "added": "2026-10-11",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 46.96,
+  "clearance_payment_url": "https://buy.stripe.com/dRmdR9e4i2zH3XL4i5dZ80S"
  },
  {
   "id": "920031071391",
@@ -10556,7 +10562,10 @@
   },
   "size": "US 6.5",
   "added": "2026-10-11",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 42.63,
+  "clearance_payment_url": "https://buy.stripe.com/8x26oH6BQ1vDdylaGtdZ80R"
  },
  {
   "id": "920033401072",
@@ -10587,7 +10596,10 @@
   },
   "size": "US 4Y",
   "added": "2026-10-12",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 43.27,
+  "clearance_payment_url": "https://buy.stripe.com/bJe3cv6BQdel79X15TdZ80X"
  },
  {
   "id": "920033391842",
@@ -10619,7 +10631,10 @@
   },
   "size": "US 8",
   "added": "2026-10-12",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 53.46,
+  "clearance_payment_url": "https://buy.stripe.com/6oU6oHbWa0rzgKxeWJdZ817"
  },
  {
   "id": "920033381057",
@@ -10681,7 +10696,10 @@
   },
   "size": "US 8",
   "added": "2026-10-12",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 46.24,
+  "clearance_payment_url": "https://buy.stripe.com/9B65kD8JY8Y5gKx29XdZ80Y"
  },
  {
   "id": "920033365277",
@@ -10712,7 +10730,10 @@
   },
   "size": "US 7.5",
   "added": "2026-10-12",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 46.24,
+  "clearance_payment_url": "https://buy.stripe.com/8x2dR9bWab6dbqdcOBdZ80Z"
  },
  {
   "id": "920033364680",
@@ -10743,7 +10764,10 @@
   },
   "size": "US 5.5",
   "added": "2026-10-12",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 46.24,
+  "clearance_payment_url": "https://buy.stripe.com/eVqbJ1e4i2zH1PD9CpdZ810"
  },
  {
   "id": "920033360877",
@@ -10774,7 +10798,10 @@
   },
   "size": "US 5",
   "added": "2026-10-12",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 46.24,
+  "clearance_payment_url": "https://buy.stripe.com/fZubJ18JYcah65TdSFdZ811"
  },
  {
   "id": "920033319090",
@@ -10806,7 +10833,10 @@
   },
   "size": "US 9",
   "added": "2026-10-12",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 64.3,
+  "clearance_payment_url": "https://buy.stripe.com/dRm00j1hwcahgKxbKxdZ81d"
  },
  {
   "id": "920033313246",
@@ -10837,7 +10867,10 @@
   },
   "size": "US 11",
   "added": "2026-10-12",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 41.55,
+  "clearance_payment_url": "https://buy.stripe.com/cNidR9f8m8Y5eCpeWJdZ80W"
  },
  {
   "id": "920033294674",
@@ -10869,7 +10902,10 @@
   },
   "size": "US 7.5",
   "added": "2026-10-12",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 64.3,
+  "clearance_payment_url": "https://buy.stripe.com/eVq3cv3pEb6d3XL15TdZ81e"
  },
  {
   "id": "920033268727",
@@ -10900,7 +10936,10 @@
   },
   "size": "US 13C",
   "added": "2026-10-12",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 64.3,
+  "clearance_payment_url": "https://buy.stripe.com/28E6oH7FUgqx8e115TdZ81f"
  },
  {
   "id": "920033663987",
@@ -10930,7 +10969,10 @@
   },
   "size": "US 6",
   "added": "2026-10-12",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 36.12,
+  "clearance_payment_url": "https://buy.stripe.com/dRm28r2lA4HPgKx7uhdZ80U"
  },
  {
   "id": "920033648293",
@@ -10961,7 +11003,10 @@
   },
   "size": "US 4.5Y",
   "added": "2026-10-12",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 46.24,
+  "clearance_payment_url": "https://buy.stripe.com/28EdR94tI8Y51PD7uhdZ812"
  },
  {
   "id": "920033638305",
@@ -10992,7 +11037,10 @@
   },
   "size": "US 12",
   "added": "2026-10-12",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 52.66,
+  "clearance_payment_url": "https://buy.stripe.com/dRmcN55xMb6d79XdSFdZ815"
  },
  {
   "id": "920033593197",
@@ -11023,7 +11071,10 @@
   },
   "size": "US 3Y",
   "added": "2026-10-12",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 57.08,
+  "clearance_payment_url": "https://buy.stripe.com/4gMcN57FU5LTeCp5m9dZ81c"
  },
  {
   "id": "920033538108",
@@ -11054,7 +11105,10 @@
   },
   "size": "US 10C",
   "added": "2026-10-12",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 53.46,
+  "clearance_payment_url": "https://buy.stripe.com/9B64gz4tI2zHcuh8yldZ818"
  },
  {
   "id": "920033536088",
@@ -11085,7 +11139,10 @@
   },
   "size": "US 10",
   "added": "2026-10-12",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 52.66,
+  "clearance_payment_url": "https://buy.stripe.com/4gMbJ1e4icah0Lz29XdZ816"
  },
  {
   "id": "920033522044",
@@ -11115,7 +11172,10 @@
   },
   "size": "US 8.5",
   "added": "2026-10-12",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 37.93,
+  "clearance_payment_url": "https://buy.stripe.com/3cIeVd6BQ4HPcuh8yldZ80V"
  },
  {
   "id": "920033516117",
@@ -11147,7 +11207,10 @@
   },
   "size": "US 2Y",
   "added": "2026-10-12",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 53.46,
+  "clearance_payment_url": "https://buy.stripe.com/cNi28r3pE0rz2TH8yldZ819"
  },
  {
   "id": "920033484715",
@@ -11179,7 +11242,10 @@
   },
   "size": "US 12C",
   "added": "2026-10-12",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 52.1,
+  "clearance_payment_url": "https://buy.stripe.com/aFafZh3pE1vD79X6qddZ814"
  },
  {
   "id": "920033466882",
@@ -11240,7 +11306,10 @@
   },
   "size": "US 13.5C",
   "added": "2026-10-12",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 53.46,
+  "clearance_payment_url": "https://buy.stripe.com/eVq5kDe4i2zH51P4i5dZ81a"
  },
  {
   "id": "920033440777",
@@ -11271,7 +11340,10 @@
   },
   "size": "US 7",
   "added": "2026-10-12",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 46.24,
+  "clearance_payment_url": "https://buy.stripe.com/4gM7sL6BQ5LT51PdSFdZ813"
  },
  {
   "id": "920033435530",
@@ -11302,7 +11374,10 @@
   },
   "size": "US 9",
   "added": "2026-10-12",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 53.46,
+  "clearance_payment_url": "https://buy.stripe.com/3cI00j9O24HPbqd6qddZ81b"
  },
  {
   "id": "920040173110",
@@ -11392,7 +11467,10 @@
   },
   "size": "US 11.5",
   "added": "2026-10-13",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 53.71,
+  "clearance_payment_url": "https://buy.stripe.com/eVq28rgcqa2979XdSFdZ81j"
  },
  {
   "id": "920022176276",
@@ -11422,7 +11500,10 @@
   },
   "size": "US 6",
   "added": "2026-10-13",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 44.61,
+  "clearance_payment_url": "https://buy.stripe.com/aFa14n0ds6PXgKxaGtdZ81h"
  },
  {
   "id": "920022167462",
@@ -11452,7 +11533,10 @@
   },
   "size": "US 10.5",
   "added": "2026-10-13",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 30.42,
+  "clearance_payment_url": "https://buy.stripe.com/bJe28r3pE7U18e13e1dZ81g"
  },
  {
   "id": "920022153999",
@@ -11482,7 +11566,10 @@
   },
   "size": "US 7Y",
   "added": "2026-10-13",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 53.46,
+  "clearance_payment_url": "https://buy.stripe.com/fZu6oHbWa2zHam929XdZ81i"
  },
  {
   "id": "920043583829",
@@ -12456,7 +12543,10 @@
   },
   "size": "US 10",
   "added": "2026-10-26",
-  "units_sold": 0
+  "units_sold": 0,
+  "clearance": true,
+  "clearance_price": 71.61,
+  "clearance_payment_url": "https://buy.stripe.com/3cI4gz2lAfmtcuhaGtdZ81k"
  },
  {
   "id": "920077749443",
