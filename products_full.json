@@ -12913,39 +12913,6 @@
   "added": "2026-10-26"
  },
  {
-  "id": "920086353859",
-  "title": "Adidas Copa Pure 2 League FG Black Gold/ Size: Men US 6.5 / Women US 7.5",
-  "price": "$50.00",
-  "price_direct": 42.5,
-  "image": "https://i.ebayimg.com/images/g/rX0AAeSwC~tq4~2P/s-l1600.webp",
-  "url": "https://www.ebay.com/itm/920086353859",
-  "brand": "Adidas",
-  "department": "Men",
-  "qty": 1,
-  "photos": [
-   "https://i.ebayimg.com/images/g/rX0AAeSwC~tq4~2P/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/ow4AAeSwClhq4~22/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/VjIAAeSwjclq4~2S/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/lSgAAeSwNBBq4~2V/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/HJQAAeSwqK9q4~2Y/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/lecAAeSw2l9q4~2b/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/yPoAAeSwRD5q4~2x/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/lpAAAeSwoMFq4~2z/s-l1600.webp"
-  ],
-  "payment_url": "https://buy.stripe.com/dRm8wPd0e6PX79X7uhdZ81m",
-  "weight_lbs": 3.0,
-  "weight_estimated": true,
-  "description": "The Adidas Copa Pure 2 League FG in Black and Gold, firm-ground soccer cleats with the classic Copa touch. Size Men US 6.5 / Women US 7.5. Brand new and comes with its box.",
-  "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
-  },
-  "size": "US 6.5",
-  "added": "2026-10-29",
-  "units_sold": 0
- },
- {
   "id": "920086325753",
   "title": "Adidas Postmove Mid CNY EL White Red/ Size: Youth US 4.5Y / Women US 5.5",
   "price": "$54.23",
@@ -13065,6 +13032,42 @@
   },
   "size": "One Size",
   "added": "2026-10-29",
+  "units_sold": 0
+ },
+ {
+  "id": "920086379180",
+  "title": "Skechers Slip-ins Work Nampa Groton SR Alloy Toe Black/ Size: Women US 9",
+  "price": "$62.00",
+  "price_direct": 52.7,
+  "image": "https://i.ebayimg.com/images/g/w2YAAeSwKMxq5B40/s-l1600.webp",
+  "url": "https://www.ebay.com/itm/920086379180",
+  "brand": "Skechers",
+  "department": "Women",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/w2YAAeSwKMxq5B40/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/xPQAAeSwumhq5B5F/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/xKQAAeSw7i9q5B5C/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/w24AAeSwKMxq5B4x/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/wtsAAeSwzi9q5B5I/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/xlIAAeSwXhRq5B5X/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/xKQAAeSw7i9q5B5T/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/w~IAAeSw9kxq5B5f/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/xMoAAeSweqpq5B5j/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/wx4AAeSwvxJq5B5r/s-l1600.webp",
+   "https://i.ebayimg.com/images/g/w94AAeSwvHNq5B5m/s-l1600.webp"
+  ],
+  "payment_url": "https://buy.stripe.com/bJe7sL6BQ4HPbqd01PdZ81r",
+  "weight_lbs": 2.5,
+  "weight_estimated": true,
+  "description": "The Skechers Slip-ins Work Nampa Groton SR in Black, a hands-free slip-in work shoe with alloy safety toe and slip-resistant outsole. Size Women US 9. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 9",
+  "added": "2026-10-30",
   "units_sold": 0
  }
 ]
