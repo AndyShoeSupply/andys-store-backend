@@ -29,6 +29,37 @@
   "units_sold": 0
  },
  {
+  "id": "398452420766",
+  "title": "Adidas Bubblecomfy I Toddler Red White JI1609 Size 5C",
+  "price": "$25.00",
+  "price_direct": 21.25,
+  "image": "https://i.ebayimg.com/images/g/CMEAAeSwZPtqvwuH/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/398452420766",
+  "brand": "Adidas",
+  "department": "Kids",
+  "qty": 1,
+  "payment_url": "https://buy.stripe.com/8x200jf8mgqxdyl7uhdZ60R",
+  "weight_lbs": 1.0,
+  "weight_estimated": false,
+  "description": "You can't go wrong with the Adidas Bubblecomfy I Toddler Red White JI1609, a kids' sneaker made to be worn on repeat. Listed here in size 5K. Comes brand new with its box included.",
+  "parcel_in": {
+   "l": 12,
+   "w": 8,
+   "h": 6
+  },
+  "size": "US 5C",
+  "photos": [
+   "https://i.ebayimg.com/images/g/CMEAAeSwZPtqvwuH/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/r~YAAeSwA65qvwty/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/M9EAAeSwn6dqvwt9/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/RoYAAeSwgeNqvwuC/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/7EAAAeSwDZZqvwuF/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/~4wAAeSwgA5qvwuL/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/jXEAAeSwrRRqvwuM/s-l1600.jpg"
+  ],
+  "units_sold": 0
+ },
+ {
   "id": "398409123317",
   "title": "Crocs Size 10 Unisex Kids Casual Clog",
   "price": "$25.00",
@@ -13035,37 +13066,5 @@
   "size": "One Size",
   "added": "2026-10-29",
   "units_sold": 0
- },
- {
-  "id": "398461852994",
-  "title": "Adidas Bubblecomfy I Toddler Red White JI1609 Size 5C",
-  "price": "$25.00",
-  "price_direct": 21.25,
-  "image": "https://i.ebayimg.com/images/g/CMEAAeSwZPtqvwuH/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398461852994",
-  "brand": "Adidas",
-  "department": "Kids",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/3cI5kDe4ifmteCpeWJdZ81s",
-  "weight_lbs": 1.0,
-  "weight_estimated": false,
-  "description": "You can't go wrong with the Adidas Bubblecomfy I Toddler Red White JI1609, a kids' sneaker made to be worn on repeat. Listed here in size 5K. Comes brand new with its box included.",
-  "parcel_in": {
-   "l": 12,
-   "w": 8,
-   "h": 6
-  },
-  "size": "US 5C",
-  "photos": [
-   "https://i.ebayimg.com/images/g/CMEAAeSwZPtqvwuH/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/r~YAAeSwA65qvwty/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/M9EAAeSwn6dqvwt9/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/RoYAAeSwgeNqvwuC/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/7EAAAeSwDZZqvwuF/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/~4wAAeSwgA5qvwuL/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/jXEAAeSwrRRqvwuM/s-l1600.jpg"
-  ],
-  "units_sold": 0,
-  "added": "2026-10-30"
  }
 ]
