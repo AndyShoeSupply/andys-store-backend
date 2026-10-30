@@ -10981,40 +10981,6 @@
   "clearance_payment_url": "https://buy.stripe.com/28EdR94tI8Y51PD7uhdZ812"
  },
  {
-  "id": "920033638305",
-  "title": "New Balance Coco CG2 Grey Pink/ Size: Men US 10.5/ Women US12",
-  "price": "$72.88",
-  "price_direct": 61.95,
-  "image": "https://i.ebayimg.com/images/g/cPYAAeSwbz9qzTgb/s-l1600.webp",
-  "url": "https://www.ebay.com/itm/920033638305",
-  "brand": "New Balance",
-  "department": "Women",
-  "qty": 1,
-  "photos": [
-   "https://i.ebayimg.com/images/g/cPYAAeSwbz9qzTgb/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/tUcAAeSwdbRqzTgd/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/OokAAeSwEPJqzTge/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/xMoAAeSwqJZqzTgh/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/oTgAAeSwxc5qzTgj/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/epIAAeSwEPpqzTgl/s-l1600.webp"
-  ],
-  "payment_url": "https://buy.stripe.com/fZu5kDgcq2zH9i54i5dZ73O",
-  "weight_lbs": 3.0,
-  "weight_estimated": false,
-  "description": "The New Balance Coco CG2 in Grey Pink is Coco Gauff's signature court shoe, made for hard-court stability and all-match comfort. Women US 12. New with box.",
-  "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
-  },
-  "size": "US 12",
-  "added": "2026-10-12",
-  "units_sold": 0,
-  "clearance": true,
-  "clearance_price": 52.66,
-  "clearance_payment_url": "https://buy.stripe.com/dRmcN55xMb6d79XdSFdZ815"
- },
- {
   "id": "920033593197",
   "title": "Nike Air Max 270 Black White PS US 3Y / EU 35",
   "price": "$79.00",
