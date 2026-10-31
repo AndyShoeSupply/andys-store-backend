@@ -6042,35 +6042,6 @@
   "units_sold": 0
  },
  {
-  "id": "398419217447",
-  "title": "Adidas Swift Run 1.0 Animal Print W 11 Women or 10 Men",
-  "price": "$62.00",
-  "price_direct": 52.7,
-  "image": "https://i.ebayimg.com/images/g/EVYAAeSwLB5qpjBn/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398419217447",
-  "brand": "Adidas",
-  "department": "Women",
-  "qty": 1,
-  "photos": [
-   "https://i.ebayimg.com/images/g/EVYAAeSwLB5qpjBn/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/wMcAAeSwVCxqpjBs/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/8I0AAeSw32NqpjBv/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/1vwAAeSwVXhqpjBx/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/K5gAAeSwbLhqpjB1/s-l1600.jpg"
-  ],
-  "payment_url": "https://buy.stripe.com/28E3cvd0e3DL9i529XdZ63k",
-  "weight_lbs": 3.0,
-  "weight_estimated": false,
-  "description": "The Adidas Swift Run 1.0 Animal Print W is a go-to women's sneaker that goes with just about anything. See the listing title for the exact size details. Ships brand new in its box.",
-  "parcel_in": {
-   "l": 12,
-   "w": 7,
-   "h": 4.5
-  },
-  "size": "US 11",
-  "units_sold": 0
- },
- {
   "id": "398419212917",
   "title": "Adidas Swift Run 1.0 Animal Print W 7.5 Women or 6.5 Men",
   "price": "$62.00",
