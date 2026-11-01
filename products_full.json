@@ -4251,35 +4251,6 @@
   "units_sold": 0
  },
  {
-  "id": "398412700662",
-  "title": "Adidas Samba OG Big Kids / Grade School",
-  "price": "$54.00",
-  "price_direct": 45.9,
-  "image": "https://i.ebayimg.com/images/g/xxIAAeSwAwdqr2TS/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398412700662",
-  "brand": "Adidas",
-  "department": "Kids",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/6oU8wPe4i1vD0LzcOBdZ63w",
-  "weight_lbs": 2.0,
-  "weight_estimated": false,
-  "description": "You can't go wrong with the Adidas Samba OG Big Kids / Grade School, a kids' sneaker made to be worn on repeat. See the listing title for the exact size details. Comes brand new with its box included.",
-  "parcel_in": {
-   "l": 12,
-   "w": 8,
-   "h": 6
-  },
-  "size": "US 5Y",
-  "photos": [
-   "https://i.ebayimg.com/images/g/xxIAAeSwAwdqr2TS/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/hQ4AAeSwCJxqr2TX/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/GwYAAeSwABRqr2Td/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/wRAAAeSwKfZqr2Ta/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/eC0AAeSwvoBqr2TV/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "398412697871",
   "title": "Adidas Samba OG GS / Kids",
   "price": "$54.00",
