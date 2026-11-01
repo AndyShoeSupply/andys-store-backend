@@ -9700,35 +9700,6 @@
   "units_sold": 0
  },
  {
-  "id": "398402241172",
-  "title": "Nike Air Zoom Structure 25 Wide White Metallic Silver W",
-  "price": "$93.00",
-  "price_direct": 79.05,
-  "image": "https://i.ebayimg.com/images/g/9HAAAeSwcFNqqfaA/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398402241172",
-  "brand": "Nike",
-  "department": "Women",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/fZubJ1gcq5LT1PD6qddZ70G",
-  "weight_lbs": 3.0,
-  "weight_estimated": false,
-  "description": "The Nike Air Zoom Structure 25 Wide White Metallic Silver W brings classic Nike style to your everyday lineup. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
-  "parcel_in": {
-   "l": 14,
-   "w": 12,
-   "h": 9
-  },
-  "size": "US 9",
-  "photos": [
-   "https://i.ebayimg.com/images/g/9HAAAeSwcFNqqfaA/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/W4IAAeSwTadqqfaH/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/o8IAAeSwSyBqqfaE/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/WMAAAeSwOZRqqfaT/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/KQQAAeSw2GhqqfaY/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "398426073438",
   "title": "Nike Air Zoom Structure 25 Wide White Metallic Silver",
   "price": "$95.00",
@@ -11378,7 +11349,7 @@
    "w": 10,
    "h": 8
   },
-  "size": "US 6",
+  "size": "US 6Y",
   "added": "2026-10-13",
   "units_sold": 0,
   "clearance": true,
