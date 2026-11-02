@@ -12219,36 +12219,6 @@
   "clearance_payment_url": "https://buy.stripe.com/3cI4gz2lAfmtcuhaGtdZ81k"
  },
  {
-  "id": "920077749443",
-  "title": "New Balance 9060 Great Plains True Red",
-  "price": "$84.00",
-  "price_direct": 71.4,
-  "image": "https://i.ebayimg.com/images/g/RwQAAeSw-htquFCu/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/920077749443",
-  "brand": "New Balance",
-  "department": "Unisex",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/9B64gzaS6gqxdyl29XdZ80D",
-  "weight_lbs": 3.0,
-  "weight_estimated": false,
-  "description": "The New Balance 9060 Great Plains True Red brings classic New Balance style to your everyday lineup. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
-  "parcel_in": {
-   "l": 14,
-   "w": 12,
-   "h": 9
-  },
-  "size": "US 7",
-  "photos": [
-   "https://i.ebayimg.com/images/g/RwQAAeSw-htquFCu/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/mmcAAeSw55tquFC8/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/nswAAeSwSb1quFDI/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/fxgAAeSwrgBquFDL/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/iZUAAeSwLAJquFDu/s-l1600.jpg"
-  ],
-  "units_sold": 0,
-  "added": "2026-10-26"
- },
- {
   "id": "920077706233",
   "title": "Adidas Gazelle Comfort Closure (toddler, casual) 5C",
   "price": "$29.00",
