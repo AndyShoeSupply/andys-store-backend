@@ -1338,12 +1338,12 @@ app.post('/api/store-reviews', (req, res) => {
 });
 
 // ---------- Shipping price charged to the customer ----------
-// Maria's FINAL rule 2026-10-08 (evening, reverses the calculated-with-cap
-// rule from earlier that day): FLAT $11.95 for every shipped order; local
-// Hereford pickup stays free. Customers pay inside Stripe's hosted checkout.
+// Maria's rule, updated 2026-11-03 (was FLAT $11.95 since 2026-10-08):
+// FLAT $9.00 for every shipped order; local Hereford pickup stays free.
+// Customers pay inside Stripe's hosted checkout.
 // computeShipping() below short-circuits to this flat amount; the weight/zone
 // estimate and provider quote chain stay in the file for label-cost checks.
-const SHIPPING_FLAT_CENTS = 1195;
+const SHIPPING_FLAT_CENTS = 900;
 const SHIPPING_CAP_CENTS = 1295;
 const DEPT_WEIGHT_LB = { Men: 3.0, Unisex: 2.8, Women: 2.5, Kids: 1.8, Baby: 1.0, Toys: 1.5, Electronics: 2.0 };
 const DEPT_PARCEL_IN = {
@@ -1561,7 +1561,7 @@ async function providerQuote(lines, dest) {
   return null;
 }
 async function computeShipping(lines, dest) {
-  // Flat $11.95 shipping (Maria's final call, 2026-10-08). The calculated
+  // Flat $9.00 shipping (Maria's call, 2026-11-03; was $11.95). The calculated
   // estimate below is kept for internal cost checks, not for charging.
   return { amount_cents: SHIPPING_FLAT_CENTS, source: 'flat', capped: false };
   const state = normalizeState(dest?.state);
@@ -1616,7 +1616,7 @@ app.post('/api/checkout', async (req, res) => {
     // Maria 2026-10-14: customers who created an account get an EXTRA 3% OFF
     // the item price (on top of the 15% OFF direct price). The discount is
     // decided HERE from the account session token — never from anything the
-    // browser claims — and shipping stays the flat $11.95 either way.
+    // browser claims — and shipping stays the flat $9.00 either way.
     const acctUser = accountUser(req);
     let accountDiscountCents = 0;
     if (acctUser) {
@@ -1685,7 +1685,7 @@ app.post('/api/checkout', async (req, res) => {
       },
     };
     if (fulfillment === 'shipping') {
-      const q = await computeShipping(lines, {}); // flat $11.95, no address needed
+      const q = await computeShipping(lines, {}); // flat $9.00, no address needed
       params.shipping_address_collection = { allowed_countries: ['US'] };
       params.shipping_options = [{
         shipping_rate_data: {
