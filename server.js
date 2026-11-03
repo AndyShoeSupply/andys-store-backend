@@ -2204,6 +2204,31 @@ app.get('/api/admin/users', requireAdmin, (req, res) => {
 app.get('/api/products/lite', (req, res) => {
   res.json(CATALOG.map(p => ({ id: String(p.id || p.itemId), title: p.title || p.name || '', price: storePriceOf(p) })));
 });
+
+// Admin inventory totals (Maria, 2026-11-03): pairs in the catalog and
+// their total value in dollars, shown in /admin.
+app.get('/api/admin/inventory', requireAdmin, (req, res) => {
+  const qtyOf = (p) => {
+    const q = Number(p?.qty);
+    if (Number.isFinite(q) && q >= 0) return q;
+    if (Array.isArray(p?.variants)) return p.variants.reduce((a, v) => a + (Number(v?.qty) || 0), 0);
+    return 1;
+  };
+  const ebayOf = (p) => Number(String(p?.price ?? '').replace(/[^0-9.]/g, '')) || 0;
+  let pairs = 0, value_store = 0, value_ebay = 0;
+  for (const p of CATALOG) {
+    const q = qtyOf(p);
+    pairs += q;
+    value_store += storePriceOf(p) * q;
+    value_ebay += ebayOf(p) * q;
+  }
+  res.json({
+    products: CATALOG.length,
+    pairs,
+    value_store: Math.round(value_store * 100) / 100,
+    value_ebay: Math.round(value_ebay * 100) / 100,
+  });
+});
 // ---------- Store config Maria edits from /admin (featured picks + overrides) ----------
 // Public read so the storefront can render her Top sellers / New arrivals /
 // Top picks and apply her per-product price/hide overrides without a rebuild.
