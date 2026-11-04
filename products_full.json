@@ -7353,35 +7353,6 @@
   "units_sold": 0
  },
  {
-  "id": "398398916606",
-  "title": "Size 10.5 - New Balance T500 Arid Stone",
-  "price": "$69.00",
-  "price_direct": 58.65,
-  "image": "https://i.ebayimg.com/images/g/ynoAAeSwIIxqqe8~/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398398916606",
-  "brand": "New Balance",
-  "department": "Unisex",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/fZubJ15xMa299i58yldZ70R",
-  "weight_lbs": 3.0,
-  "weight_estimated": false,
-  "description": "The New Balance T500 Arid Stone is a go-to unisex sneaker that goes with just about anything. Available in 10.5. Ships brand new in its box.",
-  "parcel_in": {
-   "l": 13,
-   "w": 8,
-   "h": 5
-  },
-  "size": "US 10.5",
-  "photos": [
-   "https://i.ebayimg.com/images/g/ynoAAeSwIIxqqe8~/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/8qwAAeSwOydqqe9I/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/tqgAAeSwABRqqe9B/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/9f8AAeSw-M1qqe84/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/1OUAAeSwdIRqqe87/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "398426092968",
   "title": "New Balance 550 Melon Water",
   "price": "$69.00",
@@ -12804,6 +12775,401 @@
   },
   "size": "US 9.5",
   "added": "2026-11-01",
+  "units_sold": 0
+ },
+ {
+  "id": "920102881654",
+  "title": "Adidas Break Start Bold Black White Gum/ Size: Women US 9.5 / Men US 8.5",
+  "price": "$45.21",
+  "price_direct": 38.43,
+  "image": "https://i.ebayimg.com/images/g/DsYAAeSwbetq6rqT/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920102881654",
+  "brand": "Adidas",
+  "department": "Women",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/DsYAAeSwbetq6rqT/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/EQEAAeSw1FBq6rqa/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/p38AAeSwGG1q6rqc/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/T1cAAeSw6l9q6rqf/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/Ug4AAeSw8ZNq6rqi/s-l1600.jpg"
+  ],
+  "payment_url": "https://buy.stripe.com/6oU8wP8JY4HP2THcOBdZ81u",
+  "weight_lbs": 2.5,
+  "weight_estimated": true,
+  "description": "The Adidas Break Start Bold in Black, White and Gum, a clean everyday court sneaker. Size Women US 9.5 / Men US 8.5. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 9.5",
+  "added": "2026-11-04",
+  "units_sold": 0
+ },
+ {
+  "id": "920102878883",
+  "title": "Skechers Ultra Flex 3.0 Brisk-Spec Charcoal Red/ Size: 4 Big Kid / EU 36",
+  "price": "$25.21",
+  "price_direct": 21.43,
+  "image": "https://i.ebayimg.com/images/g/P5MAAeSwCvVq6rm0/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920102878883",
+  "brand": "Skechers",
+  "department": "Kids",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/P5MAAeSwCvVq6rm0/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/SFYAAeSwXAdq6rm5/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/VHEAAeSw1hlq6rm7/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/CE8AAeSwkvZq6rm9/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/U38AAeSwUrhq6rm~/s-l1600.jpg"
+  ],
+  "payment_url": "https://buy.stripe.com/3cI3cv2lAdeleCp29XdZ81v",
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The Skechers Ultra Flex 3.0 Brisk-Spec Slip-ins in Charcoal and Red, hands-free comfort for kids. Size 4 Big Kid / EU 36. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 4",
+  "added": "2026-11-04",
+  "units_sold": 0
+ },
+ {
+  "id": "920102860982",
+  "title": "Adidas Ultraboost Light Triple White/ Size: Women US 7.5 / Men US 6.5",
+  "price": "$74.14",
+  "price_direct": 63.02,
+  "image": "https://i.ebayimg.com/images/g/~h4AAeSwMLhq6rgK/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920102860982",
+  "brand": "Adidas",
+  "department": "Women",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/~h4AAeSwMLhq6rgK/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/-E4AAeSwJ7Vq6rgR/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/1YgAAeSwoGZq6rgU/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/69MAAeSwcqpq6rgY/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/S04AAeSwEhdq6rgl/s-l1600.jpg"
+  ],
+  "payment_url": "https://buy.stripe.com/fZu00j3pEfmtfGtcOBdZ81w",
+  "weight_lbs": 2.5,
+  "weight_estimated": true,
+  "description": "The Adidas Ultraboost Light in Triple White, featherlight Boost cushioning for all-day miles. Size Women US 7.5 / Men US 6.5. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 7.5",
+  "added": "2026-11-04",
+  "units_sold": 0
+ },
+ {
+  "id": "920102852644",
+  "title": "Size 7.5 - Adidas Grand Court Alpha Silver Green W",
+  "price": "$47.99",
+  "price_direct": 40.79,
+  "image": "https://i.ebayimg.com/images/g/Mq0AAeSwbgpq6raf/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920102852644",
+  "brand": "Adidas",
+  "department": "Women",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/Mq0AAeSwbgpq6raf/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/51gAAeSwqmZq6rak/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/9i0AAeSwOVNq6ra1/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/6e4AAeSwQRBq6ra3/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/OkwAAeSw8ZNq6rbB/s-l1600.jpg"
+  ],
+  "payment_url": "https://buy.stripe.com/8x214n6BQcah1PDcOBdZ81x",
+  "weight_lbs": 2.5,
+  "weight_estimated": true,
+  "description": "The Adidas Grand Court Alpha in Silver Green with Cloud White stripes and a gum sole, suede court style. Size Women US 7.5. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 7.5",
+  "added": "2026-11-04",
+  "units_sold": 0
+ },
+ {
+  "id": "920102847720",
+  "title": "Nike Court Lite 2 Black White/ Size: Men US 7.5 / Women US 9",
+  "price": "$53.25",
+  "price_direct": 45.26,
+  "image": "https://i.ebayimg.com/images/g/5uwAAeSwQkZq6rWL/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920102847720",
+  "brand": "Nike",
+  "department": "Men",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/5uwAAeSwQkZq6rWL/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/OPEAAeSwjllq6rWa/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/4GIAAeSwelBq6rWN/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/7X0AAeSwvr1q6rWR/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/4oQAAeSwQrZq6rWT/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/8TAAAeSw1xJq6rWd/s-l1600.jpg"
+  ],
+  "payment_url": "https://buy.stripe.com/7sYeVd3pEcah51P6qddZ81y",
+  "weight_lbs": 3.0,
+  "weight_estimated": true,
+  "description": "The Nike Court Lite 2 in Black and White, a leather hard-court classic. Size Men US 7.5 / Women US 9. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 7.5",
+  "added": "2026-11-04",
+  "units_sold": 0
+ },
+ {
+  "id": "920102828995",
+  "title": "Nike Quest 5 Pure Platinum Light Crimson/ Size: Women US 9 / Men US 7.5",
+  "price": "$42.24",
+  "price_direct": 35.9,
+  "image": "https://i.ebayimg.com/images/g/IA8AAeSwcPtq6rK4/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920102828995",
+  "brand": "Nike",
+  "department": "Women",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/IA8AAeSwcPtq6rK4/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/3QAAAeSw2U5q6rK-/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/0o8AAeSwmxNq6rLI/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/H5sAAeSwgSZq6rLP/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/I5cAAeSwQopq6rLb/s-l1600.jpg"
+  ],
+  "payment_url": "https://buy.stripe.com/7sYdR93pE3DLgKx9CpdZ81z",
+  "weight_lbs": 2.5,
+  "weight_estimated": true,
+  "description": "The Nike Quest 5 in Pure Platinum, Wolf Grey and Light Crimson, a light everyday running shoe. Size Women US 9 / Men US 7.5. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 9",
+  "added": "2026-11-04",
+  "units_sold": 0
+ },
+ {
+  "id": "920102808896",
+  "title": "Nike Court Royale 2 Mid White Black/ Size: Men US 10.5 / Women US 12",
+  "price": "$52.12",
+  "price_direct": 44.3,
+  "image": "https://i.ebayimg.com/images/g/D8MAAeSwlg5q6rDD/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920102808896",
+  "brand": "Nike",
+  "department": "Men",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/D8MAAeSwlg5q6rDD/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/HXQAAeSw-Kxq6rDG/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/xegAAeSwmxNq6rDI/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/GOoAAeSwSO1q6rDL/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/GigAAeSw~~tq6rDa/s-l1600.jpg"
+  ],
+  "payment_url": "https://buy.stripe.com/dRm28rgcq4HPam9eWJdZ81A",
+  "weight_lbs": 3.0,
+  "weight_estimated": true,
+  "description": "The Nike Court Royale 2 Mid in White and Black, a clean mid-cut court profile. Size Men US 10.5 / Women US 12. Brand new without box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 10.5",
+  "added": "2026-11-04",
+  "units_sold": 0
+ },
+ {
+  "id": "920102797097",
+  "title": "Jordan Luka 2 Trick Shot PF White Green Strike/ Size: Men US 7 / Women US 8.5",
+  "price": "$72.21",
+  "price_direct": 61.38,
+  "image": "https://i.ebayimg.com/images/g/-kwAAeSwR~9q6q7P/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920102797097",
+  "brand": "Jordan",
+  "department": "Men",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/-kwAAeSwR~9q6q7P/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/B0IAAeSw76dq6q7a/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/u78AAeSwLTNq6q7T/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/BpQAAeSwektq6q7V/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/qmEAAeSwhRxq6q7X/s-l1600.jpg"
+  ],
+  "payment_url": "https://buy.stripe.com/fZucN5d0eeipcuh3e1dZ81B",
+  "weight_lbs": 3.0,
+  "weight_estimated": true,
+  "description": "The Jordan Luka 2 'Trick Shot' PF (DX9012-103) in White and Green Strike, Luka Doncic's second signature shoe. Size Men US 7 / Women US 8.5. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 7",
+  "added": "2026-11-04",
+  "units_sold": 0
+ },
+ {
+  "id": "920102793469",
+  "title": "Nike Air Force 1 Mid 07 Triple White/ Size: Men US 7 / Women US 8.5",
+  "price": "$74.21",
+  "price_direct": 63.08,
+  "image": "https://i.ebayimg.com/images/g/9uwAAeSw38Nq6q4K/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920102793469",
+  "brand": "Nike",
+  "department": "Women",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/9uwAAeSw38Nq6q4K/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/ABAAAeSwektq6q4N/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/-d4AAeSwy25q6q4P/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/BX0AAeSwtIRq6q4R/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/vXYAAeSw6kNq6q4U/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/uZEAAeSw~Hxq6q4W/s-l1600.jpg"
+  ],
+  "payment_url": "https://buy.stripe.com/6oU14n6BQb6deCp15TdZ81C",
+  "weight_lbs": 2.5,
+  "weight_estimated": true,
+  "description": "The Nike Air Force 1 Mid '07 in Triple White (CW2289-111), the all-white mid with ankle strap. Size Men US 7 / Women US 8.5. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 8.5",
+  "added": "2026-11-04",
+  "units_sold": 0
+ },
+ {
+  "id": "920102788710",
+  "title": "Jordan Stay Loyal 3/ Size: Men US 8 / Women US 9.5",
+  "price": "$63.21",
+  "price_direct": 53.73,
+  "image": "https://i.ebayimg.com/images/g/-EUAAeSw8m1q6q0L/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920102788710",
+  "brand": "Jordan",
+  "department": "Men",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/-EUAAeSw8m1q6q0L/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/8zMAAeSwsYZq6qz2/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/~oIAAeSw-Kxq6qz4/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/8dMAAeSwPuBq6q0T/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/~loAAeSwUnJq6q0Z/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/8psAAeSw87Vq6q0X/s-l1600.jpg"
+  ],
+  "payment_url": "https://buy.stripe.com/28E8wPaS6del65T7uhdZ81D",
+  "weight_lbs": 3.0,
+  "weight_estimated": true,
+  "description": "The Jordan Stay Loyal 3, everyday Jordan style with a supportive mid-cut fit. Size Men US 8 / Women US 9.5. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 8",
+  "added": "2026-11-04",
+  "units_sold": 0
+ },
+ {
+  "id": "920102757751",
+  "title": "Nike SB Check Canvas Light Bone White/ Size: 7Y / Women US 8.5",
+  "price": "$42.23",
+  "price_direct": 35.9,
+  "image": "https://i.ebayimg.com/images/g/mLoAAeSwzOlq6qmr/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920102757751",
+  "brand": "Nike",
+  "department": "Women",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/mLoAAeSwzOlq6qmr/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/i3wAAeSwo1hq6qmu/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/08cAAeSwk3pq6qmy/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/mXcAAeSw935q6qnA/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/jBsAAeSwzHBq6qnE/s-l1600.jpg"
+  ],
+  "payment_url": "https://buy.stripe.com/eVqaEX1hw5LTfGt9CpdZ81E",
+  "weight_lbs": 2.5,
+  "weight_estimated": true,
+  "description": "The Nike SB Check Canvas (905373-002) in Light Bone and White, a low canvas skate shoe. Size 7Y / Women US 8.5. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 8.5",
+  "added": "2026-11-04",
+  "units_sold": 0
+ },
+ {
+  "id": "920102737084",
+  "title": "Nike Air Monarch IV 4E Wide White Black Blue/ Size: Men US 8 / Women US 9.5",
+  "price": "$52.21",
+  "price_direct": 44.38,
+  "image": "https://i.ebayimg.com/images/g/cfcAAeSw8nxq6qas/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920102737084",
+  "brand": "Nike",
+  "department": "Men",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/cfcAAeSw8nxq6qas/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/yKcAAeSwOIxq6qax/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/gRsAAeSweW5q6qav/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/vYoAAeSw6l9q6qa8/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/vowAAeSwEPJq6qbC/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/vwQAAeSwejxq6qbG/s-l1600.jpg"
+  ],
+  "payment_url": "https://buy.stripe.com/00w7sLgcq4HPcuh29XdZ81F",
+  "weight_lbs": 3.0,
+  "weight_estimated": true,
+  "description": "The Nike Air Monarch IV 4E Extra Wide (416355-002) in White and Black with Racer Blue accents, full-length Air comfort. Size Men US 8 / Women US 9.5. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 8",
+  "added": "2026-11-04",
+  "units_sold": 0
+ },
+ {
+  "id": "920102714173",
+  "title": "Nike Dunk High Retro White Black Total Orange/ Size: Men US 10 / Women US 11.5",
+  "price": "$71.21",
+  "price_direct": 60.53,
+  "image": "https://i.ebayimg.com/images/g/Zx4AAeSw7bNq6qSG/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920102714173",
+  "brand": "Nike",
+  "department": "Men",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/Zx4AAeSw7bNq6qSG/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/ZBsAAeSw4V9q6qSD/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/sq4AAeSwUxFq6qSP/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/tRcAAeSwok1q6qSU/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/cZgAAeSwMLhq6qSX/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/sgwAAeSwX3Fq6qSo/s-l1600.jpg"
+  ],
+  "payment_url": "https://buy.stripe.com/9B68wP2lA2zHbqdaGtdZ81G",
+  "weight_lbs": 3.0,
+  "weight_estimated": true,
+  "description": "The Nike Dunk High Retro 'Panda' (DD1399-105) in White and Black with Total Orange accents. Size Men US 10 / Women US 11.5. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 10",
+  "added": "2026-11-04",
   "units_sold": 0
  }
 ]
