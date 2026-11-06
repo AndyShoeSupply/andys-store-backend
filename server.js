@@ -251,6 +251,18 @@ db.exec(`CREATE TABLE IF NOT EXISTS feedback (
   name TEXT,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 )`); // Maria 2026-10-16: customer feedback from the printed thank-you card QR (andysshoesupply.com/feedback)
+db.exec(`CREATE TABLE IF NOT EXISTS size_alerts (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  brand TEXT,
+  model TEXT,
+  product_id TEXT,
+  size TEXT NOT NULL,
+  phone TEXT,
+  email TEXT,
+  lang TEXT,
+  source TEXT,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+)`); // Maria 2026-11-06: size waitlist «¿No está tu talla? Te aviso» — visitors ask to be notified when a size arrives
 function getSetting(key, fallback) {
   try {
     const row = db.prepare('SELECT value FROM settings WHERE key = ?').get(key);
@@ -1478,6 +1490,63 @@ app.post('/api/feedback', (req, res) => {
 app.get('/api/admin/feedback', requireAdmin, (req, res) => {
   const rows = db.prepare('SELECT id, rating, improve, product, name, created_at FROM feedback ORDER BY id DESC LIMIT 200').all();
   res.json(rows);
+});
+
+// ---------- Size waitlist «¿No está tu talla? Te aviso» (Maria, 2026-11-06) ----------
+// Public form on the store (product dialog + /prices): a visitor leaves the
+// brand/model and size they want plus a phone OR an email. Requests are only
+// STORED — nothing is ever emailed or texted automatically. Maria reviews
+// matches herself (admin list below) when new pairs land via the eBay sync.
+// Basic abuse brake: max 5 submissions per IP per 10 minutes (in-memory).
+const sizeAlertHits = new Map();
+function sizeAlertRateOk(ip) {
+  const now = Date.now(), win = 10 * 60 * 1000, max = 5;
+  const arr = (sizeAlertHits.get(ip) || []).filter(t => now - t < win);
+  if (arr.length >= max) { sizeAlertHits.set(ip, arr); return false; }
+  arr.push(now); sizeAlertHits.set(ip, arr);
+  return true;
+}
+app.post('/api/size-alerts', (req, res) => {
+  try {
+    if (!sizeAlertRateOk(req.ip || 'unknown'))
+      return res.status(429).json({ ok: false, error: 'Too many submissions — please try again in a few minutes.' });
+    const b = req.body || {};
+    const clean = (v, n) => typeof v === 'string' ? v.trim().slice(0, n) : '';
+    const brand = clean(b.brand, 120);
+    const model = clean(b.model, 160);
+    const productId = clean(b.product_id, 40);
+    const size = clean(b.size, 40);
+    const phone = clean(b.phone, 40);
+    const email = clean(b.email, 160).toLowerCase();
+    const lang = b.lang === 'en' ? 'en' : 'es';
+    const source = b.source === 'prices' ? 'prices' : 'product';
+    if (!size)
+      return res.status(400).json({ ok: false, error: 'Please tell us the size you are looking for.' });
+    if (!phone && !email)
+      return res.status(400).json({ ok: false, error: 'Please leave a phone number or an email so we can reach you.' });
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+      return res.status(400).json({ ok: false, error: 'That email does not look right — please check it.' });
+    if (phone && phone.replace(/\D/g, '').length < 7)
+      return res.status(400).json({ ok: false, error: 'That phone number does not look right — please check it.' });
+    const info = db.prepare('INSERT INTO size_alerts (brand, model, product_id, size, phone, email, lang, source) VALUES (?, ?, ?, ?, ?, ?, ?, ?)')
+      .run(brand || null, model || null, productId || null, size, phone || null, email || null, lang, source);
+    res.json({ ok: true, id: Number(info.lastInsertRowid) });
+  } catch (e) {
+    res.status(e.status || 500).json({ ok: false, error: e.message || 'size alert failed' });
+  }
+});
+
+// Admin: size-waitlist requests, most recent first (Maria/Muse cross these
+// against new arrivals from the eBay→store sync and reach out manually).
+app.get('/api/admin/size-alerts', requireAdmin, (req, res) => {
+  const rows = db.prepare('SELECT id, brand, model, product_id, size, phone, email, lang, source, created_at FROM size_alerts ORDER BY id DESC LIMIT 500').all();
+  res.json(rows);
+});
+
+// Admin: delete one size-waitlist request (handled or entered by mistake).
+app.delete('/api/admin/size-alerts/:id', requireAdmin, (req, res) => {
+  const info = db.prepare('DELETE FROM size_alerts WHERE id = ?').run(Number(req.params.id) || 0);
+  res.json({ ok: true, deleted: Number(info.changes) });
 });
 
 // Validate + group raw cart entries [{id, size?, qty?}] against the catalog.
