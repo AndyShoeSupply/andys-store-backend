@@ -979,14 +979,9 @@
   "url": "https://www.ebay.com/itm/398408917829",
   "brand": "Skechers",
   "department": "Kids",
-  "qty": 5,
+  "qty": 2,
   "payment_url": "https://buy.stripe.com/8x2dR98JY1vD8e17uhdZ70a",
   "variants": [
-   {
-    "size": "12",
-    "qty": 3,
-    "payment_url": "https://buy.stripe.com/00w00j2lA1vD9i56qddZ72q"
-   },
    {
     "size": "1",
     "qty": 1,
@@ -1006,7 +1001,7 @@
    "w": 6,
    "h": 4
   },
-  "size": "US 12C, US 1Y, US 2Y",
+  "size": "US 1Y, US 2Y",
   "photos": [
    "https://i.ebayimg.com/images/g/v6UAAeSwAMdqrdQk/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/6NQAAeSwYllqrdQs/s-l1600.jpg",
