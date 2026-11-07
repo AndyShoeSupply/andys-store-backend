@@ -4515,36 +4515,6 @@
   "units_sold": 0
  },
  {
-  "id": "398445728299",
-  "title": "Nike Court Vision Low Women 6.5 Women or 5 Men",
-  "price": "$55.00",
-  "price_direct": 46.75,
-  "image": "https://i.ebayimg.com/images/g/O6AAAeSwmwpqvI7i/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398445728299",
-  "brand": "Nike",
-  "department": "Women",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/dRm8wPe4ia293XL5m9dZ619",
-  "weight_lbs": 3.0,
-  "weight_estimated": false,
-  "description": "You can't go wrong with the Nike Court Vision Low, a women's sneaker made to be worn on repeat. See the listing title for the exact size details. Brand new and comes with its box.",
-  "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
-  },
-  "size": "US 6.5",
-  "photos": [
-   "https://i.ebayimg.com/images/g/O6AAAeSwmwpqvI7i/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/G6UAAeSw7odqvI7l/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/LEQAAeSwED5qvI7q/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/Jt0AAeSw7PpqvI7t/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/MUMAAeSwA9VqvI7x/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/MlQAAeSw4dRqvI71/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "398442031978",
   "title": "adidas Campus 00s 5Y",
   "price": "$55.00",
