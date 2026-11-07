@@ -12617,37 +12617,6 @@
   "units_sold": 0
  },
  {
-  "id": "920094718110",
-  "title": "Caterpillar Second Shift Steel Toe Work Boot Black/ Size: Men US 9.5 Wide",
-  "price": "$45.00",
-  "price_direct": 38.25,
-  "image": "https://i.ebayimg.com/images/g/KLkAAeSwi1pq0sjm/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/920094718110",
-  "brand": "Caterpillar",
-  "department": "Men",
-  "qty": 1,
-  "photos": [
-   "https://i.ebayimg.com/images/g/KLkAAeSwi1pq0sjm/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/F2gAAeSwaaZq0sja/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/VT8AAeSwZ4dq0sjS/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/I5cAAeSw4vpq0sjc/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/F5AAAeSwaaZq0sjf/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/F6kAAeSwaaZq0sji/s-l1600.jpg"
-  ],
-  "payment_url": "https://buy.stripe.com/eVq28r7FU5LT2TH8yldZ81t",
-  "weight_lbs": 3.0,
-  "weight_estimated": true,
-  "description": "The Caterpillar Second Shift steel toe work boot in black, built tough for the job site with a wide fit, leather upper and foam insole. Size Men US 9.5 Wide. Brand new with defects, never worn.",
-  "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
-  },
-  "size": "US 9.5 Wide",
-  "added": "2026-11-01",
-  "units_sold": 0
- },
- {
   "id": "920102881654",
   "title": "Adidas Break Start Bold Black White Gum/ Size: Women US 9.5 / Men US 8.5",
   "price": "$45.21",
@@ -13498,6 +13467,37 @@
    "h": 8
   },
   "size": "US 6.5Y",
+  "added": "2026-11-07",
+  "units_sold": 0
+ },
+ {
+  "id": "920116668394",
+  "title": "Caterpillar Second Shift Steel Toe Work Boot Black/ Size: Men US 9.5 Wide",
+  "price": "$39.00",
+  "price_direct": 33.15,
+  "image": "https://i.ebayimg.com/images/g/KLkAAeSwi1pq0sjm/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920116668394",
+  "brand": "Caterpillar",
+  "department": "Men",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/KLkAAeSwi1pq0sjm/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/F2gAAeSwaaZq0sja/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/VT8AAeSwZ4dq0sjS/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/I5cAAeSw4vpq0sjc/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/F5AAAeSwaaZq0sjf/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/F6kAAeSwaaZq0sji/s-l1600.jpg"
+  ],
+  "payment_url": "https://buy.stripe.com/aFa00jgcqb6dbqddSFdZ81Z",
+  "weight_lbs": 3.0,
+  "weight_estimated": true,
+  "description": "The Caterpillar Second Shift steel toe work boot in black, built tough for the job site with a wide fit, leather upper and foam insole. Size Men US 9.5 Wide. Pre-owned in excellent condition.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 9.5 Wide",
   "added": "2026-11-07",
   "units_sold": 0
  }
