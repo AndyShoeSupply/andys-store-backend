@@ -1081,6 +1081,24 @@ function newArrivalCard(p) {
     + '</td></tr></table>';
 }
 
+// ---------- Featured-picks fallback (Maria, 2026-11-08) ----------
+// When there is no new-arrivals batch (fewer than 20 un-mailed pairs),
+// keep subscribers warm: every 4 days, an email with 10 RANDOM pairs from
+// the top brands (Hoka, Nike, Jordan, New Balance). Never within 4 days
+// of ANY promo email (digest or featured), so inboxes never get flooded.
+const FEATURED_MIN_DAYS = 4;
+const FEATURED_BRANDS = ['hoka', 'nike', 'jordan', 'new balance'];
+function featuredPicks() {
+  const pool = CATALOG.filter(p => p && (p.qty || 0) > 0 && FEATURED_BRANDS.includes(String(p.brand || '').trim().toLowerCase()));
+  const arr = pool.slice();
+  for (let i = arr.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); const t = arr[i]; arr[i] = arr[j]; arr[j] = t; }
+  return arr.slice(0, 10);
+}
+function daysSinceSetting(key) {
+  const v = getSetting(key, null);
+  return v ? (Date.now() - new Date(v).getTime()) / 86400000 : Infinity;
+}
+
 app.post('/api/cron/new-arrivals', async (req, res) => {
   try {
     const secret = process.env.CRON_SECRET;
@@ -1115,8 +1133,52 @@ app.post('/api/cron/new-arrivals', async (req, res) => {
       return res.json({ ok: true, sent: 0, reason: 'preview', pending, previewTo: testTo });
     }
 
-    if (pending < NEWARRIVALS_THRESHOLD)
-      return res.json({ ok: true, sent: 0, reason: 'not_ready', pending, threshold: NEWARRIVALS_THRESHOLD });
+    if (pending < NEWARRIVALS_THRESHOLD) {
+      // No batch ready — featured-picks fallback, at most one promo
+      // email of any kind every 4 days (Maria, 2026-11-08).
+      const lastAny = Math.min(daysSinceSetting('newarrivals_last_sent'), daysSinceSetting('featured_last_sent'));
+      if (lastAny < FEATURED_MIN_DAYS)
+        return res.json({ ok: true, sent: 0, reason: 'not_ready', pending, threshold: NEWARRIVALS_THRESHOLD });
+      const picks = featuredPicks();
+      if (picks.length < 10)
+        return res.json({ ok: true, sent: 0, reason: 'not_ready', pending, threshold: NEWARRIVALS_THRESHOLD });
+      if (dry)
+        return res.json({ ok: true, sent: 0, reason: 'dry_run_featured', pending, picks: picks.map(p => ({ id: p.id, title: p.title, price_direct: p.price_direct, brand: p.brand, size: p.size })) });
+      if (!RESEND_API_KEY) return res.status(503).json({ ok: false, error: 'email not configured (set RESEND_API_KEY)' });
+      const fusers = db.prepare('SELECT id, email, name FROM users WHERE unsubscribed = 0 AND email_verified = 1 ORDER BY id')
+        .all()
+        .filter(u => !isHouseEmail(u.email));
+      const fsubject = `10 pairs picked for you: Hoka, Nike, Jordan & New Balance — Andy's Shoe Supply`;
+      const cards = picks.map(newArrivalCard).join('');
+      let fsent = 0, ffailed = 0, fsampleHtml = null, fsampleText = null, fsampleUnsub = '';
+      for (const u of fusers) {
+        const first = String(u.name || '').trim().split(/\s+/)[0];
+        const unsub = unsubscribeUrl(req, u.id, u.email);
+        const mailHtml = emailShell(
+            `<p style="font-size:14px;font-weight:700;letter-spacing:2px;color:#d22;margin:0 0 4px">TOP BRANDS · FRESH PICKS</p>`
+            + `<p style="font-size:30px;font-weight:800;margin:0 0 10px;color:#111111">10 PAIRS WE PICKED FOR YOU 👟</p>`
+            + `<p style="font-size:17px;font-weight:700;color:#333333;margin:0 0 10px">Hi${first ? ' ' + escHtml(first) : ''}! 👋</p>`
+            + `<p style="font-size:16px;line-height:1.65;color:#333333;margin:0 0 12px">We pulled <strong>10 pairs</strong> from the brands everyone asks for — <strong>Hoka, Nike, Jordan and New Balance</strong> — all in stock right now, and always <strong>15% OFF the eBay price</strong>. No codes, no games, every day.</p>`
+            + cards
+            + `<p style="font-size:15px;line-height:1.6;color:#333333;margin:4px 0 18px">Sizes go fast — if your size is here, grab it before someone else does.</p>`
+            + `<p style="text-align:center;margin:6px 0 18px"><a href="https://andysshoesupply.com/" style="display:inline-block;background:#d22;color:#fff;font-size:17px;font-weight:700;text-decoration:none;padding:15px 40px;border-radius:999px">Shop the store</a></p>`
+            + `<p style="font-size:13px;color:#888888;text-align:center;margin:0 0 10px">100% authentic · Fast US shipping · Free pickup in Hereford, TX</p>`
+            + `<p style="font-size:12px;color:#888;margin-top:10px">You're receiving this because you have an account at Andy's Shoe Supply. <a href="${unsub}">Unsubscribe</a></p>`
+          );
+        const mailText = `Hi${first ? ' ' + first : ''}! We picked 10 pairs for you from Hoka, Nike, Jordan and New Balance at Andy's Shoe Supply (always 15% OFF the eBay price). See them: https://andysshoesupply.com/\n\n—\nDon't want these emails? Unsubscribe here: ${unsub}`;
+        const r = await sendEmail({ to: u.email, subject: fsubject, html: mailHtml, text: mailText, headers: { 'List-Unsubscribe': `<${unsub}>` } });
+        if (r.ok) { fsent++; if (!fsampleHtml) { fsampleHtml = mailHtml; fsampleText = mailText; fsampleUnsub = unsub; } } else ffailed++;
+        if (fusers.length > 1) await new Promise(done => setTimeout(done, 350));
+      }
+      console.log(`[email] featured picks: ${fsent} sent, ${ffailed} failed, ${fusers.length} recipients`);
+      if (fsent > 0) setSetting('featured_last_sent', new Date().toISOString());
+      if (fsent > 0 && fsampleHtml) {
+        const safeHtml = fsampleUnsub ? fsampleHtml.split(fsampleUnsub).join('#') : fsampleHtml;
+        const safeText = fsampleUnsub ? fsampleText.split(fsampleUnsub).join('(unsubscribe link disabled in your review copy)') : fsampleText;
+        await sendOwnerPromoCopy({ subject: fsubject, html: safeHtml, text: safeText });
+      }
+      return res.json({ ok: true, sent: fsent, failed: ffailed, kind: 'featured', pairs: picks.length, recipients: fusers.length, pending });
+    }
 
     const lastSent = getSetting('newarrivals_last_sent', null);
     if (lastSent && (Date.now() - new Date(lastSent).getTime()) < NEWARRIVALS_MIN_DAYS * 24 * 3600 * 1000)
