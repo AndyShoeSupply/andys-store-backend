@@ -1413,36 +1413,6 @@
   "units_sold": 0
  },
  {
-  "id": "398432916988",
-  "title": "adidas Superstar II C 5C",
-  "price": "$34.00",
-  "price_direct": 28.9,
-  "image": "https://i.ebayimg.com/images/g/GEgAAeSwtUBqtz7v/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398432916988",
-  "brand": "Adidas",
-  "department": "Kids",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/cNi8wPd0eb6dfGt5m9dZ62l",
-  "weight_lbs": 2.0,
-  "weight_estimated": false,
-  "description": "The adidas Superstar II C brings classic Adidas style to your everyday lineup. This pair is a 5K. New with box, ready to wear straight out of the package.",
-  "parcel_in": {
-   "l": 12,
-   "w": 8,
-   "h": 6
-  },
-  "size": "US 5C",
-  "photos": [
-   "https://i.ebayimg.com/images/g/GEgAAeSwtUBqtz7v/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/AKgAAeSwbz5qtz8A/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/IO4AAeSwr5dqtz7x/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/7igAAeSwYxRqtz70/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/a4kAAeSwxSZqtz72/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/7SEAAeSwEcVqtz76/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "398432851825",
   "title": "adidas Superstar II C 1Y",
   "price": "$34.00",
@@ -1609,35 +1579,6 @@
    "h": 6
   },
   "size": "US 12C",
-  "photos": [
-   "https://i.ebayimg.com/images/g/XEEAAeSwHJdqtztJ/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/rvkAAeSwSL1qtztL/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/42wAAeSw9uZqtzvt/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/LEgAAeSwbZtqtzvv/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/ZhUAAeSwVJRqtzvy/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
-  "id": "398432825037",
-  "title": "adidas Superstar Low Triple White 10C",
-  "price": "$35.00",
-  "price_direct": 29.75,
-  "image": "https://i.ebayimg.com/images/g/XEEAAeSwHJdqtztJ/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398432825037",
-  "brand": "Adidas",
-  "department": "Kids",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/dRmcN59O2deleCp5m9dZ62x",
-  "weight_lbs": 1.0,
-  "weight_estimated": false,
-  "description": "Meet the adidas Superstar Low Triple White \u2014 a kids' sneaker with a clean, standout look. Sized at 10k. Comes brand new with its box included.",
-  "parcel_in": {
-   "l": 12,
-   "w": 8,
-   "h": 6
-  },
-  "size": "US 10C",
   "photos": [
    "https://i.ebayimg.com/images/g/XEEAAeSwHJdqtztJ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/rvkAAeSwSL1qtztL/s-l1600.jpg",
@@ -6102,35 +6043,6 @@
   "units_sold": 0
  },
  {
-  "id": "398435811615",
-  "title": "Vans Knu Skool Flame \u2013 Black/Red/Yellow 6TD",
-  "price": "$63.74",
-  "price_direct": 54.18,
-  "image": "https://i.ebayimg.com/images/g/uDcAAeSwCJlquI96/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398435811615",
-  "brand": "Vans",
-  "department": "Unisex",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/eVq9AT6BQb6dam9eWJdZ625",
-  "weight_lbs": 2.0,
-  "weight_estimated": false,
-  "description": "The Vans Knu Skool Flame \u2013 Black/Red/Yellow 6TD brings classic Vans style to your everyday lineup. See the listing title for the exact size details. Comes brand new with its box included.",
-  "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
-  },
-  "size": "US 5",
-  "photos": [
-   "https://i.ebayimg.com/images/g/uDcAAeSwCJlquI96/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/kNYAAeSwgI1quI96/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/p5cAAeSwEkpquI96/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/flwAAeSwlvRquI96/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/4lcAAeSwHQtquI-O/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "398435810576",
   "title": "Vans Knu Skool Flame \u2013 Black/Red/Yellow",
   "price": "$63.74",
@@ -6592,35 +6504,6 @@
    "https://i.ebayimg.com/images/g/ldgAAeSw-1lqoLRW/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/NKYAAeSwN1tqoLRc/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/9~4AAeSwa5VqoLRg/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
-  "id": "398399249971",
-  "title": "Size 12 - Asics Gel Renma White Black",
-  "price": "$66.00",
-  "price_direct": 56.1,
-  "image": "https://i.ebayimg.com/images/g/CMcAAeSwWt1qqg8o/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398399249971",
-  "brand": "Asics",
-  "department": "Unisex",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/14AaEX8JYcah2TH29XdZ70L",
-  "weight_lbs": 3.0,
-  "weight_estimated": false,
-  "description": "The Asics Gel Renma White Black brings classic Asics style to your everyday lineup. Listed here in size 12. Ships brand new in its box.",
-  "parcel_in": {
-   "l": 14,
-   "w": 12,
-   "h": 9
-  },
-  "size": "US 12",
-  "photos": [
-   "https://i.ebayimg.com/images/g/CMcAAeSwWt1qqg8o/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/IYkAAeSwzmBqqg8k/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/GogAAeSwfmBqqg8r/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/tNwAAeSweKZqqg8u/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/7twAAeSwKkJqqg82/s-l1600.jpg"
   ],
   "units_sold": 0
  },
@@ -10550,38 +10433,6 @@
   "clearance_payment_url": "https://buy.stripe.com/eVq3cv3pEb6d3XL15TdZ81e"
  },
  {
-  "id": "920033268727",
-  "title": "New Balance 9060 Black Phantom US 13C / EU 31",
-  "price": "$89.00",
-  "price_direct": 75.65,
-  "image": "https://i.ebayimg.com/images/g/qwgAAeSwjXpqzR7K/s-l1600.webp",
-  "url": "https://www.ebay.com/itm/920033268727",
-  "brand": "New Balance",
-  "department": "Kids",
-  "qty": 1,
-  "photos": [
-   "https://i.ebayimg.com/images/g/qwgAAeSwjXpqzR7K/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/6KkAAeSwhNRqzR7O/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/yNIAAeSwLVtqzR7Q/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/GkEAAeSwP8lqzR7T/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/mhIAAeSwwHhqzR7V/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/vDgAAeSweINqzR8Z/s-l1600.webp"
-  ],
-  "payment_url": "https://buy.stripe.com/14A6oH4tI2zH51P4i5dZ73K",
-  "weight_lbs": 3.0,
-  "weight_estimated": false,
-  "description": "The New Balance 9060 Little Kid in Black and Phantom brings the bold 9060 look to little feet. Listed here in US 13C / EU 31. New with box, ready to wear.",
-  "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
-  },
-  "size": "US 13C",
-  "added": "2026-10-12",
-  "units_sold": 0,
-  "clearance_payment_url": "https://buy.stripe.com/28E6oH7FUgqx8e115TdZ81f"
- },
- {
   "id": "920033663987",
   "title": "New Balance FreezeLX V5 Turf White/ Size: Men US 6 / Women US 7.5",
   "price": "$50.00",
@@ -12180,36 +12031,6 @@
   "added": "2026-10-26"
  },
  {
-  "id": "920077721640",
-  "title": "Nike Star Runner 5 Size 12C",
-  "brand": "Nike",
-  "department": "Kids",
-  "price": "$31.00",
-  "price_direct": 26.35,
-  "qty": 1,
-  "image": "https://i.ebayimg.com/images/g/144AAeSwpvhqwabk/s-l1600.jpg",
-  "photos": [
-   "https://i.ebayimg.com/images/g/144AAeSwpvhqwabk/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/9CAAAeSw7plqwaa5/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/kJkAAeSwsQBqwaa-/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/PbAAAeSwNuFqwabZ/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/dBEAAeSwsSdqwabS/s-l1600.jpg"
-  ],
-  "url": "https://www.ebay.com/itm/920077721640",
-  "payment_url": "https://buy.stripe.com/3cIcN50dscah9i53e1dZ80I",
-  "weight_lbs": 1.0,
-  "weight_estimated": false,
-  "description": "The Nike Star Runner 5 is a go-to kids' sneaker that goes with just about anything. This pair is a 12C. New with box, ready to wear straight out of the package.",
-  "parcel_in": {
-   "l": 12,
-   "w": 8,
-   "h": 6
-  },
-  "size": "US 12C",
-  "units_sold": 0,
-  "added": "2026-10-26"
- },
- {
   "id": "920077738642",
   "title": "Adidas Campus 00s J Cream Semi Pink Spark US 5Y or 6 Women",
   "price": "$59.95",
@@ -13471,34 +13292,34 @@
   "units_sold": 0
  },
  {
-  "id": "920116668394",
-  "title": "Caterpillar Second Shift Steel Toe Work Boot Black/ Size: Men US 9.5 Wide",
-  "price": "$39.00",
-  "price_direct": 33.15,
-  "image": "https://i.ebayimg.com/images/g/KLkAAeSwi1pq0sjm/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/920116668394",
-  "brand": "Caterpillar",
-  "department": "Men",
+  "id": "920117193651",
+  "title": "adidas Superstar II C 5C",
+  "price": "$34.00",
+  "price_direct": 28.9,
+  "image": "https://i.ebayimg.com/images/g/GEgAAeSwtUBqtz7v/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920117193651",
+  "brand": "Adidas",
+  "department": "Kids",
   "qty": 1,
-  "photos": [
-   "https://i.ebayimg.com/images/g/KLkAAeSwi1pq0sjm/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/F2gAAeSwaaZq0sja/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/VT8AAeSwZ4dq0sjS/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/I5cAAeSw4vpq0sjc/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/F5AAAeSwaaZq0sjf/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/F6kAAeSwaaZq0sji/s-l1600.jpg"
-  ],
-  "payment_url": "https://buy.stripe.com/aFa00jgcqb6dbqddSFdZ81Z",
-  "weight_lbs": 3.0,
-  "weight_estimated": true,
-  "description": "The Caterpillar Second Shift steel toe work boot in black, built tough for the job site with a wide fit, leather upper and foam insole. Size Men US 9.5 Wide. Pre-owned in excellent condition.",
+  "payment_url": "https://buy.stripe.com/3cIdR97FU6PXcuh15TdZ820",
+  "weight_lbs": 2.0,
+  "weight_estimated": false,
+  "description": "The adidas Superstar II C brings classic Adidas style to your everyday lineup. This pair is a 5K. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
-   "w": 10,
-   "h": 8
+   "w": 8,
+   "h": 6
   },
-  "size": "US 9.5 Wide",
-  "added": "2026-11-07",
-  "units_sold": 0
+  "size": "US 5C",
+  "photos": [
+   "https://i.ebayimg.com/images/g/GEgAAeSwtUBqtz7v/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/AKgAAeSwbz5qtz8A/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/IO4AAeSwr5dqtz7x/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/7igAAeSwYxRqtz70/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/a4kAAeSwxSZqtz72/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/7SEAAeSwEcVqtz76/s-l1600.jpg"
+  ],
+  "units_sold": 0,
+  "added": "2026-11-07"
  }
 ]
