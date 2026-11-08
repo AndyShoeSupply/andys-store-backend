@@ -3708,9 +3708,9 @@
  },
  {
   "id": "398429699022",
-  "title": "Vans Authentic Navy",
-  "price": "$49.95",
-  "price_direct": 42.46,
+  "title": "Vans Authentic Navy 4.5Y",
+  "price": "$42.21",
+  "price_direct": 35.88,
   "image": "https://i.ebayimg.com/images/g/r8UAAeSwaTFqterh/s-l1600.jpg",
   "url": "https://www.ebay.com/itm/398429699022",
   "brand": "Vans",
@@ -3725,7 +3725,7 @@
    "w": 8,
    "h": 6
   },
-  "size": "US 4.5",
+  "size": "US 4.5Y",
   "photos": [
    "https://i.ebayimg.com/images/g/r8UAAeSwaTFqterh/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/uU8AAeSw9tNqterj/s-l1600.jpg",
@@ -3768,9 +3768,9 @@
  },
  {
   "id": "398429701545",
-  "title": "Vans Authentic Navy",
-  "price": "$49.95",
-  "price_direct": 42.46,
+  "title": "Vans Authentic Navy Size 5Y",
+  "price": "$41.11",
+  "price_direct": 34.94,
   "image": "https://i.ebayimg.com/images/g/r8UAAeSwaTFqterh/s-l1600.webp",
   "url": "https://www.ebay.com/itm/398429701545",
   "brand": "Vans",
@@ -3787,13 +3787,13 @@
   "payment_url": "https://buy.stripe.com/00wdR9aS6cahgKx9CpdZ72V",
   "weight_lbs": 2.0,
   "weight_estimated": false,
-  "description": "You can't go wrong with the Vans Authentic Navy, a unisex sneaker made to be worn on repeat. This pair is a US 4.5. Ships brand new in its box.",
+  "description": "You can't go wrong with the Vans Authentic Navy, a unisex sneaker made to be worn on repeat. This pair is a US 5Y. Ships brand new in its box.",
   "parcel_in": {
    "l": 12,
    "w": 8,
    "h": 6
   },
-  "size": "US 4.5",
+  "size": "US 5Y",
   "units_sold": 0
  },
  {
