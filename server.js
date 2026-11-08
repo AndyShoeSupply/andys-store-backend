@@ -191,6 +191,20 @@ try {
     console.log('migration: orders.delivered_notified column added');
   }
 } catch (e) { console.warn('migration orders notify columns skipped:', e.message); }
+// Migration: orders.gift_wrap + orders.gift_message (2026-11-08) — the gift
+// wrap option Maria added to the storefront checkout ($4.99 per pair).
+// Safe to run on every boot.
+try {
+  const oCols3 = db.prepare('PRAGMA table_info(orders)').all().map(c => c.name);
+  if (!oCols3.includes('gift_wrap')) {
+    db.exec('ALTER TABLE orders ADD COLUMN gift_wrap INTEGER NOT NULL DEFAULT 0');
+    console.log('migration: orders.gift_wrap column added');
+  }
+  if (!oCols3.includes('gift_message')) {
+    db.exec('ALTER TABLE orders ADD COLUMN gift_message TEXT');
+    console.log('migration: orders.gift_message column added');
+  }
+} catch (e) { console.warn('migration orders gift columns skipped:', e.message); }
 // Migration: like_votes.house (2026-10-15) — flags votes cast by the house
 // (nocount-marked devices / house accounts) so they never move the public
 // like counter. Pre-existing votes keep house=0: their voter ids are
@@ -650,11 +664,20 @@ function sendOrderNotification(session, items, orderId) {
   const buyer = session.customer_email || session.customer_details?.email || '';
   const shipName = session.customer_details?.name || '';
   const lines = (items || []).map(it => `• ${orderItemTitle(it)}${Number(it.qty) > 1 ? ` × ${it.qty}` : ''}`);
-  const text = `¡Nueva venta en tu tienda!\n\nOrden #${orderId || ''}\nCliente: ${shipName} <${buyer}>\n\n${lines.join('\n')}\n\nTotal cobrado: $${total}\n\nVela en tu panel: https://andysshoesupply.com/admin\n— Andy's Shoe Supply`;
+  // Gift wrap (2026-11-08): Maria must SEE it in the sale alert so she wraps
+  // the pairs before shipping — big line, plus the customer's message.
+  const giftText = session.metadata?.gift_wrap === '1'
+    ? `\n\n🎁 ENVOLVER PARA REGALO${session.metadata.gift_message ? `\nMensaje del cliente: ${session.metadata.gift_message}` : ''}`
+    : '';
+  const giftHtml = session.metadata?.gift_wrap === '1'
+    ? `<p><strong>🎁 ENVOLVER PARA REGALO</strong>${session.metadata.gift_message ? `<br>Mensaje del cliente: ${escHtml(session.metadata.gift_message)}` : ''}</p>`
+    : '';
+  const text = `¡Nueva venta en tu tienda!\n\nOrden #${orderId || ''}\nCliente: ${shipName} <${buyer}>\n\n${lines.join('\n')}${giftText}\n\nTotal cobrado: $${total}\n\nVela en tu panel: https://andysshoesupply.com/admin\n— Andy's Shoe Supply`;
   const html = emailShell(
     '<p><strong>¡Nueva venta en tu tienda!</strong></p>'
     + `<p>Orden #${orderId || ''} — Cliente: ${escHtml(shipName)} &lt;${escHtml(buyer)}&gt;</p>`
     + '<ul>' + lines.map(l => `<li>${escHtml(l.replace(/^• /, ''))}</li>`).join('') + '</ul>'
+    + giftHtml
     + `<p><strong>Total cobrado: $${total}</strong></p>`
     + '<p><a href="https://andysshoesupply.com/admin">Verla en tu panel</a></p>'
   );
@@ -1755,6 +1778,10 @@ app.post('/api/checkout', async (req, res) => {
     const rawItems = Array.isArray(req.body.items) ? req.body.items : [];
     const buyer = req.body.buyer || {};
     const fulfillment = req.body.fulfillment === 'pickup' ? 'pickup' : 'shipping';
+    // Gift wrap (Maria 2026-11-08): one toggle for the whole order, $4.99
+    // PER PAIR, plus an optional free gift message (max 200 chars).
+    const giftWrap = req.body.giftWrap === true;
+    const giftMessage = giftWrap ? String(req.body.giftMessage || '').trim().slice(0, 200) : '';
     const shipTo = req.body.shipTo || {};
     if (!rawItems.length) return res.status(400).json({ ok: false, error: 'Empty cart' });
     let lines;
@@ -1820,6 +1847,18 @@ app.post('/api/checkout', async (req, res) => {
     }));
     if (lineItems.some(li => !(li.price_data.unit_amount > 0)))
       return res.status(400).json({ ok: false, error: 'Price unavailable' });
+    // Gift wrap is charged per pair: quantity = total pairs in the order.
+    const giftWrapQty = giftWrap ? lines.reduce((n, l) => n + (Number(l.qty) || 0), 0) : 0;
+    if (giftWrap && giftWrapQty > 0) {
+      lineItems.push({
+        price_data: {
+          currency: 'usd',
+          unit_amount: 499,
+          product_data: { name: 'Gift wrap' },
+        },
+        quantity: giftWrapQty,
+      });
+    }
     const params = {
       mode: 'payment',
       line_items: lineItems,
@@ -1837,6 +1876,11 @@ app.post('/api/checkout', async (req, res) => {
           ...(l.qty > 1 ? { qty: l.qty } : {}),
         }))),
         fulfillment,
+        ...(giftWrap && giftWrapQty > 0 ? {
+          gift_wrap: '1',
+          gift_wrap_qty: String(giftWrapQty),
+          ...(giftMessage ? { gift_message: giftMessage } : {}),
+        } : {}),
         ...(acctUser ? { account_email: acctUser.email, account_discount_cents: String(accountDiscountCents) } : {}),
         buyer_email: String(buyer.email || '').slice(0, 120),
         buyer_name: String(buyer.name || '').slice(0, 80),
@@ -1908,12 +1952,14 @@ async function onStripeWebhook(req, res) {
         country: sh.address?.country || 'US',
       };
       const shipCharged = Number(s.total_details?.amount_shipping) || 0;
+      const giftWrapFlag = s.metadata.gift_wrap === '1' ? 1 : 0;
+      const giftMessageSaved = giftWrapFlag ? String(s.metadata.gift_message || '').slice(0, 200) : '';
       const info = db.prepare(`INSERT OR IGNORE INTO orders
-        (stripe_session, email, items, amount_total, ship_to, status, fulfillment, ship_charged_cents)
-        VALUES (?, ?, ?, ?, ?, 'paid', ?, ?)`)
+        (stripe_session, email, items, amount_total, ship_to, status, fulfillment, ship_charged_cents, gift_wrap, gift_message)
+        VALUES (?, ?, ?, ?, ?, 'paid', ?, ?, ?, ?)`)
         .run(s.id, s.customer_email || s.customer_details?.email || '',
              JSON.stringify(items), s.amount_total || 0, JSON.stringify(shipTo),
-             fulfillment, shipCharged);
+             fulfillment, shipCharged, giftWrapFlag, giftMessageSaved);
       console.log('Order paid:', s.id, items.length, 'items');
       // Buy the shipping label right away (async, never blocks the webhook reply).
       if (info.changes > 0) {
