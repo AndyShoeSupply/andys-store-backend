@@ -1105,7 +1105,7 @@ app.post('/api/cron/new-arrivals', async (req, res) => {
         html: emailShell(`<p style="font-size:14px;font-weight:700;letter-spacing:2px;color:#d22;margin:0 0 4px">👀 PREVIEW — NOT MAILED TO ANYONE</p>`
           + `<p style="font-size:30px;font-weight:800;margin:0 0 10px;color:#111111">NEW ARRIVALS JUST LANDED 👟</p>`
           + `<p style="font-size:16px;line-height:1.65;color:#333333;margin:0 0 12px">${pending} brand-new pairs just hit our direct store — and remember, everything at Andy's Shoe Supply is always <strong>15% OFF the eBay price</strong>. No codes, no games, every day.</p>`
-          + `<p style="font-size:15px;line-height:1.6;color:#555555;margin:0 0 20px">This is exactly how the email your subscribers would get looks. Here are 3 of the ${pending} fresh pairs:</p>`
+          + `<p style="font-size:15px;line-height:1.6;color:#555555;margin:0 0 20px">This is exactly how the email your subscribers would get looks. Here are 10 of the ${pending} fresh pairs:</p>`
           + cards
           + `<p style="font-size:15px;line-height:1.6;color:#333333;margin:4px 0 18px">And that's just a taste — there are <strong>${pending} fresh pairs</strong> waiting. They go fast, so don't sleep on your size.</p>`
           + `<p style="text-align:center;margin:6px 0 18px"><a href="https://andysshoesupply.com/#new-arrivals-rail" style="display:inline-block;background:#d22;color:#fff;font-size:17px;font-weight:700;text-decoration:none;padding:15px 40px;border-radius:999px">Shop all new arrivals</a></p>`
