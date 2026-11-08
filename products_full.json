@@ -5208,35 +5208,6 @@
   "units_sold": 0
  },
  {
-  "id": "398389361084",
-  "title": "ASICS GEL-RENMA",
-  "price": "$59.00",
-  "price_direct": 50.15,
-  "image": "https://i.ebayimg.com/images/g/0DgAAeSwZBRqpg4n/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398389361084",
-  "brand": "Asics",
-  "department": "Unisex",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/dRmdR90ds2zHgKx5m9dZ71l",
-  "weight_lbs": 3.0,
-  "weight_estimated": false,
-  "description": "The ASICS GEL-RENMA brings classic Asics style to your everyday lineup. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
-  "parcel_in": {
-   "l": 13,
-   "w": 8,
-   "h": 5
-  },
-  "size": "US 6",
-  "photos": [
-   "https://i.ebayimg.com/images/g/0DgAAeSwZBRqpg4n/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/tn8AAeSwZjhqpg4r/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/nxEAAeSwCZ5qpg4-/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/nyQAAeSwCZ5qpg5C/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/6ncAAeSwm3xqpg5G/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "398382984607",
   "title": "Nike Court Vision Low Black White",
   "price": "$59.00",
@@ -13321,5 +13292,95 @@
   ],
   "units_sold": 0,
   "added": "2026-11-07"
+ },
+ {
+  "id": "920118767653",
+  "title": "ASICS GEL-RENMA",
+  "price": "$59.00",
+  "price_direct": 50.15,
+  "image": "https://i.ebayimg.com/images/g/0DgAAeSwZBRqpg4n/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920118767653",
+  "brand": "Asics",
+  "department": "Unisex",
+  "qty": 1,
+  "payment_url": "https://buy.stripe.com/9B66oH3pE6PX51P4i5dZ821",
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
+  "description": "The ASICS GEL-RENMA brings classic Asics style to your everyday lineup. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "parcel_in": {
+   "l": 13,
+   "w": 8,
+   "h": 5
+  },
+  "size": "US 6",
+  "photos": [
+   "https://i.ebayimg.com/images/g/0DgAAeSwZBRqpg4n/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/tn8AAeSwZjhqpg4r/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/nxEAAeSwCZ5qpg4-/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/nyQAAeSwCZ5qpg5C/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/6ncAAeSwm3xqpg5G/s-l1600.jpg"
+  ],
+  "units_sold": 0,
+  "added": "2026-11-08"
+ },
+ {
+  "id": "920118968867",
+  "title": "Puma Voltaic Evo Fade Kids Black Pink / Size: Kids US 3Y",
+  "price": "$32.09",
+  "price_direct": 27.28,
+  "image": "https://i.ebayimg.com/images/g/D3MAAeSwcJNq8L2z/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920118968867",
+  "brand": "Puma",
+  "department": "Kids",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/D3MAAeSwcJNq8L2z/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/gJsAAeSw5HJq8L22/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/3LoAAeSwu91q8L26/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/X2cAAeSwxDtq8L29/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/YQAAAeSwQIBq8L2~/s-l1600.jpg"
+  ],
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The Puma Voltaic Evo Fade kids shoes in black and pink bring sporty Puma style for everyday wear. Listed here in size US 3Y. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 3Y",
+  "added": "2026-11-08",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/28E5kDf8mb6dbqdeWJdZ822"
+ },
+ {
+  "id": "920118967563",
+  "title": "Puma Voltaic Evo Fade Kids Black Pink / Size: Kids US 12C",
+  "price": "$32.09",
+  "price_direct": 27.28,
+  "image": "https://i.ebayimg.com/images/g/D3MAAeSwcJNq8L2z/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920118967563",
+  "brand": "Puma",
+  "department": "Kids",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/D3MAAeSwcJNq8L2z/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/gJsAAeSw5HJq8L22/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/3LoAAeSwu91q8L26/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/X2cAAeSwxDtq8L29/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/YQAAAeSwQIBq8L2~/s-l1600.jpg"
+  ],
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The Puma Voltaic Evo Fade kids shoes in black and pink bring sporty Puma style for everyday wear. Listed here in size US 12C. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 12C",
+  "added": "2026-11-08",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/3cIbJ16BQ2zH1PDcOBdZ823"
  }
 ]
