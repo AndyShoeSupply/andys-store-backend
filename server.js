@@ -1047,10 +1047,18 @@ function getMailedNewArrivals() {
   catch (e) { return []; }
 }
 
+// Maria (2026-11-08): these Puma models must NOT be featured in the
+// new-arrivals email (they still sell normally in the store/eBay).
+const DIGEST_EXCLUDE_PATTERNS = ['voltaic', 'courtflex', 'rebound layup', 'rebound lay-up', 'softride enzo', 'enzo 5'];
+function digestExcluded(p) {
+  const t = String((p && p.title) || '').toLowerCase();
+  return DIGEST_EXCLUDE_PATTERNS.some(x => t.includes(x));
+}
+
 function newArrivalCandidates() {
   const mailed = new Set(getMailedNewArrivals().map(String));
   return CATALOG
-    .filter(p => p && p.added && !mailed.has(String(p.id)))
+    .filter(p => p && p.added && !mailed.has(String(p.id)) && !digestExcluded(p))
     .sort((a, b) => String(b.added).localeCompare(String(a.added)));
 }
 
