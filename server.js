@@ -1396,6 +1396,28 @@ const itemParcelIn = (p) => {
   if (Number(pc.l) > 0 && Number(pc.w) > 0 && Number(pc.h) > 0) return { l: Number(pc.l), w: Number(pc.w), h: Number(pc.h) };
   return DEPT_PARCEL_IN[deptOf(p)] || { l: 13, w: 8, h: 5 };
 };
+// Cart alert for the store owners (Maria asked 2026-11-08: «tienes que
+// avisarme de esas cosas» — she got no notice when a customer put a shoe in
+// a cart). Fires ONCE per cart, when a NEW non-empty cart row appears;
+// updates to an existing cart do not re-notify. House carts (owner testing)
+// never notify. Fire-and-forget: never blocks the storefront sync.
+function sendCartNotification(items, itemCount, subtotalCents, email) {
+  const subtotal = ((Number(subtotalCents) || 0) / 100).toFixed(2);
+  const lines = (items || []).map(it => `• ${orderItemTitle(it)}${Number(it.qty) > 1 ? ` × ${it.qty}` : ''}`);
+  const who = email ? `Cliente: ${email}` : 'Visitante (sin cuenta)';
+  const text = `¡Carrito nuevo en tu página!\n\n${who}\n\n${lines.join('\n')}\n\nSubtotal: $${subtotal}\n\nTodavía NO es venta — es un carrito activo. Si paga, te llega el aviso de venta.\nVelo en tu panel: https://andysshoesupply.com/admin\n— Andy's Shoe Supply`;
+  const html = emailShell(
+    '<p><strong>¡Carrito nuevo en tu página!</strong></p>'
+    + `<p>${escHtml(who)}</p>`
+    + '<ul>' + lines.map(l => `<li>${escHtml(l.replace(/^• /, ''))}</li>`).join('') + '</ul>'
+    + `<p><strong>Subtotal: $${subtotal}</strong></p>`
+    + '<p>Todavía NO es venta — es un carrito activo. Si paga, te llega el aviso de venta.</p>'
+    + '<p><a href="https://andysshoesupply.com/admin">Verlo en tu panel</a></p>'
+  );
+  return Promise.all(ORDER_NOTIFY_EMAILS.map(to =>
+    sendEmail({ to, subject: `🛒 Carrito nuevo en tu página — $${subtotal}`, html, text })));
+}
+
 // ---------- Server-side carts (admin visibility, 2026-10-15) ----------
 // The storefront mirrors every cart change here: keyed by a per-device id
 // for guests, attached to the account email when the customer is logged in.
@@ -1417,12 +1439,17 @@ app.post('/api/cart/sync', (req, res) => {
     const itemCount = lines.reduce((a, l) => a + l.qty, 0);
     const subtotal = lines.reduce((a, l) => a + Math.round(storePriceOf(l.p) * 100) * l.qty, 0);
     const acct = accountUser(req);
+    const existed = db.prepare('SELECT 1 FROM carts WHERE cart_key = ?').get(cartKey);
     db.prepare(`INSERT INTO carts (cart_key, email, items, item_count, subtotal_cents, updated_at)
       VALUES (?, ?, ?, ?, ?, datetime('now'))
       ON CONFLICT(cart_key) DO UPDATE SET email = COALESCE(excluded.email, carts.email),
         items = excluded.items, item_count = excluded.item_count,
         subtotal_cents = excluded.subtotal_cents, updated_at = datetime('now')`)
       .run(cartKey, acct ? acct.email : null, JSON.stringify(items), itemCount, subtotal);
+    if (!existed && !isHouseRequest(req)) {
+      sendCartNotification(items, itemCount, subtotal, acct ? acct.email : null)
+        .catch(e => console.error('cart notify failed:', e.message));
+    }
     res.json({ ok: true, itemCount, subtotal_cents: subtotal });
   } catch (e) {
     res.status(e.status || 500).json({ ok: false, error: e.message || 'cart sync failed' });
