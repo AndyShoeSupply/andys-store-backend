@@ -1047,11 +1047,16 @@ function getMailedNewArrivals() {
   catch (e) { return []; }
 }
 
-// Maria (2026-11-08): these Puma models must NOT be featured in the
+// Maria (2026-11-08, corrected): pairs whose listing photos were taken by
+// HER (phone photos, not clean catalog shots) must NOT be featured in the
 // new-arrivals email (they still sell normally in the store/eBay).
-const DIGEST_EXCLUDE_PATTERNS = ['voltaic', 'courtflex', 'rebound layup', 'rebound lay-up', 'softride enzo', 'enzo 5'];
+// Known cases by model (her own photos): Fila Vulc 13, Fila Cress Color Block.
+const DIGEST_EXCLUDE_PATTERNS = ['vulc 13', 'cress color block'];
+const DIGEST_EXCLUDE_IDS = [];
 function digestExcluded(p) {
-  const t = String((p && p.title) || '').toLowerCase();
+  if (!p) return false;
+  if (DIGEST_EXCLUDE_IDS.includes(String(p.id))) return true;
+  const t = String(p.title || '').toLowerCase();
   return DIGEST_EXCLUDE_PATTERNS.some(x => t.includes(x));
 }
 
