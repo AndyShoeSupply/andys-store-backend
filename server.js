@@ -1015,7 +1015,7 @@ app.post('/api/cron/send-giveaway-promo', async (req, res) => {
 // The email goes out ONLY when 20+ un-mailed new arrivals pile up, and
 // never more than once per 3 days (Maria: no daily emails — people
 // unsubscribe when you fill their inbox). Each user gets a personalized
-// 3-pick: their favorite brand/size first, everyone else the 3 freshest.
+// 10-pick (Maria, 2026-11-08): their favorite brand/size first, everyone else the 10 freshest.
 const NEWARRIVALS_THRESHOLD = 20;
 const NEWARRIVALS_MIN_DAYS = 3;
 
@@ -1046,14 +1046,14 @@ function pick3NewArrivals(user, candidates) {
   };
   if (fb || fs) {
     for (const p of candidates) { // exact brand+size matches first
-      if (brandHit(p) && (fs ? sizeHit(p) : true)) { take(p); if (picks.length >= 3) break; }
+      if (brandHit(p) && (fs ? sizeHit(p) : true)) { take(p); if (picks.length >= 10) break; }
     }
     if (fb) { // then any of their brand
-      for (const p of candidates) { if (brandHit(p)) { take(p); if (picks.length >= 3) break; } }
+      for (const p of candidates) { if (brandHit(p)) { take(p); if (picks.length >= 10) break; } }
     }
   }
-  for (const p of candidates) { take(p); if (picks.length >= 3) break; } // fill with freshest
-  return picks.slice(0, 3);
+  for (const p of candidates) { take(p); if (picks.length >= 10) break; } // fill with freshest
+  return picks.slice(0, 10);
 }
 
 function newArrivalImg(p) {
@@ -1098,7 +1098,7 @@ app.post('/api/cron/new-arrivals', async (req, res) => {
     // mailed. Works even before the threshold is reached.
     if (dry && testTo) {
       if (!RESEND_API_KEY) return res.status(503).json({ ok: false, error: 'email not configured (set RESEND_API_KEY)' });
-      const cards = candidates.slice(0, 3).map(newArrivalCard).join('');
+      const cards = candidates.slice(0, 10).map(newArrivalCard).join('');
       await sendEmail({
         to: testTo,
         subject: `[Preview] ${pending} new pairs at Andy's Shoe Supply`,
@@ -1124,7 +1124,7 @@ app.post('/api/cron/new-arrivals', async (req, res) => {
 
     if (dry)
       return res.json({ ok: true, sent: 0, reason: 'dry_run_ready', pending, threshold: NEWARRIVALS_THRESHOLD,
-        featured: candidates.slice(0, 3).map(p => ({ id: p.id, title: p.title, price_direct: p.price_direct, brand: p.brand, size: p.size })),
+        featured: candidates.slice(0, 10).map(p => ({ id: p.id, title: p.title, price_direct: p.price_direct, brand: p.brand, size: p.size })),
         recipientCount: db.prepare('SELECT email FROM users WHERE unsubscribed = 0').all().filter(r => !isHouseEmail(r.email)).length });
 
     if (!RESEND_API_KEY) return res.status(503).json({ ok: false, error: 'email not configured (set RESEND_API_KEY)' });
@@ -1133,7 +1133,7 @@ app.post('/api/cron/new-arrivals', async (req, res) => {
       .all()
       .filter(u => !isHouseEmail(u.email));
     const subject = `Fresh arrivals: ${pending} new pairs at Andy's Shoe Supply`;
-    const featured = candidates.slice(0, 3);
+    const featured = candidates.slice(0, 10);
     let sent = 0, failed = 0;
     let sampleHtml = null, sampleText = null, sampleUnsub = ''; // first successful send, for the owner's review copy
     for (const u of users) {
@@ -1142,13 +1142,13 @@ app.post('/api/cron/new-arrivals', async (req, res) => {
       const unsub = unsubscribeUrl(req, u.id, u.email);
       const personal = (u.favorite_brand || u.favorite_size)
         ? `Picked for you — ${escHtml([u.favorite_brand, u.favorite_size && ('size ' + u.favorite_size)].filter(Boolean).join(' · '))}.`
-        : `Here are 3 of the ${pending} freshest pairs.`;
+        : `Here are 10 of the ${pending} freshest pairs:`;
       const mailHtml = emailShell(
           `<p style="font-size:14px;font-weight:700;letter-spacing:2px;color:#d22;margin:0 0 4px">FRESH IN STORE</p>`
           + `<p style="font-size:30px;font-weight:800;margin:0 0 10px;color:#111111">NEW ARRIVALS JUST LANDED 👟</p>`
           + `<p style="font-size:17px;font-weight:700;color:#333333;margin:0 0 10px">Hi${first ? ' ' + escHtml(first) : ''}! 👋</p>`
           + `<p style="font-size:16px;line-height:1.65;color:#333333;margin:0 0 12px"><strong>${pending} brand-new pairs</strong> just hit our direct store — and remember, everything at Andy's Shoe Supply is always <strong>15% OFF the eBay price</strong>. No codes, no games, every day.</p>`
-          + `<p style="font-size:15px;line-height:1.6;color:#555555;margin:0 0 20px">${personal} Here are 3 of the freshest pairs:</p>`
+          + `<p style="font-size:15px;line-height:1.6;color:#555555;margin:0 0 20px">${personal}</p>`
           + picks.map(newArrivalCard).join('')
           + `<p style="font-size:15px;line-height:1.6;color:#333333;margin:4px 0 18px">And that's just a taste — there are <strong>${pending} fresh pairs</strong> waiting for you. They go fast, so don't sleep on your size.</p>`
           + `<p style="text-align:center;margin:6px 0 18px"><a href="https://andysshoesupply.com/#new-arrivals-rail" style="display:inline-block;background:#d22;color:#fff;font-size:17px;font-weight:700;text-decoration:none;padding:15px 40px;border-radius:999px">Shop all ${pending} new arrivals</a></p>`
@@ -1188,7 +1188,7 @@ app.post('/api/cron/new-arrivals', async (req, res) => {
 // ---------- Preferences nudge (Maria, 2026-10-10) ----------
 // One-off: invite subscribers who haven't set favorite brand/size to add
 // them in My Account, so the new-arrivals digest can personalize their
-// 3 picks. POST /api/cron/preferences-nudge (header x-cron-secret).
+// 10 picks. POST /api/cron/preferences-nudge (header x-cron-secret).
 // ?to=address sends a single preview without touching anyone else.
 app.post('/api/cron/preferences-nudge', async (req, res) => {
   try {
