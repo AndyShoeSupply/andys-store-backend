@@ -13382,5 +13382,619 @@
   "added": "2026-11-08",
   "units_sold": 0,
   "payment_url": "https://buy.stripe.com/3cIbJ16BQ2zH1PDcOBdZ823"
+ },
+ {
+  "id": "920119455458",
+  "title": "Adidas Samba OG Cloud White Lucid Pink Gum / Size: Kids US 11C / EU 28",
+  "price": "$37.14",
+  "price_direct": 31.57,
+  "image": "https://i.ebayimg.com/images/g/U~4AAeSw38Nq8PX1/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920119455458",
+  "brand": "Adidas",
+  "department": "Kids",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/U~4AAeSw38Nq8PX1/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/dVEAAeSwgyhq8PX~/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/HoAAAeSw1vpq8PYC/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/RFcAAeSw76dq8PYE/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/haMAAeSwz-Nq8PYI/s-l1600.jpg"
+  ],
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The Adidas Samba OG kids shoes in cloud white, lucid pink and gum bring the classic Samba look in a kids size. Listed here in size US 11C. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 11C",
+  "added": "2026-11-08",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/00w4gzf8m2zHam99CpdZ824"
+ },
+ {
+  "id": "920119381163",
+  "title": "Puma Thunder Desert Bright White Gray Violet / Size: Men US 7.5 / Women US 8.5",
+  "price": "$63.24",
+  "price_direct": 53.75,
+  "image": "https://i.ebayimg.com/images/g/Si0AAeSw3P5q8O0W/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920119381163",
+  "brand": "Puma",
+  "department": "Men",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/Si0AAeSw3P5q8O0W/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/5QUAAeSw62Jq8O0J/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/8XgAAeSwlg5q8O0L/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/9bYAAeSwX3Fq8O0P/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/MGAAAeSw3Uxq8O0S/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/UEoAAeSw3R9q8O0U/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/DnsAAeSw~Bxq8O0Y/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/IdQAAeSwBvtq8O0d/s-l1600.jpg"
+  ],
+  "weight_lbs": 3.0,
+  "weight_estimated": true,
+  "description": "The Puma Thunder Desert in bright white and gray violet, style code 367997-03, with its chunky retro-runner sole. Listed here in size Men US 7.5 / Women US 8.5. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 7.5",
+  "added": "2026-11-08",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/dRm5kDd0e4HPam99CpdZ825"
+ },
+ {
+  "id": "920119377820",
+  "title": "Puma Park Lifestyle SK8 Black White Gum / Size: Kids US 5.5Y / Women US 6.5",
+  "price": "$34.21",
+  "price_direct": 29.08,
+  "image": "https://i.ebayimg.com/images/g/cp4AAeSwE7dq8OxB/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920119377820",
+  "brand": "Puma",
+  "department": "Women",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/cp4AAeSwE7dq8OxB/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/TC0AAeSwoGZq8Ow~/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/sR4AAeSwXAdq8OxD/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/x-sAAeSwXHFq8OxI/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/05sAAeSwbNlq8OxL/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/9QQAAeSwPddq8OxN/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/eA8AAeSwZCxq8OxP/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/2TkAAeSwpm5q8OxR/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/XwQAAeSwwmFq8OxU/s-l1600.jpg"
+  ],
+  "weight_lbs": 2.5,
+  "weight_estimated": true,
+  "description": "The Puma Park Lifestyle SK8 in black, white and gum, a skate-inspired low top. Listed here in size Kids US 5.5Y / Women US 6.5. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 5.5Y",
+  "added": "2026-11-08",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/cNi9ATaS6fmt8e1aGtdZ826"
+ },
+ {
+  "id": "920119369633",
+  "title": "Puma Reflect Lite Wide Women Running Shoes Black White Blue / Size: US 6.5Women",
+  "price": "$39.93",
+  "price_direct": 33.94,
+  "image": "https://i.ebayimg.com/images/g/w~YAAeSwvAdq8Orz/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920119369633",
+  "brand": "Puma",
+  "department": "Women",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/w~YAAeSwvAdq8Orz/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/4QIAAeSwARRq8Or1/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/1hIAAeSw5Ntq8Or3/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/U4QAAeSw38Zq8Or6/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/U9kAAeSwf9Nq8Or8/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/etoAAeSwD6Jq8Or-/s-l1600.jpg"
+  ],
+  "weight_lbs": 2.5,
+  "weight_estimated": true,
+  "description": "The Puma Reflect Lite Wide women's running shoes in black, white and blue, wide fit with reflective details. Listed here in size Women US 6.5. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 6.5",
+  "added": "2026-11-08",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/dRm5kD1hwdelfGt6qddZ827"
+ },
+ {
+  "id": "920119332099",
+  "title": "Fila Vulc 13 Kids High Top Shoes Triple Black / Size: Kids US 2Y / EU 33.5",
+  "price": "$26.60",
+  "price_direct": 22.61,
+  "image": "https://i.ebayimg.com/images/g/KAQAAeSwRcdq8OYL/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920119332099",
+  "brand": "Fila",
+  "department": "Kids",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/KAQAAeSwRcdq8OYL/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/FRkAAeSwOIRq8OYZ/s-l1600.jpg"
+  ],
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The Fila Vulc 13 kids high top shoes in triple black, a classic vulc-sole style for kids. Listed here in size Kids US 2Y. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 2Y",
+  "added": "2026-11-08",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/9B66oH3pEfmt0LzbKxdZ828"
+ },
+ {
+  "id": "920119290880",
+  "title": "Fila Cress Color Block Infant Shoes Orange Gold Red / Size: US 8C",
+  "price": "$21.22",
+  "price_direct": 18.04,
+  "image": "https://i.ebayimg.com/images/g/sSsAAeSw2qZq8OJB/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920119290880",
+  "brand": "Fila",
+  "department": "Infant",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/sSsAAeSw2qZq8OJB/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/r6IAAeSwFgtq8OJE/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/tkcAAeSwqmZq8OJJ/s-l1600.jpg"
+  ],
+  "weight_lbs": 1.0,
+  "weight_estimated": true,
+  "description": "The Fila Cress Color Block infant shoes in orange, gold and red. Listed here in size US 8C. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 8,
+   "h": 6
+  },
+  "size": "US 8C",
+  "added": "2026-11-08",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/4gM28r5xM4HP51P9CpdZ829"
+ },
+ {
+  "id": "920119284635",
+  "title": "Fila Cress Color Block Infant Shoes Orange Gold Red / Size: US 7C",
+  "price": "$21.22",
+  "price_direct": 18.04,
+  "image": "https://i.ebayimg.com/images/g/dBsAAeSwUnJq8ODU/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920119284635",
+  "brand": "Fila",
+  "department": "Infant",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/dBsAAeSwUnJq8ODU/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/PgUAAeSwroFq8ODX/s-l1600.jpg"
+  ],
+  "weight_lbs": 1.0,
+  "weight_estimated": true,
+  "description": "The Fila Cress Color Block infant shoes in orange, gold and red. Listed here in size US 7C. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 8,
+   "h": 6
+  },
+  "size": "US 7C",
+  "added": "2026-11-08",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/5kQ28r1hw2zHam9eWJdZ82a"
+ },
+ {
+  "id": "920119284167",
+  "title": "Fila Cress Color Block Infant Shoes Orange Gold Red / Size: US 7C",
+  "price": "$21.22",
+  "price_direct": 18.04,
+  "image": "https://i.ebayimg.com/images/g/sSsAAeSw2qZq8OJB/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920119284167",
+  "brand": "Fila",
+  "department": "Infant",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/sSsAAeSw2qZq8OJB/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/r6IAAeSwFgtq8OJE/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/tkcAAeSwqmZq8OJJ/s-l1600.jpg"
+  ],
+  "weight_lbs": 1.0,
+  "weight_estimated": true,
+  "description": "The Fila Cress Color Block infant shoes in orange, gold and red. Listed here in size US 7C. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 8,
+   "h": 6
+  },
+  "size": "US 7C",
+  "added": "2026-11-08",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/aFafZh0ds3DL8e129XdZ82b"
+ },
+ {
+  "id": "920119244978",
+  "title": "Under Armour Curry 12 Extraterrestrial GS Black Hyper Green / Size: 7Y / EU 40",
+  "price": "$62.12",
+  "price_direct": 52.8,
+  "image": "https://i.ebayimg.com/images/g/Kk4AAeSwvAdq8N5B/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920119244978",
+  "brand": "Under Armour",
+  "department": "Men",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/Kk4AAeSwvAdq8N5B/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/ju4AAeSwisVq8N5H/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/tTIAAeSwMLhq8N5M/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/u3QAAeSwf9Nq8N5P/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/JvwAAeSwroFq8N5R/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/OqYAAeSwUxFq8N5a/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/fGYAAeSw4kxq8N5e/s-l1600.jpg"
+  ],
+  "weight_lbs": 3.0,
+  "weight_estimated": true,
+  "description": "The Under Armour Curry 12 Extraterrestrial GS in black and hyper green, Stephen Curry's grade-school basketball shoe. Listed here in size US 7Y. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 7Y",
+  "added": "2026-11-08",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/dRmeVdbWadelfGtbKxdZ82c"
+ },
+ {
+  "id": "920119218014",
+  "title": "Saucony Kinvara 14 A/C Kids Shoes Coral / Size: Kids US 5Y",
+  "price": "$33.95",
+  "price_direct": 28.86,
+  "image": "https://i.ebayimg.com/images/g/afUAAeSwQrZq8Nvl/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920119218014",
+  "brand": "Saucony",
+  "department": "Kids",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/afUAAeSwQrZq8Nvl/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/amwAAeSwSbJq8Nvj/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/ldUAAeSwxDtq8Nvp/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/al8AAeSwOYxq8Nvs/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/sYoAAeSwvr1q8Nvu/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/ao0AAeSwOYxq8Nvw/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/~lIAAeSwvZVq8Nvz/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/yTMAAeSwD6Jq8Nv2/s-l1600.jpg"
+  ],
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The Saucony Kinvara 14 A/C kids shoes in coral, a light and fast kids running shoe with alternative closure. Listed here in size Kids US 5Y. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 5Y",
+  "added": "2026-11-08",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/7sYbJ1gcq2zH65T4i5dZ82d"
+ },
+ {
+  "id": "920119196086",
+  "title": "PUMA Softride Enzo 5 Youth Shoes Blue Fade / Size: Kids US 3Y",
+  "price": "$33.21",
+  "price_direct": 28.23,
+  "image": "https://i.ebayimg.com/images/g/OnwAAeSwGNdq8NkZ/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920119196086",
+  "brand": "Puma",
+  "department": "Kids",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/OnwAAeSwGNdq8NkZ/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/hNwAAeSwJSVq8Nhg/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/WJgAAeSwxYJq8NhZ/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/7ZUAAeSwPuBq8Nhb/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/6AQAAeSwdr5q8Nhe/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/DNkAAeSwEDdq8NkW/s-l1600.jpg"
+  ],
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The PUMA Softride Enzo 5 youth shoes in blue fade, soft foam comfort for everyday wear. Listed here in size Kids US 3Y. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 3Y",
+  "added": "2026-11-08",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/cNiaEX4tI2zH3XL4i5dZ82e"
+ },
+ {
+  "id": "920119195563",
+  "title": "PUMA Softride Enzo 5 Youth Shoes Blue Fade / Size: Kids US 12C",
+  "price": "$33.21",
+  "price_direct": 28.23,
+  "image": "https://i.ebayimg.com/images/g/OnwAAeSwGNdq8NkZ/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920119195563",
+  "brand": "Puma",
+  "department": "Kids",
+  "qty": 3,
+  "photos": [
+   "https://i.ebayimg.com/images/g/OnwAAeSwGNdq8NkZ/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/hNwAAeSwJSVq8Nhg/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/WJgAAeSwxYJq8NhZ/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/7ZUAAeSwPuBq8Nhb/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/6AQAAeSwdr5q8Nhe/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/DNkAAeSwEDdq8NkW/s-l1600.jpg"
+  ],
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The PUMA Softride Enzo 5 youth shoes in blue fade, soft foam comfort for everyday wear. Listed here in size Kids US 12C. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 12C",
+  "added": "2026-11-08",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/7sY28r3pE3DL65TcOBdZ82f"
+ },
+ {
+  "id": "920119194919",
+  "title": "PUMA Softride Enzo 5 Youth Shoes Blue Fade / Size: Kids US 13C",
+  "price": "$33.21",
+  "price_direct": 28.23,
+  "image": "https://i.ebayimg.com/images/g/OnwAAeSwGNdq8NkZ/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920119194919",
+  "brand": "Puma",
+  "department": "Kids",
+  "qty": 3,
+  "photos": [
+   "https://i.ebayimg.com/images/g/OnwAAeSwGNdq8NkZ/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/hNwAAeSwJSVq8Nhg/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/WJgAAeSwxYJq8NhZ/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/7ZUAAeSwPuBq8Nhb/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/6AQAAeSwdr5q8Nhe/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/DNkAAeSwEDdq8NkW/s-l1600.jpg"
+  ],
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The PUMA Softride Enzo 5 youth shoes in blue fade, soft foam comfort for everyday wear. Listed here in size Kids US 13C. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 13C",
+  "added": "2026-11-08",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/00w7sL7FU7U1bqdeWJdZ82g"
+ },
+ {
+  "id": "920119192295",
+  "title": "PUMA Softride Enzo 5 Youth Shoes Blue Fade / Size: Kids US 6Y",
+  "price": "$33.21",
+  "price_direct": 28.23,
+  "image": "https://i.ebayimg.com/images/g/OnwAAeSwGNdq8NkZ/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920119192295",
+  "brand": "Puma",
+  "department": "Kids",
+  "qty": 2,
+  "photos": [
+   "https://i.ebayimg.com/images/g/OnwAAeSwGNdq8NkZ/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/hNwAAeSwJSVq8Nhg/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/WJgAAeSwxYJq8NhZ/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/7ZUAAeSwPuBq8Nhb/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/6AQAAeSwdr5q8Nhe/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/DNkAAeSwEDdq8NkW/s-l1600.jpg"
+  ],
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The PUMA Softride Enzo 5 youth shoes in blue fade, soft foam comfort for everyday wear. Listed here in size Kids US 6Y. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 6Y",
+  "added": "2026-11-08",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/14A28r1hwgqx1PD15TdZ82h"
+ },
+ {
+  "id": "920119191252",
+  "title": "PUMA Softride Enzo 5 Youth Shoes Blue Fade / Size: Kids US 5.5Y / EU 37.5",
+  "price": "$33.21",
+  "price_direct": 28.23,
+  "image": "https://i.ebayimg.com/images/g/OnwAAeSwGNdq8NkZ/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920119191252",
+  "brand": "Puma",
+  "department": "Kids",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/OnwAAeSwGNdq8NkZ/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/hNwAAeSwJSVq8Nhg/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/WJgAAeSwxYJq8NhZ/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/7ZUAAeSwPuBq8Nhb/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/6AQAAeSwdr5q8Nhe/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/DNkAAeSwEDdq8NkW/s-l1600.jpg"
+  ],
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The PUMA Softride Enzo 5 youth shoes in blue fade, soft foam comfort for everyday wear. Listed here in size Kids US 5.5Y. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 5.5Y",
+  "added": "2026-11-08",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/cNi4gz6BQ7U1am929XdZ82i"
+ },
+ {
+  "id": "920119150770",
+  "title": "PUMA Rebound Layup SL V Kids Shoes Black White Gold / Size: Kids US 1Y",
+  "price": "$34.42",
+  "price_direct": 29.26,
+  "image": "https://i.ebayimg.com/images/g/DGEAAeSwbehq8NHn/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920119150770",
+  "brand": "Puma",
+  "department": "Kids",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/DGEAAeSwbehq8NHn/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/awoAAeSw-hpq8NHp/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/sJYAAeSwxeZq8NHr/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/kZ4AAeSwyOBq8NHt/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/faMAAeSwy6lq8NHx/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/UwwAAeSwo79q8NHz/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/EhUAAeSwv31q8NHv/s-l1600.jpg"
+  ],
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The PUMA Rebound Layup SL V kids shoes in black, white and gold, a retro court style with strap. Listed here in size Kids US 1Y. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 1Y",
+  "added": "2026-11-08",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/4gM4gzaS6b6d79X5m9dZ82j"
+ },
+ {
+  "id": "920119149879",
+  "title": "PUMA Rebound Layup SL V Kids Shoes Black White Gold / Size: Kids US 12C",
+  "price": "$34.42",
+  "price_direct": 29.26,
+  "image": "https://i.ebayimg.com/images/g/DGEAAeSwbehq8NHn/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920119149879",
+  "brand": "Puma",
+  "department": "Kids",
+  "qty": 2,
+  "photos": [
+   "https://i.ebayimg.com/images/g/DGEAAeSwbehq8NHn/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/awoAAeSw-hpq8NHp/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/sJYAAeSwxeZq8NHr/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/kZ4AAeSwyOBq8NHt/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/faMAAeSwy6lq8NHx/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/UwwAAeSwo79q8NHz/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/EhUAAeSwv31q8NHv/s-l1600.jpg"
+  ],
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The PUMA Rebound Layup SL V kids shoes in black, white and gold, a retro court style with strap. Listed here in size Kids US 12C. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 12C",
+  "added": "2026-11-08",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/bJecN51hwgqx51PcOBdZ82k"
+ },
+ {
+  "id": "920119142440",
+  "title": "PUMA Rebound Layup SL V Kids Shoes Black White Gold / Size: Kids US 13C / EU 31",
+  "price": "$34.42",
+  "price_direct": 29.26,
+  "image": "https://i.ebayimg.com/images/g/DGEAAeSwbehq8NHn/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920119142440",
+  "brand": "Puma",
+  "department": "Kids",
+  "qty": 3,
+  "photos": [
+   "https://i.ebayimg.com/images/g/DGEAAeSwbehq8NHn/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/awoAAeSw-hpq8NHp/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/sJYAAeSwxeZq8NHr/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/kZ4AAeSwyOBq8NHt/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/faMAAeSwy6lq8NHx/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/UwwAAeSwo79q8NHz/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/EhUAAeSwv31q8NHv/s-l1600.jpg"
+  ],
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The PUMA Rebound Layup SL V kids shoes in black, white and gold, a retro court style with strap. Listed here in size Kids US 13C. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 13C",
+  "added": "2026-11-08",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/3cI4gz3pE6PXgKx3e1dZ82l"
+ },
+ {
+  "id": "920119064508",
+  "title": "PUMA Courtflex V3 Lina Toddler White Lilac Frost / Size: Kids US 9C",
+  "price": "$25.21",
+  "price_direct": 21.43,
+  "image": "https://i.ebayimg.com/images/g/uZwAAeSw2dRq8Mf6/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920119064508",
+  "brand": "Puma",
+  "department": "Infant",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/uZwAAeSw2dRq8Mf6/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/xt8AAeSwghlq8Mf9/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/Mi0AAeSwQvpq8MgA/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/lDsAAeSwy6Fq8MgG/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/lLgAAeSw7mRq8MgJ/s-l1600.jpg"
+  ],
+  "weight_lbs": 1.0,
+  "weight_estimated": true,
+  "description": "The PUMA Courtflex V3 Lina toddler shoes in white and lilac frost. Listed here in size Kids US 9C. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 8,
+   "h": 6
+  },
+  "size": "US 9C",
+  "added": "2026-11-08",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/8x24gze4ia299i57uhdZ82m"
+ },
+ {
+  "id": "920119062065",
+  "title": "PUMA Courtflex V3 Lina Toddler White Lilac Frost / Size: Kids US 10C",
+  "price": "$25.21",
+  "price_direct": 21.43,
+  "image": "https://i.ebayimg.com/images/g/uZwAAeSw2dRq8Mf6/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920119062065",
+  "brand": "Puma",
+  "department": "Infant",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/uZwAAeSw2dRq8Mf6/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/xt8AAeSwghlq8Mf9/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/Mi0AAeSwQvpq8MgA/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/lDsAAeSwy6Fq8MgG/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/lLgAAeSw7mRq8MgJ/s-l1600.jpg"
+  ],
+  "weight_lbs": 1.0,
+  "weight_estimated": true,
+  "description": "The PUMA Courtflex V3 Lina toddler shoes in white and lilac frost. Listed here in size Kids US 10C. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 8,
+   "h": 6
+  },
+  "size": "US 10C",
+  "added": "2026-11-08",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/8x28wPaS67U165T6qddZ82n"
  }
 ]
