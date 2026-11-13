@@ -1972,35 +1972,6 @@
   "units_sold": 0
  },
  {
-  "id": "398432912808",
-  "title": "adidas Superstar II  7C",
-  "price": "$39.00",
-  "price_direct": 33.15,
-  "image": "https://i.ebayimg.com/images/g/bmoAAeSwMhhqtzzg/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398432912808",
-  "brand": "Adidas",
-  "department": "Kids",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/4gM4gz6BQgqx9i5g0NdZ62m",
-  "weight_lbs": 2.0,
-  "weight_estimated": false,
-  "description": "Meet the adidas Superstar II — a kids' sneaker with a clean, standout look. Sized at 7k. Ships brand new in its box.",
-  "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
-  },
-  "size": "US 7C",
-  "photos": [
-   "https://i.ebayimg.com/images/g/bmoAAeSwMhhqtzzg/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/xmAAAeSwnm9qtzzj/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/VWMAAeSwCbVqtzzl/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/bEkAAeSwVJRqtzzn/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/DiAAAeSwVrpqtz0G/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "398432840275",
   "title": "adidas Superstar II C 12C",
   "price": "$39.00",
