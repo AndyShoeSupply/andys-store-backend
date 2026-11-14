@@ -10793,37 +10793,6 @@
   "clearance_payment_url": "https://buy.stripe.com/bJe28r3pE7U18e13e1dZ81g"
  },
  {
-  "id": "920022153999",
-  "title": "Nike LeBron 22 White Black Metallic Gold Size 7Y",
-  "price": "$74.00",
-  "price_direct": 62.9,
-  "image": "https://i.ebayimg.com/images/g/RXUAAeSwFIFqyEtk/s-l1600.webp",
-  "url": "https://www.ebay.com/itm/920022153999",
-  "brand": "Nike",
-  "department": "Kids",
-  "qty": 1,
-  "photos": [
-   "https://i.ebayimg.com/images/g/RXUAAeSwFIFqyEtk/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/SHYAAeSw~T5qyEtn/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/EBQAAeSw2StqyEtq/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/V0YAAeSw9gdqyEtu/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/DSoAAeSwMUVqyEt5/s-l1600.webp"
-  ],
-  "payment_url": "https://buy.stripe.com/8x23cv0ds1vD3XLbKxdZ800",
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
-  "description": "The Nike LeBron 22 in White, Black and Metallic Gold brings the King's signature court style to grade school sizes. Size 7Y. New with box, never worn.",
-  "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
-  },
-  "size": "US 7Y",
-  "added": "2026-10-13",
-  "units_sold": 0,
-  "clearance_payment_url": "https://buy.stripe.com/fZu6oHbWa2zHam929XdZ81i"
- },
- {
   "id": "920043583829",
   "title": "New Balance 2002R Sea Salt Pink Granite US 11C / EU 28.5",
   "price": "$59.00",
