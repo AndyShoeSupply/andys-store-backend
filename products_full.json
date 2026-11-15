@@ -17,7 +17,7 @@
    "https://i.ebayimg.com/images/g/HOAAAeSw~fxqwplz/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/bJeeVd3pE3DLdyl6qddZ60c",
-  "weight_lbs": 1.0,
+  "weight_lbs": 2.0,
   "weight_estimated": false,
   "description": "The New 6k Adidas Campus 00s EL I KI5921 Black Blue Toddler Infant Summer Shoe is a go-to infant shoe that goes with just about anything. Listed here in size 6C. New with box, ready to wear straight out of the package.",
   "parcel_in": {
@@ -8848,13 +8848,13 @@
   "department": "Women",
   "qty": 1,
   "payment_url": "https://buy.stripe.com/8x200j6BQ4HP1PD01PdZ70M",
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 4.0,
+  "weight_estimated": false,
   "description": "Add some fresh style to your rotation with the HOKA Hopara 2 Women’s, a women's sneaker in a head-turning colorway. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 7,
-   "h": 4.5
+   "l": 13,
+   "w": 8,
+   "h": 5
   },
   "size": "US 6",
   "photos": [
@@ -9417,9 +9417,9 @@
   "weight_estimated": false,
   "description": "Meet the HOKA Clifton One9 Carbon Black — a women's sneaker with a clean, standout look. Sized at men's 7.5 / women's 8.5. Comes brand new with its box included.",
   "parcel_in": {
-   "l": 14,
-   "w": 12,
-   "h": 9
+   "l": 14.0,
+   "w": 12.0,
+   "h": 9.0
   },
   "size": "US 7.5",
   "units_sold": 0
@@ -10660,12 +10660,12 @@
   ],
   "payment_url": "https://buy.stripe.com/8x228r8JYb6dbqdaGtdZ744",
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The Saucony Guide ISO 2 TR in Slate Blue is a supportive trail-ready trainer with a rugged outsole. Size Men US 11.5 / Women US 12.5. New with box, never worn.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 11.5",
   "added": "2026-10-13",
@@ -10690,8 +10690,8 @@
    "https://i.ebayimg.com/images/g/gY4AAeSw8KFqyFAH/s-l1600.webp"
   ],
   "payment_url": "https://buy.stripe.com/6oU7sLbWaeipdylcOBdZ746",
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Adidas Anthony Edwards 2.0 in Lucid Orange and Silver Metallic brings Ant's signature energy to grade school hoops. Size 6Y / Women US 7. New with box, never worn.",
   "parcel_in": {
    "l": 12,
@@ -10722,7 +10722,7 @@
   ],
   "payment_url": "https://buy.stripe.com/3cI7sLe4ieipcuh29XdZ747",
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The Adidas Runfalcon 5 in Dusky Petrol and Core Black is a light, comfortable everyday runner. Size Men US 10.5. New with box, never worn.",
   "parcel_in": {
    "l": 12,
@@ -10752,13 +10752,13 @@
    "https://i.ebayimg.com/images/g/IHoAAeSwaulq0YIh/s-l1600.webp"
   ],
   "payment_url": "https://buy.stripe.com/00w4gz3pEcaheCp15TdZ801",
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 2.0,
+  "weight_estimated": false,
   "description": "The New Balance 2002R for toddlers in Sea Salt with Pink Granite accents and hook-and-loop straps for easy on and off. Size US 11C / EU 28.5. Brand new, never worn.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 11C",
   "added": "2026-10-15",
@@ -10783,13 +10783,13 @@
    "https://i.ebayimg.com/images/g/EM4AAeSwdclq0YEi/s-l1600.webp"
   ],
   "payment_url": "https://buy.stripe.com/aFa4gz2lA7U18e19CpdZ802",
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The New Balance 2002R GS in Black and Sea Salt with Gold Metallic details - a retro runner with premium layered styling. Size US 7Y / Women US 8.5. Brand new, never worn.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 8.5",
   "added": "2026-10-15",
@@ -10813,13 +10813,13 @@
    "https://i.ebayimg.com/images/g/uSwAAeSwm~lq0XuS/s-l1600.webp"
   ],
   "payment_url": "https://buy.stripe.com/00w4gz6BQfmt2THeWJdZ803",
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Hey Dude Wally Youth in Red - a featherlight slip-on with an easy, all-day casual fit. Size US 5Y / EU 37. Brand new, never worn.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 5Y",
   "added": "2026-10-15",
@@ -10846,12 +10846,12 @@
   ],
   "payment_url": "https://buy.stripe.com/dRm00j1hwfmtfGtdSFdZ804",
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The New Balance Fresh Foam Arishi v4 in Marblehead and Castlerock with a gum outsole, extra-wide 4E fit and plush Fresh Foam cushioning. Size Men US 15. Brand new, never worn.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 15",
   "added": "2026-10-15",
@@ -10878,12 +10878,12 @@
   ],
   "payment_url": "https://buy.stripe.com/dRm14n8JY6PXcuh6qddZ805",
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The Nike Revolution 8 in Deep Royal Blue and White - a light, breathable everyday trainer with soft foam cushioning. Size Men US 11.5 / Women US 13. Brand new, never worn.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 11.5",
   "added": "2026-10-15",
@@ -10910,12 +10910,12 @@
   ],
   "payment_url": "https://buy.stripe.com/4gM5kDf8m6PXeCpbKxdZ806",
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The adidas Galaxy 7 in all-black Core Black - a clean, versatile daily trainer with Cloudfoam comfort. Size Men US 10.5 / Women US 11.5. Brand new, never worn.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 10.5",
   "added": "2026-10-15",
@@ -10943,12 +10943,12 @@
   ],
   "payment_url": "https://buy.stripe.com/eVqcN58JY6PXeCpg0NdZ807",
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The adidas X_PLR Path in Clay, Carbon and Charcoal - a sleek, lightweight sneaker built for everyday miles. Size Men US 9.5 / Women US 10.5. Brand new, never worn.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 9.5",
   "added": "2026-10-15",
@@ -10973,12 +10973,12 @@
   ],
   "payment_url": "https://buy.stripe.com/7sYaEX6BQ5LT1PDg0NdZ809",
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The Hey Dude Marty in Oceano - an open-heel mule in dark charcoal canvas you can slip on and go. Size Men US 8 / Women US 9. Brand new, never worn.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 8",
   "added": "2026-10-15",
@@ -11002,8 +11002,8 @@
    "https://i.ebayimg.com/images/g/uhIAAeSw1qxq0XOr/s-l1600.webp"
   ],
   "payment_url": "https://buy.stripe.com/dRm8wPf8meipcuh15TdZ80a",
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Bearpaw Retro Shorty in Black/Black - a cozy suede mini boot with plush wool-blend lining. Size Women US 10. Brand new, never worn.",
   "parcel_in": {
    "l": 12,
@@ -11036,7 +11036,7 @@
   ],
   "payment_url": "https://buy.stripe.com/9B68wP2lA0rzam9eWJdZ80b",
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The Puma Thunder Desert in Bright White and Gray Violet - a chunky retro-inspired sneaker with bold layered panels. Size Men US 7.5 / Women US 8.5. Brand new, never worn.",
   "parcel_in": {
    "l": 12,
@@ -11068,13 +11068,13 @@
    "https://i.ebayimg.com/images/g/EDoAAeSwsiZq0W2W/s-l1600.webp"
   ],
   "payment_url": "https://buy.stripe.com/dRm8wP5xMfmtgKx01PdZ80c",
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The adidas Adizero Aruku J in Cloud White, Pure Ruby and Core Black - a light junior runner with responsive cushioning. Size US 5Y / Women US 6.5. Brand new, never worn.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 6.5",
   "added": "2026-10-15",
@@ -11099,13 +11099,13 @@
    "assets/catalog/398409178352-6.jpg"
   ],
   "payment_url": "https://buy.stripe.com/eVq7sL9O2b6deCpdSFdZ80d",
-  "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_lbs": 2.0,
+  "weight_estimated": false,
   "description": "The Crocs Classic Clog in size 7 men (9 women) is a shoe perfect for various occasions including travel, activewear, casual outings, and workwear. This slip-on clog features a round toe shape, solid pale yellow-green / lime color, and is made with a synthetic lining and rubber outsole for comfort and durability. With its lightweight and cushioned design, this Crocs Classic Clog is a stylish and practical choice for everyday wear, suitable for all seasons.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 21,
+   "w": 12,
+   "h": 4
   },
   "size": "US 7",
   "added": "2026-10-15",
@@ -11132,13 +11132,13 @@
    "https://i.ebayimg.com/images/g/hcgAAeSwQBZq0seF/s-l1600.webp"
   ],
   "payment_url": "https://buy.stripe.com/9B6dR98JY5LT65T15TdZ80h",
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Brooks Adrenaline GTS 20 running shoe in black, a supportive daily trainer with smooth cushioning. Size Men US 7.5 / Women US 9. Brand new with box, never worn.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 7.5",
   "added": "2026-10-16",
@@ -11162,13 +11162,13 @@
    "https://i.ebayimg.com/images/g/Fc4AAeSwsm5q0sRd/s-l1600.webp"
   ],
   "payment_url": "https://buy.stripe.com/00wcN56BQ1vD9i53e1dZ80i",
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Fila Vulc 13 sneaker in black and white, a classic vulc-sole style for kids. Size Kids US 4Y / EU 36. Brand new with box, never worn.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 4Y",
   "added": "2026-10-16",
@@ -11193,13 +11193,13 @@
    "https://i.ebayimg.com/images/g/nb0AAeSwcR5q0rxO/s-l1600.webp"
   ],
   "payment_url": "https://buy.stripe.com/4gM8wPe4i8Y5am915TdZ80k",
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Adidas Ultraboost 22 running shoe in Triple Grey, with responsive Boost cushioning and a stretchy knit upper. Size Women US 6. Brand new with box, never worn.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 6",
   "added": "2026-10-16",
@@ -11216,13 +11216,13 @@
   "department": "Women",
   "qty": 1,
   "payment_url": "https://buy.stripe.com/9B68wP2lAb6d2TH01PdZ80o",
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Nike Court Vision Low is a clean, classic everyday sneaker. Size Women US 9 (also fits Men US 7.5). Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 9",
   "photos": [
@@ -11254,13 +11254,13 @@
    "https://i.ebayimg.com/images/g/dkQAAeSw7Zdq1qeB/s-l1600.webp"
   ],
   "payment_url": "https://buy.stripe.com/5kQaEX8JY1vDgKxg0NdZ80p",
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 2.0,
+  "weight_estimated": false,
   "description": "The Nike Shox R4 Phantom Picante Red W brings classic Nike style to your everyday lineup. Size Women US 7 (also fits Youth 5.5Y). Ships brand new in its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 8.0,
+   "h": 6.0
   },
   "size": "US 7",
   "added": "2026-10-19",
@@ -11318,12 +11318,12 @@
   ],
   "payment_url": "https://buy.stripe.com/aFaaEX9O2del8e115TdZ80r",
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The Adidas Predator 24 Club FxG soccer cleats in Core Black and Carbon, built for firm ground control. Size Men US 11.5. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 11.5",
   "added": "2026-10-20",
@@ -11350,12 +11350,12 @@
   ],
   "payment_url": "https://buy.stripe.com/8x214n5xMcahfGt3e1dZ80t",
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The Adidas Adizero Select 2.0 in Purple Burst and Black, a lightweight basketball shoe built for speed. Size Men US 13 / Women US 14. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14.0,
+   "w": 12.0,
+   "h": 10.0
   },
   "size": "US 13",
   "added": "2026-10-21",
@@ -11381,12 +11381,12 @@
   ],
   "payment_url": "https://buy.stripe.com/cNibJ16BQa293XL3e1dZ80u",
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The Adidas Predator Club TF from the Energy Citrus Pack in Yellow and Black, turf soccer shoes with classic Predator control. Size Men US 8. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 8",
   "added": "2026-10-21",
@@ -11412,13 +11412,13 @@
    "https://i.ebayimg.com/images/g/KzoAAeSw1K9q2Vl~/s-l1600.webp"
   ],
   "payment_url": "https://buy.stripe.com/5kQ00j5xM1vD51P15TdZ80v",
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Adidas Codechaos 22 Spikeless golf shoes in White and Green Spark (style IE3447), with a bold chaos look and course-ready grip. Size Women US 4.5. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 4.5",
   "added": "2026-10-21",
@@ -11444,13 +11444,13 @@
    "https://i.ebayimg.com/images/g/wKkAAeSwm1Bq2VKZ/s-l1600.webp"
   ],
   "payment_url": "https://buy.stripe.com/4gM28r7FU2zHeCpbKxdZ80w",
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Adidas Adizero Select 2.0 in Purple Burst and Black, a lightweight basketball shoe built for speed. Size Men US 9 / Women US 10. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14.0,
+   "w": 12.0,
+   "h": 10.0
   },
   "size": "US 10",
   "added": "2026-10-21",
@@ -11474,13 +11474,13 @@
    "https://i.ebayimg.com/images/g/K5gAAeSwbLhqpjB1/s-l1600.webp"
   ],
   "payment_url": "https://buy.stripe.com/14A7sL6BQdeldylbKxdZ80x",
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 4.0,
+  "weight_estimated": false,
   "description": "The Adidas Swift Run 1.0 in Animal Print (style JR0634), a comfy knit runner with a wild finish. Size Women US 7 / Men US 6. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 13.0,
+   "w": 8.0,
+   "h": 5.0
   },
   "size": "US 7",
   "added": "2026-10-21",
@@ -11506,12 +11506,12 @@
   ],
   "payment_url": "https://buy.stripe.com/00w00jd0e7U1fGtg0NdZ80y",
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The Asics Blade FF 2 in Saba Blue and White, a fast indoor court shoe with a low, agile feel. Size Men US 11 / Women US 12.5. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14.0,
+   "w": 12.0,
+   "h": 10.0
   },
   "size": "US 11",
   "added": "2026-10-21",
@@ -11537,13 +11537,13 @@
    "https://i.ebayimg.com/images/g/6FEAAeSwrs9q2WS0/s-l1600.webp"
   ],
   "payment_url": "https://buy.stripe.com/7sY00j8JY3DL2TH9CpdZ80z",
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Asics GT-1000 14 GS in Twilight Blue and Digital Sakura, a supportive kids' runner for everyday miles. Size 5Y / Women US 6.5. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 5Y",
   "added": "2026-10-21",
@@ -11568,13 +11568,13 @@
    "https://i.ebayimg.com/images/g/OaMAAeSwHddq2W20/s-l1600.webp"
   ],
   "payment_url": "https://buy.stripe.com/6oU9ATf8m3DLcuh8yldZ80A",
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The New Balance 480 in Green and Orange, a retro court style sized for kids. Size Kids US 2 / EU 33.5. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 2",
   "added": "2026-10-21",
@@ -11602,12 +11602,12 @@
   ],
   "payment_url": "https://buy.stripe.com/9B6dR9aS6a29dylg0NdZ80B",
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The HOKA Clifton 10 in Oatmeal Oat Milk, a lightweight, well-cushioned daily trainer made for running and all-day comfort. Size Men US 9 / Women US 10. Brand new with box, never worn.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14.0,
+   "w": 12.0,
+   "h": 10.0
   },
   "size": "US 9",
   "added": "2026-10-26",
@@ -11634,12 +11634,12 @@
   ],
   "payment_url": "https://buy.stripe.com/28EbJ15xM3DLeCpg0NdZ80C",
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The Hoka Clifton One9 in Black Cerise pairs plush Clifton cushioning with a clean everyday look. Size Men US 10 / Women US 11. New with box, never worn.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 10",
   "added": "2026-10-26",
@@ -11662,8 +11662,8 @@
   "description": "The Adidas Gazelle Comfort Closure (toddler, casual) brings classic Adidas style to your everyday lineup. Available in 5C. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
-   "w": 8,
-   "h": 6
+   "w": 8.0,
+   "h": 6.0
   },
   "size": "US 5C",
   "photos": [
@@ -11728,9 +11728,9 @@
   "weight_estimated": false,
   "description": "Meet the Reebok Classic Nylon HS Low Black — a women's sneaker with a clean, standout look. Available in 8 or 9.5 Women. Comes brand new with its box included.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 8",
   "units_sold": 0,
@@ -11751,9 +11751,9 @@
   "weight_estimated": false,
   "description": "You can't go wrong with the Adidas Gazelle Indoor J Kids Better Scarlet White Gum, a kids' sneaker made to be worn on repeat. Sized at 6Y or 7Women. Ships brand new in its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 6Y",
   "photos": [
@@ -11781,9 +11781,9 @@
   "weight_estimated": false,
   "description": "Add some fresh style to your rotation with the Adidas Campus 00s J – “Cream Semi Pink Spark” 5Y or 6, a kids' sneaker in a head-turning colorway. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 5Y",
   "photos": [
@@ -11812,8 +11812,8 @@
   "description": "Meet the New Balance 9060 Lace — a kids' sneaker with a clean, standout look. Listed here in size 2Y. Comes brand new with its box included.",
   "parcel_in": {
    "l": 12,
-   "w": 8,
-   "h": 6
+   "w": 8.0,
+   "h": 6.0
   },
   "size": "US 2Y",
   "photos": [
@@ -11840,13 +11840,13 @@
   "department": "Infant",
   "qty": 1,
   "payment_url": "https://buy.stripe.com/9B6aEXbWa1vD0LzaGtdZ80M",
-  "weight_lbs": 1.0,
+  "weight_lbs": 2.0,
   "weight_estimated": false,
   "description": "Add some fresh style to your rotation with the New Balance 740 Bungee Lace Infant/Toddler, a infant sneaker in a head-turning colorway. Listed here in size 4C. New with box, ready to wear straight out of the package.",
   "parcel_in": {
    "l": 12,
-   "w": 8,
-   "h": 6
+   "w": 8.0,
+   "h": 6.0
   },
   "size": "US 4C",
   "photos": [
@@ -11874,9 +11874,9 @@
   "weight_estimated": false,
   "description": "You can't go wrong with the adidas Superstar II C, a kids' sneaker made to be worn on repeat. Sized at 9K. Comes brand new with its box included.",
   "parcel_in": {
-   "l": 12,
-   "w": 8,
-   "h": 6
+   "l": 12.0,
+   "w": 8.0,
+   "h": 6.0
   },
   "size": "US 9C",
   "photos": [
@@ -11905,9 +11905,9 @@
   "weight_estimated": false,
   "description": "The adidas Superstar II C is a go-to kids' sneaker that goes with just about anything. Sized at 1Y. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 8,
-   "h": 6
+   "l": 12.0,
+   "w": 8.0,
+   "h": 6.0
   },
   "size": "US 1Y",
   "photos": [
@@ -11935,9 +11935,9 @@
   "weight_estimated": false,
   "description": "The Adidas Samba OG C brings classic Adidas style to your everyday lineup. See the listing title for the exact size details. Ships brand new in its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 6
+   "l": 12.0,
+   "w": 10.0,
+   "h": 6.0
   },
   "size": "US 2C",
   "photos": [
@@ -11967,9 +11967,9 @@
   "weight_estimated": false,
   "description": "You can't go wrong with the adidas VL Court 3.0 Shadow Red, a unisex sneaker made to be worn on repeat. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
-   "l": 14,
-   "w": 12,
-   "h": 9
+   "l": 14.0,
+   "w": 12.0,
+   "h": 9.0
   },
   "size": "US 12.5",
   "photos": [
@@ -12004,12 +12004,12 @@
   ],
   "payment_url": "https://buy.stripe.com/dRm8wPd0e6PX79X7uhdZ81m",
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The Adidas Copa Pure 2 League FG in Black and Gold, firm-ground soccer cleats with the classic Copa touch. Size Men US 6.5 / Women US 7.5. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 6.5",
   "added": "2026-10-29",
@@ -12033,13 +12033,13 @@
    "https://i.ebayimg.com/images/g/roAAAeSwVOpq4~rS/s-l1600.webp"
   ],
   "payment_url": "https://buy.stripe.com/cNi5kD0ds4HPam9aGtdZ81n",
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Adidas Postmove Mid CNY EL in White and Red, a retro-inspired mid-cut sneaker. Size Youth US 4.5Y / Women US 5.5. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 10.0
   },
   "size": "US 4.5Y",
   "added": "2026-10-29",
@@ -12063,13 +12063,13 @@
    "https://i.ebayimg.com/images/g/iFQAAeSwFppq4~jX/s-l1600.webp"
   ],
   "payment_url": "https://buy.stripe.com/eVqbJ1bWab6dfGt01PdZ81o",
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Adidas Y-3 Gendo Superstar in Black and Easy Yellow — Yohji Yamamoto's hollow Gendo platform sole on the classic Superstar shell. Size Women US 6. Brand new with tags.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 10.0
   },
   "size": "US 6",
   "added": "2026-10-29",
@@ -12093,13 +12093,13 @@
    "https://i.ebayimg.com/images/g/KrcAAeSwiEJq4~Ee/s-l1600.webp"
   ],
   "payment_url": "https://buy.stripe.com/14AeVd2lA3DLbqd3e1dZ81p",
-  "weight_lbs": 1.5,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "Electronic Spider-Man mask with moving, blinking eyes that light up, controlled by the included ring remote. Brand new with tags.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 10.0
   },
   "size": "",
   "added": "2026-10-29",
@@ -12125,13 +12125,13 @@
    "https://i.ebayimg.com/images/g/YVoAAeSwYONq4-3S/s-l1600.webp"
   ],
   "payment_url": "https://buy.stripe.com/6oU8wP9O2cahbqd4i5dZ81q",
-  "weight_lbs": 1.5,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "Deadpool 3 electronic mask with moving, blinking eyes, ring remote control and a USB rechargeable battery. One size. Brand new with tags.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 10.0
   },
   "size": "One Size",
   "added": "2026-10-29",
@@ -12191,13 +12191,13 @@
    "https://i.ebayimg.com/images/g/Ug4AAeSw8ZNq6rqi/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/6oU8wP8JY4HP2THcOBdZ81u",
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Adidas Break Start Bold in Black, White and Gum, a clean everyday court sneaker. Size Women US 9.5 / Men US 8.5. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14.0,
+   "w": 12.0,
+   "h": 10.0
   },
   "size": "US 9.5",
   "added": "2026-11-04",
@@ -12221,13 +12221,13 @@
    "https://i.ebayimg.com/images/g/U38AAeSwUrhq6rm~/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/3cI3cv2lAdeleCp29XdZ81v",
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Skechers Ultra Flex 3.0 Brisk-Spec Slip-ins in Charcoal and Red, hands-free comfort for kids. Size 4 Big Kid / EU 36. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 4",
   "added": "2026-11-04",
@@ -12251,13 +12251,13 @@
    "https://i.ebayimg.com/images/g/S04AAeSwEhdq6rgl/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/fZu00j3pEfmtfGtcOBdZ81w",
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Adidas Ultraboost Light in Triple White, featherlight Boost cushioning for all-day miles. Size Women US 7.5 / Men US 6.5. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14.0,
+   "w": 12.0,
+   "h": 10.0
   },
   "size": "US 7.5",
   "added": "2026-11-04",
@@ -12281,13 +12281,13 @@
    "https://i.ebayimg.com/images/g/OkwAAeSw8ZNq6rbB/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/8x214n6BQcah1PDcOBdZ81x",
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Adidas Grand Court Alpha in Silver Green with Cloud White stripes and a gum sole, suede court style. Size Women US 7.5. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14.0,
+   "w": 12.0,
+   "h": 10.0
   },
   "size": "US 7.5",
   "added": "2026-11-04",
@@ -12313,12 +12313,12 @@
   ],
   "payment_url": "https://buy.stripe.com/7sYeVd3pEcah51P6qddZ81y",
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The Nike Court Lite 2 in Black and White, a leather hard-court classic. Size Men US 7.5 / Women US 9. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14.0,
+   "w": 12.0,
+   "h": 10.0
   },
   "size": "US 7.5",
   "added": "2026-11-04",
@@ -12342,13 +12342,13 @@
    "https://i.ebayimg.com/images/g/I5cAAeSwQopq6rLb/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/7sYdR93pE3DLgKx9CpdZ81z",
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Nike Quest 5 in Pure Platinum, Wolf Grey and Light Crimson, a light everyday running shoe. Size Women US 9 / Men US 7.5. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 10.0,
+   "h": 8.0
   },
   "size": "US 9",
   "added": "2026-11-04",
@@ -12372,13 +12372,13 @@
    "https://i.ebayimg.com/images/g/GigAAeSw~~tq6rDa/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/dRm28rgcq4HPam9eWJdZ81A",
-  "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_lbs": 4.0,
+  "weight_estimated": false,
   "description": "The Nike Court Royale 2 Mid in White and Black, a clean mid-cut court profile. Size Men US 10.5 / Women US 12. Brand new without box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14.0,
+   "w": 12.0,
+   "h": 10.0
   },
   "size": "US 10.5",
   "added": "2026-11-04",
@@ -12403,12 +12403,12 @@
   ],
   "payment_url": "https://buy.stripe.com/fZucN5d0eeipcuh3e1dZ81B",
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The Jordan Luka 2 'Trick Shot' PF (DX9012-103) in White and Green Strike, Luka Doncic's second signature shoe. Size Men US 7 / Women US 8.5. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14.0,
+   "w": 12.0,
+   "h": 10.0
   },
   "size": "US 7",
   "added": "2026-11-04",
@@ -12433,13 +12433,13 @@
    "https://i.ebayimg.com/images/g/uZEAAeSw~Hxq6q4W/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/6oU14n6BQb6deCp15TdZ81C",
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Nike Air Force 1 Mid '07 in Triple White (CW2289-111), the all-white mid with ankle strap. Size Men US 7 / Women US 8.5. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14.0,
+   "w": 12.0,
+   "h": 10.0
   },
   "size": "US 8.5",
   "added": "2026-11-04",
@@ -12465,12 +12465,12 @@
   ],
   "payment_url": "https://buy.stripe.com/28E8wPaS6del65T7uhdZ81D",
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The Jordan Stay Loyal 3, everyday Jordan style with a supportive mid-cut fit. Size Men US 8 / Women US 9.5. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14.0,
+   "w": 12.0,
+   "h": 10.0
   },
   "size": "US 8",
   "added": "2026-11-04",
@@ -12494,13 +12494,13 @@
    "https://i.ebayimg.com/images/g/jBsAAeSwzHBq6qnE/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/eVqaEX1hw5LTfGt9CpdZ81E",
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Nike SB Check Canvas (905373-002) in Light Bone and White, a low canvas skate shoe. Size 7Y / Women US 8.5. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 12.0,
+   "w": 12.0,
+   "h": 10.0
   },
   "size": "US 8.5",
   "added": "2026-11-04",
@@ -12525,13 +12525,13 @@
    "https://i.ebayimg.com/images/g/sgwAAeSwX3Fq6qSo/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/9B68wP2lA2zHbqdaGtdZ81G",
-  "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_lbs": 4.0,
+  "weight_estimated": false,
   "description": "The Nike Dunk High Retro 'Panda' (DD1399-105) in White and Black with Total Orange accents. Size Men US 10 / Women US 11.5. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14.0,
+   "w": 12.0,
+   "h": 10.0
   },
   "size": "US 10",
   "added": "2026-11-04",
@@ -12557,8 +12557,8 @@
    "https://i.ebayimg.com/images/g/bMMAAeSwdMZq6~QE/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/7sY7sL8JY1vD65TeWJdZ81H",
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Adidas Grand Court Alpha (JH7231) in Purple Burst, a solid purple court sneaker with logo accents and a foam insole. Size Women US 6 / Men US 5. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
@@ -12589,12 +12589,12 @@
   ],
   "payment_url": "https://buy.stripe.com/7sY14ngcq6PXeCp7uhdZ81I",
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The Adidas Handball Spezial (HQ9438) in Colombia Navy and Yellow, a low-top retro trainer with a rubber outsole. Size Men US 7.5 / Women US 8.5. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14.0,
+   "w": 12.0,
+   "h": 9.0
   },
   "size": "US 7.5",
   "added": "2026-11-05",
@@ -12620,12 +12620,12 @@
   ],
   "payment_url": "https://buy.stripe.com/aFa28r0dsgqx8e15m9dZ81J",
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The Adidas Handball Spezial (HQ9438) in Colombia Navy and Yellow with a gum sole, a low-top retro trainer. Size Men US 7 / Women US 8. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14.0,
+   "w": 12.0,
+   "h": 9.0
   },
   "size": "US 7",
   "added": "2026-11-05",
@@ -12649,13 +12649,13 @@
    "https://i.ebayimg.com/images/g/K5gAAeSwbLhqpjB1/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/14A00jf8m8Y5eCpaGtdZ81K",
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 4.0,
+  "weight_estimated": false,
   "description": "The Adidas Swift Run 1.0 (JR0634) in Animal Print with a cheetah theme, breathable mesh upper and foam insole. Size Women US 8 / Men US 7. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 13.0,
+   "w": 8.0,
+   "h": 5.0
   },
   "size": "US 8",
   "added": "2026-11-05",
@@ -12681,8 +12681,8 @@
    "https://i.ebayimg.com/images/g/EPQAAeSwGG1q6~Cc/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/6oU9AT0dsgqx0Lz4i5dZ81L",
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Nike V5 RNR Kids in White and Metallic Silver, a light all-day sneaker for active kids. Size US 3Y / EU 35. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
@@ -12711,8 +12711,8 @@
    "https://i.ebayimg.com/images/g/PugAAeSwUs1q68jV/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/6oUfZh9O2gqx2THg0NdZ81O",
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The New Balance Rave Run v2 Kids Shoes in Black and White, Fresh Foam comfort for young athletes. Size US 1 / EU 32.5. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
@@ -12741,13 +12741,13 @@
    "https://i.ebayimg.com/images/g/Uv8AAeSwpvhqu0Q2/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/14A8wP9O2b6deCpg0NdZ81P",
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Nike Run Swift 3 SE in Grey and Pink, a mesh running shoe with a rubber outsole. Size Women US 7 / 5.5Y. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14,
+   "w": 12,
+   "h": 10
   },
   "size": "US 7",
   "added": "2026-11-05",
@@ -12804,13 +12804,13 @@
    "https://i.ebayimg.com/images/g/4OsAAeSw4tlqn2OW/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/6oUaEX7FUeip0Lz8yldZ81R",
-  "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_lbs": 4.0,
+  "weight_estimated": false,
   "description": "The Nike Uplift SC Sail Black Life Lime sneakers in size Men US 7.5 / Women US 9 bring stylish Nike design to your everyday lineup. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 13,
+   "w": 8,
+   "h": 5
   },
   "size": "US 7.5",
   "added": "2026-11-07",
@@ -12834,13 +12834,13 @@
    "https://i.ebayimg.com/images/g/EC4AAeSw585q71ss/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/cNi7sL9O2del1PD3e1dZ81S",
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The New Balance 530 Black Flat Taupe brings classic New Balance style to your everyday lineup. See the listing title for the exact size details. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14,
+   "w": 12,
+   "h": 9
   },
   "size": "US 9.5",
   "added": "2026-11-07",
@@ -12865,12 +12865,12 @@
   ],
   "payment_url": "https://buy.stripe.com/14A7sL3pEgqxeCp9CpdZ81T",
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The Avia Avi-Storm men's running shoes in blue, black and green are designed for athletic activities and everyday comfort. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14,
+   "w": 12,
+   "h": 9
   },
   "size": "US 12",
   "added": "2026-11-07",
@@ -12894,13 +12894,13 @@
    "https://i.ebayimg.com/images/g/HL4AAeSwJG5q6rxy/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/14A6oH1hwa29eCp15TdZ81U",
-  "weight_lbs": 2.0,
-  "weight_estimated": true,
+  "weight_lbs": 1.0,
+  "weight_estimated": false,
   "description": "The Fun Gesture LED Hand Light Car Rear Window Sign with Remote is a unique and fun accessory light designed for your car rear window. Brand new.",
   "parcel_in": {
    "l": 12,
-   "w": 10,
-   "h": 8
+   "w": 5,
+   "h": 2
   },
   "size": null,
   "added": "2026-11-07",
@@ -12924,13 +12924,13 @@
    "https://i.ebayimg.com/images/g/Hv4AAeSws~hq71xT/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/3cI14n5xMfmtcuhbKxdZ81W",
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Skechers Slip-ins Max Cushioning Endeavour in off white and pink are a stylish and comfortable pair for everyday wear. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14,
+   "w": 12,
+   "h": 9
   },
   "size": "US 9",
   "added": "2026-11-07",
@@ -12954,13 +12954,13 @@
    "https://i.ebayimg.com/images/g/-tUAAeSwDYpq71kc/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/6oU3cvaS6a298e16qddZ81X",
-  "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_lbs": 5.0,
+  "weight_estimated": false,
   "description": "The Iron Age Trencher IA5002 men's 6-inch work boot in brown is a rugged and durable work boot. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14,
+   "w": 12,
+   "h": 9
   },
   "size": "US 11",
   "added": "2026-11-07",
@@ -12984,13 +12984,13 @@
    "https://i.ebayimg.com/images/g/uUEAAeSwajVq71eK/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/5kQ00j9O20rz2TH9CpdZ81Y",
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Adidas Handball Spezial Mexico World Cup shoes in white are a stylish and comfortable choice. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14,
+   "w": 12,
+   "h": 9
   },
   "size": "US 6.5Y",
   "added": "2026-11-07",
@@ -13038,7 +13038,7 @@
   "department": "Unisex",
   "qty": 1,
   "payment_url": "https://buy.stripe.com/9B66oH3pE6PX51P4i5dZ821",
-  "weight_lbs": 3.0,
+  "weight_lbs": 4.0,
   "weight_estimated": false,
   "description": "The ASICS GEL-RENMA brings classic Asics style to your everyday lineup. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
   "parcel_in": {
@@ -13074,13 +13074,13 @@
    "https://i.ebayimg.com/images/g/X2cAAeSwxDtq8L29/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/YQAAAeSwQIBq8L2~/s-l1600.jpg"
   ],
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Puma Voltaic Evo Fade kids shoes in black and pink bring sporty Puma style for everyday wear. Listed here in size US 12C. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
-   "w": 10,
-   "h": 8
+   "w": 12,
+   "h": 9
   },
   "size": "US 12C",
   "added": "2026-11-08",
@@ -13104,13 +13104,13 @@
    "https://i.ebayimg.com/images/g/RFcAAeSw76dq8PYE/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/haMAAeSwz-Nq8PYI/s-l1600.jpg"
   ],
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 2.0,
+  "weight_estimated": false,
   "description": "The Adidas Samba OG kids shoes in cloud white, lucid pink and gum bring the classic Samba look in a kids size. Listed here in size US 11C. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
-   "w": 10,
-   "h": 8
+   "w": 12,
+   "h": 7
   },
   "size": "US 11C",
   "added": "2026-11-08",
@@ -13138,12 +13138,12 @@
    "https://i.ebayimg.com/images/g/IdQAAeSwBvtq8O0d/s-l1600.jpg"
   ],
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The Puma Thunder Desert in bright white and gray violet, style code 367997-03, with its chunky retro-runner sole. Listed here in size Men US 7.5 / Women US 8.5. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14,
+   "w": 12,
+   "h": 9
   },
   "size": "US 7.5",
   "added": "2026-11-08",
@@ -13171,13 +13171,13 @@
    "https://i.ebayimg.com/images/g/2TkAAeSwpm5q8OxR/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/XwQAAeSwwmFq8OxU/s-l1600.jpg"
   ],
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Puma Park Lifestyle SK8 in black, white and gum, a skate-inspired low top. Listed here in size Kids US 5.5Y / Women US 6.5. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
-   "w": 10,
-   "h": 8
+   "w": 12,
+   "h": 7
   },
   "size": "US 5.5Y",
   "added": "2026-11-08",
@@ -13202,13 +13202,13 @@
    "https://i.ebayimg.com/images/g/U9kAAeSwf9Nq8Or8/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/etoAAeSwD6Jq8Or-/s-l1600.jpg"
   ],
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Puma Reflect Lite Wide women's running shoes in black, white and blue, wide fit with reflective details. Listed here in size Women US 6.5. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14,
+   "w": 12,
+   "h": 9
   },
   "size": "US 6.5",
   "added": "2026-11-08",
@@ -13229,13 +13229,13 @@
    "https://i.ebayimg.com/images/g/KAQAAeSwRcdq8OYL/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/FRkAAeSwOIRq8OYZ/s-l1600.jpg"
   ],
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Fila Vulc 13 kids high top shoes in triple black, a classic vulc-sole style for kids. Listed here in size Kids US 2Y. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
-   "w": 10,
-   "h": 8
+   "w": 12,
+   "h": 7
   },
   "size": "US 2Y",
   "added": "2026-11-08",
@@ -13257,8 +13257,8 @@
    "https://i.ebayimg.com/images/g/r6IAAeSwFgtq8OJE/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/tkcAAeSwqmZq8OJJ/s-l1600.jpg"
   ],
-  "weight_lbs": 1.0,
-  "weight_estimated": true,
+  "weight_lbs": 2.0,
+  "weight_estimated": false,
   "description": "The Fila Cress Color Block infant shoes in orange, gold and red. Listed here in size US 8C. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
@@ -13284,8 +13284,8 @@
    "https://i.ebayimg.com/images/g/dBsAAeSwUnJq8ODU/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/PgUAAeSwroFq8ODX/s-l1600.jpg"
   ],
-  "weight_lbs": 1.0,
-  "weight_estimated": true,
+  "weight_lbs": 2.0,
+  "weight_estimated": false,
   "description": "The Fila Cress Color Block infant shoes in orange, gold and red. Listed here in size US 7C. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
@@ -13312,8 +13312,8 @@
    "https://i.ebayimg.com/images/g/r6IAAeSwFgtq8OJE/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/tkcAAeSwqmZq8OJJ/s-l1600.jpg"
   ],
-  "weight_lbs": 1.0,
-  "weight_estimated": true,
+  "weight_lbs": 2.0,
+  "weight_estimated": false,
   "description": "The Fila Cress Color Block infant shoes in orange, gold and red. Listed here in size US 7C. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
@@ -13345,12 +13345,12 @@
    "https://i.ebayimg.com/images/g/fGYAAeSw4kxq8N5e/s-l1600.jpg"
   ],
   "weight_lbs": 3.0,
-  "weight_estimated": true,
+  "weight_estimated": false,
   "description": "The Under Armour Curry 12 Extraterrestrial GS in black and hyper green, Stephen Curry's grade-school basketball shoe. Listed here in size US 7Y. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
-   "w": 10,
-   "h": 8
+   "w": 12,
+   "h": 7
   },
   "size": "US 7Y",
   "added": "2026-11-08",
@@ -13377,13 +13377,13 @@
    "https://i.ebayimg.com/images/g/~lIAAeSwvZVq8Nvz/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/yTMAAeSwD6Jq8Nv2/s-l1600.jpg"
   ],
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Saucony Kinvara 14 A/C kids shoes in coral, a light and fast kids running shoe with alternative closure. Listed here in size Kids US 5Y. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
-   "w": 10,
-   "h": 8
+   "w": 12,
+   "h": 7
   },
   "size": "US 5Y",
   "added": "2026-11-08",
@@ -13408,13 +13408,13 @@
    "https://i.ebayimg.com/images/g/6AQAAeSwdr5q8Nhe/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/DNkAAeSwEDdq8NkW/s-l1600.jpg"
   ],
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The PUMA Softride Enzo 5 youth shoes in blue fade, soft foam comfort for everyday wear. Listed here in size Kids US 3Y. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
-   "w": 10,
-   "h": 8
+   "w": 12,
+   "h": 7
   },
   "size": "US 3Y",
   "added": "2026-11-08",
@@ -13439,13 +13439,13 @@
    "https://i.ebayimg.com/images/g/6AQAAeSwdr5q8Nhe/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/DNkAAeSwEDdq8NkW/s-l1600.jpg"
   ],
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The PUMA Softride Enzo 5 youth shoes in blue fade, soft foam comfort for everyday wear. Listed here in size Kids US 12C. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
-   "w": 10,
-   "h": 8
+   "w": 12,
+   "h": 7
   },
   "size": "US 12C",
   "added": "2026-11-08",
@@ -13470,13 +13470,13 @@
    "https://i.ebayimg.com/images/g/6AQAAeSwdr5q8Nhe/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/DNkAAeSwEDdq8NkW/s-l1600.jpg"
   ],
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The PUMA Softride Enzo 5 youth shoes in blue fade, soft foam comfort for everyday wear. Listed here in size Kids US 13C. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
-   "w": 10,
-   "h": 8
+   "w": 12,
+   "h": 7
   },
   "size": "US 13C",
   "added": "2026-11-08",
@@ -13501,13 +13501,13 @@
    "https://i.ebayimg.com/images/g/6AQAAeSwdr5q8Nhe/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/DNkAAeSwEDdq8NkW/s-l1600.jpg"
   ],
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The PUMA Softride Enzo 5 youth shoes in blue fade, soft foam comfort for everyday wear. Listed here in size Kids US 6Y. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
-   "w": 10,
-   "h": 8
+   "w": 12,
+   "h": 7
   },
   "size": "US 6Y",
   "added": "2026-11-08",
@@ -13532,13 +13532,13 @@
    "https://i.ebayimg.com/images/g/6AQAAeSwdr5q8Nhe/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/DNkAAeSwEDdq8NkW/s-l1600.jpg"
   ],
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The PUMA Softride Enzo 5 youth shoes in blue fade, soft foam comfort for everyday wear. Listed here in size Kids US 5.5Y. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
-   "w": 10,
-   "h": 8
+   "w": 12,
+   "h": 7
   },
   "size": "US 5.5Y",
   "added": "2026-11-08",
@@ -13564,13 +13564,13 @@
    "https://i.ebayimg.com/images/g/UwwAAeSwo79q8NHz/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/EhUAAeSwv31q8NHv/s-l1600.jpg"
   ],
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The PUMA Rebound Layup SL V kids shoes in black, white and gold, a retro court style with strap. Listed here in size Kids US 1Y. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
-   "w": 10,
-   "h": 8
+   "w": 12,
+   "h": 9
   },
   "size": "US 1Y",
   "added": "2026-11-08",
@@ -13596,13 +13596,13 @@
    "https://i.ebayimg.com/images/g/UwwAAeSwo79q8NHz/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/EhUAAeSwv31q8NHv/s-l1600.jpg"
   ],
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The PUMA Rebound Layup SL V kids shoes in black, white and gold, a retro court style with strap. Listed here in size Kids US 12C. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
-   "w": 10,
-   "h": 8
+   "w": 12,
+   "h": 9
   },
   "size": "US 12C",
   "added": "2026-11-08",
@@ -13628,13 +13628,13 @@
    "https://i.ebayimg.com/images/g/UwwAAeSwo79q8NHz/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/EhUAAeSwv31q8NHv/s-l1600.jpg"
   ],
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The PUMA Rebound Layup SL V kids shoes in black, white and gold, a retro court style with strap. Listed here in size Kids US 13C. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
-   "w": 10,
-   "h": 8
+   "w": 12,
+   "h": 9
   },
   "size": "US 13C",
   "added": "2026-11-08",
@@ -13658,13 +13658,13 @@
    "https://i.ebayimg.com/images/g/lDsAAeSwy6Fq8MgG/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/lLgAAeSw7mRq8MgJ/s-l1600.jpg"
   ],
-  "weight_lbs": 1.0,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The PUMA Courtflex V3 Lina toddler shoes in white and lilac frost. Listed here in size Kids US 9C. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
-   "w": 8,
-   "h": 6
+   "w": 12,
+   "h": 7
   },
   "size": "US 9C",
   "added": "2026-11-08",
@@ -13688,13 +13688,13 @@
    "https://i.ebayimg.com/images/g/lDsAAeSwy6Fq8MgG/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/lLgAAeSw7mRq8MgJ/s-l1600.jpg"
   ],
-  "weight_lbs": 1.0,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The PUMA Courtflex V3 Lina toddler shoes in white and lilac frost. Listed here in size Kids US 10C. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
-   "w": 8,
-   "h": 6
+   "w": 12,
+   "h": 7
   },
   "size": "US 10C",
   "added": "2026-11-08",
@@ -13718,13 +13718,13 @@
    "https://i.ebayimg.com/images/g/lDsAAeSwy6Fq8MgG/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/lLgAAeSw7mRq8MgJ/s-l1600.jpg"
   ],
-  "weight_lbs": 1.0,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The PUMA Courtflex V3 Lina toddler shoes in white and lilac frost. Listed here in size Kids US 6C. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
-   "w": 8,
-   "h": 6
+   "w": 12,
+   "h": 7
   },
   "size": "US 6C",
   "added": "2026-11-09",
