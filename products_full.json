@@ -13690,13 +13690,13 @@
    "https://i.ebayimg.com/images/g/fiwAAeSwt3xqqzM7/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/cccAAeSwANVqqzM2/s-l1600.jpg"
   ],
-  "weight_lbs": 2.5,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The ASICS GEL-Contend 9 in green, a breathable mesh women's running sneaker with gel insole comfort and a rubber outsole. Listed here in size Women US 12. Brand new and comes with its box.",
   "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
+   "l": 14,
+   "w": 12,
+   "h": 9
   },
   "size": "US 12",
   "added": "2026-11-15",
@@ -13722,8 +13722,8 @@
    "https://i.ebayimg.com/images/g/7ikAAeSwLMNq2WSt/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/6FEAAeSwrs9q2WS0/s-l1600.jpg"
   ],
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
   "description": "The Asics GT-1000 14 GS in Twilight Blue and Digital Sakura, a supportive kids' runner for everyday miles. Size 6.5Y / Women US 8. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
