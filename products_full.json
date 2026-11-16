@@ -4181,35 +4181,6 @@
   "units_sold": 0
  },
  {
-  "id": "398412768858",
-  "title": "Adidas Samba OG Grade School / Girls",
-  "price": "$54.95",
-  "price_direct": 46.71,
-  "image": "https://i.ebayimg.com/images/g/yGgAAeSwuqxqr2dr/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398412768858",
-  "brand": "Adidas",
-  "department": "Kids",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/9B6eVd9O26PXfGtaGtdZ63r",
-  "weight_lbs": 2.0,
-  "weight_estimated": false,
-  "description": "Add some fresh style to your rotation with the Adidas Samba OG Grade School / Girls, a kids' sneaker in a head-turning colorway. See the listing title for the exact size details. Comes brand new with its box included.",
-  "parcel_in": {
-   "l": 12,
-   "w": 8,
-   "h": 6
-  },
-  "size": "US 6.5Y",
-  "photos": [
-   "https://i.ebayimg.com/images/g/yGgAAeSwuqxqr2dr/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/8gUAAeSw0l5qr2dt/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/ig0AAeSwDG9qr2dx/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/RDIAAeSwMp1qr2d0/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/IZ8AAeSwLGlqr2d2/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "920006268257",
   "title": "Adidas Campus 00s Mustard Yellow Gum Men: US 4 - Women: US 5",
   "price": "$55.00",
@@ -13703,33 +13674,65 @@
   "payment_url": "https://buy.stripe.com/7sY28r6BQ1vD3XLbKxdZ82q"
  },
  {
-  "id": "920146479995",
-  "title": "Converse Chuck Taylor All Star Hi Floral Rained Out Womens 7.5 Women or 6 Men",
-  "price": "$38.00",
-  "price_direct": 32.3,
-  "image": "https://i.ebayimg.com/images/g/dYcAAeSwKjZqrIab/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/920146479995",
-  "brand": "Converse",
+  "id": "920146817775",
+  "title": "ASICS GEL-Contend 9/ Size 12 Women\u2019s",
+  "price": "$69.00",
+  "price_direct": 58.65,
+  "image": "https://i.ebayimg.com/images/g/fcIAAeSwE6lqqzOY/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920146817775",
+  "brand": "ASICS",
   "department": "Women",
   "qty": 1,
-  "payment_url": "https://buy.stripe.com/3cIfZhaS6cah79X4i5dZ82r",
-  "weight_lbs": 2.0,
-  "weight_estimated": false,
-  "description": "You can't go wrong with the Converse Chuck Taylor All Star Hi Floral Rained Out Womens, a women's sneaker made to be worn on repeat. See the listing title for the exact size details. Ships brand new in its box.",
+  "photos": [
+   "https://i.ebayimg.com/images/g/fcIAAeSwE6lqqzOY/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/u4AAAeSwYdBqqzMu/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/ga0AAeSw-TFqqzM~/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/fiwAAeSwt3xqqzM7/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/cccAAeSwANVqqzM2/s-l1600.jpg"
+  ],
+  "weight_lbs": 2.5,
+  "weight_estimated": true,
+  "description": "The ASICS GEL-Contend 9 in green, a breathable mesh women's running sneaker with gel insole comfort and a rubber outsole. Listed here in size Women US 12. Brand new and comes with its box.",
   "parcel_in": {
    "l": 12,
    "w": 10,
-   "h": 6
+   "h": 8
   },
-  "size": "US 7.5",
-  "photos": [
-   "https://i.ebayimg.com/images/g/dYcAAeSwKjZqrIab/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/ZXIAAeSwEjRqrIaf/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/KY8AAeSwTadqrIfT/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/5EAAAeSwM3JqrIfW/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/gxgAAeSwShxqrIfY/s-l1600.jpg"
-  ],
+  "size": "US 12",
+  "added": "2026-11-15",
   "units_sold": 0,
-  "added": "2026-11-15"
+  "payment_url": "https://buy.stripe.com/aFa7sL3pEfmt8e14i5dZ82s"
+ },
+ {
+  "id": "920146804499",
+  "title": "Asics GT-1000 14 GS Twilight Blue Digital Sakura/ Size:6.5Y / Women US 8",
+  "price": "$64.32",
+  "price_direct": 54.67,
+  "image": "https://i.ebayimg.com/images/g/zwIAAeSwUF9q2WSX/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920146804499",
+  "brand": "Asics",
+  "department": "Kids",
+  "qty": 1,
+  "photos": [
+   "https://i.ebayimg.com/images/g/zwIAAeSwUF9q2WSX/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/zCsAAeSwYrdq2WSj/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/4OUAAeSw-ldq2WSo/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/zh8AAeSwAQVq2WSq/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/1TEAAeSwBMBq2WSw/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/7ikAAeSwLMNq2WSt/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/6FEAAeSwrs9q2WS0/s-l1600.jpg"
+  ],
+  "weight_lbs": 1.8,
+  "weight_estimated": true,
+  "description": "The Asics GT-1000 14 GS in Twilight Blue and Digital Sakura, a supportive kids' runner for everyday miles. Size 6.5Y / Women US 8. Brand new and comes with its box.",
+  "parcel_in": {
+   "l": 12,
+   "w": 10,
+   "h": 8
+  },
+  "size": "US 6.5Y",
+  "added": "2026-11-15",
+  "units_sold": 0,
+  "payment_url": "https://buy.stripe.com/3cI7sL9O2cah1PD3e1dZ82t"
  }
 ]
