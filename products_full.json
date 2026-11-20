@@ -3019,35 +3019,6 @@
   "units_sold": 0
  },
  {
-  "id": "398366082499",
-  "title": "YZY YS-01 / Yeezy Slide “Fudge”",
-  "price": "$45.00",
-  "price_direct": 38.25,
-  "image": "https://i.ebayimg.com/images/g/Q0UAAeSwE~FqnYau/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398366082499",
-  "brand": "Yeezy",
-  "department": "Unisex",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/6oU00j9O26PXfGt01PdZ71P",
-  "weight_lbs": 1.0,
-  "weight_estimated": false,
-  "description": "The YZY YS-01 / Yeezy Slide “Fudge” brings classic Yeezy style to your everyday lineup. See the listing title for the exact size details. Comes brand new with its box included.",
-  "parcel_in": {
-   "l": 13,
-   "w": 8,
-   "h": 5
-  },
-  "size": "US 14",
-  "photos": [
-   "https://i.ebayimg.com/images/g/Q0UAAeSwE~FqnYau/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/EswAAeSwU0FqnYa5/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/7t8AAeSw~lNqnYdq/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/9QAAAeSwiIVqnYdu/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/S3IAAeSwMfVqnYeJ/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "398364734316",
   "title": "Nike Court Royale Blue New 10 Men or 11.5 Women",
   "price": "$45.00",
@@ -7289,35 +7260,6 @@
    "https://i.ebayimg.com/images/g/bRwAAeSwMaJqpzrw/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/6~oAAeSwl9hqpzrz/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/3vwAAeSwpr5qpzr3/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
-  "id": "398402502307",
-  "title": "Adidas AE 1 Low Metamorphosis Pack 10 Men or 11 Women",
-  "price": "$72.00",
-  "price_direct": 61.2,
-  "image": "https://i.ebayimg.com/images/g/kaoAAeSwIWdqq0sp/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398402502307",
-  "brand": "Adidas",
-  "department": "Men",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/fZu7sLbWaeipcuhg0NdZ70x",
-  "weight_lbs": 2.0,
-  "weight_estimated": false,
-  "description": "The Adidas AE 1 Low Metamorphosis Pack brings classic Adidas style to your everyday lineup. See the listing title for the exact size details. Brand new and comes with its box.",
-  "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 5
-  },
-  "size": "US 10",
-  "photos": [
-   "https://i.ebayimg.com/images/g/kaoAAeSwIWdqq0sp/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/314AAeSwahRqq0st/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/rK8AAeSwf9tqq0sw/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/hIgAAeSw-1xqq0sz/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/PVcAAeSwfGNqq0s6/s-l1600.jpg"
   ],
   "units_sold": 0
  },
