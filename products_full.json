@@ -5985,35 +5985,6 @@
   "units_sold": 0
  },
  {
-  "id": "398438981818",
-  "title": "New Balance FuelCell 990v6 Kids 3Y",
-  "price": "$65.00",
-  "price_direct": 55.25,
-  "image": "https://i.ebayimg.com/images/g/8k8AAeSwRddqueZ1/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398438981818",
-  "brand": "New Balance",
-  "department": "Kids",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/4gM00j0ds6PX2TH6qddZ61K",
-  "weight_lbs": 2.0,
-  "weight_estimated": false,
-  "description": "You can't go wrong with the New Balance FuelCell 990v6 Kids, a kids' sneaker made to be worn on repeat. Available in 3Y. Ships brand new in its box.",
-  "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
-  },
-  "size": "US 3Y",
-  "photos": [
-   "https://i.ebayimg.com/images/g/8k8AAeSwRddqueZ1/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/2akAAeSwIRlqueZ4/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/dUcAAeSwuhlqueZ5/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/gRcAAeSwjtRqueZ9/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/5ekAAeSw~7tqueaC/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "398438953265",
   "title": "New Balance FuelCell 990v6 Kids 1.5Y",
   "price": "$65.00",
@@ -12574,36 +12545,6 @@
    "h": 8
   },
   "size": "US 3Y",
-  "added": "2026-11-05",
-  "units_sold": 0
- },
- {
-  "id": "920106409559",
-  "title": "New Balance Rave Run v2 Kids Shoes Black White / Size: US 1 W / EU 32.5",
-  "price": "$37.00",
-  "price_direct": 31.45,
-  "image": "https://i.ebayimg.com/images/g/~BAAAeSwu91q68jM/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/920106409559",
-  "brand": "New Balance",
-  "department": "Kids",
-  "qty": 1,
-  "photos": [
-   "https://i.ebayimg.com/images/g/~BAAAeSwu91q68jM/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/-jwAAeSwX3Fq68jO/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/~zoAAeSwMgxq68jQ/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/N0MAAeSw7bNq68jT/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/PugAAeSwUs1q68jV/s-l1600.jpg"
-  ],
-  "payment_url": "https://buy.stripe.com/6oUfZh9O2gqx2THg0NdZ81O",
-  "weight_lbs": 3.0,
-  "weight_estimated": false,
-  "description": "The New Balance Rave Run v2 Kids Shoes in Black and White, Fresh Foam comfort for young athletes. Size US 1 / EU 32.5. Brand new and comes with its box.",
-  "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
-  },
-  "size": "US 1",
   "added": "2026-11-05",
   "units_sold": 0
  },
