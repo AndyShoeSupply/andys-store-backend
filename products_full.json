@@ -8461,35 +8461,6 @@
   "units_sold": 0
  },
  {
-  "id": "398435890533",
-  "title": "New Balance 9060 Great Plains True Red",
-  "price": "$84.00",
-  "price_direct": 71.4,
-  "image": "https://i.ebayimg.com/images/g/RwQAAeSw-htquFCu/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398435890533",
-  "brand": "New Balance",
-  "department": "Unisex",
-  "qty": 2,
-  "payment_url": "https://buy.stripe.com/3cI4gzf8m0rz0Lz3e1dZ61Y",
-  "weight_lbs": 3.0,
-  "weight_estimated": false,
-  "description": "The New Balance 9060 Great Plains True Red is a go-to unisex sneaker that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
-  "parcel_in": {
-   "l": 14,
-   "w": 12,
-   "h": 9
-  },
-  "size": "US 6",
-  "photos": [
-   "https://i.ebayimg.com/images/g/RwQAAeSw-htquFCu/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/mmcAAeSw55tquFC8/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/nswAAeSwSb1quFDI/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/fxgAAeSwrgBquFDL/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/iZUAAeSwLAJquFDu/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "398409321392",
   "title": "Jordan 1 SE Low Knit  size 4.5y",
   "price": "$84.00",
@@ -8894,35 +8865,6 @@
    "https://i.ebayimg.com/images/g/80QAAeSwwsfJquKgA/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/BvAAAeSwabxquKgE/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/-DAAAeSwNV9quKgL/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
-  "id": "398402454419",
-  "title": "New Balance 9060 Great Plains True Red",
-  "price": "$91.00",
-  "price_direct": 77.35,
-  "image": "https://i.ebayimg.com/images/g/RwQAAeSw-htquFCu/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/398402454419",
-  "brand": "New Balance",
-  "department": "Unisex",
-  "qty": 2,
-  "payment_url": "https://buy.stripe.com/14A7sL5xM4HP51P5m9dZ70y",
-  "weight_lbs": 3.0,
-  "weight_estimated": false,
-  "description": "The New Balance 9060 Great Plains True Red brings classic New Balance style to your everyday lineup. See the listing title for the exact size details. Ships brand new in its box.",
-  "parcel_in": {
-   "l": 14,
-   "w": 12,
-   "h": 9
-  },
-  "size": "US 11.5",
-  "photos": [
-   "https://i.ebayimg.com/images/g/RwQAAeSw-htquFCu/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/mmcAAeSw55tquFC8/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/nswAAeSwSb1quFDI/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/fxgAAeSwrgBquFDL/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/iZUAAeSwLAJquFDu/s-l1600.jpg"
   ],
   "units_sold": 0
  },
@@ -13617,5 +13559,65 @@
   "added": "2026-11-15",
   "units_sold": 0,
   "payment_url": "https://buy.stripe.com/3cI7sL9O2cah1PD3e1dZ82t"
+ },
+ {
+  "id": "920164274723",
+  "title": "New Balance 9060 Great Plains True Red",
+  "price": "$84.00",
+  "price_direct": 71.4,
+  "image": "https://i.ebayimg.com/images/g/RwQAAeSw-htquFCu/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920164274723",
+  "brand": "New Balance",
+  "department": "Unisex",
+  "qty": 2,
+  "payment_url": "https://buy.stripe.com/9B600j5xMfmt0LzdSFdZ82u",
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
+  "description": "The New Balance 9060 Great Plains True Red is a go-to unisex sneaker that goes with just about anything. See the listing title for the exact size details. New with box, ready to wear straight out of the package.",
+  "parcel_in": {
+   "l": 14,
+   "w": 12,
+   "h": 9
+  },
+  "size": "US 6",
+  "photos": [
+   "https://i.ebayimg.com/images/g/RwQAAeSw-htquFCu/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/mmcAAeSw55tquFC8/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/nswAAeSwSb1quFDI/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/fxgAAeSwrgBquFDL/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/iZUAAeSwLAJquFDu/s-l1600.jpg"
+  ],
+  "units_sold": 0,
+  "added": "2026-11-20"
+ },
+ {
+  "id": "920164285564",
+  "title": "New Balance 9060 Great Plains True Red",
+  "price": "$91.00",
+  "price_direct": 77.35,
+  "image": "https://i.ebayimg.com/images/g/RwQAAeSw-htquFCu/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920164285564",
+  "brand": "New Balance",
+  "department": "Unisex",
+  "qty": 2,
+  "payment_url": "https://buy.stripe.com/aFa9ATf8mfmt3XLdSFdZ82v",
+  "weight_lbs": 3.0,
+  "weight_estimated": false,
+  "description": "The New Balance 9060 Great Plains True Red brings classic New Balance style to your everyday lineup. See the listing title for the exact size details. Ships brand new in its box.",
+  "parcel_in": {
+   "l": 14,
+   "w": 12,
+   "h": 9
+  },
+  "size": "US 11.5",
+  "photos": [
+   "https://i.ebayimg.com/images/g/RwQAAeSw-htquFCu/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/mmcAAeSw55tquFC8/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/nswAAeSwSb1quFDI/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/fxgAAeSwrgBquFDL/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/iZUAAeSwLAJquFDu/s-l1600.jpg"
+  ],
+  "units_sold": 0,
+  "added": "2026-11-20"
  }
 ]
