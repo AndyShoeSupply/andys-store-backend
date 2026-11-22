@@ -917,6 +917,15 @@ app.post('/api/admin/send-promo', requireAdmin, async (req, res) => {
     const subject = String(req.body.subject || '').trim().slice(0, 150);
     const text = String(req.body.text || '').trim().slice(0, 8000);
     if (!subject || !text) return res.status(400).json({ error: 'subject and text are required' });
+    // Maria (2026-11-22): promo emails ALWAYS carry shoes — the best pairs,
+    // with photos. Callers pass productIds; each renders as a product card
+    // (same card design as the new-arrivals digest).
+    const productIds = Array.isArray(req.body.productIds) ? req.body.productIds.map(String).slice(0, 12) : [];
+    const promoProducts = productIds
+      .map(id => CATALOG.find(p => p && String(p.id) === id))
+      .filter(p => p && !digestExcluded(p));
+    const cardsHtml = promoProducts.map(newArrivalCard).join('');
+    const cardsText = promoProducts.map(p => `\u2022 ${p.title || p.name || 'Pair'} \u2014 $${Number(p.price_direct || p.price || 0).toFixed(2)} \u2014 https://andysshoesupply.com/#item-${encodeURIComponent(p.id)}`).join('\n');
     if (!RESEND_API_KEY) return res.status(503).json({ error: 'email not configured (set RESEND_API_KEY)' });
     const users = db.prepare('SELECT id, email, name FROM users WHERE unsubscribed = 0 ORDER BY id').all()
       .filter(u => !isHouseEmail(u.email));
@@ -928,9 +937,10 @@ app.post('/api/admin/send-promo', requireAdmin, async (req, res) => {
         subject,
         html: emailShell(
           `<div>${textToHtml(text)}</div>`
+          + cardsHtml
           + `<p style="font-size:12px;color:#888;margin-top:20px">You're receiving this because you have an account at Andy's Shoe Supply. <a href="${unsub}">Unsubscribe</a></p>`
         ),
-        text: `${text}\n\n—\nDon't want these emails? Unsubscribe here: ${unsub}`,
+        text: `${text}${cardsText ? `\n\n${cardsText}` : ''}\n\n—\nDon't want these emails? Unsubscribe here: ${unsub}`,
         headers: { 'List-Unsubscribe': `<${unsub}>` },
       });
       if (r.ok) sent++; else failed++;
@@ -943,12 +953,13 @@ app.post('/api/admin/send-promo', requireAdmin, async (req, res) => {
         subject,
         html: emailShell(
           `<div>${textToHtml(text)}</div>`
+          + cardsHtml
           + `<p style="font-size:12px;color:#888;margin-top:20px">Review copy for the owner — not sent to customers.</p>`
         ),
         text,
       });
     }
-    res.json({ ok: true, recipients: users.length, sent, failed, ownerCopy: sent > 0 });
+    res.json({ ok: true, recipients: users.length, sent, failed, ownerCopy: sent > 0, products: promoProducts.length });
   } catch (e) {
     console.error('send-promo error:', e.message);
     res.status(500).json({ error: 'promo send failed', detail: e.message });
@@ -2655,6 +2666,7 @@ app.get('/api/health', (req, res) => res.json({
   usps: !!(process.env.USPS_CLIENT_ID && process.env.USPS_CLIENT_SECRET),
   shipping: process.env.EASYPOST_API_KEY ? 'easypost' : (process.env.SHIPPO_TOKEN ? 'shippo' : 'none'),
   email: !!RESEND_API_KEY, // Resend wired for welcome / order / promo emails
+  promoProducts: true, // send-promo accepts productIds and renders shoe cards (2026-11-22)
   r2: r2Enabled(),
 }));
 
