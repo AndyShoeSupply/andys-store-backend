@@ -273,7 +273,11 @@ db.exec(`CREATE TABLE IF NOT EXISTS visit_events (
   city TEXT,
   region TEXT,
   country TEXT
-)`); // Maria 2026-11-24: per-visit detail for the admin "Actividad reciente" feed (who entered, device, city, what they viewed; subscriber name/email when signed in). Raw IPs are never stored.
+)`);
+// One-time cleanup (2026-11-24, Maria: "no te pongas ahí tú"): drop the
+// automated store-review visits from the activity feed's first day. Scoped to
+// that day + desktop Chrome with no geolocation, which is the review browser.
+try { db.prepare("DELETE FROM visit_events WHERE day = '2026-11-24' AND device = 'Computadora (Windows)' AND browser = 'Chrome' AND (city IS NULL OR city = '')").run(); } catch (e) {} // Maria 2026-11-24: per-visit detail for the admin "Actividad reciente" feed (who entered, device, city, what they viewed; subscriber name/email when signed in). Raw IPs are never stored.
 db.exec('CREATE TABLE IF NOT EXISTS product_views (product_id TEXT NOT NULL, day TEXT NOT NULL, views INTEGER NOT NULL DEFAULT 0, PRIMARY KEY (product_id, day))'); // Maria 2026-10-11: per-product views for admin 'Más vistos'
 db.exec(`CREATE TABLE IF NOT EXISTS feedback (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -2460,6 +2464,7 @@ app.post('/api/views', (req, res) => {
   try {
     const id = String((req.body && req.body.id) || '').slice(0, 64);
     if (!id) return res.json({ ok: false });
+    if (isHouseRequest(req)) return res.json({ ok: true }); // marked devices never count or appear
     const day = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Chicago' }).format(new Date());
     db.prepare(`INSERT INTO product_views (product_id, day, views) VALUES (?, ?, 1)
       ON CONFLICT(product_id, day) DO UPDATE SET views = views + 1`).run(id, day);
