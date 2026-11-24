@@ -274,7 +274,7 @@
   "title": "PAW PATROL HIGH TOP Toddler US 9C 10C",
   "price": "$28.00",
   "price_direct": 23.8,
-  "image": "https://i.ebayimg.com/images/g/-ogAAeSwf55qrdux/s-l1600.jpg",
+  "image": "assets/catalog/398408970955-1.jpg",
   "url": "https://www.ebay.com/itm/398408970955",
   "brand": "Other",
   "department": "Infant",
@@ -302,7 +302,8 @@
   },
   "size": "US 10C",
   "photos": [
-   "https://i.ebayimg.com/images/g/-ogAAeSwf55qrdux/s-l1600.jpg"
+   "assets/catalog/398408970955-1.jpg",
+   "assets/catalog/398408970955-2.jpg"
   ],
   "units_sold": 0
  },
@@ -1705,17 +1706,18 @@
   "title": "Reebok Smash Edge Kids Sneakers in beautiful light pink and whit",
   "price": "$36.50",
   "price_direct": 31.02,
-  "image": "https://i.ebayimg.com/images/g/-nMAAeSwZPtqwxUK/s-l1600.jpg",
+  "image": "assets/catalog/920008932262-1.jpg",
   "url": "https://www.ebay.com/itm/920008932262",
   "brand": "Reebok",
   "department": "Kids",
   "qty": 1,
   "photos": [
-   "https://i.ebayimg.com/images/g/-nMAAeSwZPtqwxUK/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/VX8AAeSwDJpqwxUN/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/w9cAAeSwQ6VqwxUO/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/LIMAAeSw7odqwxUQ/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/J0IAAeSw8pNqwxUV/s-l1600.jpg"
+   "assets/catalog/920008932262-1.jpg",
+   "assets/catalog/920008932262-2.jpg",
+   "assets/catalog/920008932262-3.jpg",
+   "assets/catalog/920008932262-4.jpg",
+   "assets/catalog/920008932262-5.jpg",
+   "assets/catalog/920008932262-6.jpg"
   ],
   "payment_url": "https://buy.stripe.com/3cI00j6BQb6dcuhg0NdZ608",
   "weight_lbs": 3.0,
@@ -2495,9 +2497,7 @@
    "https://i.ebayimg.com/images/g/FzYAAeSwdIRqsEyC/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/3uMAAeSwKcBqsEyE/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/jdoAAeSw2X5qsEyH/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/2T4AAeSwf9tqsEyM/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/9dwAAeSwsntqsEyR/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/8mQAAeSwtMVqsEyW/s-l1600.jpg"
+   "https://i.ebayimg.com/images/g/2T4AAeSwf9tqsEyM/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/3cI3cvbWaa2979X4i5dZ63p",
   "weight_lbs": 3.0,
@@ -2624,8 +2624,7 @@
    "https://i.ebayimg.com/images/g/ThcAAeSwZmFqpiCO/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/3hgAAeSwXFhqpiCT/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/H8gAAeSwMaJqpiCY/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/hMcAAeSwNsRqpiCb/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/Z68AAeSw2MBqpiCf/s-l1600.jpg"
+   "https://i.ebayimg.com/images/g/hMcAAeSwNsRqpiCb/s-l1600.jpg"
   ],
   "units_sold": 0
  },
@@ -2976,10 +2975,7 @@
   "size": "US 11.5",
   "photos": [
    "https://i.ebayimg.com/images/g/6acAAeSw-0FqpNL3/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/6HEAAeSwYWxqpNJx/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/yTEAAeSwzkdqpNNa/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/RvMAAeSwZjhqpNNe/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/INUAAeSwQR5qpNNu/s-l1600.jpg"
+   "https://i.ebayimg.com/images/g/6HEAAeSwYWxqpNJx/s-l1600.jpg"
   ],
   "units_sold": 0
  },
@@ -3303,8 +3299,7 @@
    "https://i.ebayimg.com/images/g/heoAAeSwQIlqueoM/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/k0sAAeSw3XxqueoW/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/uYMAAeSwrwFqueoY/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/oZcAAeSwyBBqueob/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/lTkAAeSwJ4ZqueoQ/s-l1600.jpg"
+   "https://i.ebayimg.com/images/g/oZcAAeSwyBBqueob/s-l1600.jpg"
   ],
   "units_sold": 0
  },
@@ -3432,9 +3427,7 @@
   "photos": [
    "assets/catalog/398366041190-1.webp",
    "assets/catalog/398366041190-2.webp",
-   "assets/catalog/398366041190-3.webp",
-   "assets/catalog/398366041190-4.webp",
-   "assets/catalog/398366041190-5.webp"
+   "assets/catalog/398366041190-3.webp"
   ],
   "units_sold": 0
  },
@@ -3612,7 +3605,6 @@
    "https://i.ebayimg.com/images/g/40YAAeSwjhxquJXM/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/8OcAAeSwZMBquJXR/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/CC0AAeSwKqZquJXU/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/DTkAAeSwHQtquJXX/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/ADgAAeSwvwJquJXb/s-l1600.jpg"
   ],
   "units_sold": 1
@@ -3905,11 +3897,7 @@
   },
   "size": "US 5.5Y",
   "photos": [
-   "https://i.ebayimg.com/images/g/sAIAAeSwXz1qr2Qr/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/z5UAAeSwSwiHtqr2Qu/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/1Y0AAeSwH2Jqr2Qx/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/gX0AAeSwweKZqr2Qz/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/ZJYAAeSwiyFqr2Q3/s-l1600.jpg"
+   "https://i.ebayimg.com/images/g/sAIAAeSwXz1qr2Qr/s-l1600.jpg"
   ],
   "units_sold": 0
  },
@@ -4902,8 +4890,6 @@
   },
   "size": "US 7Y",
   "photos": [
-   "assets/catalog/398375735418-1.jpg",
-   "assets/catalog/398375735418-2.jpg",
    "assets/catalog/398375735418-3.jpg",
    "assets/catalog/398375735418-4.jpg",
    "assets/catalog/398375735418-5.jpg",
@@ -5595,12 +5581,8 @@
   "qty": 1,
   "photos": [
    "https://i.ebayimg.com/images/g/ht0AAeSw7fFqpj8D/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/gqsAAeSwuaFqpj8H/s-l1600.webp",
    "https://i.ebayimg.com/images/g/tKcAAeSw3Txqpj-q/s-l1600.webp",
    "https://i.ebayimg.com/images/g/yL4AAeSwgQFqpj-0/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/x7wAAeSwguFqpj-9/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/7o8AAeSw3oxqpj~A/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/2ikAAeSw~dBqpj~D/s-l1600.webp",
    "https://i.ebayimg.com/images/g/kEQAAeSwXYxqpj~K/s-l1600.webp",
    "https://i.ebayimg.com/images/g/uSYAAeSwx9pqpj~N/s-l1600.webp"
   ],
@@ -5874,8 +5856,7 @@
    "https://i.ebayimg.com/images/g/8k8AAeSwRddqueZ1/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/2akAAeSwIRlqueZ4/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/dUcAAeSwuhlqueZ5/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/gRcAAeSwjtRqueZ9/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/5ekAAeSw~7tqueaC/s-l1600.jpg"
+   "https://i.ebayimg.com/images/g/gRcAAeSwjtRqueZ9/s-l1600.jpg"
   ],
   "units_sold": 0
  },
@@ -6495,9 +6476,7 @@
   "photos": [
    "https://i.ebayimg.com/images/g/Kq8AAeSwkNpqu0Ch/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/No8AAeSwbAVqu0CD/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/PJoAAeSw28Nqu0CG/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/SDsAAeSwyI1qu0Cc/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/PggAAeSwO2lqu0CQ/s-l1600.jpg"
+   "https://i.ebayimg.com/images/g/SDsAAeSwyI1qu0Cc/s-l1600.jpg"
   ],
   "units_sold": 0
  },
@@ -6524,7 +6503,6 @@
   "photos": [
    "https://i.ebayimg.com/images/g/jUIAAeSw7bpquzfu/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/7SMAAeSwVABquzg0/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/8bAAAeSwED5quzg3/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/8DcAAeSwimhquzhr/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/53EAAeSwjuhquzhy/s-l1600.jpg"
   ],
@@ -6577,7 +6555,6 @@
    "https://i.ebayimg.com/images/g/lMYAAeSwaw5qsH0z/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/mCQAAeSwVCxqsH02/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/oUQAAeSwYntqsH05/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/rnMAAeSwEutqsH08/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/q3YAAeSwUERqsH1A/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/28EfZhd0e2zHam96qddZ63o",
@@ -6882,9 +6859,7 @@
    "https://i.ebayimg.com/images/g/86gAAeSw7zhqnLXB/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/v30AAeSw9fJqnLW9/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/6~IAAeSww99qnLWz/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/RIgAAeSwJxBqnLW4/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/WI8AAeSw1qNqnLTs/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/bL0AAeSwzVlqnLVA/s-l1600.jpg"
+   "https://i.ebayimg.com/images/g/RIgAAeSwJxBqnLW4/s-l1600.jpg"
   ],
   "units_sold": 0
  },
@@ -7670,7 +7645,6 @@
   "photos": [
    "https://i.ebayimg.com/images/g/BucAAeSwg1xqs1dX/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/MjwAAeSws1dqs1da/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/1HUAAeSwNv5qs1dd/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/8HYAAeSwfAZqs1dh/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/~EMAAeSwbw5qs1dk/s-l1600.jpg"
   ],
@@ -7689,7 +7663,6 @@
   "photos": [
    "https://i.ebayimg.com/images/g/tS8AAeSw7RFqn3sF/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/VY8AAeSwx6lqr3CP/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/fV4AAeSwdIRqr3CM/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/8NEAAeSww49qr3CT/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/GcAAAeSw6N9qr3CX/s-l1600.jpg"
   ],
@@ -7757,7 +7730,6 @@
   "photos": [
    "https://i.ebayimg.com/images/g/N24AAeSwnJNqrxkD/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/DoMAAeSwYHRqrxkO/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/fH4AAeSwTctqrxkR/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/GvMAAeSwCJxqrxkU/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/qucAAeSwUjZqrxkX/s-l1600.jpg"
   ],
@@ -8116,11 +8088,7 @@
    }
   ],
   "photos": [
-   "https://i.ebayimg.com/images/g/9NwAAeSwxPxqoL8T/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/mwkAAeSw9J9qoL8r/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/fecAAeSw9LdqoL8x/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/fXQAAeSwZxRqoL84/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/gKcAAeSw9P9qoL88/s-l1600.jpg"
+   "https://i.ebayimg.com/images/g/9NwAAeSwxPxqoL8T/s-l1600.jpg"
   ],
   "units_sold": 0
  },
@@ -8191,18 +8159,13 @@
   "url": "https://www.ebay.com/itm/398339652878",
   "brand": "Jordan",
   "department": "Kids",
-  "qty": 6,
+  "qty": 5,
   "payment_url": "https://buy.stripe.com/eVq3cv2lA3DLbqdbKxdZ720",
   "variants": [
    {
     "size": "2.5Y",
     "qty": 1,
     "payment_url": "https://buy.stripe.com/9B65kDbWa6PX2THg0NdZ72g"
-   },
-   {
-    "size": "4.5Y",
-    "qty": 1,
-    "payment_url": "https://buy.stripe.com/6oUdR95xM4HP79Xg0NdZ72h"
    },
    {
     "size": "5.5Y",
@@ -10441,10 +10404,7 @@
   "qty": 1,
   "photos": [
    "https://i.ebayimg.com/images/g/lrAAAeSwMD9q0XuP/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/j~gAAeSwJp5q0Xub/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/mF8AAeSwycVq0XuU/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/mJYAAeSwJgVq0XuZ/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/uSwAAeSwm~lq0XuS/s-l1600.webp"
+   "https://i.ebayimg.com/images/g/j~gAAeSwJp5q0Xub/s-l1600.webp"
   ],
   "payment_url": "https://buy.stripe.com/00w4gz6BQfmt2THeWJdZ803",
   "weight_lbs": 3.0,
@@ -10750,17 +10710,18 @@
   "title": "Fila Vulc 13 Black White/ Size: Kids US 4Y / EU 36",
   "price": "$32.22",
   "price_direct": 27.39,
-  "image": "https://i.ebayimg.com/images/g/V3MAAeSwjmBq0sRB/s-l1600.webp",
+  "image": "assets/catalog/920046792798-1.jpg",
   "url": "https://www.ebay.com/itm/920046792798",
   "brand": "Fila",
   "department": "Kids",
   "qty": 1,
   "photos": [
-   "https://i.ebayimg.com/images/g/V3MAAeSwjmBq0sRB/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/DSIAAeSw6Vxq0sRE/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/T8EAAeSw8ZZq0sRI/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/Tb0AAeSwR4Bq0sRU/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/Fc4AAeSwsm5q0sRd/s-l1600.webp"
+   "assets/catalog/920046792798-1.jpg",
+   "assets/catalog/920046792798-2.jpg",
+   "assets/catalog/920046792798-3.jpg",
+   "assets/catalog/920046792798-4.jpg",
+   "assets/catalog/920046792798-5.jpg",
+   "assets/catalog/920046792798-6.jpg"
   ],
   "payment_url": "https://buy.stripe.com/00wcN56BQ1vD9i53e1dZ80i",
   "weight_lbs": 3.0,
@@ -11162,7 +11123,6 @@
   "qty": 1,
   "photos": [
    "https://i.ebayimg.com/images/g/DoUAAeSwt9Zq2W2o/s-l1600.webp",
-   "https://i.ebayimg.com/images/g/Y38AAeSw8gpq2W2r/s-l1600.webp",
    "https://i.ebayimg.com/images/g/XfIAAeSw0Ahq2W2t/s-l1600.webp",
    "https://i.ebayimg.com/images/g/WakAAeSwT2Fq2W2v/s-l1600.webp",
    "https://i.ebayimg.com/images/g/DzEAAeSwnZZq2W2y/s-l1600.webp",
@@ -11906,11 +11866,9 @@
   "qty": 1,
   "photos": [
    "https://i.ebayimg.com/images/g/5uwAAeSwQkZq6rWL/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/OPEAAeSwjllq6rWa/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/4GIAAeSwelBq6rWN/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/7X0AAeSwvr1q6rWR/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/4oQAAeSwQrZq6rWT/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/8TAAAeSw1xJq6rWd/s-l1600.jpg"
+   "https://i.ebayimg.com/images/g/4oQAAeSwQrZq6rWT/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/7sYeVd3pEcah51P6qddZ81y",
   "weight_lbs": 3.0,
@@ -12429,9 +12387,7 @@
   "qty": 1,
   "photos": [
    "https://i.ebayimg.com/images/g/WMQAAeSwg41q710F/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/UpoAAeSw~Hxq710H/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/Z64AAeSw6kNq710N/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/6PEAAeSwdV1q710P/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/RAoAAeSwg2Fq710S/s-l1600.jpg"
   ],
   "payment_url": "https://buy.stripe.com/14A7sL3pEgqxeCp9CpdZ81T",
@@ -12791,14 +12747,13 @@
   "title": "Fila Vulc 13 Kids High Top Shoes Triple Black / Size: Kids US 2Y / EU 33.5",
   "price": "$26.60",
   "price_direct": 22.61,
-  "image": "https://i.ebayimg.com/images/g/KAQAAeSwRcdq8OYL/s-l1600.jpg",
+  "image": "assets/catalog/920119332099.webp",
   "url": "https://www.ebay.com/itm/920119332099",
   "brand": "Fila",
   "department": "Kids",
   "qty": 1,
   "photos": [
-   "https://i.ebayimg.com/images/g/KAQAAeSwRcdq8OYL/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/FRkAAeSwOIRq8OYZ/s-l1600.jpg"
+   "assets/catalog/920119332099.webp"
   ],
   "weight_lbs": 3.0,
   "weight_estimated": false,
@@ -12818,15 +12773,16 @@
   "title": "Fila Cress Color Block Infant Shoes Orange Gold Red / Size: US 8C",
   "price": "$21.22",
   "price_direct": 18.04,
-  "image": "https://i.ebayimg.com/images/g/sSsAAeSw2qZq8OJB/s-l1600.jpg",
+  "image": "assets/catalog/920119290880-1.jpg",
   "url": "https://www.ebay.com/itm/920119290880",
   "brand": "Fila",
   "department": "Infant",
   "qty": 1,
   "photos": [
-   "https://i.ebayimg.com/images/g/sSsAAeSw2qZq8OJB/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/r6IAAeSwFgtq8OJE/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/tkcAAeSwqmZq8OJJ/s-l1600.jpg"
+   "assets/catalog/920119290880-1.jpg",
+   "assets/catalog/920119290880-2.jpg",
+   "assets/catalog/920119290880-3.jpg",
+   "assets/catalog/920119290880-4.jpg"
   ],
   "weight_lbs": 2.0,
   "weight_estimated": false,
@@ -12846,14 +12802,17 @@
   "title": "Fila Cress Color Block Infant Shoes Orange Gold Red / Size: US 7C",
   "price": "$21.22",
   "price_direct": 18.04,
-  "image": "https://i.ebayimg.com/images/g/dBsAAeSwUnJq8ODU/s-l1600.jpg",
+  "image": "assets/catalog/920119284635-1.jpg",
   "url": "https://www.ebay.com/itm/920119284635",
   "brand": "Fila",
   "department": "Infant",
   "qty": 1,
   "photos": [
-   "https://i.ebayimg.com/images/g/dBsAAeSwUnJq8ODU/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/PgUAAeSwroFq8ODX/s-l1600.jpg"
+   "assets/catalog/920119284635-1.jpg",
+   "assets/catalog/920119284635-2.jpg",
+   "assets/catalog/920119284635-3.jpg",
+   "assets/catalog/920119284635-4.jpg",
+   "assets/catalog/920119284635-5.jpg"
   ],
   "weight_lbs": 2.0,
   "weight_estimated": false,
@@ -12873,15 +12832,16 @@
   "title": "Fila Cress Color Block Infant Shoes Orange Gold Red / Size: US 7C",
   "price": "$21.22",
   "price_direct": 18.04,
-  "image": "https://i.ebayimg.com/images/g/sSsAAeSw2qZq8OJB/s-l1600.jpg",
+  "image": "assets/catalog/920119284167-1.jpg",
   "url": "https://www.ebay.com/itm/920119284167",
   "brand": "Fila",
   "department": "Infant",
   "qty": 1,
   "photos": [
-   "https://i.ebayimg.com/images/g/sSsAAeSw2qZq8OJB/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/r6IAAeSwFgtq8OJE/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/tkcAAeSwqmZq8OJJ/s-l1600.jpg"
+   "assets/catalog/920119284167-1.jpg",
+   "assets/catalog/920119284167-2.jpg",
+   "assets/catalog/920119284167-3.jpg",
+   "assets/catalog/920119284167-4.jpg"
   ],
   "weight_lbs": 2.0,
   "weight_estimated": false,
