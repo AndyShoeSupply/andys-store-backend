@@ -256,6 +256,24 @@ try {
 // price_direct / hidden set from the admin panel).
 db.exec('CREATE TABLE IF NOT EXISTS settings (key TEXT PRIMARY KEY, value TEXT)');
 db.exec('CREATE TABLE IF NOT EXISTS visits (day TEXT NOT NULL, visitor TEXT NOT NULL, PRIMARY KEY (day, visitor))');
+db.exec(`CREATE TABLE IF NOT EXISTS visit_events (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  ts TEXT NOT NULL DEFAULT (datetime('now')),
+  day TEXT NOT NULL,
+  visitor TEXT NOT NULL,
+  user_email TEXT,
+  user_name TEXT,
+  kind TEXT NOT NULL DEFAULT 'visit',
+  path TEXT,
+  product_id TEXT,
+  product_title TEXT,
+  referrer TEXT,
+  device TEXT,
+  browser TEXT,
+  city TEXT,
+  region TEXT,
+  country TEXT
+)`); // Maria 2026-11-24: per-visit detail for the admin "Actividad reciente" feed (who entered, device, city, what they viewed; subscriber name/email when signed in). Raw IPs are never stored.
 db.exec('CREATE TABLE IF NOT EXISTS product_views (product_id TEXT NOT NULL, day TEXT NOT NULL, views INTEGER NOT NULL DEFAULT 0, PRIMARY KEY (product_id, day))'); // Maria 2026-10-11: per-product views for admin 'Más vistos'
 db.exec(`CREATE TABLE IF NOT EXISTS feedback (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -2358,14 +2376,80 @@ app.get('/api/inventory', requireAdmin, (req, res) => {
 // ---------- Visit counter (Maria asked 2026-10-10: her own visitor stats) ----------
 // The storefront POSTs one beacon per page load; we count distinct visitors
 // per Chicago day (hash of IP+UA, raw IPs are never stored; obvious bots out).
-app.post('/api/visit', (req, res) => {
+// ---------- Visit detail feed (Maria 2026-11-24: "quién entró a la página") ----------
+// Beyond the daily counter, each visit/product view is logged as an event so
+// the admin panel can show WHO entered: subscriber name+email when the visit
+// carries a signed-in session, plus device, browser, approximate city (from
+// IP geolocation), referrer host and the products viewed. A visitor's phone
+// number is NOT knowable from a web visit and is never claimed here. House
+// devices/accounts are excluded (isHouseRequest), same rule as the counter.
+const geoCache = new Map(); // ip -> {city, region, country} | null
+function parseDevice(ua) {
+  const u = String(ua || '');
+  let device = 'Otro dispositivo';
+  if (/iPad/i.test(u)) device = 'iPad';
+  else if (/iPhone/i.test(u)) device = 'iPhone';
+  else if (/Android/i.test(u)) device = /Mobile/i.test(u) ? 'Teléfono Android' : 'Tableta Android';
+  else if (/Windows/i.test(u)) device = 'Computadora (Windows)';
+  else if (/Macintosh|Mac OS X/i.test(u)) device = 'Mac';
+  else if (/Linux/i.test(u)) device = 'Computadora (Linux)';
+  let browser = '';
+  if (/Edg\//i.test(u)) browser = 'Edge';
+  else if (/SamsungBrowser/i.test(u)) browser = 'Samsung Internet';
+  else if (/Firefox\//i.test(u)) browser = 'Firefox';
+  else if (/Chrome\//i.test(u)) browser = 'Chrome';
+  else if (/Safari\//i.test(u)) browser = 'Safari';
+  return { device, browser };
+}
+function refHostOf(ref) {
+  try { return new URL(String(ref || '')).hostname.replace(/^www\./, '').slice(0, 80); } catch (e) { return ''; }
+}
+async function geoForIp(ip) {
+  if (!ip || /^(10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.|127\.|::1|fe80:)/i.test(ip)) return null;
+  if (geoCache.has(ip)) return geoCache.get(ip);
+  let geo = null;
+  try {
+    const ctl = new AbortController();
+    const timer = setTimeout(() => ctl.abort(), 1800);
+    const r = await fetch('http://ip-api.com/json/' + encodeURIComponent(ip) + '?fields=status,city,regionName,country', { signal: ctl.signal });
+    clearTimeout(timer);
+    const j = await r.json();
+    if (j && j.status === 'success') geo = { city: j.city || '', region: j.regionName || '', country: j.country || '' };
+  } catch (e) { /* geo is best-effort only */ }
+  if (geoCache.size > 500) geoCache.clear();
+  if (geo) geoCache.set(ip, geo); // failures are not cached: next visit retries
+  return geo;
+}
+function visitorOf(req) {
+  const ua = String(req.get('user-agent') || '');
+  const ip = String(req.get('x-forwarded-for') || req.ip || '').split(',')[0].trim();
+  return { ua, ip, visitor: crypto.createHash('sha256').update(ip + '|' + ua).digest('hex').slice(0, 24) };
+}
+function logVisitEvent(req, ev) {
+  try {
+    if (isHouseRequest(req)) return; // house devices/accounts never appear
+    const u = accountUser(req);
+    const { device, browser } = parseDevice(ev.ua);
+    db.prepare(`INSERT INTO visit_events (day, visitor, user_email, user_name, kind, path, product_id, product_title, referrer, device, browser, city, region, country)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`).run(
+      ev.day, ev.visitor, u ? u.email : null, u ? (u.name || '') : null,
+      ev.kind || 'visit', ev.path || null, ev.productId || null, ev.productTitle || null,
+      ev.referrer || null, device, browser,
+      ev.geo ? (ev.geo.city || null) : null, ev.geo ? (ev.geo.region || null) : null, ev.geo ? (ev.geo.country || null) : null);
+  } catch (e) { console.error('visit event log failed:', e.message); }
+}
+app.post('/api/visit', async (req, res) => {
   try {
     const ua = String(req.get('user-agent') || '');
     if (!/bot|crawler|spider|headless|lighthouse/i.test(ua)) {
-      const ip = String(req.get('x-forwarded-for') || req.ip || '').split(',')[0].trim();
-      const visitor = crypto.createHash('sha256').update(ip + '|' + ua).digest('hex').slice(0, 24);
+      const { ip, visitor } = visitorOf(req);
       const day = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Chicago' }).format(new Date());
       db.prepare('INSERT OR IGNORE INTO visits (day, visitor) VALUES (?, ?)').run(day, visitor);
+      const geo = await geoForIp(ip);
+      const body = req.body || {};
+      logVisitEvent(req, { ua, day, visitor, kind: 'visit',
+        path: String(body.path || '').slice(0, 200), referrer: refHostOf(body.ref), geo });
+      try { db.prepare("DELETE FROM visit_events WHERE day < date('now', '-90 days')").run(); } catch (e) {}
     }
   } catch (e) { console.error('visit log failed:', e.message); }
   res.status(204).end();
@@ -2379,6 +2463,16 @@ app.post('/api/views', (req, res) => {
     const day = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Chicago' }).format(new Date());
     db.prepare(`INSERT INTO product_views (product_id, day, views) VALUES (?, ?, 1)
       ON CONFLICT(product_id, day) DO UPDATE SET views = views + 1`).run(id, day);
+    // Detail feed: which visitor (and subscriber, if signed in) viewed it.
+    try {
+      const { ua, ip, visitor } = visitorOf(req);
+      if (!/bot|crawler|spider|headless|lighthouse/i.test(ua)) {
+        let title = '';
+        try { const p = CATALOG.find(x => String(x.id || x.itemId) === id); if (p) title = p.title || p.name || ''; } catch (e) {}
+        logVisitEvent(req, { ua, day, visitor, kind: 'product', productId: id, productTitle: title,
+          geo: geoCache.get(ip) || null });
+      }
+    } catch (e) {}
     res.json({ ok: true });
   } catch (e) { res.json({ ok: false }); }
 });
@@ -2418,6 +2512,49 @@ app.get('/api/admin/visits', requireAdmin, (req, res) => {
     total: sum(db.prepare('SELECT COUNT(*) AS visitors FROM visits GROUP BY day').all().map(v => ({ visitors: v.visitors }))),
     byDay: rows.slice(0, 14),
   });
+});
+
+// Admin: recent visit activity grouped per visitor per Chicago day — who
+// entered (subscriber name/email when signed in), device, approximate city,
+// where they came from and which products they viewed (Maria 2026-11-24).
+app.get('/api/admin/visit-events', requireAdmin, (req, res) => {
+  try {
+    const rows = db.prepare('SELECT * FROM visit_events ORDER BY id DESC LIMIT 400').all();
+    const fmt = new Intl.DateTimeFormat('es-MX', { timeZone: 'America/Chicago', day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit', hour12: true });
+    const fmtTime = new Intl.DateTimeFormat('es-MX', { timeZone: 'America/Chicago', hour: 'numeric', minute: '2-digit', hour12: true });
+    const toLocal = (ts, f) => { try { return f.format(new Date(String(ts).replace(' ', 'T') + 'Z')); } catch (e) { return ''; } };
+    const groups = new Map();
+    for (const r of rows) {
+      const key = r.day + '|' + r.visitor;
+      let g = groups.get(key);
+      if (!g) {
+        g = { day: r.day, lastTs: r.ts, firstTs: r.ts, email: null, name: null,
+              device: r.device || '', browser: r.browser || '',
+              city: r.city || '', region: r.region || '', country: r.country || '',
+              referrer: '', products: [], entries: 0 };
+        groups.set(key, g);
+      }
+      g.firstTs = r.ts;
+      g.entries += 1;
+      if (r.user_email && !g.email) { g.email = r.user_email; g.name = r.user_name || ''; }
+      if (r.referrer && !g.referrer) g.referrer = r.referrer;
+      if (!g.city && r.city) { g.city = r.city; g.region = r.region || ''; g.country = r.country || ''; }
+      if (r.kind === 'product' && r.product_title && !g.products.includes(r.product_title)) g.products.push(r.product_title);
+    }
+    const out = [...groups.values()].slice(0, 40).map(g => ({
+      day: g.day,
+      when: toLocal(g.lastTs, fmt),
+      from: toLocal(g.firstTs, fmtTime),
+      to: toLocal(g.lastTs, fmtTime),
+      email: g.email, name: g.name,
+      device: g.device, browser: g.browser,
+      city: g.city, region: g.region, country: g.country,
+      referrer: g.referrer,
+      products: g.products.slice(0, 8),
+      entries: g.entries,
+    }));
+    res.json({ events: out });
+  } catch (e) { res.json({ events: [] }); }
 });
 
 app.get('/api/admin/users', requireAdmin, (req, res) => {
