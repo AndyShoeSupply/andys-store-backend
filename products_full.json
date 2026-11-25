@@ -2236,36 +2236,6 @@
   "units_sold": 0
  },
  {
-  "id": "920005612537",
-  "title": "Nike Jr Mercurial Vapor 16 Little Kids Soccer Cleats 12c",
-  "price": "$39.99",
-  "price_direct": 33.99,
-  "image": "https://i.ebayimg.com/images/g/F5sAAeSwD1Jqwan7/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/920005612537",
-  "brand": "Nike",
-  "department": "Kids",
-  "qty": 1,
-  "payment_url": "https://buy.stripe.com/00waEXaS6cah0Lz7uhdZ723",
-  "weight_lbs": 2.0,
-  "weight_estimated": false,
-  "description": "Meet the Nike Jr Mercurial Vapor 16 Little Kids Soccer Cleats — a kids' cleat with a clean, standout look. Sized at 12c. New with box, ready to wear straight out of the package.",
-  "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
-  },
-  "size": "US 12C",
-  "photos": [
-   "https://i.ebayimg.com/images/g/F5sAAeSwD1Jqwan7/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/VmsAAeSw3Odqwan7/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/0LkAAeSw1MJqwan7/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/8XcAAeSw4dRqwan7/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/1W8AAeSwGcxqwan7/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/O3YAAeSwk7Bqwan7/s-l1600.jpg"
-  ],
-  "units_sold": 0
- },
- {
   "id": "920005606270",
   "title": "Nike Jr Mercurial Vapor 16 Little Kids Soccer Cleats 10c",
   "price": "$39.99",
@@ -12996,7 +12966,7 @@
   "url": "https://www.ebay.com/itm/920119194919",
   "brand": "Puma",
   "department": "Kids",
-  "qty": 3,
+  "qty": 2,
   "photos": [
    "https://i.ebayimg.com/images/g/OnwAAeSwGNdq8NkZ/s-l1600.jpg",
    "https://i.ebayimg.com/images/g/hNwAAeSwJSVq8Nhg/s-l1600.jpg",
