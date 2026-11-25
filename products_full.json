@@ -11425,6 +11425,37 @@
   "added": "2026-10-26"
  },
  {
+  "id": "920077753074",
+  "title": "adidas Superstar II C 9C",
+  "price": "$34.00",
+  "price_direct": 28.9,
+  "image": "https://i.ebayimg.com/images/g/GEgAAeSwtUBqtz7v/s-l1600.jpg",
+  "url": "https://www.ebay.com/itm/920077753074",
+  "brand": "Adidas",
+  "department": "Kids",
+  "qty": 1,
+  "payment_url": "https://buy.stripe.com/fZu3cv3pE1vDam93e1dZ80N",
+  "weight_lbs": 2.0,
+  "weight_estimated": false,
+  "description": "You can't go wrong with the adidas Superstar II C, a kids' sneaker made to be worn on repeat. Sized at 9K. Comes brand new with its box included.",
+  "parcel_in": {
+   "l": 12.0,
+   "w": 8.0,
+   "h": 6.0
+  },
+  "size": "US 9C",
+  "photos": [
+   "https://i.ebayimg.com/images/g/GEgAAeSwtUBqtz7v/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/AKgAAeSwbz5qtz8A/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/IO4AAeSwr5dqtz7x/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/7igAAeSwYxRqtz70/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/a4kAAeSwxSZqtz72/s-l1600.jpg",
+   "https://i.ebayimg.com/images/g/7SEAAeSwEcVqtz76/s-l1600.jpg"
+  ],
+  "units_sold": 0,
+  "added": "2026-10-26"
+ },
+ {
   "id": "920077755147",
   "title": "adidas Superstar II C 1Y",
   "price": "$35.00",
