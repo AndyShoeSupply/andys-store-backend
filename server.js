@@ -1907,6 +1907,10 @@ app.post('/api/checkout', async (req, res) => {
     }
     const params = {
       mode: 'payment',
+      // Maria 2026-11-25: the BFRIDAY code announced by email/banner could not
+      // be entered anywhere — Stripe only shows the promotion-code field when
+      // the session allows it. Without this flag no code can ever apply.
+      allow_promotion_codes: true,
       line_items: lineItems,
       success_url: 'https://andysshoesupply.com/?paid=1&cs={CHECKOUT_SESSION_ID}',
       cancel_url: 'https://andysshoesupply.com/',
