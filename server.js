@@ -277,7 +277,13 @@ db.exec(`CREATE TABLE IF NOT EXISTS visit_events (
 // One-time cleanup (2026-11-24, Maria: "no te pongas ahí tú"): drop the
 // automated store-review visits from the activity feed's first day. Scoped to
 // that day + desktop Chrome with no geolocation, which is the review browser.
-try { db.prepare("DELETE FROM visit_events WHERE day = '2026-11-24' AND device = 'Computadora (Windows)' AND browser = 'Chrome' AND (city IS NULL OR city = '')").run(); } catch (e) {} // Maria 2026-11-24: per-visit detail for the admin "Actividad reciente" feed (who entered, device, city, what they viewed; subscriber name/email when signed in). Raw IPs are never stored.
+try { db.prepare("DELETE FROM visit_events WHERE day = '2026-11-24' AND device = 'Computadora (Windows)' AND browser = 'Chrome' AND (city IS NULL OR city = '')").run(); } catch (e) {}
+// One-time cleanup (2026-11-25): drop tonight's BFRIDAY checkout-test visit —
+// the fresh test browser logged its first entry (Linux Chrome, geolocated to
+// Amarillo) before the nocount mark took hold. Maria: "ya te dije que no las
+// cuentes". Remove its daily-count row first, then the feed rows.
+try { db.prepare("DELETE FROM visits WHERE day = '2026-11-25' AND visitor IN (SELECT visitor FROM visit_events WHERE day = '2026-11-25' AND device = 'Computadora (Linux)' AND browser = 'Chrome' AND city = 'Amarillo')").run(); } catch (e) {}
+try { db.prepare("DELETE FROM visit_events WHERE day = '2026-11-25' AND device = 'Computadora (Linux)' AND browser = 'Chrome' AND city = 'Amarillo'").run(); } catch (e) {} // Maria 2026-11-24: per-visit detail for the admin "Actividad reciente" feed (who entered, device, city, what they viewed; subscriber name/email when signed in). Raw IPs are never stored.
 db.exec('CREATE TABLE IF NOT EXISTS product_views (product_id TEXT NOT NULL, day TEXT NOT NULL, views INTEGER NOT NULL DEFAULT 0, PRIMARY KEY (product_id, day))'); // Maria 2026-10-11: per-product views for admin 'Más vistos'
 db.exec(`CREATE TABLE IF NOT EXISTS feedback (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
