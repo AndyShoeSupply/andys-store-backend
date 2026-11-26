@@ -13330,36 +13330,6 @@
   "added": "2026-11-20"
  },
  {
-  "id": "920170121522",
-  "title": "Nike Star Runner 5 Size 12C",
-  "price": "$31.00",
-  "price_direct": 26.35,
-  "image": "https://i.ebayimg.com/images/g/144AAeSwpvhqwabk/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/920170121522",
-  "brand": "Nike",
-  "department": "Kids",
-  "qty": 1,
-  "photos": [
-   "https://i.ebayimg.com/images/g/144AAeSwpvhqwabk/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/9CAAAeSw7plqwaa5/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/kJkAAeSwsQBqwaa-/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/dBEAAeSwsSdqwabS/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/PbAAAeSwNuFqwabZ/s-l1600.jpg"
-  ],
-  "weight_lbs": 1.8,
-  "weight_estimated": true,
-  "description": "The Nike Star Runner 5 in black is a lightweight athletic sneaker for little ones, with a breathable mesh upper, moderate cushioning and a rubber outsole for traction. Listed here in size US 12C. Brand new and comes with its box.",
-  "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
-  },
-  "size": "US 12C",
-  "added": "2026-11-21",
-  "units_sold": 0,
-  "payment_url": "https://buy.stripe.com/8x29ATaS61vDbqddSFdZ82w"
- },
- {
   "id": "920172455228",
   "title": "New Balance Fresh Foam X 1007 Black Grey / Size: Men US 12.5 Wide",
   "price": "$74.21",
