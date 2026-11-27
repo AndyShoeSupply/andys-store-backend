@@ -2713,18 +2713,46 @@ app.put('/api/admin/overrides', requireAdmin, (req, res) => {
     res.status(500).json({ ok: false, error: 'Could not save override' });
   }
 });
+// Migration: customer profile + verification fields (Maria, 2026-11-27) —
+// editable account panel: phone (optional, code-verified when an SMS
+// provider is configured), saved shipping address, email change confirmed
+// by a 6-digit code, and previous emails so order history survives an
+// email change. Safe to run on every boot.
+try {
+  const cols = db.prepare('PRAGMA table_info(users)').all().map(c => c.name);
+  const add = (name, ddl) => { if (!cols.includes(name)) { db.exec(ddl); console.log('migration: users.' + name + ' added'); } };
+  add('phone', "ALTER TABLE users ADD COLUMN phone TEXT NOT NULL DEFAULT ''");
+  add('phone_verified', "ALTER TABLE users ADD COLUMN phone_verified INTEGER NOT NULL DEFAULT 0");
+  add('phone_code', "ALTER TABLE users ADD COLUMN phone_code TEXT");
+  add('phone_code_expires', "ALTER TABLE users ADD COLUMN phone_code_expires TEXT");
+  add('phone_code_sent_at', "ALTER TABLE users ADD COLUMN phone_code_sent_at TEXT");
+  add('addr_line1', "ALTER TABLE users ADD COLUMN addr_line1 TEXT NOT NULL DEFAULT ''");
+  add('addr_line2', "ALTER TABLE users ADD COLUMN addr_line2 TEXT NOT NULL DEFAULT ''");
+  add('addr_city', "ALTER TABLE users ADD COLUMN addr_city TEXT NOT NULL DEFAULT ''");
+  add('addr_state', "ALTER TABLE users ADD COLUMN addr_state TEXT NOT NULL DEFAULT ''");
+  add('addr_zip', "ALTER TABLE users ADD COLUMN addr_zip TEXT NOT NULL DEFAULT ''");
+  add('pending_email', "ALTER TABLE users ADD COLUMN pending_email TEXT");
+  add('email_code', "ALTER TABLE users ADD COLUMN email_code TEXT");
+  add('email_code_expires', "ALTER TABLE users ADD COLUMN email_code_expires TEXT");
+  add('email_code_sent_at', "ALTER TABLE users ADD COLUMN email_code_sent_at TEXT");
+  add('prev_emails', "ALTER TABLE users ADD COLUMN prev_emails TEXT NOT NULL DEFAULT ''");
+} catch (e) { console.warn('migration users profile skipped:', e.message); }
+
 // ---------- Customer accounts ----------
 const newSessionToken = () => crypto.randomBytes(32).toString('hex');
 function accountUser(req) {
   const h = req.get('authorization') || '';
   const m = h.match(/^Bearer\s+(.+)$/i);
   if (!m) return null;
-  const row = db.prepare("SELECT s.user_id, s.expires_at, u.id, u.email, u.name, u.created_at, u.favorite_brand, u.favorite_size FROM sessions s JOIN users u ON u.id = s.user_id WHERE s.token = ?").get(m[1]);
+  const row = db.prepare("SELECT s.user_id, s.expires_at, u.id, u.email, u.name, u.created_at, u.favorite_brand, u.favorite_size, u.phone, u.phone_verified, u.addr_line1, u.addr_line2, u.addr_city, u.addr_state, u.addr_zip, u.prev_emails FROM sessions s JOIN users u ON u.id = s.user_id WHERE s.token = ?").get(m[1]);
   if (!row) return null;
   if (new Date(row.expires_at) < new Date()) { db.prepare('DELETE FROM sessions WHERE token = ?').run(m[1]); return null; }
   return { id: row.id, email: row.email, name: row.name, created_at: row.created_at,
            favorite_brand: row.favorite_brand || '', favorite_size: row.favorite_size || '',
-           favoriteBrand: row.favorite_brand || '', favoriteSize: row.favorite_size || '' };
+           favoriteBrand: row.favorite_brand || '', favoriteSize: row.favorite_size || '',
+           phone: row.phone || '', phoneVerified: !!row.phone_verified,
+           address: { line1: row.addr_line1 || '', line2: row.addr_line2 || '', city: row.addr_city || '', state: row.addr_state || '', zip: row.addr_zip || '' },
+           prevEmails: String(row.prev_emails || '').split(',').map(s => s.trim()).filter(Boolean) };
 }
 function requireAccount(req, res, next) {
   const u = accountUser(req);
@@ -2815,8 +2843,10 @@ app.post('/api/account/logout', (req, res) => {  const h = req.get('authorizatio
   res.json({ ok: true });
 });
 app.get('/api/account/me', requireAccount, (req, res) => {
+  const myEmails = [req.account.email, ...(req.account.prevEmails || [])];
+  const ph = myEmails.map(() => '?').join(',');
   const orders = db.prepare(`SELECT id, items, amount_total, tracking_number, label_url, status, fulfillment, shipped_notified, delivered_notified, created_at
-    FROM orders WHERE lower(email) = lower(?) ORDER BY id DESC LIMIT 20`).all(req.account.email);
+    FROM orders WHERE lower(email) IN (${ph}) ORDER BY id DESC LIMIT 20`).all(...myEmails.map(e => e.toLowerCase()));
   // Light delivery check (fire-and-forget): a shipped order the carrier
   // already delivered flips to 'delivered' + thank-you/review email, and the
   // customer sees the fresh status on their next visit.
@@ -2835,6 +2865,167 @@ app.put('/api/account/preferences', requireAccount, (req, res) => {
       .run(favoriteBrand, favoriteSize, req.account.id);
     res.json({ ok: true, favoriteBrand, favoriteSize });
   } catch (e) { res.status(500).json({ error: 'preferences update failed' }); }
+});
+
+// ---------- Account panel: profile, email/phone verification, password ----------
+// SMS delivery for phone codes: active only when Twilio env vars exist.
+// Without them the code flow still works end-to-end except the text itself
+// is not sent; the storefront tells the customer honestly and the number
+// is saved as unverified.
+const SMS_READY = () => !!(process.env.TWILIO_ACCOUNT_SID && process.env.TWILIO_AUTH_TOKEN && process.env.TWILIO_FROM_NUMBER);
+async function sendSmsCode(phone, code) {
+  const sid = process.env.TWILIO_ACCOUNT_SID, tok = process.env.TWILIO_AUTH_TOKEN, from = process.env.TWILIO_FROM_NUMBER;
+  const body = new URLSearchParams({ To: phone, From: from, Body: `Andy's Shoe Supply: your verification code is ${code}. It expires in 10 minutes.` });
+  const r = await fetch(`https://api.twilio.com/2010-04-01/Accounts/${sid}/Messages.json`, {
+    method: 'POST',
+    headers: { 'Authorization': 'Basic ' + Buffer.from(sid + ':' + tok).toString('base64'), 'Content-Type': 'application/x-www-form-urlencoded' },
+    body
+  });
+  if (!r.ok) throw new Error('sms send failed ' + r.status);
+}
+const sixDigitCode = () => String(crypto.randomInt(0, 1000000)).padStart(6, '0');
+const codeRecentlySent = (sentAt) => sentAt && (Date.now() - new Date(sentAt).getTime()) < 60 * 1000;
+
+// Save the editable profile (name, phone, shipping address). Changing the
+// phone number resets its verified flag — the new number must be verified.
+app.put('/api/account/profile', requireAccount, (req, res) => {
+  try {
+    const b = req.body || {};
+    const clean = (v, n) => String(v == null ? '' : v).trim().slice(0, n);
+    const name = clean(b.name, 80);
+    const phone = clean(b.phone, 24).replace(/[^\d+]/g, '');
+    const line1 = clean(b.address && b.address.line1, 120);
+    const line2 = clean(b.address && b.address.line2, 120);
+    const city = clean(b.address && b.address.city, 60);
+    const state = clean(b.address && b.address.state, 40);
+    const zip = clean(b.address && b.address.zip, 20);
+    const cur = db.prepare('SELECT phone FROM users WHERE id = ?').get(req.account.id);
+    const phoneChanged = (cur.phone || '') !== phone;
+    db.prepare(`UPDATE users SET name = ?, phone = ?, phone_verified = CASE WHEN ? THEN 0 ELSE phone_verified END,
+      phone_code = CASE WHEN ? THEN NULL ELSE phone_code END,
+      addr_line1 = ?, addr_line2 = ?, addr_city = ?, addr_state = ?, addr_zip = ? WHERE id = ?`)
+      .run(name, phone, phoneChanged ? 1 : 0, phoneChanged ? 1 : 0, line1, line2, city, state, zip, req.account.id);
+    res.json({ ok: true, user: accountUser(req) });
+  } catch (e) { res.status(500).json({ ok: false, error: 'profile update failed' }); }
+});
+
+// Change password: current password required; other sessions are signed out.
+app.post('/api/account/change-password', requireAccount, async (req, res) => {
+  try {
+    const current = String((req.body || {}).currentPassword || '');
+    const next = String((req.body || {}).newPassword || '');
+    if (next.length < 8) return res.status(400).json({ ok: false, error: 'password_too_short', message: 'New password must be at least 8 characters.' });
+    const u = db.prepare('SELECT password_hash FROM users WHERE id = ?').get(req.account.id);
+    if (!u || !(await bcrypt.compare(current, u.password_hash)))
+      return res.status(403).json({ ok: false, error: 'wrong_password', message: 'Current password is incorrect.' });
+    const hash = await bcrypt.hash(next, 10);
+    db.prepare('UPDATE users SET password_hash = ? WHERE id = ?').run(hash, req.account.id);
+    const h = req.get('authorization') || '';
+    const m = h.match(/^Bearer\s+(.+)$/i);
+    db.prepare('DELETE FROM sessions WHERE user_id = ? AND token != ?').run(req.account.id, m ? m[1] : '');
+    res.json({ ok: true });
+  } catch (e) { res.status(500).json({ ok: false, error: 'password change failed' }); }
+});
+
+// Email change, step 1: send a 6-digit code to the NEW address.
+app.post('/api/account/email/request-change', requireAccount, async (req, res) => {
+  try {
+    const newEmail = String((req.body || {}).newEmail || '').trim().toLowerCase();
+    if (!EMAIL_RE.test(newEmail)) return res.status(400).json({ ok: false, error: 'invalid_email', message: 'That email does not look right.' });
+    if (newEmail === req.account.email) return res.status(400).json({ ok: false, error: 'same_email', message: 'That is already your email.' });
+    const taken = db.prepare('SELECT id FROM users WHERE lower(email) = ? AND id != ?').get(newEmail, req.account.id);
+    if (taken) return res.status(409).json({ ok: false, error: 'email_taken', message: 'Another account already uses that email.' });
+    const row = db.prepare('SELECT email_code_sent_at FROM users WHERE id = ?').get(req.account.id);
+    if (codeRecentlySent(row && row.email_code_sent_at))
+      return res.status(429).json({ ok: false, error: 'code_recently_sent', message: 'We just sent a code — wait a minute and try again.' });
+    const code = sixDigitCode();
+    const exp = new Date(Date.now() + 10 * 60 * 1000).toISOString();
+    db.prepare('UPDATE users SET pending_email = ?, email_code = ?, email_code_expires = ?, email_code_sent_at = ? WHERE id = ?')
+      .run(newEmail, code, exp, new Date().toISOString(), req.account.id);
+    await sendEmail({
+      to: newEmail,
+      subject: "Your email change code — Andy's Shoe Supply",
+      text: `Hi! You asked to change the email on your Andy's Shoe Supply account to this address.\n\nYour verification code is: ${code}\n\nIt expires in 10 minutes. If you didn't ask for this, ignore this email — your account email won't change.\n\nAndy's Shoe Supply · Hereford, TX`,
+      html: `<div style="font-family:Arial,Helvetica,sans-serif;max-width:520px;margin:0 auto;padding:24px"><h2 style="margin:0 0 12px">Confirm your new email</h2><p>You asked to change the email on your Andy's Shoe Supply account to this address. Enter this code on the account page:</p><p style="font-size:32px;font-weight:800;letter-spacing:6px;margin:18px 0">${code}</p><p style="color:#666">It expires in 10 minutes. If you didn't ask for this, ignore this email — your account email won't change.</p><p style="color:#666">Andy's Shoe Supply · Hereford, TX</p></div>`
+    });
+    res.json({ ok: true, sentTo: newEmail });
+  } catch (e) { res.status(500).json({ ok: false, error: 'could not send the code' }); }
+});
+
+// Email change, step 2: confirm the code; the old address is kept on the
+// account so past orders still show under My Account.
+app.post('/api/account/email/confirm-change', requireAccount, (req, res) => {
+  try {
+    const code = String((req.body || {}).code || '').trim();
+    const u = db.prepare('SELECT pending_email, email_code, email_code_expires, prev_emails FROM users WHERE id = ?').get(req.account.id);
+    if (!u || !u.pending_email || !u.email_code)
+      return res.status(400).json({ ok: false, error: 'no_pending_change', message: 'No email change is waiting — request a code first.' });
+    if (new Date(u.email_code_expires) < new Date())
+      return res.status(400).json({ ok: false, error: 'code_expired', message: 'That code expired — request a new one.' });
+    if (code !== u.email_code)
+      return res.status(400).json({ ok: false, error: 'wrong_code', message: 'That code is not right — check the email and try again.' });
+    const prev = String(u.prev_emails || '').split(',').map(s => s.trim()).filter(Boolean);
+    if (!prev.includes(req.account.email)) prev.push(req.account.email);
+    db.prepare('UPDATE users SET email = ?, email_verified = 1, prev_emails = ?, pending_email = NULL, email_code = NULL, email_code_expires = NULL, email_code_sent_at = NULL WHERE id = ?')
+      .run(u.pending_email, prev.join(','), req.account.id);
+    db.prepare('UPDATE carts SET email = ? WHERE lower(email) = lower(?)').run(u.pending_email, req.account.email);
+    res.json({ ok: true, email: u.pending_email, user: accountUser(req) });
+  } catch (e) { res.status(500).json({ ok: false, error: 'could not confirm the change' }); }
+});
+
+// Phone verification, step 1: text a 6-digit code to the number on file
+// (or to the number in the request, which is saved first).
+app.post('/api/account/phone/request-code', requireAccount, async (req, res) => {
+  try {
+    let phone = String((req.body || {}).phone || '').trim().replace(/[^\d+]/g, '');
+    const u = db.prepare('SELECT phone, phone_code_sent_at FROM users WHERE id = ?').get(req.account.id);
+    if (!phone) phone = u.phone || '';
+    const digits = phone.replace(/\D/g, '');
+    if (digits.length < 10) return res.status(400).json({ ok: false, error: 'invalid_phone', message: 'Please enter a valid phone number.' });
+    if (codeRecentlySent(u.phone_code_sent_at))
+      return res.status(429).json({ ok: false, error: 'code_recently_sent', message: 'We just sent a code — wait a minute and try again.' });
+    const code = sixDigitCode();
+    const exp = new Date(Date.now() + 10 * 60 * 1000).toISOString();
+    const changed = (u.phone || '') !== phone;
+    db.prepare(`UPDATE users SET phone = ?, phone_verified = CASE WHEN ? THEN 0 ELSE phone_verified END,
+      phone_code = ?, phone_code_expires = ?, phone_code_sent_at = ? WHERE id = ?`)
+      .run(phone, changed ? 1 : 0, code, exp, new Date().toISOString(), req.account.id);
+    if (!SMS_READY()) return res.json({ ok: true, sms: false });
+    const to = digits.length === 10 ? '+1' + digits : (phone.startsWith('+') ? phone : '+' + digits);
+    await sendSmsCode(to, code);
+    res.json({ ok: true, sms: true });
+  } catch (e) { res.status(500).json({ ok: false, error: 'could not send the code' }); }
+});
+
+// Phone verification, step 2: confirm the code.
+app.post('/api/account/phone/confirm', requireAccount, (req, res) => {
+  try {
+    const code = String((req.body || {}).code || '').trim();
+    const u = db.prepare('SELECT phone_code, phone_code_expires FROM users WHERE id = ?').get(req.account.id);
+    if (!u || !u.phone_code)
+      return res.status(400).json({ ok: false, error: 'no_pending_code', message: 'No code is waiting — request one first.' });
+    if (new Date(u.phone_code_expires) < new Date())
+      return res.status(400).json({ ok: false, error: 'code_expired', message: 'That code expired — request a new one.' });
+    if (code !== u.phone_code)
+      return res.status(400).json({ ok: false, error: 'wrong_code', message: 'That code is not right — check the text and try again.' });
+    db.prepare('UPDATE users SET phone_verified = 1, phone_code = NULL, phone_code_expires = NULL, phone_code_sent_at = NULL WHERE id = ?').run(req.account.id);
+    res.json({ ok: true, user: accountUser(req) });
+  } catch (e) { res.status(500).json({ ok: false, error: 'could not confirm the code' }); }
+});
+
+// Admin: delete a customer account (sessions + user row; orders stay as
+// the sales record). House accounts are protected. Used to remove test
+// accounts and at a customer's request from the admin side.
+app.delete('/api/admin/users/:id', requireAdmin, (req, res) => {
+  try {
+    const id = parseInt(req.params.id, 10);
+    const u = db.prepare('SELECT id, email FROM users WHERE id = ?').get(id);
+    if (!u) return res.status(404).json({ ok: false, error: 'user not found' });
+    if (isHouseEmail(u.email)) return res.status(403).json({ ok: false, error: 'house_account' });
+    db.prepare('DELETE FROM sessions WHERE user_id = ?').run(id);
+    db.prepare('DELETE FROM users WHERE id = ?').run(id);
+    res.json({ ok: true, deleted: u.email });
+  } catch (e) { res.status(500).json({ ok: false, error: 'delete failed' }); }
 });
 
 // Self-service account deletion (Maria, 2026-10-16): a signed-in customer can
@@ -2869,6 +3060,7 @@ app.get('/api/health', (req, res) => res.json({
   usps: !!(process.env.USPS_CLIENT_ID && process.env.USPS_CLIENT_SECRET),
   shipping: process.env.EASYPOST_API_KEY ? 'easypost' : (process.env.SHIPPO_TOKEN ? 'shippo' : 'none'),
   email: !!RESEND_API_KEY, // Resend wired for welcome / order / promo emails
+  sms: SMS_READY(), // Twilio wired for phone verification codes
   promoProducts: true, // send-promo accepts productIds and renders shoe cards (2026-11-22)
   r2: r2Enabled(),
 }));
