@@ -12439,36 +12439,6 @@
   "units_sold": 0
  },
  {
-  "id": "920115842504",
-  "title": "Adidas Handball Spezial Mexico World Cup White / Size: US 6.5 Y / Women US 7.5",
-  "price": "$51.00",
-  "price_direct": 43.35,
-  "image": "https://i.ebayimg.com/images/g/hRsAAeSwSS9q71d~/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/920115842504",
-  "brand": "Adidas",
-  "department": "Kids",
-  "qty": 1,
-  "photos": [
-   "https://i.ebayimg.com/images/g/hRsAAeSwSS9q71d~/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/x7cAAeSwCJJq71eB/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/vi4AAeSwZllq71eD/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/3z8AAeSw3Uxq71eH/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/uUEAAeSwajVq71eK/s-l1600.jpg"
-  ],
-  "payment_url": "https://buy.stripe.com/5kQ00j9O20rz2TH9CpdZ81Y",
-  "weight_lbs": 3.0,
-  "weight_estimated": false,
-  "description": "The Adidas Handball Spezial Mexico World Cup shoes in white are a stylish and comfortable choice. Brand new and comes with its box.",
-  "parcel_in": {
-   "l": 14,
-   "w": 12,
-   "h": 9
-  },
-  "size": "US 6.5Y",
-  "added": "2026-11-07",
-  "units_sold": 0
- },
- {
   "id": "920117193651",
   "title": "adidas Superstar II C 5C",
   "price": "$34.00",
