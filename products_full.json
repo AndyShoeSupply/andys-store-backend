@@ -13390,37 +13390,6 @@
   "payment_url": "https://buy.stripe.com/7sY4gze4i1vD2TH6qddZ82z"
  },
  {
-  "id": "920172434084",
-  "title": "La Sportiva Wildcat 2.0 GTX Garden Forest / Size: Men US 9.5",
-  "price": "$74.22",
-  "price_direct": 63.09,
-  "image": "https://i.ebayimg.com/images/g/cbUAAeSwJQ1rAzMm/s-l1600.jpg",
-  "url": "https://www.ebay.com/itm/920172434084",
-  "brand": "La Sportiva",
-  "department": "Men",
-  "qty": 1,
-  "photos": [
-   "https://i.ebayimg.com/images/g/cbUAAeSwJQ1rAzMm/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/gD0AAeSwAq5rAzMz/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/miUAAeSwkuBrAzM1/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/AHEAAeSweGtrAzM3/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/gFkAAeSwAq5rAzM5/s-l1600.jpg",
-   "https://i.ebayimg.com/images/g/87YAAeSwezVrAzM7/s-l1600.jpg"
-  ],
-  "weight_lbs": 3.0,
-  "weight_estimated": true,
-  "description": "The La Sportiva Wildcat 2.0 GTX in Garden/Forest, size Men US 9.5. Waterproof Gore-Tex trail runner with FriXion AT outsole and Impact Brake System. Brand new in its box.",
-  "parcel_in": {
-   "l": 12,
-   "w": 10,
-   "h": 8
-  },
-  "size": "US 9.5",
-  "added": "2026-11-22",
-  "units_sold": 0,
-  "payment_url": "https://buy.stripe.com/dRmcN59O21vD79XdSFdZ82A"
- },
- {
   "id": "920172424872",
   "title": "New Balance 204L Cortado Stone Pink / Size: Women US 11.5 / Men US 10",
   "price": "$74.11",
