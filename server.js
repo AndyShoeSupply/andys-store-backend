@@ -1818,6 +1818,44 @@ function stripe() {
   return require('stripe')(process.env.STRIPE_SECRET_KEY);
 }
 
+// ---------- Promo codes (Maria 2026-11-27) ----------
+// Customers could not find where to type a code like BFRIDAY: the only field
+// was a small link on Stripe's own page. The storefront now has its own
+// discount-code field; it validates here against Stripe and /api/checkout
+// applies the code to the session so the discount is already on at Stripe.
+async function findActivePromotionCode(code) {
+  const list = await stripe().promotionCodes.list({ code, active: true, limit: 1 });
+  const pc = (list.data && list.data[0]) || null;
+  if (!pc) return null;
+  if (pc.expires_at && pc.expires_at * 1000 < Date.now()) return null;
+  if (pc.max_redemptions && pc.times_redeemed >= pc.max_redemptions) return null;
+  return pc;
+}
+function promotionCoupon(pc) {
+  return (pc && pc.promotion && pc.promotion.coupon) || (pc && pc.coupon) || {};
+}
+
+app.post('/api/promo/validate', async (req, res) => {
+  try {
+    const code = String((req.body || {}).code || '').trim().toUpperCase();
+    if (!code) return res.status(400).json({ ok: false, error: 'empty' });
+    if (!process.env.STRIPE_SECRET_KEY) return res.status(503).json({ ok: false, error: 'unavailable' });
+    const pc = await findActivePromotionCode(code);
+    if (!pc) return res.json({ ok: false, error: 'invalid' });
+    const coupon = promotionCoupon(pc);
+    return res.json({
+      ok: true,
+      code,
+      percent_off: coupon.percent_off || null,
+      amount_off: coupon.amount_off ? coupon.amount_off / 100 : null,
+      currency: coupon.currency || 'usd',
+    });
+  } catch (e) {
+    console.error('promo validate failed:', e.message);
+    return res.status(503).json({ ok: false, error: 'unavailable' });
+  }
+});
+
 // POST { items: [{id, size?}], buyer: {name, email}, fulfillment: 'shipping'|'pickup',
 //        shipTo: {line1, city, state, zip} }  (shipTo required only for shipping)
 // Dynamic Stripe Checkout with CALCULATED shipping capped at $12.95 (the
@@ -1828,6 +1866,7 @@ function stripe() {
 app.post('/api/checkout', async (req, res) => {
   try {
     const rawItems = Array.isArray(req.body.items) ? req.body.items : [];
+    const promoCode = String(req.body.promoCode || '').trim().toUpperCase();
     const buyer = req.body.buyer || {};
     const fulfillment = req.body.fulfillment === 'pickup' ? 'pickup' : 'shipping';
     // Gift wrap (Maria 2026-11-08): one toggle for the whole order, $4.99
@@ -1889,6 +1928,16 @@ app.post('/api/checkout', async (req, res) => {
       return res.json({ ok: false, fallback: true, url });
     };
     if (!process.env.STRIPE_SECRET_KEY) return fallback();
+    // Promo code typed in the storefront's own discount field (Maria
+    // 2026-11-27): resolve it against Stripe and apply it to the session so
+    // the discount is already on when Stripe opens. An invalid code stops
+    // the checkout with a clear error instead of silently charging full
+    // price. Stripe forbids discounts + allow_promotion_codes together.
+    let promoPc = null;
+    if (promoCode) {
+      try { promoPc = await findActivePromotionCode(promoCode); } catch (e) { promoPc = null; }
+      if (!promoPc) return res.status(400).json({ ok: false, error: 'promo_invalid' });
+    }
     const lineItems = lines.map(l => ({
       price_data: {
         currency: 'usd',
@@ -1913,10 +1962,6 @@ app.post('/api/checkout', async (req, res) => {
     }
     const params = {
       mode: 'payment',
-      // Maria 2026-11-25: the BFRIDAY code announced by email/banner could not
-      // be entered anywhere — Stripe only shows the promotion-code field when
-      // the session allows it. Without this flag no code can ever apply.
-      allow_promotion_codes: true,
       line_items: lineItems,
       success_url: 'https://andysshoesupply.com/?paid=1&cs={CHECKOUT_SESSION_ID}',
       cancel_url: 'https://andysshoesupply.com/',
@@ -1940,8 +1985,14 @@ app.post('/api/checkout', async (req, res) => {
         ...(acctUser ? { account_email: acctUser.email, account_discount_cents: String(accountDiscountCents) } : {}),
         buyer_email: String(buyer.email || '').slice(0, 120),
         buyer_name: String(buyer.name || '').slice(0, 80),
+        ...(promoPc ? { promo_code: promoCode } : {}),
       },
     };
+    // With a code from the storefront field, apply it directly; otherwise
+    // keep Stripe's own promotion-code field available (Maria 2026-11-25:
+    // without allow_promotion_codes no code can ever be typed at Stripe).
+    if (promoPc) params.discounts = [{ promotion_code: promoPc.id }];
+    else params.allow_promotion_codes = true;
     if (fulfillment === 'shipping') {
       const q = await computeShipping(lines, {}); // flat $9.00, no address needed
       params.shipping_address_collection = { allowed_countries: ['US'] };
